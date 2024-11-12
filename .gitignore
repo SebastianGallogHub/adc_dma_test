@@ -74,3 +74,16 @@
 #!*.dcp
 
 # End of https://www.toptal.com/developers/gitignore/api/vivado,xilinxvivado
+#
+#
+#
+#
+# Personalizados
+*.jou
+!*.tcl
+*.gen/
+*.srcs/
+!*.srcs/sources_1/db/*/*.db
+*.xpr
+ip_repo
+
