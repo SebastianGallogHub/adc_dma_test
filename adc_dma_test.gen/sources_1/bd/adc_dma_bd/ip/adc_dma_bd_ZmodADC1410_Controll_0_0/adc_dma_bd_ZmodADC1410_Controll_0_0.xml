@@ -49,7 +49,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>CLK_DOMAIN</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.SYSCLK.CLK_DOMAIN"/>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.SYSCLK.CLK_DOMAIN">adc_dma_bd_processing_system7_0_0_FCLK_CLK1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -125,7 +125,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>CLK_DOMAIN</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.ADC_INCLK.CLK_DOMAIN"/>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.ADC_INCLK.CLK_DOMAIN">/clk_wiz_0_clk_out1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -3552,15 +3552,15 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ADC_INCLK.ASSOCIATED_BUSIF" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ADC_INCLK.ASSOCIATED_PORT" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ADC_INCLK.ASSOCIATED_RESET" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ADC_INCLK.CLK_DOMAIN" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ADC_INCLK.CLK_DOMAIN" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ADC_INCLK.FREQ_HZ" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ADC_INCLK.FREQ_TOLERANCE_HZ" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ADC_INCLK.PHASE" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.ADC_INCLK.PHASE" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SRST_N.POLARITY" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SYSCLK.ASSOCIATED_BUSIF" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SYSCLK.ASSOCIATED_PORT" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SYSCLK.ASSOCIATED_RESET" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SYSCLK.CLK_DOMAIN" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SYSCLK.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SYSCLK.FREQ_HZ" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SYSCLK.FREQ_TOLERANCE_HZ" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SYSCLK.PHASE" xilinx:valuePermission="bd_and_user"/>

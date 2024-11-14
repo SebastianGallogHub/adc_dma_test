@@ -397,7 +397,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>CLK_DOMAIN</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.CLK_DOMAIN"/>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.CLK_DOMAIN">adc_dma_bd_processing_system7_0_0_FCLK_CLK1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -535,7 +535,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>CLK_DOMAIN</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXILITECLK.CLK_DOMAIN"/>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXILITECLK.CLK_DOMAIN">adc_dma_bd_processing_system7_0_0_FCLK_CLK1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -685,7 +685,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>FREQ_HZ</spirit:name>
-          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.AXI_S2MM.FREQ_HZ">100000000</spirit:value>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.AXI_S2MM.FREQ_HZ"/>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -703,7 +703,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>CLK_DOMAIN</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.AXI_S2MM.CLK_DOMAIN"/>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.AXI_S2MM.CLK_DOMAIN">adc_dma_bd_processing_system7_0_0_FCLK_CLK1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -807,7 +807,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>CLK_DOMAIN</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.SYSCLK.CLK_DOMAIN"/>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.SYSCLK.CLK_DOMAIN">adc_dma_bd_processing_system7_0_0_FCLK_CLK1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -887,7 +887,7 @@
         </spirit:parameter>
         <spirit:parameter>
           <spirit:name>CLK_DOMAIN</spirit:name>
-          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.AXISTREAMCLK.CLK_DOMAIN"/>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.AXISTREAMCLK.CLK_DOMAIN">adc_dma_bd_processing_system7_0_0_FCLK_CLK1</spirit:value>
           <spirit:vendorExtensions>
             <xilinx:parameterInfo>
               <xilinx:parameterUsage>none</xilinx:parameterUsage>
@@ -4353,12 +4353,12 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXISTREAMCLK.ASSOCIATED_BUSIF" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXISTREAMCLK.ASSOCIATED_PORT" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXISTREAMCLK.ASSOCIATED_RESET" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXISTREAMCLK.CLK_DOMAIN" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXISTREAMCLK.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXISTREAMCLK.FREQ_HZ" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXISTREAMCLK.FREQ_TOLERANCE_HZ" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXISTREAMCLK.PHASE" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_S2MM.CLK_DOMAIN" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_S2MM.FREQ_HZ" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_S2MM.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_S2MM.FREQ_HZ" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_S2MM.HAS_TKEEP" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_S2MM.HAS_TLAST" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.AXI_S2MM.HAS_TREADY" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
@@ -4375,9 +4375,9 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.ARUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.AWUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.BUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.CLK_DOMAIN" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.DATA_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.FREQ_HZ" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.HAS_BRESP" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.HAS_BURST" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.HAS_CACHE" xilinx:valueSource="constant" xilinx:valuePermission="bd_and_user"/>
@@ -4406,15 +4406,15 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXILITECLK.ASSOCIATED_BUSIF" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXILITECLK.ASSOCIATED_PORT" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXILITECLK.ASSOCIATED_RESET" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXILITECLK.CLK_DOMAIN" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXILITECLK.FREQ_HZ" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXILITECLK.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXILITECLK.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXILITECLK.FREQ_TOLERANCE_HZ" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXILITECLK.PHASE" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_RST.POLARITY" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SYSCLK.ASSOCIATED_BUSIF" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SYSCLK.ASSOCIATED_PORT" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SYSCLK.ASSOCIATED_RESET" xilinx:valuePermission="bd_and_user"/>
-        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SYSCLK.CLK_DOMAIN" xilinx:valuePermission="bd_and_user"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SYSCLK.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SYSCLK.FREQ_HZ" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SYSCLK.FREQ_TOLERANCE_HZ" xilinx:valuePermission="bd_and_user"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.SYSCLK.PHASE" xilinx:valuePermission="bd_and_user"/>
