@@ -16,7 +16,10 @@ entity TAR_v1_0_S00_AXI is
 	);
 	port (
 		-- Users to add ports here
-
+        OUT_REG0    : out std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+        OUT_REG1    : out std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+        OUT_REG2    : out std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+        OUT_REG3    : out std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
 		-- User ports ends
 		-- Do not modify the ports beyond this line
 
@@ -133,7 +136,7 @@ begin
 	-- axi_awready is asserted for one S_AXI_ACLK clock cycle when both
 	-- S_AXI_AWVALID and S_AXI_WVALID are asserted. axi_awready is
 	-- de-asserted when reset is low.
---comentario
+    
 	process (S_AXI_ACLK)
 	begin
 	  if rising_edge(S_AXI_ACLK) then 

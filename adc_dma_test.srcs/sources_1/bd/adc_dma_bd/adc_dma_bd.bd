@@ -2408,7 +2408,12 @@
         "vlnv": "xilinx.com:ip:xlconcat:2.1",
         "xci_name": "adc_dma_bd_xlconcat_0_0",
         "xci_path": "ip/adc_dma_bd_xlconcat_0_0/adc_dma_bd_xlconcat_0_0.xci",
-        "inst_hier_path": "xlconcat_0"
+        "inst_hier_path": "xlconcat_0",
+        "parameters": {
+          "NUM_PORTS": {
+            "value": "3"
+          }
+        }
       },
       "clk_wiz_0": {
         "vlnv": "xilinx.com:ip:clk_wiz:6.0",
@@ -2587,6 +2592,12 @@
           "ZmodADC1410_Controll_0/sADC_SDIO"
         ]
       },
+      "TAR_0_Introut": {
+        "ports": [
+          "TAR_0/Introut",
+          "xlconcat_0/In2"
+        ]
+      },
       "ZmodADC1410_Controll_0_adcClkIn_n": {
         "ports": [
           "ZmodADC1410_Controll_0/adcClkIn_n",
@@ -2732,6 +2743,8 @@
           "axi_dma_0/m_axi_mm2s_aclk",
           "axi_mem_intercon/S02_ACLK",
           "axi_dma_0/m_axi_s2mm_aclk",
+          "AXI_ZmodADC1410_0/s00_axi_aclk",
+          "ps7_0_axi_periph/M02_ACLK",
           "TAR_0/s00_axi_aclk",
           "TAR_0/m00_axis_aclk"
         ]
@@ -2739,11 +2752,9 @@
       "processing_system7_0_FCLK_CLK1": {
         "ports": [
           "processing_system7_0/FCLK_CLK1",
-          "AXI_ZmodADC1410_0/s00_axi_aclk",
-          "ps7_0_axi_periph/M02_ACLK",
-          "rst_ps7_0_100M_1/slowest_sync_clk",
           "AXI_ZmodADC1410_0/SysClk",
           "ZmodADC1410_Controll_0/SysClk",
+          "rst_ps7_0_100M_1/slowest_sync_clk",
           "TAR_0/SysClk"
         ]
       },
@@ -2759,7 +2770,8 @@
         "ports": [
           "rst_ps7_0_100M_1/peripheral_aresetn",
           "AXI_ZmodADC1410_0/lRst_n",
-          "ps7_0_axi_periph/M02_ARESETN"
+          "ps7_0_axi_periph/M02_ARESETN",
+          "TAR_0/IRst_n"
         ]
       },
       "rst_ps7_0_100M_peripheral_aresetn": {

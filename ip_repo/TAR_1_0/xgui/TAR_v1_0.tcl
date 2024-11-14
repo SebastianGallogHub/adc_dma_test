@@ -13,6 +13,15 @@ proc init_gui { IPINST } {
 
 }
 
+proc update_PARAM_VALUE.ADC_SAMPLE_WIDTH { PARAM_VALUE.ADC_SAMPLE_WIDTH } {
+	# Procedure called to update ADC_SAMPLE_WIDTH when any of the dependent parameters in the arguments change
+}
+
+proc validate_PARAM_VALUE.ADC_SAMPLE_WIDTH { PARAM_VALUE.ADC_SAMPLE_WIDTH } {
+	# Procedure called to validate ADC_SAMPLE_WIDTH
+	return true
+}
+
 proc update_PARAM_VALUE.C_S00_AXI_DATA_WIDTH { PARAM_VALUE.C_S00_AXI_DATA_WIDTH } {
 	# Procedure called to update C_S00_AXI_DATA_WIDTH when any of the dependent parameters in the arguments change
 }
@@ -86,5 +95,10 @@ proc update_MODELPARAM_VALUE.C_M00_AXIS_TDATA_WIDTH { MODELPARAM_VALUE.C_M00_AXI
 proc update_MODELPARAM_VALUE.C_M00_AXIS_START_COUNT { MODELPARAM_VALUE.C_M00_AXIS_START_COUNT PARAM_VALUE.C_M00_AXIS_START_COUNT } {
 	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
 	set_property value [get_property value ${PARAM_VALUE.C_M00_AXIS_START_COUNT}] ${MODELPARAM_VALUE.C_M00_AXIS_START_COUNT}
+}
+
+proc update_MODELPARAM_VALUE.ADC_SAMPLE_WIDTH { MODELPARAM_VALUE.ADC_SAMPLE_WIDTH PARAM_VALUE.ADC_SAMPLE_WIDTH } {
+	# Procedure called to set VHDL generic/Verilog parameter value(s) based on TCL parameter value
+	set_property value [get_property value ${PARAM_VALUE.ADC_SAMPLE_WIDTH}] ${MODELPARAM_VALUE.ADC_SAMPLE_WIDTH}
 }
 

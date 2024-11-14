@@ -5,7 +5,7 @@ use ieee.numeric_std.all;
 entity TAR_v1_0 is
 	generic (
 		-- Users to add parameters here
-
+        ADC_SAMPLE_WIDTH : integer := 14;
 		-- User parameters ends
 		-- Do not modify the parameters beyond this line
 
@@ -25,6 +25,7 @@ entity TAR_v1_0 is
 		IRst_n    : in std_logic;
         sCh1In  : in std_logic_vector(15 downto 0);
         sCh2In  : in std_logic_vector(15 downto 0);
+        Introut : out std_logic;
 		-- User ports ends
 		-- Do not modify the ports beyond this line
 
@@ -72,6 +73,10 @@ architecture arch_imp of TAR_v1_0 is
 		C_S_AXI_ADDR_WIDTH	: integer	:= 4
 		);
 		port (
+		OUT_REG0    : out std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+        OUT_REG1    : out std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+        OUT_REG2    : out std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+        OUT_REG3    : out std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
 		S_AXI_ACLK	: in std_logic;
 		S_AXI_ARESETN	: in std_logic;
 		S_AXI_AWADDR	: in std_logic_vector(C_S_AXI_ADDR_WIDTH-1 downto 0);
@@ -96,12 +101,33 @@ architecture arch_imp of TAR_v1_0 is
 		);
 	end component TAR_v1_0_S00_AXI;
 
-	component TAR_v1_0_M00_AXIS is
+--	component TAR_v1_0_M00_AXIS is
+--		generic (
+--		C_M_AXIS_TDATA_WIDTH	: integer	:= 32;
+--		C_M_START_COUNT	: integer	:= 32
+--		);
+--		port (
+--		M_AXIS_ACLK	: in std_logic;
+--		M_AXIS_ARESETN	: in std_logic;
+--		M_AXIS_TVALID	: out std_logic;
+--		M_AXIS_TDATA	: out std_logic_vector(C_M_AXIS_TDATA_WIDTH-1 downto 0);
+--		M_AXIS_TSTRB	: out std_logic_vector((C_M_AXIS_TDATA_WIDTH/8)-1 downto 0);
+--		M_AXIS_TLAST	: out std_logic;
+--		M_AXIS_TREADY	: in std_logic
+--		);
+--	end component TAR_v1_0_M00_AXIS;
+	
+	component master_test is
 		generic (
+		IADC_SAMPLE_WIDTH   : integer   := 14;
 		C_M_AXIS_TDATA_WIDTH	: integer	:= 32;
 		C_M_START_COUNT	: integer	:= 32
 		);
 		port (
+		START  : in std_logic;
+		IADC_SAMPLE : in std_logic_vector(IADC_SAMPLE_WIDTH-1 downto 0);
+        NUMBER_OF_SAMPLES_UNTIL_SEND : in std_logic_vector(C_M_AXIS_TDATA_WIDTH-1 downto 0);
+        INTR    : out std_logic;
 		M_AXIS_ACLK	: in std_logic;
 		M_AXIS_ARESETN	: in std_logic;
 		M_AXIS_TVALID	: out std_logic;
@@ -110,7 +136,14 @@ architecture arch_imp of TAR_v1_0 is
 		M_AXIS_TLAST	: out std_logic;
 		M_AXIS_TREADY	: in std_logic
 		);
-	end component TAR_v1_0_M00_AXIS;
+	end component master_test;
+	
+	signal slv_reg0	:std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0);
+	signal slv_reg1	:std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0);
+	signal slv_reg2	:std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0);
+	signal slv_reg3	:std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0);
+	
+	signal master_test_start :std_logic :='0';
 
 begin
 
@@ -121,6 +154,10 @@ TAR_v1_0_S00_AXI_inst : TAR_v1_0_S00_AXI
 		C_S_AXI_ADDR_WIDTH	=> C_S00_AXI_ADDR_WIDTH
 	)
 	port map (
+	    OUT_REG0 => slv_reg0,   
+        OUT_REG1 => slv_reg1,
+        OUT_REG2 => slv_reg2,
+        OUT_REG3 => slv_reg3,
 		S_AXI_ACLK	=> s00_axi_aclk,
 		S_AXI_ARESETN	=> s00_axi_aresetn,
 		S_AXI_AWADDR	=> s00_axi_awaddr,
@@ -143,14 +180,20 @@ TAR_v1_0_S00_AXI_inst : TAR_v1_0_S00_AXI
 		S_AXI_RVALID	=> s00_axi_rvalid,
 		S_AXI_RREADY	=> s00_axi_rready
 	);
+	
+	master_test_start <= slv_reg0(0);
 
--- Instantiation of Axi Bus Interface M00_AXIS
-TAR_v1_0_M00_AXIS_inst : TAR_v1_0_M00_AXIS
+master_test_inst : master_test
 	generic map (
+	    IADC_SAMPLE_WIDTH  => ADC_SAMPLE_WIDTH,
 		C_M_AXIS_TDATA_WIDTH	=> C_M00_AXIS_TDATA_WIDTH,
 		C_M_START_COUNT	=> C_M00_AXIS_START_COUNT
 	)
 	port map (
+	    START => master_test_start,
+	    IADC_SAMPLE => sCh1In(ADC_SAMPLE_WIDTH-1 downto 0),
+        NUMBER_OF_SAMPLES_UNTIL_SEND => slv_reg1,
+        INTR => Introut,
 		M_AXIS_ACLK	=> m00_axis_aclk,
 		M_AXIS_ARESETN	=> m00_axis_aresetn,
 		M_AXIS_TVALID	=> m00_axis_tvalid,
