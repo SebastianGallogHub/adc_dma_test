@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
---Date        : Thu Nov 14 13:24:17 2024
+--Date        : Fri Nov 15 11:04:15 2024
 --Host        : sebasHAL running 64-bit Ubuntu 20.04.6 LTS
 --Command     : generate_target adc_dma_bd_wrapper.bd
 --Design      : adc_dma_bd_wrapper

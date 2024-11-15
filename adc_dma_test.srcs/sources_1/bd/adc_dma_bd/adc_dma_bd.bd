@@ -6,7 +6,7 @@
       "gen_directory": "../../../../adc_dma_test.gen/sources_1/bd/adc_dma_bd",
       "name": "adc_dma_bd",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
-      "synth_flow_mode": "Hierarchical",
+      "synth_flow_mode": "None",
       "tool_version": "2023.1",
       "validated": "true"
     },
@@ -3072,8 +3072,8 @@
           "ps7_0_axi_periph/S00_ACLK",
           "ps7_0_axi_periph/ACLK",
           "ps7_0_axi_periph/M01_ACLK",
-          "TAR_0/s00_axi_aclk",
           "rst_ps7_0_100M/slowest_sync_clk",
+          "TAR_0/s00_axi_aclk",
           "TAR_0/m00_axis_aclk"
         ]
       },
@@ -3083,10 +3083,10 @@
           "AXI_ZmodADC1410_0/SysClk",
           "ZmodADC1410_Controll_0/SysClk",
           "rst_ps7_0_100M_1/slowest_sync_clk",
-          "TAR_0/SysClk",
           "ps7_0_axi_periph/M02_ACLK",
           "AXI_ZmodADC1410_0/s00_axi_aclk",
-          "AXI_ZmodADC1410_0/AxiStreamClk"
+          "AXI_ZmodADC1410_0/AxiStreamClk",
+          "TAR_0/SysClk"
         ]
       },
       "processing_system7_0_FCLK_RESET0_N": {

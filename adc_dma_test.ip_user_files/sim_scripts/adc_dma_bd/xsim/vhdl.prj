@@ -1,0 +1,26 @@
+vhdl fifo_generator_v13_2_8  \
+"../../../../adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/c97d/hdl/fifo_generator_v13_2_rfs.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../bd/adc_dma_bd/ip/adc_dma_bd_axi_dma_0_0/sim/adc_dma_bd_axi_dma_0_0.vhd" \
+"../../../bd/adc_dma_bd/ipshared/b810/src/AD9648_SPI.vhd" \
+"../../../bd/adc_dma_bd/ipshared/b810/src/ZmodADC1410_Controller.vhd" \
+"../../../bd/adc_dma_bd/ip/adc_dma_bd_ZmodADC1410_Controll_0_0/sim/adc_dma_bd_ZmodADC1410_Controll_0_0.vhd" \
+"../../../bd/adc_dma_bd/ip/adc_dma_bd_rst_ps7_0_100M_0/sim/adc_dma_bd_rst_ps7_0_100M_0.vhd" \
+"../../../bd/adc_dma_bd/ipshared/ce55/src/AXI_ZmodADC1410_v1_0_S00_AXI.vhd" \
+"../../../bd/adc_dma_bd/ipshared/ce55/src/Circular_Buffer.vhd" \
+"../../../bd/adc_dma_bd/ipshared/ce55/src/SyncAsync.vhd" \
+"../../../bd/adc_dma_bd/ipshared/ce55/src/SyncAsyncReset.vhd" \
+"../../../bd/adc_dma_bd/ipshared/ce55/src/HandshakeData.vhd" \
+"../../../bd/adc_dma_bd/ipshared/ce55/src/SPI_Adapter.vhd" \
+"../../../bd/adc_dma_bd/ipshared/ce55/src/AXI_ZmodADC1410_v1_0.vhd" \
+"../../../bd/adc_dma_bd/ip/adc_dma_bd_AXI_ZmodADC1410_0_0/sim/adc_dma_bd_AXI_ZmodADC1410_0_0.vhd" \
+"../../../bd/adc_dma_bd/ip/adc_dma_bd_rst_ps7_0_100M_1_0/sim/adc_dma_bd_rst_ps7_0_100M_1_0.vhd" \
+"../../../bd/adc_dma_bd/ipshared/b377/hdl/TAR_v1_0_S00_AXI.vhd" \
+"../../../bd/adc_dma_bd/ipshared/b377/hdl/master_test.vhd" \
+"../../../bd/adc_dma_bd/ipshared/b377/hdl/TAR_v1_0.vhd" \
+"../../../bd/adc_dma_bd/ip/adc_dma_bd_TAR_0_0/sim/adc_dma_bd_TAR_0_0.vhd" \
+"../../../bd/adc_dma_bd/sim/adc_dma_bd.vhd" \
+
+# Do not sort compile order
+nosort

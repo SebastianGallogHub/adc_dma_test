@@ -1,0 +1,35 @@
+verilog xil_defaultlib --include "/tools/Xilinx/Vivado/2023.1/data/xilinx_vip/include" --include "../../../../adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/ec67/hdl" --include "../../../../adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/aed8/hdl" --include "../../../../adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/30ef" \
+"../../../bd/adc_dma_bd/ip/adc_dma_bd_processing_system7_0_0/sim/adc_dma_bd_processing_system7_0_0.v" \
+
+verilog fifo_generator_v13_2_8 --include "/tools/Xilinx/Vivado/2023.1/data/xilinx_vip/include" --include "../../../../adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/ec67/hdl" --include "../../../../adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/aed8/hdl" --include "../../../../adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/30ef" \
+"../../../../adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/c97d/simulation/fifo_generator_vlog_beh.v" \
+"../../../../adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/c97d/hdl/fifo_generator_v13_2_rfs.v" \
+
+verilog xil_defaultlib --include "/tools/Xilinx/Vivado/2023.1/data/xilinx_vip/include" --include "../../../../adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/ec67/hdl" --include "../../../../adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/aed8/hdl" --include "../../../../adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/30ef" \
+"../../../bd/adc_dma_bd/ip/adc_dma_bd_ZmodADC1410_Controll_0_0/src/fifo_generator_adc/sim/fifo_generator_adc.v" \
+"../../../bd/adc_dma_bd/ip/adc_dma_bd_xbar_0/sim/adc_dma_bd_xbar_0.v" \
+"../../../bd/adc_dma_bd/ip/adc_dma_bd_xbar_1/sim/adc_dma_bd_xbar_1.v" \
+"../../../bd/adc_dma_bd/ip/adc_dma_bd_xlconcat_0_0/sim/adc_dma_bd_xlconcat_0_0.v" \
+"../../../bd/adc_dma_bd/ip/adc_dma_bd_clk_wiz_0_0/adc_dma_bd_clk_wiz_0_0_clk_wiz.v" \
+"../../../bd/adc_dma_bd/ip/adc_dma_bd_clk_wiz_0_0/adc_dma_bd_clk_wiz_0_0.v" \
+"../../../bd/adc_dma_bd/ip/adc_dma_bd_AXI_ZmodADC1410_0_0/src/TX_FIFO/sim/TX_FIFO.v" \
+"../../../bd/adc_dma_bd/ip/adc_dma_bd_AXI_ZmodADC1410_0_0/src/RX_FIFO/sim/RX_FIFO.v" \
+
+verilog blk_mem_gen_v8_4_6 --include "/tools/Xilinx/Vivado/2023.1/data/xilinx_vip/include" --include "../../../../adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/ec67/hdl" --include "../../../../adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/aed8/hdl" --include "../../../../adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/30ef" \
+"../../../../adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_AXI_ZmodADC1410_0_0/src/blk_mem_gen_0/simulation/blk_mem_gen_v8_4.v" \
+
+verilog xil_defaultlib --include "/tools/Xilinx/Vivado/2023.1/data/xilinx_vip/include" --include "../../../../adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/ec67/hdl" --include "../../../../adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/aed8/hdl" --include "../../../../adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/30ef" \
+"../../../bd/adc_dma_bd/ip/adc_dma_bd_AXI_ZmodADC1410_0_0/src/blk_mem_gen_0/sim/blk_mem_gen_0.v" \
+"../../../bd/adc_dma_bd/ip/adc_dma_bd_auto_pc_0/sim/adc_dma_bd_auto_pc_0.v" \
+"../../../bd/adc_dma_bd/ip/adc_dma_bd_auto_cc_0/sim/adc_dma_bd_auto_cc_0.v" \
+"../../../bd/adc_dma_bd/ip/adc_dma_bd_auto_us_0/sim/adc_dma_bd_auto_us_0.v" \
+"../../../bd/adc_dma_bd/ip/adc_dma_bd_auto_us_1/sim/adc_dma_bd_auto_us_1.v" \
+"../../../bd/adc_dma_bd/ip/adc_dma_bd_auto_us_2/sim/adc_dma_bd_auto_us_2.v" \
+"../../../bd/adc_dma_bd/ip/adc_dma_bd_auto_pc_1/sim/adc_dma_bd_auto_pc_1.v" \
+"../../../bd/adc_dma_bd/ip/adc_dma_bd_s01_mmu_0/sim/adc_dma_bd_s01_mmu_0.v" \
+"../../../bd/adc_dma_bd/ip/adc_dma_bd_s02_mmu_0/sim/adc_dma_bd_s02_mmu_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

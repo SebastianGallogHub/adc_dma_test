@@ -4,7 +4,7 @@
     "xci_name": "adc_dma_bd_TAR_0_0",
     "cell_name": "TAR_0",
     "component_reference": "user.org:user:TAR:1.0",
-    "ip_revision": "8",
+    "ip_revision": "13",
     "gen_directory": "../../../../../../adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_TAR_0_0",
     "parameters": {
       "component_parameters": {
@@ -39,13 +39,13 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "8" } ],
+        "IPREVISION": [ { "value": "13" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_TAR_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],
         "SHAREDDIR": [ { "value": "../../ipshared" } ],
         "SWVERSION": [ { "value": "2023.1" } ],
-        "SYNTHESISFLOW": [ { "value": "OUT_OF_CONTEXT" } ]
+        "SYNTHESISFLOW": [ { "value": "GLOBAL" } ]
       }
     },
     "boundary": {
