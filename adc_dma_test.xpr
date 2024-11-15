@@ -44,6 +44,7 @@
     <Option Name="SimulatorGccVersionRiviera" Val="9.3.0"/>
     <Option Name="SimulatorGccVersionActiveHdl" Val="9.3.0"/>
     <Option Name="TargetLanguage" Val="VHDL"/>
+    <Option Name="TargetSimulator" Val="Riviera"/>
     <Option Name="BoardPart" Val="digilentinc.com:eclypse-z7:part0:1.1"/>
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
@@ -113,6 +114,14 @@
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
       <Filter Type="Constrs"/>
+      <File Path="$PSRCDIR/constrs_1/imports/constrs/ZmodADC.xdc">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="$PPRDIR/../../documentacion/vivado-library-zmod-v1-2019.1-2/hierarchies/ZmodADC/constrs/ZmodADC.xdc"/>
+          <Attr Name="ImportTime" Val="1636679497"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
