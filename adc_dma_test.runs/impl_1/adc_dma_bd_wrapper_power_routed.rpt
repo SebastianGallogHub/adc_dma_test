@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date             : Fri Nov 15 13:19:29 2024
+| Date             : Fri Nov 15 19:45:19 2024
 | Host             : sebasHAL running 64-bit Ubuntu 20.04.6 LTS
 | Command          : report_power -file adc_dma_bd_wrapper_power_routed.rpt -pb adc_dma_bd_wrapper_power_summary_routed.pb -rpx adc_dma_bd_wrapper_power_routed.rpx
 | Design           : adc_dma_bd_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.825        |
+| Total On-Chip Power (W)  | 1.861        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.678        |
-| Device Static (W)        | 0.147        |
+| Dynamic (W)              | 1.713        |
+| Device Static (W)        | 0.148        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 64.0         |
-| Junction Temperature (C) | 46.0         |
+| Max Ambient (C)          | 63.5         |
+| Junction Temperature (C) | 46.5         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,25 +52,24 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.033 |        7 |       --- |             --- |
-| Slice Logic              |     0.008 |    15967 |       --- |             --- |
-|   LUT as Logic           |     0.006 |     4504 |     53200 |            8.47 |
+| Clocks                   |     0.035 |       13 |       --- |             --- |
+| Slice Logic              |     0.007 |    15958 |       --- |             --- |
+|   LUT as Logic           |     0.006 |     4494 |     53200 |            8.45 |
 |   Register               |    <0.001 |     8659 |    106400 |            8.14 |
-|   LUT as Distributed RAM |    <0.001 |       26 |     17400 |            0.15 |
 |   CARRY4                 |    <0.001 |      183 |     13300 |            1.38 |
-|   BUFG                   |    <0.001 |        3 |        32 |            9.38 |
 |   F7/F8 Muxes            |    <0.001 |       96 |     53200 |            0.18 |
+|   LUT as Distributed RAM |    <0.001 |       26 |     17400 |            0.15 |
 |   LUT as Shift Register  |    <0.001 |      256 |     17400 |            1.47 |
 |   Others                 |     0.000 |      810 |       --- |             --- |
-| Signals                  |     0.016 |    11814 |       --- |             --- |
+| Signals                  |     0.011 |    11800 |       --- |             --- |
 | Block RAM                |    <0.001 |        3 |       140 |            2.14 |
 | MMCM                     |     0.124 |        1 |         4 |           25.00 |
-| PLL                      |     0.059 |        1 |         4 |           25.00 |
+| PLL                      |     0.097 |        1 |         4 |           25.00 |
 | DSPs                     |    <0.001 |        1 |       220 |            0.45 |
-| I/O                      |     0.032 |       32 |       200 |           16.00 |
+| I/O                      |     0.034 |       32 |       200 |           16.00 |
 | PS7                      |     1.404 |        1 |       --- |             --- |
-| Static Power             |     0.147 |          |           |                 |
-| Total                    |     1.825 |          |           |                 |
+| Static Power             |     0.148 |          |           |                 |
+| Total                    |     1.861 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -80,11 +79,11 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.085 |       0.070 |      0.016 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.123 |       0.107 |      0.016 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.082 |       0.066 |      0.016 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.140 |       0.125 |      0.016 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vcco18    |       1.800 |     0.007 |       0.006 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco18    |       1.800 |     0.011 |       0.010 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -140,15 +139,21 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+---------------------------------+---------------------------------------------------------------+-----------------+
-| Clock                           | Domain                                                        | Constraint (ns) |
-+---------------------------------+---------------------------------------------------------------+-----------------+
-| clk_fpga_0                      | adc_dma_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0] |            10.0 |
-| clk_fpga_1                      | adc_dma_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1] |            10.0 |
-| clk_out1_adc_dma_bd_clk_wiz_0_0 | adc_dma_bd_i/clk_wiz_0/inst/clk_out1_adc_dma_bd_clk_wiz_0_0   |             2.5 |
-| clkfbout_adc_dma_bd_clk_wiz_0_0 | adc_dma_bd_i/clk_wiz_0/inst/clkfbout_adc_dma_bd_clk_wiz_0_0   |             8.0 |
-| sys_clock                       | sys_clock                                                     |             8.0 |
-+---------------------------------+---------------------------------------------------------------+-----------------+
++-----------------------------------+---------------------------------------------------------------+-----------------+
+| Clock                             | Domain                                                        | Constraint (ns) |
++-----------------------------------+---------------------------------------------------------------+-----------------+
+| DcoClk_0                          | DcoClk_0                                                      |            10.0 |
+| FboutDcoClk                       | adc_dma_bd_i/ZmodADC1410_Controll_0/U0/FboutDcoClk            |            10.0 |
+| I                                 | adc_dma_bd_i/ZmodADC1410_Controll_0/U0/I                      |            10.0 |
+| clk_fpga_0                        | adc_dma_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[0] |            10.0 |
+| clk_fpga_1                        | adc_dma_bd_i/processing_system7_0/inst/FCLK_CLK_unbuffered[1] |            10.0 |
+| clk_out1_adc_dma_bd_clk_wiz_0_0   | adc_dma_bd_i/clk_wiz_0/inst/clk_out1_adc_dma_bd_clk_wiz_0_0   |             2.5 |
+| clk_out1_adc_dma_bd_clk_wiz_0_0_1 | adc_dma_bd_i/clk_wiz_0/inst/clk_out1_adc_dma_bd_clk_wiz_0_0   |             2.5 |
+| clkfbout_adc_dma_bd_clk_wiz_0_0   | adc_dma_bd_i/clk_wiz_0/inst/clkfbout_adc_dma_bd_clk_wiz_0_0   |             8.0 |
+| clkfbout_adc_dma_bd_clk_wiz_0_0_1 | adc_dma_bd_i/clk_wiz_0/inst/clkfbout_adc_dma_bd_clk_wiz_0_0   |             8.0 |
+| sys_clk_pin                       | sys_clock                                                     |             8.0 |
+| sys_clock                         | sys_clock                                                     |             8.0 |
++-----------------------------------+---------------------------------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -160,19 +165,19 @@ Table of Contents
 +----------------------------+-----------+
 | Name                       | Power (W) |
 +----------------------------+-----------+
-| adc_dma_bd_wrapper         |     1.678 |
-|   adc_dma_bd_i             |     1.674 |
+| adc_dma_bd_wrapper         |     1.713 |
+|   adc_dma_bd_i             |     1.711 |
 |     AXI_ZmodADC1410_0      |     0.014 |
 |       U0                   |     0.014 |
-|     ZmodADC1410_Controll_0 |     0.101 |
-|       U0                   |     0.101 |
-|     axi_dma_0              |     0.014 |
-|       U0                   |     0.014 |
-|     axi_mem_intercon       |     0.009 |
+|     ZmodADC1410_Controll_0 |     0.138 |
+|       U0                   |     0.138 |
+|     axi_dma_0              |     0.013 |
+|       U0                   |     0.013 |
+|     axi_mem_intercon       |     0.008 |
 |       m00_couplers         |     0.002 |
 |       s00_couplers         |     0.002 |
 |       s01_couplers         |     0.001 |
-|       xbar                 |     0.003 |
+|       xbar                 |     0.002 |
 |     clk_wiz_0              |     0.125 |
 |       inst                 |     0.125 |
 |     processing_system7_0   |     1.405 |

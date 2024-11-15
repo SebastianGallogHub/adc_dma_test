@@ -1,19 +1,20 @@
 set_property SRC_FILE_INFO {cfile:/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_processing_system7_0_0/adc_dma_bd_processing_system7_0_0.xdc rfile:../../../adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_processing_system7_0_0/adc_dma_bd_processing_system7_0_0.xdc id:1 order:EARLY scoped_inst:adc_dma_bd_i/processing_system7_0/inst} [current_design]
 set_property SRC_FILE_INFO {cfile:/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_axi_dma_0_0/adc_dma_bd_axi_dma_0_0.xdc rfile:../../../adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_axi_dma_0_0/adc_dma_bd_axi_dma_0_0.xdc id:2 order:EARLY scoped_inst:adc_dma_bd_i/axi_dma_0/U0} [current_design]
 set_property SRC_FILE_INFO {cfile:/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_clk_wiz_0_0/adc_dma_bd_clk_wiz_0_0.xdc rfile:../../../adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_clk_wiz_0_0/adc_dma_bd_clk_wiz_0_0.xdc id:3 order:EARLY scoped_inst:adc_dma_bd_i/clk_wiz_0/inst} [current_design]
-set_property SRC_FILE_INFO {cfile:/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl rfile:../../../../../../../../../tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl id:4 order:LATE scoped_inst:adc_dma_bd_i/AXI_ZmodADC1410_0/U0/SPI_Adapter_inst/RECEIVE_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl rfile:../../../../../../../../../tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl id:5 order:LATE scoped_inst:adc_dma_bd_i/AXI_ZmodADC1410_0/U0/SPI_Adapter_inst/RECEIVE_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl rfile:../../../../../../../../../tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl id:6 order:LATE scoped_inst:adc_dma_bd_i/AXI_ZmodADC1410_0/U0/SPI_Adapter_inst/TRANSMIT_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl rfile:../../../../../../../../../tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl id:7 order:LATE scoped_inst:adc_dma_bd_i/AXI_ZmodADC1410_0/U0/SPI_Adapter_inst/TRANSMIT_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl rfile:../../../../../../../../../tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl id:8 order:LATE scoped_inst:adc_dma_bd_i/ZmodADC1410_Controll_0/U0/InstChAFIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl rfile:../../../../../../../../../tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl id:9 order:LATE scoped_inst:adc_dma_bd_i/ZmodADC1410_Controll_0/U0/InstChAFIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl rfile:../../../../../../../../../tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl id:10 order:LATE scoped_inst:adc_dma_bd_i/ZmodADC1410_Controll_0/U0/InstChBFIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl rfile:../../../../../../../../../tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl id:11 order:LATE scoped_inst:adc_dma_bd_i/ZmodADC1410_Controll_0/U0/InstChBFIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:../../../../../../../../../tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:12 order:LATE scoped_inst:adc_dma_bd_i/ps7_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:../../../../../../../../../tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:13 order:LATE scoped_inst:adc_dma_bd_i/ps7_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:../../../../../../../../../tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:14 order:LATE scoped_inst:adc_dma_bd_i/ps7_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:../../../../../../../../../tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:15 order:LATE scoped_inst:adc_dma_bd_i/ps7_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake unmanaged:yes} [current_design]
-set_property SRC_FILE_INFO {cfile:/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:../../../../../../../../../tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:16 order:LATE scoped_inst:adc_dma_bd_i/ps7_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.srcs/constrs_1/new/adc_dma_test_pinout.xdc rfile:../../../adc_dma_test.srcs/constrs_1/new/adc_dma_test_pinout.xdc id:4} [current_design]
+set_property SRC_FILE_INFO {cfile:/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl rfile:../../../../../../../../../tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl id:5 order:LATE scoped_inst:adc_dma_bd_i/AXI_ZmodADC1410_0/U0/SPI_Adapter_inst/RECEIVE_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl rfile:../../../../../../../../../tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl id:6 order:LATE scoped_inst:adc_dma_bd_i/AXI_ZmodADC1410_0/U0/SPI_Adapter_inst/RECEIVE_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl rfile:../../../../../../../../../tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl id:7 order:LATE scoped_inst:adc_dma_bd_i/AXI_ZmodADC1410_0/U0/SPI_Adapter_inst/TRANSMIT_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl rfile:../../../../../../../../../tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl id:8 order:LATE scoped_inst:adc_dma_bd_i/AXI_ZmodADC1410_0/U0/SPI_Adapter_inst/TRANSMIT_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl rfile:../../../../../../../../../tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl id:9 order:LATE scoped_inst:adc_dma_bd_i/ZmodADC1410_Controll_0/U0/InstChAFIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl rfile:../../../../../../../../../tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl id:10 order:LATE scoped_inst:adc_dma_bd_i/ZmodADC1410_Controll_0/U0/InstChAFIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl rfile:../../../../../../../../../tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl id:11 order:LATE scoped_inst:adc_dma_bd_i/ZmodADC1410_Controll_0/U0/InstChBFIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl rfile:../../../../../../../../../tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_gray.tcl id:12 order:LATE scoped_inst:adc_dma_bd_i/ZmodADC1410_Controll_0/U0/InstChBFIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:../../../../../../../../../tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:13 order:LATE scoped_inst:adc_dma_bd_i/ps7_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:../../../../../../../../../tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:14 order:LATE scoped_inst:adc_dma_bd_i/ps7_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:../../../../../../../../../tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:15 order:LATE scoped_inst:adc_dma_bd_i/ps7_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:../../../../../../../../../tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:16 order:LATE scoped_inst:adc_dma_bd_i/ps7_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake unmanaged:yes} [current_design]
+set_property SRC_FILE_INFO {cfile:/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl rfile:../../../../../../../../../tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_cdc/tcl/xpm_cdc_handshake.tcl id:17 order:LATE scoped_inst:adc_dma_bd_i/ps7_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake unmanaged:yes} [current_design]
 current_instance adc_dma_bd_i/processing_system7_0/inst
 set_property src_info {type:SCOPED_XDC file:1 line:21 export:INPUT save:INPUT read:READ} [current_design]
 set_input_jitter clk_fpga_0 0.3
@@ -292,54 +293,184 @@ current_instance adc_dma_bd_i/clk_wiz_0/inst
 set_property src_info {type:SCOPED_XDC file:3 line:57 export:INPUT save:INPUT read:READ} [current_design]
 set_input_jitter [get_clocks -of_objects [get_ports clk_in1]] 0.080
 current_instance
+set_property src_info {type:XDC file:4 line:2 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN D18   IOSTANDARD LVCMOS33 } [get_ports { sys_clock }]; #IO_L12P_T1_MRCC Sch=sysclk
+set_property src_info {type:XDC file:4 line:7 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN N20  } [get_ports { adcClkIn_n_0 }]; #IO_L14N_T2_SRCC Sch=syzygy_a_c2p_clk_n
+set_property src_info {type:XDC file:4 line:8 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN N19  } [get_ports { adcClkIn_p_0 }]; #IO_L14P_T2_SRCC Sch=syzygy_a_c2p_clk_p
+set_property src_info {type:XDC file:4 line:11 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN T17   IOSTANDARD LVCMOS18 } [get_ports { sCh1CouplingL_0 }]; #IO_L21N_T3_DQS Sch=syzygy_a_d_n[0]
+set_property src_info {type:XDC file:4 line:12 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN T16   IOSTANDARD LVCMOS18 } [get_ports { sCh1CouplingH_0 }]; #IO_L21P_T3_DQS Sch=syzygy_a_d_p[0]
+set_property src_info {type:XDC file:4 line:13 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN T19   IOSTANDARD LVCMOS18 } [get_ports { sCh2CouplingL_0 }]; #IO_L22N_T3 Sch=syzygy_a_d_n[1]
+set_property src_info {type:XDC file:4 line:14 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN R19   IOSTANDARD LVCMOS18 } [get_ports { sCh2CouplingH_0 }]; #IO_L22P_T3 Sch=syzygy_a_d_p[1]
+set_property src_info {type:XDC file:4 line:15 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN P18   IOSTANDARD LVCMOS18 } [get_ports { sCh2GainL_0 }]; #IO_L20N_T3 Sch=syzygy_a_d_n[3]
+set_property src_info {type:XDC file:4 line:16 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN P17   IOSTANDARD LVCMOS18 } [get_ports { sCh2GainH_0 }]; #IO_L20P_T3 Sch=syzygy_a_d_p[3]
+set_property src_info {type:XDC file:4 line:17 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN P15   IOSTANDARD LVCMOS18 } [get_ports { sCh1GainL_0 }]; #IO_L19N_T3_VREF Sch=syzygy_a_d_n[5]
+set_property src_info {type:XDC file:4 line:18 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN N15   IOSTANDARD LVCMOS18 } [get_ports { sCh1GainH_0 }]; #IO_L19P_T3 Sch=syzygy_a_d_p[5]
+set_property src_info {type:XDC file:4 line:19 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN K21   IOSTANDARD LVCMOS18 } [get_ports { sRelayComL_0 }]; #IO_L9N_T1_DQS Sch=syzygy_a_d_n[7]
+set_property src_info {type:XDC file:4 line:20 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN J20   IOSTANDARD LVCMOS18 } [get_ports { sRelayComH_0 }]; #IO_L9P_T1_DQS Sch=syzygy_a_d_p[7]
+set_property src_info {type:XDC file:4 line:22 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN T18   IOSTANDARD LVCMOS18 } [get_ports { sADC_Sclk_0 }]; #IO_L23N_T3 Sch=syzygy_a_d_n[2]
+set_property src_info {type:XDC file:4 line:23 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN R18   IOSTANDARD LVCMOS18 } [get_ports { sADC_SDIO_0 }]; #IO_L23P_T3 Sch=syzygy_a_d_p[2]
+set_property src_info {type:XDC file:4 line:24 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN M21   IOSTANDARD LVCMOS18 } [get_ports { sADC_CS_0 }]; #IO_L15P_T2_DQS Sch=syzygy_a_s[26]
+set_property src_info {type:XDC file:4 line:26 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN M22  } [get_ports { adcSync_0 }]; #IO_L15N_T2_DQS Sch=syzygy_a_s[27]
+set_property src_info {type:XDC file:4 line:31 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN M19  } [get_ports { DcoClk_0 }]; #IO_L13P_T2_MRCC Sch=syzygy_a_p2c_clk_p
+set_property src_info {type:XDC file:4 line:34 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN N22   IOSTANDARD LVCMOS18 } [get_ports { dADC_Data_0[0] }]; #IO_L16P_T2 Sch=syzygy_a_s[24]
+set_property src_info {type:XDC file:4 line:35 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN L21   IOSTANDARD LVCMOS18 } [get_ports { dADC_Data_0[1] }]; #IO_L10P_T1 Sch=syzygy_a_s[22]
+set_property src_info {type:XDC file:4 line:36 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN R16   IOSTANDARD LVCMOS18 } [get_ports { dADC_Data_0[2] }]; #IO_L24N_T3 Sch=syzygy_a_d_n[4]
+set_property src_info {type:XDC file:4 line:37 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN J18   IOSTANDARD LVCMOS18 } [get_ports { dADC_Data_0[3] }]; #IO_L7P_T1 Sch=syzygy_a_d_p[6]
+set_property src_info {type:XDC file:4 line:38 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN K18   IOSTANDARD LVCMOS18 } [get_ports { dADC_Data_0[4] }]; #IO_L7N_T1 Sch=syzygy_a_d_n[6]
+set_property src_info {type:XDC file:4 line:39 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN L19   IOSTANDARD LVCMOS18 } [get_ports { dADC_Data_0[5] }]; #IO_L12N_T1_MRCC Sch=syzygy_a_s[16]
+set_property src_info {type:XDC file:4 line:40 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN L18   IOSTANDARD LVCMOS18 } [get_ports { dADC_Data_0[6] }]; #IO_L12P_T1_MRCC Sch=syzygy_a_s[18]
+set_property src_info {type:XDC file:4 line:41 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN L22   IOSTANDARD LVCMOS18 } [get_ports { dADC_Data_0[7] }]; #IO_L10N_T1 Sch=syzygy_a_s[20]
+set_property src_info {type:XDC file:4 line:42 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN K20   IOSTANDARD LVCMOS18 } [get_ports { dADC_Data_0[8] }]; #IO_L11N_T1_SRCC Sch=syzygy_a_s[17]
+set_property src_info {type:XDC file:4 line:43 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN P16   IOSTANDARD LVCMOS18 } [get_ports { dADC_Data_0[9] }]; #IO_L24P_T3 Sch=syzygy_a_d_p[4]
+set_property src_info {type:XDC file:4 line:44 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN K19   IOSTANDARD LVCMOS18 } [get_ports { dADC_Data_0[10] }]; #IO_L11P_T1_SRCC Sch=syzygy_a_s[19]
+set_property src_info {type:XDC file:4 line:45 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN J22   IOSTANDARD LVCMOS18 } [get_ports { dADC_Data_0[11] }]; #IO_L8N_T1 Sch=syzygy_a_s[21]
+set_property src_info {type:XDC file:4 line:46 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN J21   IOSTANDARD LVCMOS18 } [get_ports { dADC_Data_0[12] }]; #IO_L8P_T1 Sch=syzygy_a_s[23]
+set_property src_info {type:XDC file:4 line:47 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN P22   IOSTANDARD LVCMOS18 } [get_ports { dADC_Data_0[13] }]; #IO_L16N_T2 Sch=syzygy_a_s[25]
+set_property src_info {type:XDC file:4 line:52 export:INPUT save:INPUT read:READ} [current_design]
+create_generated_clock -name adcClkIn_p_0 -source [get_pins design_1_i/ZmodADC1410_Controll_0/U0/InstADC_ClkODDR/C] -divide_by 1 [get_ports adcClkIn_p_0]
+set_property src_info {type:XDC file:4 line:60 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN Y19   IOSTANDARD LVCMOS18 } [get_ports { sDAC_Data_0[0] }]; #IO_L11P_T1_SRCC Sch=syzygy_b_s[19]
+set_property src_info {type:XDC file:4 line:61 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN Y18   IOSTANDARD LVCMOS18 } [get_ports { sDAC_Data_0[1] }]; #IO_L12P_T1_MRCC Sch=syzygy_b_s[18]
+set_property src_info {type:XDC file:4 line:62 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN AB22  IOSTANDARD LVCMOS18 } [get_ports { sDAC_Data_0[2] }]; #IO_L7N_T1 Sch=syzygy_b_d_n[6]
+set_property src_info {type:XDC file:4 line:63 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN AB20  IOSTANDARD LVCMOS18 } [get_ports { sDAC_Data_0[3] }]; #IO_L10N_T1 Sch=syzygy_b_s[20]
+set_property src_info {type:XDC file:4 line:64 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN AA18  IOSTANDARD LVCMOS18 } [get_ports { sDAC_Data_0[4] }]; #IO_L12N_T1_MRCC Sch=syzygy_b_s[16]
+set_property src_info {type:XDC file:4 line:65 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN AA19  IOSTANDARD LVCMOS18 } [get_ports { sDAC_Data_0[5] }]; #IO_L11N_T1_SRCC Sch=syzygy_b_s[17]
+set_property src_info {type:XDC file:4 line:66 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN Y21   IOSTANDARD LVCMOS18 } [get_ports { sDAC_Data_0[6] }]; #IO_L9N_T1_DQS Sch=syzygy_b_d_n[7]
+set_property src_info {type:XDC file:4 line:67 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN Y20   IOSTANDARD LVCMOS18 } [get_ports { sDAC_Data_0[7] }]; #IO_L9P_T1_DQS Sch=syzygy_b_d_p[7]
+set_property src_info {type:XDC file:4 line:68 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN V15   IOSTANDARD LVCMOS18 } [get_ports { sDAC_Data_0[8] }]; #IO_L19N_T3_VREF Sch=syzygy_b_d_n[5]
+set_property src_info {type:XDC file:4 line:69 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN V14   IOSTANDARD LVCMOS18 } [get_ports { sDAC_Data_0[9] }]; #IO_L19P_T3 Sch=syzygy_b_d_p[5]
+set_property src_info {type:XDC file:4 line:70 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN AB15  IOSTANDARD LVCMOS18 } [get_ports { sDAC_Data_0[10] }]; #IO_L24N_T3 Sch=syzygy_b_d_n[3]
+set_property src_info {type:XDC file:4 line:71 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN AB14  IOSTANDARD LVCMOS18 } [get_ports { sDAC_Data_0[11] }]; #IO_L24P_T3 Sch=syzygy_b_d_p[3]
+set_property src_info {type:XDC file:4 line:72 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN W13   IOSTANDARD LVCMOS18 } [get_ports { sDAC_Data_0[12] }]; #IO_L20N_T3 Sch=syzygy_b_d_n[1]
+set_property src_info {type:XDC file:4 line:73 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN V13   IOSTANDARD LVCMOS18 } [get_ports { sDAC_Data_0[13] }]; #IO_L20P_T3 Sch=syzygy_b_d_p[1]
+set_property src_info {type:XDC file:4 line:75 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN W16   IOSTANDARD LVCMOS18 } [get_ports { sDAC_Clkin_0 }]; #IO_L14P_T2_SRCC Sch=syzygy_b_c2p_clk_p
+set_property src_info {type:XDC file:4 line:76 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN W17   IOSTANDARD LVCMOS18 } [get_ports { sDAC_ClkIO_0 }]; #IO_L13P_T2_MRCC Sch=syzygy_b_p2c_clk_p
+set_property src_info {type:XDC file:4 line:78 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN Y14   IOSTANDARD LVCMOS18 } [get_ports { sDAC_SDIO_0 }]; #IO_L22P_T3 Sch=syzygy_b_d_p[4]
+set_property src_info {type:XDC file:4 line:79 export:INPUT save:INPUT read:READ} [current_design]
+set_property DRIVE 4 [get_ports sDAC_SDIO_0]
+set_property src_info {type:XDC file:4 line:80 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN AA14  IOSTANDARD LVCMOS18 } [get_ports { sDAC_CS_0 }]; #IO_L22N_T3 Sch=syzygy_b_d_n[4]
+set_property src_info {type:XDC file:4 line:81 export:INPUT save:INPUT read:READ} [current_design]
+set_property DRIVE 4 [get_ports sDAC_CS_0]
+set_property src_info {type:XDC file:4 line:82 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN AA13  IOSTANDARD LVCMOS18 } [get_ports { sDAC_SCLK_0 }]; #IO_L23N_T3 Sch=syzygy_b_d_n[2]
+set_property src_info {type:XDC file:4 line:83 export:INPUT save:INPUT read:READ} [current_design]
+set_property DRIVE 4 [get_ports sDAC_SCLK_0]
+set_property src_info {type:XDC file:4 line:85 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN W15   IOSTANDARD LVCMOS18 } [get_ports { sDAC_SetFS1_0 }]; #IO_L21P_T3_DQS Sch=syzygy_b_d_p[0]
+set_property src_info {type:XDC file:4 line:86 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN Y15   IOSTANDARD LVCMOS18 } [get_ports { sDAC_SetFS2_0 }]; #IO_L21N_T3_DQS Sch=syzygy_b_d_n[0]
+set_property src_info {type:XDC file:4 line:87 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN Y13   IOSTANDARD LVCMOS18 } [get_ports { sDAC_Reset_0 }]; #IO_L23P_T3 Sch=syzygy_b_d_p[2]
+set_property src_info {type:XDC file:4 line:88 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict { PACKAGE_PIN AA22  IOSTANDARD LVCMOS18 } [get_ports { sDAC_EnOut_0 }]; #IO_L7P_T1 Sch=syzygy_b_d_p[6]
+set_property src_info {type:XDC file:4 line:90 export:INPUT save:INPUT read:READ} [current_design]
+create_generated_clock -name sDAC_Clkin_0 -source [get_pins design_1_i/ZmodDAC1411_Controll_0/U0/InstDAC_ClkinODDR/C] -divide_by 1 [get_ports sDAC_Clkin_0]
+set_property src_info {type:XDC file:4 line:91 export:INPUT save:INPUT read:READ} [current_design]
+create_generated_clock -name sDAC_ClkIO_0 -source [get_pins design_1_i/ZmodDAC1411_Controll_0/U0/InstDAC_ClkIO_ODDR/C] -divide_by 1 [get_ports sDAC_ClkIO_0]
+set_property src_info {type:XDC file:4 line:93 export:INPUT save:INPUT read:READ} [current_design]
+set_output_delay -clock [get_clocks sDAC_Clkin_0] -clock_fall -min -add_delay -0.100 [get_ports {sDAC_Data_0[*]}]
+set_property src_info {type:XDC file:4 line:94 export:INPUT save:INPUT read:READ} [current_design]
+set_output_delay -clock [get_clocks sDAC_Clkin_0] -clock_fall -max -add_delay 0.250 [get_ports {sDAC_Data_0[*]}]
+set_property src_info {type:XDC file:4 line:95 export:INPUT save:INPUT read:READ} [current_design]
+set_output_delay -clock [get_clocks sDAC_Clkin_0] -min -add_delay -0.100 [get_ports {sDAC_Data_0[*]}]
+set_property src_info {type:XDC file:4 line:96 export:INPUT save:INPUT read:READ} [current_design]
+set_output_delay -clock [get_clocks sDAC_Clkin_0] -max -add_delay 0.150 [get_ports {sDAC_Data_0[*]}]
 current_instance adc_dma_bd_i/AXI_ZmodADC1410_0/U0/SPI_Adapter_inst/RECEIVE_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst
-set_property src_info {type:SCOPED_XDC file:4 line:23 export:INPUT save:NONE read:READ} [current_design]
-create_waiver -internal -scoped -type CDC -id {CDC-6} -user "xpm_cdc" -tags "1009444" -desc "The CDC-6 warning is waived as it is safe in the context of XPM_CDC_GRAY." -from [get_pins -quiet {src_gray_ff_reg*/C}] -to [get_pins -quiet {dest_graysync_ff_reg*/D}]
-current_instance
-current_instance adc_dma_bd_i/AXI_ZmodADC1410_0/U0/SPI_Adapter_inst/RECEIVE_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst
 set_property src_info {type:SCOPED_XDC file:5 line:23 export:INPUT save:NONE read:READ} [current_design]
 create_waiver -internal -scoped -type CDC -id {CDC-6} -user "xpm_cdc" -tags "1009444" -desc "The CDC-6 warning is waived as it is safe in the context of XPM_CDC_GRAY." -from [get_pins -quiet {src_gray_ff_reg*/C}] -to [get_pins -quiet {dest_graysync_ff_reg*/D}]
 current_instance
-current_instance adc_dma_bd_i/AXI_ZmodADC1410_0/U0/SPI_Adapter_inst/TRANSMIT_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst
+current_instance adc_dma_bd_i/AXI_ZmodADC1410_0/U0/SPI_Adapter_inst/RECEIVE_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst
 set_property src_info {type:SCOPED_XDC file:6 line:23 export:INPUT save:NONE read:READ} [current_design]
 create_waiver -internal -scoped -type CDC -id {CDC-6} -user "xpm_cdc" -tags "1009444" -desc "The CDC-6 warning is waived as it is safe in the context of XPM_CDC_GRAY." -from [get_pins -quiet {src_gray_ff_reg*/C}] -to [get_pins -quiet {dest_graysync_ff_reg*/D}]
 current_instance
-current_instance adc_dma_bd_i/AXI_ZmodADC1410_0/U0/SPI_Adapter_inst/TRANSMIT_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst
+current_instance adc_dma_bd_i/AXI_ZmodADC1410_0/U0/SPI_Adapter_inst/TRANSMIT_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst
 set_property src_info {type:SCOPED_XDC file:7 line:23 export:INPUT save:NONE read:READ} [current_design]
 create_waiver -internal -scoped -type CDC -id {CDC-6} -user "xpm_cdc" -tags "1009444" -desc "The CDC-6 warning is waived as it is safe in the context of XPM_CDC_GRAY." -from [get_pins -quiet {src_gray_ff_reg*/C}] -to [get_pins -quiet {dest_graysync_ff_reg*/D}]
 current_instance
-current_instance adc_dma_bd_i/ZmodADC1410_Controll_0/U0/InstChAFIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst
+current_instance adc_dma_bd_i/AXI_ZmodADC1410_0/U0/SPI_Adapter_inst/TRANSMIT_FIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst
 set_property src_info {type:SCOPED_XDC file:8 line:23 export:INPUT save:NONE read:READ} [current_design]
 create_waiver -internal -scoped -type CDC -id {CDC-6} -user "xpm_cdc" -tags "1009444" -desc "The CDC-6 warning is waived as it is safe in the context of XPM_CDC_GRAY." -from [get_pins -quiet {src_gray_ff_reg*/C}] -to [get_pins -quiet {dest_graysync_ff_reg*/D}]
 current_instance
-current_instance adc_dma_bd_i/ZmodADC1410_Controll_0/U0/InstChAFIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst
+current_instance adc_dma_bd_i/ZmodADC1410_Controll_0/U0/InstChAFIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst
 set_property src_info {type:SCOPED_XDC file:9 line:23 export:INPUT save:NONE read:READ} [current_design]
 create_waiver -internal -scoped -type CDC -id {CDC-6} -user "xpm_cdc" -tags "1009444" -desc "The CDC-6 warning is waived as it is safe in the context of XPM_CDC_GRAY." -from [get_pins -quiet {src_gray_ff_reg*/C}] -to [get_pins -quiet {dest_graysync_ff_reg*/D}]
 current_instance
-current_instance adc_dma_bd_i/ZmodADC1410_Controll_0/U0/InstChBFIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst
+current_instance adc_dma_bd_i/ZmodADC1410_Controll_0/U0/InstChAFIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst
 set_property src_info {type:SCOPED_XDC file:10 line:23 export:INPUT save:NONE read:READ} [current_design]
 create_waiver -internal -scoped -type CDC -id {CDC-6} -user "xpm_cdc" -tags "1009444" -desc "The CDC-6 warning is waived as it is safe in the context of XPM_CDC_GRAY." -from [get_pins -quiet {src_gray_ff_reg*/C}] -to [get_pins -quiet {dest_graysync_ff_reg*/D}]
 current_instance
-current_instance adc_dma_bd_i/ZmodADC1410_Controll_0/U0/InstChBFIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst
+current_instance adc_dma_bd_i/ZmodADC1410_Controll_0/U0/InstChBFIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst
 set_property src_info {type:SCOPED_XDC file:11 line:23 export:INPUT save:NONE read:READ} [current_design]
 create_waiver -internal -scoped -type CDC -id {CDC-6} -user "xpm_cdc" -tags "1009444" -desc "The CDC-6 warning is waived as it is safe in the context of XPM_CDC_GRAY." -from [get_pins -quiet {src_gray_ff_reg*/C}] -to [get_pins -quiet {dest_graysync_ff_reg*/D}]
 current_instance
-current_instance adc_dma_bd_i/ps7_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake
-set_property src_info {type:SCOPED_XDC file:12 line:30 export:INPUT save:NONE read:READ} [current_design]
-create_waiver -internal -scoped -type CDC -id {CDC-15} -user "xpm_cdc" -tags "1009444" -desc "The CDC-15 warning is waived as it is safe in the context of XPM_CDC_HANDSHAKE." -from [get_pins -quiet {src_hsdata_ff_reg*/C}] -to [get_pins -quiet {dest_hsdata_ff_reg*/D}]
+current_instance adc_dma_bd_i/ZmodADC1410_Controll_0/U0/InstChBFIFO/U0/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst
+set_property src_info {type:SCOPED_XDC file:12 line:23 export:INPUT save:NONE read:READ} [current_design]
+create_waiver -internal -scoped -type CDC -id {CDC-6} -user "xpm_cdc" -tags "1009444" -desc "The CDC-6 warning is waived as it is safe in the context of XPM_CDC_GRAY." -from [get_pins -quiet {src_gray_ff_reg*/C}] -to [get_pins -quiet {dest_graysync_ff_reg*/D}]
 current_instance
-current_instance adc_dma_bd_i/ps7_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake
+current_instance adc_dma_bd_i/ps7_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_ar/handshake
 set_property src_info {type:SCOPED_XDC file:13 line:30 export:INPUT save:NONE read:READ} [current_design]
 create_waiver -internal -scoped -type CDC -id {CDC-15} -user "xpm_cdc" -tags "1009444" -desc "The CDC-15 warning is waived as it is safe in the context of XPM_CDC_HANDSHAKE." -from [get_pins -quiet {src_hsdata_ff_reg*/C}] -to [get_pins -quiet {dest_hsdata_ff_reg*/D}]
 current_instance
-current_instance adc_dma_bd_i/ps7_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake
+current_instance adc_dma_bd_i/ps7_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_aw/handshake
 set_property src_info {type:SCOPED_XDC file:14 line:30 export:INPUT save:NONE read:READ} [current_design]
 create_waiver -internal -scoped -type CDC -id {CDC-15} -user "xpm_cdc" -tags "1009444" -desc "The CDC-15 warning is waived as it is safe in the context of XPM_CDC_HANDSHAKE." -from [get_pins -quiet {src_hsdata_ff_reg*/C}] -to [get_pins -quiet {dest_hsdata_ff_reg*/D}]
 current_instance
-current_instance adc_dma_bd_i/ps7_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake
+current_instance adc_dma_bd_i/ps7_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_fwd_w/handshake
 set_property src_info {type:SCOPED_XDC file:15 line:30 export:INPUT save:NONE read:READ} [current_design]
 create_waiver -internal -scoped -type CDC -id {CDC-15} -user "xpm_cdc" -tags "1009444" -desc "The CDC-15 warning is waived as it is safe in the context of XPM_CDC_HANDSHAKE." -from [get_pins -quiet {src_hsdata_ff_reg*/C}] -to [get_pins -quiet {dest_hsdata_ff_reg*/D}]
 current_instance
-current_instance adc_dma_bd_i/ps7_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake
+current_instance adc_dma_bd_i/ps7_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_b/handshake
 set_property src_info {type:SCOPED_XDC file:16 line:30 export:INPUT save:NONE read:READ} [current_design]
+create_waiver -internal -scoped -type CDC -id {CDC-15} -user "xpm_cdc" -tags "1009444" -desc "The CDC-15 warning is waived as it is safe in the context of XPM_CDC_HANDSHAKE." -from [get_pins -quiet {src_hsdata_ff_reg*/C}] -to [get_pins -quiet {dest_hsdata_ff_reg*/D}]
+current_instance
+current_instance adc_dma_bd_i/ps7_0_axi_periph/m02_couplers/auto_cc/inst/gen_clock_conv.gen_async_lite_conv.clock_conv_lite_resp_r/handshake
+set_property src_info {type:SCOPED_XDC file:17 line:30 export:INPUT save:NONE read:READ} [current_design]
 create_waiver -internal -scoped -type CDC -id {CDC-15} -user "xpm_cdc" -tags "1009444" -desc "The CDC-15 warning is waived as it is safe in the context of XPM_CDC_HANDSHAKE." -from [get_pins -quiet {src_hsdata_ff_reg*/C}] -to [get_pins -quiet {dest_hsdata_ff_reg*/D}]
