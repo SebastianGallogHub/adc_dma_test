@@ -42,8 +42,8 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_dma_bd_
 # IP: bd/adc_dma_bd/ip/adc_dma_bd_rst_ps7_0_100M_1_0/adc_dma_bd_rst_ps7_0_100M_1_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_dma_bd_rst_ps7_0_100M_1_0 || ORIG_REF_NAME==adc_dma_bd_rst_ps7_0_100M_1_0} -quiet] -quiet
 
-# IP: bd/adc_dma_bd/ip/adc_dma_bd_TAR_0_0/adc_dma_bd_TAR_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_dma_bd_TAR_0_0 || ORIG_REF_NAME==adc_dma_bd_TAR_0_0} -quiet] -quiet
+# IP: bd/adc_dma_bd/ip/adc_dma_bd_TAR_0_1/adc_dma_bd_TAR_0_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_dma_bd_TAR_0_1 || ORIG_REF_NAME==adc_dma_bd_TAR_0_1} -quiet] -quiet
 
 # IP: bd/adc_dma_bd/ip/adc_dma_bd_auto_pc_0/adc_dma_bd_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_dma_bd_auto_pc_0 || ORIG_REF_NAME==adc_dma_bd_auto_pc_0} -quiet] -quiet

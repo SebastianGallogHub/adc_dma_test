@@ -47,13 +47,13 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: user.org:user:TAR:1.0
--- IP Revision: 13
+-- IP Revision: 18
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
 USE ieee.numeric_std.ALL;
 
-ENTITY adc_dma_bd_TAR_0_0 IS
+ENTITY adc_dma_bd_TAR_0_1 IS
   PORT (
     SysClk : IN STD_LOGIC;
     IRst_n : IN STD_LOGIC;
@@ -89,11 +89,11 @@ ENTITY adc_dma_bd_TAR_0_0 IS
     m00_axis_tlast : OUT STD_LOGIC;
     m00_axis_tready : IN STD_LOGIC
   );
-END adc_dma_bd_TAR_0_0;
+END adc_dma_bd_TAR_0_1;
 
-ARCHITECTURE adc_dma_bd_TAR_0_0_arch OF adc_dma_bd_TAR_0_0 IS
+ARCHITECTURE adc_dma_bd_TAR_0_1_arch OF adc_dma_bd_TAR_0_1 IS
   ATTRIBUTE DowngradeIPIdentifiedWarnings : STRING;
-  ATTRIBUTE DowngradeIPIdentifiedWarnings OF adc_dma_bd_TAR_0_0_arch: ARCHITECTURE IS "yes";
+  ATTRIBUTE DowngradeIPIdentifiedWarnings OF adc_dma_bd_TAR_0_1_arch: ARCHITECTURE IS "yes";
   COMPONENT TAR_v1_0 IS
     GENERIC (
       C_S00_AXI_DATA_WIDTH : INTEGER;
@@ -138,11 +138,17 @@ ARCHITECTURE adc_dma_bd_TAR_0_0_arch OF adc_dma_bd_TAR_0_0 IS
       m00_axis_tready : IN STD_LOGIC
     );
   END COMPONENT TAR_v1_0;
+  ATTRIBUTE X_CORE_INFO : STRING;
+  ATTRIBUTE X_CORE_INFO OF adc_dma_bd_TAR_0_1_arch: ARCHITECTURE IS "TAR_v1_0,Vivado 2023.1";
+  ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
+  ATTRIBUTE CHECK_LICENSE_TYPE OF adc_dma_bd_TAR_0_1_arch : ARCHITECTURE IS "adc_dma_bd_TAR_0_1,TAR_v1_0,{}";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER OF IRst_n: SIGNAL IS "XIL_INTERFACENAME IRst_n, POLARITY ACTIVE_LOW, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF IRst_n: SIGNAL IS "xilinx.com:signal:reset:1.0 IRst_n RST";
-  ATTRIBUTE X_INTERFACE_PARAMETER OF SysClk: SIGNAL IS "XIL_INTERFACENAME SysClk, ASSOCIATED_RESET IRst_n, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN adc_dma_bd_processing_system7_0_0_FCLK_CLK1, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF Introut: SIGNAL IS "XIL_INTERFACENAME Introut, SENSITIVITY LEVEL_HIGH, PORTWIDTH 1";
+  ATTRIBUTE X_INTERFACE_INFO OF Introut: SIGNAL IS "xilinx.com:signal:interrupt:1.0 Introut INTERRUPT";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF SysClk: SIGNAL IS "XIL_INTERFACENAME SysClk, ASSOCIATED_RESET IRst_n, ASSOCIATED_BUSIF S00_ZMOD1410, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN adc_dma_bd_processing_system7_0_0_FCLK_CLK1, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF SysClk: SIGNAL IS "xilinx.com:signal:clock:1.0 SysClk CLK";
   ATTRIBUTE X_INTERFACE_PARAMETER OF m00_axis_aclk: SIGNAL IS "XIL_INTERFACENAME M00_AXIS_CLK, ASSOCIATED_BUSIF M00_AXIS, ASSOCIATED_RESET m00_axis_aresetn, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN adc_dma_bd_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF m00_axis_aclk: SIGNAL IS "xilinx.com:signal:clock:1.0 M00_AXIS_CLK CLK";
@@ -179,6 +185,8 @@ ARCHITECTURE adc_dma_bd_TAR_0_0_arch OF adc_dma_bd_TAR_0_0 IS
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_wready: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI WREADY";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_wstrb: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI WSTRB";
   ATTRIBUTE X_INTERFACE_INFO OF s00_axi_wvalid: SIGNAL IS "xilinx.com:interface:aximm:1.0 S00_AXI WVALID";
+  ATTRIBUTE X_INTERFACE_INFO OF sCh1In: SIGNAL IS "user:user:ZMOD1410:2.0 S00_ZMOD1410 ch1_in_data";
+  ATTRIBUTE X_INTERFACE_INFO OF sCh2In: SIGNAL IS "user:user:ZMOD1410:2.0 S00_ZMOD1410 ch2_in_data";
 BEGIN
   U0 : TAR_v1_0
     GENERIC MAP (
@@ -223,4 +231,4 @@ BEGIN
       m00_axis_tlast => m00_axis_tlast,
       m00_axis_tready => m00_axis_tready
     );
-END adc_dma_bd_TAR_0_0_arch;
+END adc_dma_bd_TAR_0_1_arch;

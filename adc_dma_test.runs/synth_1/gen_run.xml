@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1732027681" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/adc_dma_bd_wrapper.dcp">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg484-1" LaunchTime="1732205077" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/adc_dma_bd_wrapper.dcp">
   <File Type="RDS-RDS" Name="adc_dma_bd_wrapper.vds"/>
   <File Type="REPORTS-TCL" Name="adc_dma_bd_wrapper_reports.tcl"/>
   <File Type="PA-TCL" Name="adc_dma_bd_wrapper.tcl"/>
@@ -57,7 +57,7 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
     <Step Id="synth_design"/>
   </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="adc_dma_bd_TAR_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_dma_bd_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="adc_dma_bd_TAR_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_dma_bd_processing_system7_0_0"/>
 </GenRun>

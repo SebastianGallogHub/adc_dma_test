@@ -7,7 +7,8 @@
       "name": "adc_dma_bd",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.1"
+      "tool_version": "2023.1",
+      "validated": "true"
     },
     "design_tree": {
       "processing_system7_0": "",
@@ -221,8 +222,20 @@
         "type": "clk",
         "direction": "I",
         "parameters": {
+          "CLK_DOMAIN": {
+            "value": "adc_dma_bd_sys_clock",
+            "value_src": "default"
+          },
           "FREQ_HZ": {
             "value": "125000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
           },
           "PHASE": {
             "value": "0.0"
@@ -2721,8 +2734,8 @@
       },
       "TAR_0": {
         "vlnv": "user.org:user:TAR:1.0",
-        "xci_name": "adc_dma_bd_TAR_0_0",
-        "xci_path": "ip/adc_dma_bd_TAR_0_0/adc_dma_bd_TAR_0_0.xci",
+        "xci_name": "adc_dma_bd_TAR_0_1",
+        "xci_path": "ip/adc_dma_bd_TAR_0_1/adc_dma_bd_TAR_0_1.xci",
         "inst_hier_path": "TAR_0"
       }
     },
@@ -3057,8 +3070,8 @@
           "ps7_0_axi_periph/M01_ARESETN",
           "axi_mem_intercon/S01_ARESETN",
           "axi_mem_intercon/S02_ARESETN",
-          "TAR_0/s00_axi_aresetn",
-          "TAR_0/m00_axis_aresetn"
+          "TAR_0/m00_axis_aresetn",
+          "TAR_0/s00_axi_aresetn"
         ]
       },
       "sys_clock_1": {

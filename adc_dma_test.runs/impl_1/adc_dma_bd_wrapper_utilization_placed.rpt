@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date         : Wed Nov 20 09:12:20 2024
+| Date         : Thu Nov 21 13:07:48 2024
 | Host         : sebasHAL running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_utilization -file adc_dma_bd_wrapper_utilization_placed.rpt -pb adc_dma_bd_wrapper_utilization_placed.pb
 | Design       : adc_dma_bd_wrapper
@@ -259,7 +259,7 @@ Table of Contents
 | adc_dma_bd_auto_pc_0                |    1 |
 | adc_dma_bd_auto_cc_0                |    1 |
 | adc_dma_bd_ZmodADC1410_Controll_0_0 |    1 |
-| adc_dma_bd_TAR_0_0                  |    1 |
+| adc_dma_bd_TAR_0_1                  |    1 |
 | adc_dma_bd_AXI_ZmodADC1410_0_0      |    1 |
 +-------------------------------------+------+
 
