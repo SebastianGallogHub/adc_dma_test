@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: user.org:user:TAR:1.0
--- IP Revision: 18
+-- IP Revision: 26
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -60,6 +60,11 @@ ENTITY adc_dma_bd_TAR_0_1 IS
     sCh1In : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     sCh2In : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     Introut : OUT STD_LOGIC;
+    Count : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    OUT_REG0 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    OUT_REG1 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    OUT_REG2 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+    OUT_REG3 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     s00_axi_aclk : IN STD_LOGIC;
     s00_axi_aresetn : IN STD_LOGIC;
     s00_axi_awaddr : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
@@ -108,6 +113,11 @@ ARCHITECTURE adc_dma_bd_TAR_0_1_arch OF adc_dma_bd_TAR_0_1 IS
       sCh1In : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
       sCh2In : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
       Introut : OUT STD_LOGIC;
+      Count : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      OUT_REG0 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      OUT_REG1 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      OUT_REG2 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
+      OUT_REG3 : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       s00_axi_aclk : IN STD_LOGIC;
       s00_axi_aresetn : IN STD_LOGIC;
       s00_axi_awaddr : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
@@ -202,6 +212,11 @@ BEGIN
       sCh1In => sCh1In,
       sCh2In => sCh2In,
       Introut => Introut,
+      Count => Count,
+      OUT_REG0 => OUT_REG0,
+      OUT_REG1 => OUT_REG1,
+      OUT_REG2 => OUT_REG2,
+      OUT_REG3 => OUT_REG3,
       s00_axi_aclk => s00_axi_aclk,
       s00_axi_aresetn => s00_axi_aresetn,
       s00_axi_awaddr => s00_axi_awaddr,

@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
---Date        : Thu Nov 21 12:20:02 2024
+--Date        : Mon Dec  9 09:09:28 2024
 --Host        : sebasHAL running 64-bit Ubuntu 20.04.6 LTS
 --Command     : generate_target adc_dma_bd.bd
 --Design      : adc_dma_bd
@@ -3968,6 +3968,11 @@ architecture STRUCTURE of adc_dma_bd is
     sCh1In : in STD_LOGIC_VECTOR ( 15 downto 0 );
     sCh2In : in STD_LOGIC_VECTOR ( 15 downto 0 );
     Introut : out STD_LOGIC;
+    Count : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    OUT_REG0 : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    OUT_REG1 : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    OUT_REG2 : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    OUT_REG3 : out STD_LOGIC_VECTOR ( 31 downto 0 );
     s00_axi_aclk : in STD_LOGIC;
     s00_axi_aresetn : in STD_LOGIC;
     s00_axi_awaddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -4272,6 +4277,11 @@ architecture STRUCTURE of adc_dma_bd is
   signal NLW_AXI_ZmodADC1410_0_sSync_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_AXI_ZmodADC1410_0_s_axis_s2mm_tdata_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_AXI_ZmodADC1410_0_s_axis_s2mm_tkeep_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal NLW_TAR_0_Count_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal NLW_TAR_0_OUT_REG0_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal NLW_TAR_0_OUT_REG1_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal NLW_TAR_0_OUT_REG2_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal NLW_TAR_0_OUT_REG3_UNCONNECTED : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_TAR_0_m00_axis_tstrb_UNCONNECTED : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal NLW_ZmodADC1410_Controll_0_FIFO_EMPTY_CHA_UNCONNECTED : STD_LOGIC;
   signal NLW_ZmodADC1410_Controll_0_FIFO_EMPTY_CHB_UNCONNECTED : STD_LOGIC;
@@ -4411,8 +4421,13 @@ AXI_ZmodADC1410_0: component adc_dma_bd_AXI_ZmodADC1410_0_0
     );
 TAR_0: component adc_dma_bd_TAR_0_1
      port map (
+      Count(31 downto 0) => NLW_TAR_0_Count_UNCONNECTED(31 downto 0),
       IRst_n => rst_ps7_0_100M_1_peripheral_aresetn(0),
       Introut => TAR_0_Introut,
+      OUT_REG0(31 downto 0) => NLW_TAR_0_OUT_REG0_UNCONNECTED(31 downto 0),
+      OUT_REG1(31 downto 0) => NLW_TAR_0_OUT_REG1_UNCONNECTED(31 downto 0),
+      OUT_REG2(31 downto 0) => NLW_TAR_0_OUT_REG2_UNCONNECTED(31 downto 0),
+      OUT_REG3(31 downto 0) => NLW_TAR_0_OUT_REG3_UNCONNECTED(31 downto 0),
       SysClk => processing_system7_0_FCLK_CLK1,
       m00_axis_aclk => processing_system7_0_FCLK_CLK0,
       m00_axis_aresetn => rst_ps7_0_100M_peripheral_aresetn(0),

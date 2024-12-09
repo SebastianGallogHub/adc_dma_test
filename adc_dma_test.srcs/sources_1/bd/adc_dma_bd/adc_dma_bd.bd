@@ -3070,8 +3070,8 @@
           "ps7_0_axi_periph/M01_ARESETN",
           "axi_mem_intercon/S01_ARESETN",
           "axi_mem_intercon/S02_ARESETN",
-          "TAR_0/m00_axis_aresetn",
-          "TAR_0/s00_axi_aresetn"
+          "TAR_0/s00_axi_aresetn",
+          "TAR_0/m00_axis_aresetn"
         ]
       },
       "sys_clock_1": {
