@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date             : Mon Dec  9 09:43:00 2024
+| Date             : Tue Dec 10 14:25:35 2024
 | Host             : sebasHAL running 64-bit Ubuntu 20.04.6 LTS
 | Command          : report_power -file adc_dma_bd_wrapper_power_routed.rpt -pb adc_dma_bd_wrapper_power_summary_routed.pb -rpx adc_dma_bd_wrapper_power_routed.rpx
 | Design           : adc_dma_bd_wrapper
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.862        |
+| Total On-Chip Power (W)  | 1.863        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 1.715        |
@@ -53,14 +53,14 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.037 |       13 |       --- |             --- |
-| Slice Logic              |     0.006 |    16725 |       --- |             --- |
-|   LUT as Logic           |     0.005 |     4846 |     53200 |            9.11 |
-|   Register               |    <0.001 |     9113 |    106400 |            8.56 |
+| Slice Logic              |     0.006 |    16689 |       --- |             --- |
+|   LUT as Logic           |     0.005 |     4836 |     53200 |            9.09 |
+|   Register               |    <0.001 |     9081 |    106400 |            8.53 |
 |   CARRY4                 |    <0.001 |      199 |     13300 |            1.50 |
 |   LUT as Distributed RAM |    <0.001 |       38 |     17400 |            0.22 |
 |   LUT as Shift Register  |    <0.001 |      259 |     17400 |            1.49 |
 |   Others                 |     0.000 |      829 |       --- |             --- |
-| Signals                  |     0.010 |    12675 |       --- |             --- |
+| Signals                  |     0.010 |    12650 |       --- |             --- |
 | Block RAM                |    <0.001 |        3 |       140 |            2.14 |
 | MMCM                     |     0.124 |        1 |         4 |           25.00 |
 | PLL                      |     0.097 |        1 |         4 |           25.00 |
@@ -68,7 +68,7 @@ Table of Contents
 | I/O                      |     0.034 |       32 |       200 |           16.00 |
 | PS7                      |     1.404 |        1 |       --- |             --- |
 | Static Power             |     0.148 |          |           |                 |
-| Total                    |     1.862 |          |           |                 |
+| Total                    |     1.863 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -78,7 +78,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.084 |       0.067 |      0.016 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.084 |       0.068 |      0.016 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.140 |       0.125 |      0.016 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -164,14 +164,14 @@ Table of Contents
 +----------------------------+-----------+
 | Name                       | Power (W) |
 +----------------------------+-----------+
-| adc_dma_bd_wrapper         |     1.714 |
+| adc_dma_bd_wrapper         |     1.715 |
 |   adc_dma_bd_i             |     1.713 |
 |     AXI_ZmodADC1410_0      |     0.016 |
 |       U0                   |     0.016 |
 |     ZmodADC1410_Controll_0 |     0.140 |
 |       U0                   |     0.140 |
-|     axi_dma_0              |     0.012 |
-|       U0                   |     0.012 |
+|     axi_dma_0              |     0.013 |
+|       U0                   |     0.013 |
 |     axi_mem_intercon       |     0.008 |
 |       m00_couplers         |     0.002 |
 |       s00_couplers         |     0.002 |
@@ -183,7 +183,7 @@ Table of Contents
 |       inst                 |     1.405 |
 |     ps7_0_axi_periph       |     0.006 |
 |       m02_couplers         |     0.001 |
-|       s00_couplers         |     0.003 |
+|       s00_couplers         |     0.004 |
 +----------------------------+-----------+
 
 

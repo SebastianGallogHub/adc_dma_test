@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="PULSE_FORMATTER_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="PULSE_FORMATTER_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,248.629 ns"></ZoomEndTime>
+      <Cursor1Time time="358.900 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="465"></NameColumnWidth>
+      <ValueColumnWidth column_width="128"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="5" />
+   <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/rstn">
+      <obj_property name="ElementShortName">rstn</obj_property>
+      <obj_property name="ObjectShortName">rstn</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group150">
+      <obj_property name="label">INPUT</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/timebase_of_intr">
+         <obj_property name="ElementShortName">timebase_of_intr</obj_property>
+         <obj_property name="ObjectShortName">timebase_of_intr</obj_property>
+      </wvobject>
+      <wvobject type="group" fp_name="group148">
+         <obj_property name="label">CHA</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="array" fp_name="/PULSE_FORMATTER_tb/cha_data">
+            <obj_property name="ElementShortName">cha_data[13:0]</obj_property>
+            <obj_property name="ObjectShortName">cha_data[13:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/PULSE_FORMATTER_tb/cha_ts">
+            <obj_property name="ElementShortName">cha_ts[31:0]</obj_property>
+            <obj_property name="ObjectShortName">cha_ts[31:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/cha_dr">
+            <obj_property name="ElementShortName">cha_dr</obj_property>
+            <obj_property name="ObjectShortName">cha_dr</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject type="group" fp_name="group149">
+         <obj_property name="label">CHB</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <wvobject type="array" fp_name="/PULSE_FORMATTER_tb/chb_data">
+            <obj_property name="ElementShortName">chb_data[13:0]</obj_property>
+            <obj_property name="ObjectShortName">chb_data[13:0]</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="/PULSE_FORMATTER_tb/chb_ts">
+            <obj_property name="ElementShortName">chb_ts[31:0]</obj_property>
+            <obj_property name="ObjectShortName">chb_ts[31:0]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/chb_dr">
+            <obj_property name="ElementShortName">chb_dr</obj_property>
+            <obj_property name="ObjectShortName">chb_dr</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group205">
+      <obj_property name="label">M_AXIS</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/m_axis_aclk">
+         <obj_property name="ElementShortName">m_axis_aclk</obj_property>
+         <obj_property name="ObjectShortName">m_axis_aclk</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/m_axis_aresetn">
+         <obj_property name="ElementShortName">m_axis_aresetn</obj_property>
+         <obj_property name="ObjectShortName">m_axis_aresetn</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/m_axis_tvalid">
+         <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/PULSE_FORMATTER_tb/m_axis_tdata">
+         <obj_property name="ElementShortName">m_axis_tdata[47:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tdata[47:0]</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/PULSE_FORMATTER_tb/m_axis_tstrb">
+         <obj_property name="ElementShortName">m_axis_tstrb[5:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tstrb[5:0]</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/m_axis_tlast">
+         <obj_property name="ElementShortName">m_axis_tlast</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tlast</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/m_axis_tready">
+         <obj_property name="ElementShortName">m_axis_tready</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tready</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group206">
+      <obj_property name="label">FIFO</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/fifo_full">
+         <obj_property name="ElementShortName">fifo_full</obj_property>
+         <obj_property name="ObjectShortName">fifo_full</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/fifo_empty">
+         <obj_property name="ElementShortName">fifo_empty</obj_property>
+         <obj_property name="ObjectShortName">fifo_empty</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

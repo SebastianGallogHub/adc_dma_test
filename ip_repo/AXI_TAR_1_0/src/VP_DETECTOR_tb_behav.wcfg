@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="VP_DETECTOR_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="VP_DETECTOR_tb" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="4,000.001 ns"></ZoomEndTime>
+      <Cursor1Time time="4,000.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="364"></NameColumnWidth>
+      <ValueColumnWidth column_width="178"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="4" />
+   <wave_markers>
+      <marker label="" time="230000" />
+      <marker label="" time="350000" />
+      <marker label="" time="1020000" />
+      <marker label="" time="1180000" />
+      <marker label="" time="900000" />
+      <marker label="" time="3240000" />
+      <marker label="" time="1140000" />
+      <marker label="" time="3160000" />
+      <marker label="" time="2770000" />
+      <marker label="" time="2690000" />
+   </wave_markers>
+   <wvobject type="logic" fp_name="/VP_DETECTOR_tb/clk">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/VP_DETECTOR_tb/rstn">
+      <obj_property name="ElementShortName">rstn</obj_property>
+      <obj_property name="ObjectShortName">rstn</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group116">
+      <obj_property name="label">INPUT</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/VP_DETECTOR_tb/cad">
+         <obj_property name="ElementShortName">cad[13:0]</obj_property>
+         <obj_property name="ObjectShortName">cad[13:0]</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">200</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="Reversed">false</obj_property>
+         <obj_property name="AnalogYRangeMin">0</obj_property>
+         <obj_property name="AnalogYRRangeMax">65535</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/VP_DETECTOR_tb/h_high">
+         <obj_property name="ElementShortName">h_high[15:0]</obj_property>
+         <obj_property name="ObjectShortName">h_high[15:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/VP_DETECTOR_tb/h_low">
+         <obj_property name="ElementShortName">h_low[15:0]</obj_property>
+         <obj_property name="ObjectShortName">h_low[15:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/VP_DETECTOR_tb/ts_in">
+         <obj_property name="ElementShortName">ts_in[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ts_in[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group115">
+      <obj_property name="label">OUTPUT</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/VP_DETECTOR_tb/dr">
+         <obj_property name="ElementShortName">dr</obj_property>
+         <obj_property name="ObjectShortName">dr</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/VP_DETECTOR_tb/vp">
+         <obj_property name="ElementShortName">vp[13:0]</obj_property>
+         <obj_property name="ObjectShortName">vp[13:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/VP_DETECTOR_tb/ts">
+         <obj_property name="ElementShortName">ts[31:0]</obj_property>
+         <obj_property name="ObjectShortName">ts[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>
