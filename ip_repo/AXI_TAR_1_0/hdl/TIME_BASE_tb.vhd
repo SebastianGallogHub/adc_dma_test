@@ -24,15 +24,21 @@ use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity TIME_BASE_tb is
+    generic(
+        TS_LEN_tb : integer := 16
+    );
 end TIME_BASE_tb;
 
 architecture Behavioral of TIME_BASE_tb is
 
     -- Component Declaration for the Unit Under Test (UUT)
     component TIME_BASE
+    generic(
+        TS_LEN :integer := 16
+    );
     Port ( clk : in STD_LOGIC;
            rstn : in STD_LOGIC;
-           timestamp : out STD_LOGIC_VECTOR (31 downto 0);
+           timestamp : out STD_LOGIC_VECTOR (TS_LEN-1 downto 0);
            of_introut : out STD_LOGIC);
     end component;
 
@@ -41,7 +47,7 @@ architecture Behavioral of TIME_BASE_tb is
     signal rstn_tb : STD_LOGIC := '1';
     
     -- Outputs
-    signal timestamp_tb : STD_LOGIC_VECTOR (31 downto 0);
+    signal timestamp_tb : STD_LOGIC_VECTOR (TS_LEN_tb-1 downto 0);
     signal of_introut_tb : STD_LOGIC;
 
     -- Clock period definitions
@@ -50,7 +56,11 @@ architecture Behavioral of TIME_BASE_tb is
 begin
 
     -- Instantiate the Unit Under Test (UUT)
-    uut: TIME_BASE Port map (
+    uut: TIME_BASE 
+    generic map(
+        TS_LEN => TS_LEN_tb
+    )
+    Port map (
           clk => clk_tb,
           rstn => rstn_tb,
           timestamp => timestamp_tb,

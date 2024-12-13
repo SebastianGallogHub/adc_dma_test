@@ -11,25 +11,18 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="4,000.001 ns"></ZoomEndTime>
-      <Cursor1Time time="4,000.000 ns"></Cursor1Time>
+      <ZoomEndTime time="3,500.001 ns"></ZoomEndTime>
+      <Cursor1Time time="3,500.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="364"></NameColumnWidth>
-      <ValueColumnWidth column_width="178"></ValueColumnWidth>
+      <ValueColumnWidth column_width="170"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="4" />
    <wave_markers>
-      <marker label="" time="230000" />
-      <marker label="" time="350000" />
       <marker label="" time="1020000" />
-      <marker label="" time="1180000" />
-      <marker label="" time="900000" />
-      <marker label="" time="3240000" />
-      <marker label="" time="1140000" />
       <marker label="" time="3160000" />
-      <marker label="" time="2770000" />
-      <marker label="" time="2690000" />
+      <marker label="" time="2070000" />
    </wave_markers>
    <wvobject type="logic" fp_name="/VP_DETECTOR_tb/clk">
       <obj_property name="ElementShortName">clk</obj_property>
@@ -75,7 +68,6 @@
    <wvobject type="group" fp_name="group115">
       <obj_property name="label">OUTPUT</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="logic" fp_name="/VP_DETECTOR_tb/dr">
          <obj_property name="ElementShortName">dr</obj_property>
          <obj_property name="ObjectShortName">dr</obj_property>

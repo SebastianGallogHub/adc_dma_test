@@ -7,12 +7,16 @@ library ieee;
 use ieee.std_logic_1164.all;
 
 entity PULSE_FORMATTER_tb is
+    generic(
+        TS_LEN_tb : integer := 32
+    );
 end PULSE_FORMATTER_tb;
 
 architecture tb of PULSE_FORMATTER_tb is
 
     component PULSE_FORMATTER
         generic (
+            TS_LEN : integer := 32;
             FIFO_DEPTH : integer := 16;
             C_M_AXIS_TDATA_WIDTH	: integer	:= 48
         );
@@ -20,10 +24,10 @@ architecture tb of PULSE_FORMATTER_tb is
             clk           : in std_logic;
             rstn          : in std_logic;
             cha_data      : in std_logic_vector (13 downto 0);
-            cha_ts        : in std_logic_vector (31 downto 0);
+            cha_ts        : in std_logic_vector (TS_LEN-1 downto 0);
             cha_dr        : in std_logic;
             chb_data      : in std_logic_vector (13 downto 0);
-            chb_ts        : in std_logic_vector (31 downto 0);
+            chb_ts        : in std_logic_vector (TS_LEN-1 downto 0);
             chb_dr        : in std_logic;
             timebase_of_intr   : in std_logic;
             m_axis_aclk	: in std_logic;
@@ -73,6 +77,7 @@ begin
 
     dut : PULSE_FORMATTER
         generic map (
+            TS_LEN => TS_LEN_tb,
             FIFO_DEPTH => 16,
             C_M_AXIS_TDATA_WIDTH => 48
         )
@@ -130,7 +135,7 @@ begin
         wait for TbPeriod;
         
         cha_data <= (others=>'1');
-        cha_ts <= "1111" & (27 downto 0 => '0');
+        cha_ts <= "1111" & (TS_LEN_tb-4 downto 0 => '0');
         cha_dr <= '1';
         
         wait for TbPeriod;
@@ -144,7 +149,7 @@ begin
         wait for TbPeriod;
         
         chb_data <= (others=>'1');
-        chb_ts <= "1111111111" & (21 downto 0 => '0');
+        chb_ts <= "1111111111" & (TS_LEN_tb-10 downto 0 => '0');
         chb_dr <= '1';
         
         wait for TbPeriod;
@@ -158,10 +163,10 @@ begin
         wait for TbPeriod;
         
         cha_data <= (others=>'1');
-        cha_ts <= "1111" & (27 downto 0 => '0');
+        cha_ts <= "1111" & (TS_LEN_tb-4 downto 0 => '0');
         cha_dr <= '1';
         chb_data <= (others=>'1');
-        chb_ts <= "1111111111" & (21 downto 0 => '0');
+        chb_ts <= "1111111111" & (TS_LEN_tb-10 downto 0 => '0');
         chb_dr <= '1';
         
         wait for TbPeriod;
@@ -188,7 +193,7 @@ begin
         wait for TbPeriod;
         
         cha_data <= (others=>'1');
-        cha_ts <= "1111" & (27 downto 0 => '0');
+        cha_ts <= "1111" & (TS_LEN_tb-4 downto 0 => '0');
         cha_dr <= '1';
         timebase_of_intr <= '1';
         
@@ -205,10 +210,10 @@ begin
         wait for TbPeriod;
         
         cha_data <= (others=>'1');
-        cha_ts <= "1111" & (27 downto 0 => '0');
+        cha_ts <= "1111" & (TS_LEN_tb-4 downto 0 => '0');
         cha_dr <= '1';
         chb_data <= (others=>'1');
-        chb_ts <= "1111111111" & (21 downto 0 => '0');
+        chb_ts <= "1111111111" & (TS_LEN_tb-10 downto 0 => '0');
         chb_dr <= '1';
         timebase_of_intr <= '1';
         
@@ -224,7 +229,7 @@ begin
         -- debe salir el dato f0000000bfff por m_axis_tdata y levantarse fifo_empty luego de que m_axis_tready se pone en 1
         wait for TbPeriod;
         cha_data <= (others=>'1');
-        cha_ts <= "1111" & (27 downto 0 => '0');
+        cha_ts <= "1111" & (TS_LEN_tb-4 downto 0 => '0');
         cha_dr <= '1';
         m_axis_tready <= '0';
         

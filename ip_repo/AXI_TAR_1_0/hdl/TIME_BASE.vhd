@@ -25,16 +25,21 @@ use IEEE.STD_LOGIC_1164.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity TIME_BASE is
-    Port ( clk : in STD_LOGIC;
+    generic (
+        TS_LEN : integer := 32
+    );
+    port ( clk : in STD_LOGIC;
            rstn : in STD_LOGIC;
 
-           timestamp : out STD_LOGIC_VECTOR (31 downto 0);
+           timestamp : out STD_LOGIC_VECTOR (TS_LEN-1 downto 0);
            of_introut : out STD_LOGIC);
 end TIME_BASE;
 
 architecture Behavioral of TIME_BASE is
-    signal counter: STD_LOGIC_VECTOR (31 downto 0) := (others => '0');
+    signal counter: STD_LOGIC_VECTOR (TS_LEN-1 downto 0) := (others => '0');
     signal of_intr_internal: STD_LOGIC := '0';
+    
+    constant MAX_COUNT : STD_LOGIC_VECTOR (TS_LEN-1 downto 0) := (others => '1');
 begin
     process(clk, rstn)
     begin
@@ -43,7 +48,7 @@ begin
                 counter <= (others => '0');
                 of_intr_internal <= '0';
             else
-                if counter = x"FFFFFF" then
+                if counter = MAX_COUNT then
                     counter <= (others => '0');
                     of_intr_internal <= '1';
                 else

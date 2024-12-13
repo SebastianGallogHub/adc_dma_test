@@ -24,8 +24,9 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity PULSE_FORMATTER is
     generic (
+        TS_LEN : integer := 32;
         FIFO_DEPTH : integer := 16;
-		C_M_AXIS_TDATA_WIDTH	: integer	:= 32
+		C_M_AXIS_TDATA_WIDTH	: integer	:= 48 -- Ligado con TS_LEN
     );
     port (
         -- Clock and Reset
@@ -34,11 +35,11 @@ entity PULSE_FORMATTER is
         
         -- Data inputs
         cha_data    : in  std_logic_vector(13 downto 0);
-        cha_ts      : in  std_logic_vector(31 downto 0);
+        cha_ts      : in  std_logic_vector(TS_LEN-1 downto 0);
         cha_dr      : in  std_logic;
         
         chb_data    : in  std_logic_vector(13 downto 0);
-        chb_ts      : in  std_logic_vector(31 downto 0);
+        chb_ts      : in  std_logic_vector(TS_LEN-1 downto 0);
         chb_dr      : in  std_logic;
         
         timebase_of_intr : in  std_logic;
@@ -59,11 +60,11 @@ entity PULSE_FORMATTER is
 end PULSE_FORMATTER;
 
 architecture Behavioral of PULSE_FORMATTER is
-    signal ch_a : STD_LOGIC_VECTOR(1 downto 0) := "10";
-    signal ch_b : STD_LOGIC_VECTOR(1 downto 0) := "01";
+    signal ch_a : STD_LOGIC_VECTOR(1 downto 0) := "01";
+    signal ch_b : STD_LOGIC_VECTOR(1 downto 0) := "10";
     signal ts_of : STD_LOGIC_VECTOR(1 downto 0) := "11"; 
     signal ts_of_data : STD_LOGIC_VECTOR(13 downto 0) := (others => '1'); 
-    signal ts_of_ts : STD_LOGIC_VECTOR(31 downto 0) := (others => '0'); 
+    signal ts_of_ts : STD_LOGIC_VECTOR(TS_LEN-1 downto 0) := (others => '0'); 
     
     -- FIFO memory
     type fifo_array is array (0 to FIFO_DEPTH-1) of std_logic_vector(C_M_AXIS_TDATA_WIDTH-1 downto 0);

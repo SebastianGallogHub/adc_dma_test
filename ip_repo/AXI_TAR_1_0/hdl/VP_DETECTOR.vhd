@@ -25,6 +25,9 @@ use IEEE.STD_LOGIC_ARITH.ALL;
 use IEEE.STD_LOGIC_UNSIGNED.ALL;
 
 entity VP_DETECTOR is
+    generic(
+        TS_LEN : integer := 32
+    );
     Port ( clk : in STD_LOGIC;
            rstn : in STD_LOGIC;
            
@@ -33,22 +36,22 @@ entity VP_DETECTOR is
            h_low : in STD_LOGIC_VECTOR (15 downto 0);
            h_high : in STD_LOGIC_VECTOR (15 downto 0);
            
-           ts_in : in STD_LOGIC_VECTOR(31 downto 0);
+           ts_in : in STD_LOGIC_VECTOR(TS_LEN-1 downto 0);
            
            dr : out STD_LOGIC;
            vp : out STD_LOGIC_VECTOR (13 downto 0);
-           ts : out STD_LOGIC_VECTOR (31 downto 0));
+           ts : out STD_LOGIC_VECTOR (TS_LEN-1 downto 0));
 end VP_DETECTOR;
 
 architecture Behavioral of VP_DETECTOR is
     signal in_range      : BOOLEAN := false;
     
     signal vp_temp       : std_logic_vector (13 downto 0) := (others => '0');
-    signal ts_temp       : std_logic_vector (31 downto 0) := (others => '0');
+    signal ts_temp       : std_logic_vector (TS_LEN-1 downto 0) := (others => '0');
 
     signal dr_internal   : std_logic := '0';
     signal vp_internal   : std_logic_vector (13 downto 0) := (others => '0');
-    signal ts_internal   : std_logic_vector (31 downto 0) := (others => '0');
+    signal ts_internal   : std_logic_vector (TS_LEN-1 downto 0) := (others => '0');
 begin
 
     process (clk, rstn)
