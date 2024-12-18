@@ -31,15 +31,15 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity TAR_tb is
+entity TAR_async_tb is
 --  Port ( );
-    generic(
-        TS_LEN_tb : integer := 8;
-        C_M_AXIS_TDATA_WIDTH_tb : integer := 24 -- 3
-    );
-end TAR_tb;
+generic(
+    TS_LEN_tb : integer := 8;
+    C_M_AXIS_TDATA_WIDTH_tb : integer := 24 -- 3
+);
+end TAR_async_tb;
 
-architecture Behavioral of TAR_tb is
+architecture Behavioral of TAR_async_tb is
     component VP_DETECTOR is
         generic (
             TS_LEN : integer := 16
@@ -142,6 +142,23 @@ architecture Behavioral of TAR_tb is
         x"1F29", x"216D", x"23BA", x"260C", x"2860", x"2AB1", x"2CFA", x"2F37",
         x"3164", x"337A", x"3575", x"3751", x"3909", x"3A98", x"3BFB", x"3D2E",
         x"3E2E", x"3EF8", x"3F8A", x"3FE2", x"3F0F", x"3FE2", x"3F8A", x"3EF8", -- 3fff
+        x"3E2E", x"3D2E", x"3BFB", x"3A98", x"3909", x"3751", x"3575", x"337A",
+        x"3164", x"2F37", x"2CFA", x"2AB1", x"2860", x"260C", x"23BA", x"216D",
+        x"1F29", x"1CF1", x"1ACA", x"18B4", x"16B4", x"14C9", x"12F7", x"113D",
+        x"0F9D", x"0E18", x"0CAC", x"0B5B", x"0A24", x"0905", x"07FF", x"0710",
+        x"0637", x"0573", x"04C3", x"0425", x"0399", x"031C", x"02AD", x"024C",
+        x"01F7", x"01AD", x"016C", x"0134", x"0103", x"00DA", x"00B6", x"0098"
+    );
+    
+    constant GAUSSIAN_WAVE_B : gaussian := (
+        x"0019", x"001F", x"0027", x"002F", x"003A", x"0047", x"0056", x"0069",
+        x"007E", x"0098", x"00B6", x"00DA", x"0103", x"0134", x"016C", x"01AD",
+        x"01F7", x"024C", x"02AD", x"031C", x"0399", x"0425", x"04C3", x"0573",
+        x"0637", x"0710", x"07FF", x"0905", x"0A24", x"0B5B", x"0CAC", x"0E18",
+        x"0F9D", x"113D", x"12F7", x"14C9", x"16B4", x"18B4", x"1ACA", x"1CF1",
+        x"1F29", x"216D", x"23BA", x"260C", x"2860", x"2AB1", x"2CFA", x"2F37",
+        x"3164", x"337A", x"3575", x"3751", x"3909", x"3A98", x"3BFB", x"3D2E",
+        x"3E2E", x"3EF8", x"3F8A", x"3FE2", x"3FFF", x"3FE2", x"3F8A", x"3EF8", -- 3fff
         x"3E2E", x"3D2E", x"3BFB", x"3A98", x"3909", x"3751", x"3575", x"337A",
         x"3164", x"2F37", x"2CFA", x"2AB1", x"2860", x"260C", x"23BA", x"216D",
         x"1F29", x"1CF1", x"1ACA", x"18B4", x"16B4", x"14C9", x"12F7", x"113D",
@@ -288,7 +305,7 @@ stimulus_chb_process : process
             sCh2H_High <= h_high_data(j);
             
             for i in 0 to 111 loop
-                sCh2In <= GAUSSIAN_WAVE(i)(13 downto 0);
+                sCh2In <= GAUSSIAN_WAVE_B(i)(13 downto 0);
                 wait for CLK_PERIOD;
             end loop;
 
