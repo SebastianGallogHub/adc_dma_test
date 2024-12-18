@@ -22,11 +22,73 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
-entity AXI_TAR_tb is
+entity AXI_TAR_master_test_tb is
 --  Port ( );
-end AXI_TAR_tb;
+    generic(
+        C_S00_AXI_DATA_WIDTH	: integer	:= 32;
+        C_S00_AXI_ADDR_WIDTH	: integer	:= 4;
+        
+        C_M00_AXIS_TDATA_WIDTH	: integer	:= 32
+    );
+end AXI_TAR_master_test_tb;
 
-architecture Behavioral of AXI_TAR_tb is
+architecture Behavioral of AXI_TAR_master_test_tb is
+
+    component AXI_TAR_v1_0_S00_AXI is
+		generic (
+		C_S_AXI_DATA_WIDTH	: integer	:= 32;
+		C_S_AXI_ADDR_WIDTH	: integer	:= 4
+		);
+		port (
+		OUT_REG0    : out std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+        OUT_REG1    : out std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+        IN_REG2    : in std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+        OUT_REG3    : out std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+		S_AXI_ACLK	: in std_logic;
+		S_AXI_ARESETN	: in std_logic;
+		S_AXI_AWADDR	: in std_logic_vector(C_S_AXI_ADDR_WIDTH-1 downto 0);
+		S_AXI_AWPROT	: in std_logic_vector(2 downto 0);
+		S_AXI_AWVALID	: in std_logic;
+		S_AXI_AWREADY	: out std_logic;
+		S_AXI_WDATA	: in std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+		S_AXI_WSTRB	: in std_logic_vector((C_S_AXI_DATA_WIDTH/8)-1 downto 0);
+		S_AXI_WVALID	: in std_logic;
+		S_AXI_WREADY	: out std_logic;
+		S_AXI_BRESP	: out std_logic_vector(1 downto 0);
+		S_AXI_BVALID	: out std_logic;
+		S_AXI_BREADY	: in std_logic;
+		S_AXI_ARADDR	: in std_logic_vector(C_S_AXI_ADDR_WIDTH-1 downto 0);
+		S_AXI_ARPROT	: in std_logic_vector(2 downto 0);
+		S_AXI_ARVALID	: in std_logic;
+		S_AXI_ARREADY	: out std_logic;
+		S_AXI_RDATA	: out std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+		S_AXI_RRESP	: out std_logic_vector(1 downto 0);
+		S_AXI_RVALID	: out std_logic;
+		S_AXI_RREADY	: in std_logic
+		);
+	end component AXI_TAR_v1_0_S00_AXI;
+
+    component master_test is
+		generic (
+		C_M_AXIS_TDATA_WIDTH	: integer	:= 32
+		);
+		port (
+		START  : in std_logic;
+		IADC1_SAMPLE : in std_logic_vector(13 downto 0);
+        IADC2_SAMPLE : in std_logic_vector(13 downto 0);
+        NUMBER_OF_SAMPLES_UNTIL_SEND : in std_logic_vector(31 downto 0);
+        INTR    : out std_logic;
+        COUNT : out std_logic_vector(31 downto 0);
+		M_AXIS_ACLK	: in std_logic;
+		M_AXIS_ARESETN	: in std_logic;
+		M_AXIS_TVALID	: out std_logic;
+		M_AXIS_TDATA	: out std_logic_vector(C_M_AXIS_TDATA_WIDTH-1 downto 0);
+		M_AXIS_TSTRB	: out std_logic_vector((C_M_AXIS_TDATA_WIDTH/8)-1 downto 0);
+		M_AXIS_TLAST	: out std_logic;
+		M_AXIS_TREADY	: in std_logic
+		);
+	end component master_test;
+
     -- Señales para la instancia de TAR_v1_0
     signal SysClk    : std_logic := '0';
     signal IRst_n    : std_logic := '0';
@@ -75,50 +137,58 @@ architecture Behavioral of AXI_TAR_tb is
 
 begin
 
-    -- Instancia del DUT (Device Under Test)
-    AXI_TAR_inst: entity work.AXI_TAR_v1_0
-        port map (
-            -- Conexión de puertos
-            SysClk => SysClk,
-            IRst_n => IRst_n,
-            sCh1In => sCh1In,
-            sCh2In => sCh2In,
-            Introut => Introut,
-            OUT_REG0 => slv_reg0,
-            OUT_REG1 => slv_reg1,
-            OUT_REG2 => slv_reg2,
-            OUT_REG3 => slv_reg3,
-            
-            s00_axi_aclk => s00_axi_aclk,
-            s00_axi_aresetn => s00_axi_aresetn,
-            s00_axi_awaddr => s00_axi_awaddr,
-            s00_axi_awprot => s00_axi_awprot,
-            s00_axi_awvalid => s00_axi_awvalid,
-            s00_axi_awready => s00_axi_awready,
-            s00_axi_wdata => s00_axi_wdata,
-            s00_axi_wstrb => s00_axi_wstrb,
-            s00_axi_wvalid => s00_axi_wvalid,
-            s00_axi_wready => s00_axi_wready,
-            s00_axi_bresp => s00_axi_bresp,
-            s00_axi_bvalid => s00_axi_bvalid,
-            s00_axi_bready => s00_axi_bready,
-            s00_axi_araddr => s00_axi_araddr,
-            s00_axi_arprot => s00_axi_arprot,
-            s00_axi_arvalid => s00_axi_arvalid,
-            s00_axi_arready => s00_axi_arready,
-            s00_axi_rdata => s00_axi_rdata,
-            s00_axi_rresp => s00_axi_rresp,
-            s00_axi_rvalid => s00_axi_rvalid,
-            s00_axi_rready => s00_axi_rready,
-            
-            m00_axis_aclk => m00_axis_aclk,
-            m00_axis_aresetn => m00_axis_aresetn,
-            m00_axis_tvalid => m00_axis_tvalid,
-            m00_axis_tdata => m00_axis_tdata,
-            m00_axis_tstrb => m00_axis_tstrb,
-            m00_axis_tlast => m00_axis_tlast,
-            m00_axis_tready => m00_axis_tready
-        );
+    AXI_TAR_v1_0_S00_AXI_inst : AXI_TAR_v1_0_S00_AXI
+	generic map (
+		C_S_AXI_DATA_WIDTH	=> C_S00_AXI_DATA_WIDTH,
+		C_S_AXI_ADDR_WIDTH	=> C_S00_AXI_ADDR_WIDTH
+	)
+	port map (
+	    OUT_REG0 		=> slv_reg0,   
+        OUT_REG1 		=> slv_reg1,
+        IN_REG2 		=> slv_reg2,
+        OUT_REG3 		=> slv_reg3,
+		S_AXI_ACLK		=> s00_axi_aclk,
+		S_AXI_ARESETN	=> s00_axi_aresetn,
+		S_AXI_AWADDR	=> s00_axi_awaddr,
+		S_AXI_AWPROT	=> s00_axi_awprot,
+		S_AXI_AWVALID	=> s00_axi_awvalid,
+		S_AXI_AWREADY	=> s00_axi_awready,
+		S_AXI_WDATA		=> s00_axi_wdata,
+		S_AXI_WSTRB		=> s00_axi_wstrb,
+		S_AXI_WVALID	=> s00_axi_wvalid,
+		S_AXI_WREADY	=> s00_axi_wready,
+		S_AXI_BRESP		=> s00_axi_bresp,
+		S_AXI_BVALID	=> s00_axi_bvalid,
+		S_AXI_BREADY	=> s00_axi_bready,
+		S_AXI_ARADDR	=> s00_axi_araddr,
+		S_AXI_ARPROT	=> s00_axi_arprot,
+		S_AXI_ARVALID	=> s00_axi_arvalid,
+		S_AXI_ARREADY	=> s00_axi_arready,
+		S_AXI_RDATA		=> s00_axi_rdata,
+		S_AXI_RRESP		=> s00_axi_rresp,
+		S_AXI_RVALID	=> s00_axi_rvalid,
+		S_AXI_RREADY	=> s00_axi_rready
+	);
+
+    master_test_inst : master_test
+	generic map (
+		C_M_AXIS_TDATA_WIDTH	=> C_M00_AXIS_TDATA_WIDTH
+	)
+	port map (
+	    START 			=> slv_reg0(0),
+	    IADC1_SAMPLE 	=> sCh1In(15 downto 2),
+	    IADC2_SAMPLE 	=> sCh2In(15 downto 2),
+        NUMBER_OF_SAMPLES_UNTIL_SEND => slv_reg1,
+        INTR 			=> Introut,
+        COUNT 			=> slv_reg2,
+		M_AXIS_ACLK		=> m00_axis_aclk,
+		M_AXIS_ARESETN	=> m00_axis_aresetn,
+		M_AXIS_TVALID	=> m00_axis_tvalid,
+		M_AXIS_TDATA	=> m00_axis_tdata,
+		M_AXIS_TSTRB	=> m00_axis_tstrb,
+		M_AXIS_TLAST	=> m00_axis_tlast,
+		M_AXIS_TREADY	=> m00_axis_tready
+	);
 
     -- Generador de reloj
     clk_process: process

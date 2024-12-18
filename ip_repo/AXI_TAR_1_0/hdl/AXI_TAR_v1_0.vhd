@@ -4,12 +4,6 @@ use ieee.numeric_std.all;
 
 entity AXI_TAR_v1_0 is
 	generic (
-		-- Users to add parameters here
-        
-		-- User parameters ends
-		-- Do not modify the parameters beyond this line
-
-
 		-- Parameters of Axi Slave Bus Interface S00_AXI
 		C_S00_AXI_DATA_WIDTH	: integer	:= 32;
 		C_S00_AXI_ADDR_WIDTH	: integer	:= 4;
@@ -19,20 +13,12 @@ entity AXI_TAR_v1_0 is
 		C_M00_AXIS_START_COUNT	: integer	:= 32
 	);
 	port (
-		-- Users to add ports here
 		-- Interfaz compatible con ZmodADC1410_Controller v1.0
 		SysClk    : in std_logic;
 		IRst_n    : in std_logic;
         sCh1In  : in std_logic_vector(15 downto 0);
         sCh2In  : in std_logic_vector(15 downto 0);
         Introut : out std_logic;
-        OUT_REG0    : out std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0);
-        OUT_REG1    : out std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0);
-        OUT_REG2    : out std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0);
-        OUT_REG3    : out std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0);
-		-- User ports ends
-		-- Do not modify the ports beyond this line
-
 
 		-- Ports of Axi Slave Bus Interface S00_AXI
 		s00_axi_aclk	: in std_logic;
@@ -104,22 +90,6 @@ architecture arch_imp of AXI_TAR_v1_0 is
 		S_AXI_RREADY	: in std_logic
 		);
 	end component AXI_TAR_v1_0_S00_AXI;
-
---	component AXI_TAR_v1_0_M00_AXIS is
---		generic (
---		C_M_AXIS_TDATA_WIDTH	: integer	:= 32;
---		C_M_START_COUNT	: integer	:= 32
---		);
---		port (
---		M_AXIS_ACLK	: in std_logic;
---		M_AXIS_ARESETN	: in std_logic;
---		M_AXIS_TVALID	: out std_logic;
---		M_AXIS_TDATA	: out std_logic_vector(C_M_AXIS_TDATA_WIDTH-1 downto 0);
---		M_AXIS_TSTRB	: out std_logic_vector((C_M_AXIS_TDATA_WIDTH/8)-1 downto 0);
---		M_AXIS_TLAST	: out std_logic;
---		M_AXIS_TREADY	: in std_logic
---		);
---	end component AXI_TAR_v1_0_M00_AXIS;
 	
 	component master_test is
 		generic (
@@ -144,28 +114,51 @@ architecture arch_imp of AXI_TAR_v1_0 is
 
 	component TAR is
 		generic (
-			FIFO_DEPTH : integer := 16;
-			C_M_AXIS_TDATA_WIDTH	: integer	:= 32
+        TIMESTAMP_LEN           : integer := 32;
+        FIFO_DEPTH              : integer := 16;
+		C_M_AXIS_TDATA_WIDTH	: integer := 48
 		);
 		port ( 
-			clk : in STD_LOGIC;
-			rstn : in STD_LOGIC;
-			start : in STD_LOGIC;
-			sCh1In  : in std_logic_vector(13 downto 0);
-			sCh1H_Low : in std_logic_vector(15 downto 0);
-			sCh1H_High : in std_logic_vector(15 downto 0);
-			sCh2In  : in std_logic_vector(13 downto 0);
-			sCh2H_Low : in std_logic_vector(15 downto 0);
-			sCh2H_High : in std_logic_vector(15 downto 0);
-			m_axis_aclk	: in std_logic;
-			m_axis_aresetn	: in std_logic;
-			m_axis_tvalid	: out std_logic;
-			m_axis_tdata	: out std_logic_vector(C_M_AXIS_TDATA_WIDTH-1 downto 0);
-			m_axis_tstrb	: out std_logic_vector((C_M_AXIS_TDATA_WIDTH/8)-1 downto 0);
-			m_axis_tlast	: out std_logic;
-			m_axis_tready	: in std_logic
-		);
+        clk : in STD_LOGIC;
+        rstn : in STD_LOGIC;
+        start : in STD_LOGIC;
+
+        -- Puerto de entrada de CHA
+        sCh1In  : in std_logic_vector(13 downto 0);
+        sCh1H_Low : in std_logic_vector(15 downto 0);
+        sCh1H_High : in std_logic_vector(15 downto 0);
+        
+        -- Puerto de entrada de CHB
+        sCh2In  : in std_logic_vector(13 downto 0);
+        sCh2H_Low : in std_logic_vector(15 downto 0);
+        sCh2H_High : in std_logic_vector(15 downto 0);
+
+        -- AXI Stream outputs
+        m_axis_aclk	: in std_logic;
+		m_axis_aresetn	: in std_logic;
+		m_axis_tvalid	: out std_logic;
+		m_axis_tdata	: out std_logic_vector(C_M_AXIS_TDATA_WIDTH-1 downto 0);
+		m_axis_tstrb	: out std_logic_vector((C_M_AXIS_TDATA_WIDTH/8)-1 downto 0);
+		m_axis_tlast	: out std_logic;
+		m_axis_tready	: in std_logic
+    	);
 	end component TAR;
+
+	--	component AXI_TAR_v1_0_M00_AXIS is
+	--		generic (
+	--		C_M_AXIS_TDATA_WIDTH	: integer	:= 32;
+	--		C_M_START_COUNT	: integer	:= 32
+	--		);
+	--		port (
+	--		M_AXIS_ACLK	: in std_logic;
+	--		M_AXIS_ARESETN	: in std_logic;
+	--		M_AXIS_TVALID	: out std_logic;
+	--		M_AXIS_TDATA	: out std_logic_vector(C_M_AXIS_TDATA_WIDTH-1 downto 0);
+	--		M_AXIS_TSTRB	: out std_logic_vector((C_M_AXIS_TDATA_WIDTH/8)-1 downto 0);
+	--		M_AXIS_TLAST	: out std_logic;
+	--		M_AXIS_TREADY	: in std_logic
+	--		);
+	--	end component AXI_TAR_v1_0_M00_AXIS;
 	
 	signal slv_reg0	:std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0);
 	signal slv_reg1	:std_logic_vector(C_S00_AXI_DATA_WIDTH-1 downto 0);
@@ -182,29 +175,29 @@ AXI_TAR_v1_0_S00_AXI_inst : AXI_TAR_v1_0_S00_AXI
 		C_S_AXI_ADDR_WIDTH	=> C_S00_AXI_ADDR_WIDTH
 	)
 	port map (
-	    OUT_REG0 => slv_reg0,   
-        OUT_REG1 => slv_reg1,
-        IN_REG2 => slv_reg2,
-        OUT_REG3 => slv_reg3,
-		S_AXI_ACLK	=> s00_axi_aclk,
+	    OUT_REG0 		=> slv_reg0,   
+        OUT_REG1 		=> slv_reg1,
+        IN_REG2 		=> slv_reg2,
+        OUT_REG3 		=> slv_reg3,
+		S_AXI_ACLK		=> s00_axi_aclk,
 		S_AXI_ARESETN	=> s00_axi_aresetn,
 		S_AXI_AWADDR	=> s00_axi_awaddr,
 		S_AXI_AWPROT	=> s00_axi_awprot,
 		S_AXI_AWVALID	=> s00_axi_awvalid,
 		S_AXI_AWREADY	=> s00_axi_awready,
-		S_AXI_WDATA	=> s00_axi_wdata,
-		S_AXI_WSTRB	=> s00_axi_wstrb,
+		S_AXI_WDATA		=> s00_axi_wdata,
+		S_AXI_WSTRB		=> s00_axi_wstrb,
 		S_AXI_WVALID	=> s00_axi_wvalid,
 		S_AXI_WREADY	=> s00_axi_wready,
-		S_AXI_BRESP	=> s00_axi_bresp,
+		S_AXI_BRESP		=> s00_axi_bresp,
 		S_AXI_BVALID	=> s00_axi_bvalid,
 		S_AXI_BREADY	=> s00_axi_bready,
 		S_AXI_ARADDR	=> s00_axi_araddr,
 		S_AXI_ARPROT	=> s00_axi_arprot,
 		S_AXI_ARVALID	=> s00_axi_arvalid,
 		S_AXI_ARREADY	=> s00_axi_arready,
-		S_AXI_RDATA	=> s00_axi_rdata,
-		S_AXI_RRESP	=> s00_axi_rresp,
+		S_AXI_RDATA		=> s00_axi_rdata,
+		S_AXI_RRESP		=> s00_axi_rresp,
 		S_AXI_RVALID	=> s00_axi_rvalid,
 		S_AXI_RREADY	=> s00_axi_rready
 	);
@@ -216,13 +209,13 @@ master_test_inst : master_test
 		C_M_AXIS_TDATA_WIDTH	=> C_M00_AXIS_TDATA_WIDTH
 	)
 	port map (
-	    START => master_test_start,
-	    IADC1_SAMPLE => sCh1In(15 downto 2),
-	    IADC2_SAMPLE => sCh2In(15 downto 2),
+	    START 			=> master_test_start,
+	    IADC1_SAMPLE 	=> sCh1In(15 downto 2),
+	    IADC2_SAMPLE 	=> sCh2In(15 downto 2),
         NUMBER_OF_SAMPLES_UNTIL_SEND => slv_reg1,
-        INTR => Introut,
-        COUNT => slv_reg2,
-		M_AXIS_ACLK	=> m00_axis_aclk,
+        INTR 			=> Introut,
+        COUNT 			=> slv_reg2,
+		M_AXIS_ACLK		=> m00_axis_aclk,
 		M_AXIS_ARESETN	=> m00_axis_aresetn,
 		M_AXIS_TVALID	=> m00_axis_tvalid,
 		M_AXIS_TDATA	=> m00_axis_tdata,
@@ -230,11 +223,6 @@ master_test_inst : master_test
 		M_AXIS_TLAST	=> m00_axis_tlast,
 		M_AXIS_TREADY	=> m00_axis_tready
 	);
-
-    OUT_REG0 <= slv_reg0;
-    OUT_REG1 <= slv_reg1;
-    OUT_REG2 <= slv_reg2;
-    OUT_REG3 <= slv_reg3;
 
 
 TAR_00 : TAR

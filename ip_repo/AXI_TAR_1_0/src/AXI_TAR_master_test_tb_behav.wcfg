@@ -3,204 +3,207 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="AXI_TAR_tb_behav.wdb" id="1">
+      <db_ref path="AXI_TAR_master_test_tb_behav.wdb" id="1">
          <top_modules>
-            <top_module name="AXI_TAR_tb" />
+            <top_module name="AXI_TAR_master_test_tb" />
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="358.801 ns"></ZoomEndTime>
-      <Cursor1Time time="201.400 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="37.100001 us"></ZoomEndTime>
+      <Cursor1Time time="11.120000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="481"></NameColumnWidth>
+      <NameColumnWidth column_width="465"></NameColumnWidth>
       <ValueColumnWidth column_width="128"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="3" />
-   <wvobject type="group" fp_name="group77">
-      <obj_property name="label">Outputs</obj_property>
+   <WVObjectSize size="8" />
+   <wvobject type="logic" fp_name="/AXI_TAR_master_test_tb/SysClk">
+      <obj_property name="ElementShortName">SysClk</obj_property>
+      <obj_property name="ObjectShortName">SysClk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/AXI_TAR_master_test_tb/IRst_n">
+      <obj_property name="ElementShortName">IRst_n</obj_property>
+      <obj_property name="ObjectShortName">IRst_n</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/AXI_TAR_master_test_tb/Introut">
+      <obj_property name="ElementShortName">Introut</obj_property>
+      <obj_property name="ObjectShortName">Introut</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/AXI_TAR_master_test_tb/sCh1In">
+      <obj_property name="ElementShortName">sCh1In[15:0]</obj_property>
+      <obj_property name="ObjectShortName">sCh1In[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/AXI_TAR_master_test_tb/sCh2In">
+      <obj_property name="ElementShortName">sCh2In[15:0]</obj_property>
+      <obj_property name="ObjectShortName">sCh2In[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="group" fp_name="group1171">
+      <obj_property name="label">SLV_REG</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <wvobject type="logic" fp_name="/AXI_TAR_tb/Introut">
-         <obj_property name="ElementShortName">Introut</obj_property>
-         <obj_property name="ObjectShortName">Introut</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/AXI_TAR_tb/slv_reg0">
+      <wvobject type="array" fp_name="/AXI_TAR_master_test_tb/slv_reg0">
          <obj_property name="ElementShortName">slv_reg0[31:0]</obj_property>
          <obj_property name="ObjectShortName">slv_reg0[31:0]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/AXI_TAR_tb/slv_reg1">
+      <wvobject type="array" fp_name="/AXI_TAR_master_test_tb/slv_reg1">
          <obj_property name="ElementShortName">slv_reg1[31:0]</obj_property>
          <obj_property name="ObjectShortName">slv_reg1[31:0]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/AXI_TAR_tb/slv_reg2">
+      <wvobject type="array" fp_name="/AXI_TAR_master_test_tb/slv_reg2">
          <obj_property name="ElementShortName">slv_reg2[31:0]</obj_property>
          <obj_property name="ObjectShortName">slv_reg2[31:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/AXI_TAR_master_test_tb/slv_reg3">
+         <obj_property name="ElementShortName">slv_reg3[31:0]</obj_property>
+         <obj_property name="ObjectShortName">slv_reg3[31:0]</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject type="group" fp_name="group36">
+   <wvobject type="group" fp_name="group1172">
       <obj_property name="label">S_AXI</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <wvobject type="group" fp_name="group38">
+      <wvobject type="group" fp_name="group1175">
          <obj_property name="label">GLOBAL</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="isExpanded"></obj_property>
-         <wvobject type="logic" fp_name="/AXI_TAR_tb/s00_axi_aclk">
+         <wvobject type="logic" fp_name="/AXI_TAR_master_test_tb/s00_axi_aclk">
             <obj_property name="ElementShortName">s00_axi_aclk</obj_property>
             <obj_property name="ObjectShortName">s00_axi_aclk</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/AXI_TAR_tb/s00_axi_aresetn">
+         <wvobject type="logic" fp_name="/AXI_TAR_master_test_tb/s00_axi_aresetn">
             <obj_property name="ElementShortName">s00_axi_aresetn</obj_property>
             <obj_property name="ObjectShortName">s00_axi_aresetn</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="group39">
+      <wvobject type="group" fp_name="group1176">
          <obj_property name="label">WRITE_ADDR</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="isExpanded"></obj_property>
-         <wvobject type="array" fp_name="/AXI_TAR_tb/s00_axi_awaddr">
+         <wvobject type="array" fp_name="/AXI_TAR_master_test_tb/s00_axi_awaddr">
             <obj_property name="ElementShortName">s00_axi_awaddr[3:0]</obj_property>
             <obj_property name="ObjectShortName">s00_axi_awaddr[3:0]</obj_property>
-            <obj_property name="Radix">BINARYRADIX</obj_property>
          </wvobject>
-         <wvobject type="array" fp_name="/AXI_TAR_tb/s00_axi_awprot">
+         <wvobject type="array" fp_name="/AXI_TAR_master_test_tb/s00_axi_awprot">
             <obj_property name="ElementShortName">s00_axi_awprot[2:0]</obj_property>
             <obj_property name="ObjectShortName">s00_axi_awprot[2:0]</obj_property>
-            <obj_property name="Radix">HEXRADIX</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/AXI_TAR_tb/s00_axi_awvalid">
+         <wvobject type="logic" fp_name="/AXI_TAR_master_test_tb/s00_axi_awvalid">
             <obj_property name="ElementShortName">s00_axi_awvalid</obj_property>
             <obj_property name="ObjectShortName">s00_axi_awvalid</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/AXI_TAR_tb/s00_axi_awready">
+         <wvobject type="logic" fp_name="/AXI_TAR_master_test_tb/s00_axi_awready">
             <obj_property name="ElementShortName">s00_axi_awready</obj_property>
             <obj_property name="ObjectShortName">s00_axi_awready</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="group40">
+      <wvobject type="group" fp_name="group1177">
          <obj_property name="label">WRITE_DATA</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="isExpanded"></obj_property>
-         <wvobject type="array" fp_name="/AXI_TAR_tb/s00_axi_wdata">
+         <wvobject type="array" fp_name="/AXI_TAR_master_test_tb/s00_axi_wdata">
             <obj_property name="ElementShortName">s00_axi_wdata[31:0]</obj_property>
             <obj_property name="ObjectShortName">s00_axi_wdata[31:0]</obj_property>
-            <obj_property name="Radix">HEXRADIX</obj_property>
          </wvobject>
-         <wvobject type="array" fp_name="/AXI_TAR_tb/s00_axi_wstrb">
+         <wvobject type="array" fp_name="/AXI_TAR_master_test_tb/s00_axi_wstrb">
             <obj_property name="ElementShortName">s00_axi_wstrb[3:0]</obj_property>
             <obj_property name="ObjectShortName">s00_axi_wstrb[3:0]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/AXI_TAR_tb/s00_axi_wvalid">
+         <wvobject type="logic" fp_name="/AXI_TAR_master_test_tb/s00_axi_wvalid">
             <obj_property name="ElementShortName">s00_axi_wvalid</obj_property>
             <obj_property name="ObjectShortName">s00_axi_wvalid</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/AXI_TAR_tb/s00_axi_wready">
+         <wvobject type="logic" fp_name="/AXI_TAR_master_test_tb/s00_axi_wready">
             <obj_property name="ElementShortName">s00_axi_wready</obj_property>
             <obj_property name="ObjectShortName">s00_axi_wready</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="group41">
+      <wvobject type="group" fp_name="group1179">
          <obj_property name="label">WRITE_RETURN</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="isExpanded"></obj_property>
-         <wvobject type="array" fp_name="/AXI_TAR_tb/s00_axi_bresp">
+         <wvobject type="array" fp_name="/AXI_TAR_master_test_tb/s00_axi_bresp">
             <obj_property name="ElementShortName">s00_axi_bresp[1:0]</obj_property>
             <obj_property name="ObjectShortName">s00_axi_bresp[1:0]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/AXI_TAR_tb/s00_axi_bvalid">
+         <wvobject type="logic" fp_name="/AXI_TAR_master_test_tb/s00_axi_bvalid">
             <obj_property name="ElementShortName">s00_axi_bvalid</obj_property>
             <obj_property name="ObjectShortName">s00_axi_bvalid</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/AXI_TAR_tb/s00_axi_bready">
+         <wvobject type="logic" fp_name="/AXI_TAR_master_test_tb/s00_axi_bready">
             <obj_property name="ElementShortName">s00_axi_bready</obj_property>
             <obj_property name="ObjectShortName">s00_axi_bready</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="group42">
+      <wvobject type="group" fp_name="group1180">
          <obj_property name="label">READ_ADDR</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="isExpanded"></obj_property>
-         <wvobject type="array" fp_name="/AXI_TAR_tb/s00_axi_araddr">
+         <wvobject type="array" fp_name="/AXI_TAR_master_test_tb/s00_axi_araddr">
             <obj_property name="ElementShortName">s00_axi_araddr[3:0]</obj_property>
             <obj_property name="ObjectShortName">s00_axi_araddr[3:0]</obj_property>
          </wvobject>
-         <wvobject type="array" fp_name="/AXI_TAR_tb/s00_axi_arprot">
+         <wvobject type="array" fp_name="/AXI_TAR_master_test_tb/s00_axi_arprot">
             <obj_property name="ElementShortName">s00_axi_arprot[2:0]</obj_property>
             <obj_property name="ObjectShortName">s00_axi_arprot[2:0]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/AXI_TAR_tb/s00_axi_arvalid">
+         <wvobject type="logic" fp_name="/AXI_TAR_master_test_tb/s00_axi_arvalid">
             <obj_property name="ElementShortName">s00_axi_arvalid</obj_property>
             <obj_property name="ObjectShortName">s00_axi_arvalid</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/AXI_TAR_tb/s00_axi_arready">
+         <wvobject type="logic" fp_name="/AXI_TAR_master_test_tb/s00_axi_arready">
             <obj_property name="ElementShortName">s00_axi_arready</obj_property>
             <obj_property name="ObjectShortName">s00_axi_arready</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject type="group" fp_name="group43">
+      <wvobject type="group" fp_name="group1181">
          <obj_property name="label">READ_RETURN</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="isExpanded"></obj_property>
-         <wvobject type="array" fp_name="/AXI_TAR_tb/s00_axi_rdata">
+         <wvobject type="array" fp_name="/AXI_TAR_master_test_tb/s00_axi_rdata">
             <obj_property name="ElementShortName">s00_axi_rdata[31:0]</obj_property>
             <obj_property name="ObjectShortName">s00_axi_rdata[31:0]</obj_property>
-            <obj_property name="Radix">HEXRADIX</obj_property>
          </wvobject>
-         <wvobject type="array" fp_name="/AXI_TAR_tb/s00_axi_rresp">
+         <wvobject type="array" fp_name="/AXI_TAR_master_test_tb/s00_axi_rresp">
             <obj_property name="ElementShortName">s00_axi_rresp[1:0]</obj_property>
             <obj_property name="ObjectShortName">s00_axi_rresp[1:0]</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/AXI_TAR_tb/s00_axi_rvalid">
+         <wvobject type="logic" fp_name="/AXI_TAR_master_test_tb/s00_axi_rvalid">
             <obj_property name="ElementShortName">s00_axi_rvalid</obj_property>
             <obj_property name="ObjectShortName">s00_axi_rvalid</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/AXI_TAR_tb/s00_axi_rready">
+         <wvobject type="logic" fp_name="/AXI_TAR_master_test_tb/s00_axi_rready">
             <obj_property name="ElementShortName">s00_axi_rready</obj_property>
             <obj_property name="ObjectShortName">s00_axi_rready</obj_property>
          </wvobject>
       </wvobject>
    </wvobject>
-   <wvobject type="group" fp_name="group37">
+   <wvobject type="group" fp_name="group1173">
       <obj_property name="label">M_AXIS</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
-      <wvobject type="group" fp_name="group452">
+      <wvobject type="group" fp_name="group1174">
          <obj_property name="label">GLOBAL</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="isExpanded"></obj_property>
-         <wvobject type="logic" fp_name="/AXI_TAR_tb/m00_axis_aclk">
+         <wvobject type="logic" fp_name="/AXI_TAR_master_test_tb/m00_axis_aclk">
             <obj_property name="ElementShortName">m00_axis_aclk</obj_property>
             <obj_property name="ObjectShortName">m00_axis_aclk</obj_property>
          </wvobject>
-         <wvobject type="logic" fp_name="/AXI_TAR_tb/m00_axis_aresetn">
+         <wvobject type="logic" fp_name="/AXI_TAR_master_test_tb/m00_axis_aresetn">
             <obj_property name="ElementShortName">m00_axis_aresetn</obj_property>
             <obj_property name="ObjectShortName">m00_axis_aresetn</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject type="logic" fp_name="/AXI_TAR_tb/m00_axis_tvalid">
+      <wvobject type="logic" fp_name="/AXI_TAR_master_test_tb/m00_axis_tvalid">
          <obj_property name="ElementShortName">m00_axis_tvalid</obj_property>
          <obj_property name="ObjectShortName">m00_axis_tvalid</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/AXI_TAR_tb/m00_axis_tdata">
+      <wvobject type="array" fp_name="/AXI_TAR_master_test_tb/m00_axis_tdata">
          <obj_property name="ElementShortName">m00_axis_tdata[31:0]</obj_property>
          <obj_property name="ObjectShortName">m00_axis_tdata[31:0]</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="/AXI_TAR_tb/m00_axis_tstrb">
+      <wvobject type="array" fp_name="/AXI_TAR_master_test_tb/m00_axis_tstrb">
          <obj_property name="ElementShortName">m00_axis_tstrb[3:0]</obj_property>
          <obj_property name="ObjectShortName">m00_axis_tstrb[3:0]</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/AXI_TAR_tb/m00_axis_tlast">
+      <wvobject type="logic" fp_name="/AXI_TAR_master_test_tb/m00_axis_tlast">
          <obj_property name="ElementShortName">m00_axis_tlast</obj_property>
          <obj_property name="ObjectShortName">m00_axis_tlast</obj_property>
       </wvobject>
-      <wvobject type="logic" fp_name="/AXI_TAR_tb/m00_axis_tready">
+      <wvobject type="logic" fp_name="/AXI_TAR_master_test_tb/m00_axis_tready">
          <obj_property name="ElementShortName">m00_axis_tready</obj_property>
          <obj_property name="ObjectShortName">m00_axis_tready</obj_property>
       </wvobject>
