@@ -1,5 +1,5 @@
 # (c) Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-# (c) Copyright 2022-2024 Advanced Micro Devices, Inc. All rights reserved.
+# (c) Copyright 2022-2025 Advanced Micro Devices, Inc. All rights reserved.
 # 
 # This file contains confidential and proprietary information
 # of AMD and is protected under U.S. and international copyright
@@ -53,8 +53,6 @@
 
 
 create_clock -period 10 -name m_axi_sg_aclk [get_ports m_axi_sg_aclk]
-
-create_clock -period 10 -name m_axi_mm2s_aclk [get_ports m_axi_mm2s_aclk]
 
 create_clock -period 10 -name m_axi_s2mm_aclk [get_ports m_axi_s2mm_aclk]
 

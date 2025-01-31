@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date             : Tue Dec 10 14:25:35 2024
+| Date             : Fri Jan 31 08:41:40 2025
 | Host             : sebasHAL running 64-bit Ubuntu 20.04.6 LTS
 | Command          : report_power -file adc_dma_bd_wrapper_power_routed.rpt -pb adc_dma_bd_wrapper_power_summary_routed.pb -rpx adc_dma_bd_wrapper_power_routed.rpx
 | Design           : adc_dma_bd_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.863        |
+| Total On-Chip Power (W)  | 1.867        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.715        |
+| Dynamic (W)              | 1.719        |
 | Device Static (W)        | 0.148        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 63.5         |
@@ -52,23 +52,24 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.037 |       13 |       --- |             --- |
-| Slice Logic              |     0.006 |    16689 |       --- |             --- |
-|   LUT as Logic           |     0.005 |     4836 |     53200 |            9.09 |
-|   Register               |    <0.001 |     9081 |    106400 |            8.53 |
-|   CARRY4                 |    <0.001 |      199 |     13300 |            1.50 |
+| Clocks                   |     0.036 |       13 |       --- |             --- |
+| Slice Logic              |     0.009 |    17322 |       --- |             --- |
+|   LUT as Logic           |     0.008 |     6171 |     53200 |           11.60 |
+|   Register               |    <0.001 |     8562 |    106400 |            8.05 |
+|   CARRY4                 |    <0.001 |      194 |     13300 |            1.46 |
 |   LUT as Distributed RAM |    <0.001 |       38 |     17400 |            0.22 |
-|   LUT as Shift Register  |    <0.001 |      259 |     17400 |            1.49 |
-|   Others                 |     0.000 |      829 |       --- |             --- |
-| Signals                  |     0.010 |    12650 |       --- |             --- |
-| Block RAM                |    <0.001 |        3 |       140 |            2.14 |
+|   F7/F8 Muxes            |    <0.001 |      199 |     53200 |            0.37 |
+|   LUT as Shift Register  |    <0.001 |      195 |     17400 |            1.12 |
+|   Others                 |     0.000 |      752 |       --- |             --- |
+| Signals                  |     0.013 |    12942 |       --- |             --- |
+| Block RAM                |    <0.001 |        2 |       140 |            1.43 |
 | MMCM                     |     0.124 |        1 |         4 |           25.00 |
 | PLL                      |     0.097 |        1 |         4 |           25.00 |
 | DSPs                     |     0.002 |        2 |       220 |            0.91 |
 | I/O                      |     0.034 |       32 |       200 |           16.00 |
 | PS7                      |     1.404 |        1 |       --- |             --- |
 | Static Power             |     0.148 |          |           |                 |
-| Total                    |     1.863 |          |           |                 |
+| Total                    |     1.867 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -78,7 +79,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.084 |       0.068 |      0.016 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.088 |       0.072 |      0.016 |       NA    | Unspecified | NA         |
 | Vccaux    |       1.800 |     0.140 |       0.125 |      0.016 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -164,18 +165,19 @@ Table of Contents
 +----------------------------+-----------+
 | Name                       | Power (W) |
 +----------------------------+-----------+
-| adc_dma_bd_wrapper         |     1.715 |
-|   adc_dma_bd_i             |     1.713 |
-|     AXI_ZmodADC1410_0      |     0.016 |
-|       U0                   |     0.016 |
-|     ZmodADC1410_Controll_0 |     0.140 |
-|       U0                   |     0.140 |
-|     axi_dma_0              |     0.013 |
-|       U0                   |     0.013 |
-|     axi_mem_intercon       |     0.008 |
+| adc_dma_bd_wrapper         |     1.719 |
+|   adc_dma_bd_i             |     1.717 |
+|     AXI_TAR_0              |     0.009 |
+|       U0                   |     0.009 |
+|     AXI_ZmodADC1410_0      |     0.015 |
+|       U0                   |     0.015 |
+|     ZmodADC1410_Controll_0 |     0.139 |
+|       U0                   |     0.139 |
+|     axi_dma_0              |     0.011 |
+|       U0                   |     0.011 |
+|     axi_mem_intercon       |     0.007 |
 |       m00_couplers         |     0.002 |
 |       s00_couplers         |     0.002 |
-|       s01_couplers         |     0.001 |
 |       xbar                 |     0.002 |
 |     clk_wiz_0              |     0.125 |
 |       inst                 |     0.125 |

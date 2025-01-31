@@ -34,8 +34,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity TAR_async_tb is
 --  Port ( );
 generic(
-    TS_LEN_tb : integer := 8;
-    C_M_AXIS_TDATA_WIDTH_tb : integer := 24 -- 3
+    TS_LEN_tb : integer := 32;
+    C_M_AXIS_TDATA_WIDTH_tb : integer := 48--24 -- 3
 );
 end TAR_async_tb;
 
@@ -96,11 +96,43 @@ architecture Behavioral of TAR_async_tb is
         of_introut : out STD_LOGIC
         );
     end component TIME_BASE;
+
+    component TAR is
+		generic (
+        TIMESTAMP_LEN           : integer := 32;
+        FIFO_DEPTH              : integer := 16;
+		C_M_AXIS_TDATA_WIDTH	: integer := 48
+		);
+		port ( 
+        clk : in STD_LOGIC;
+        rstn : in STD_LOGIC;
+        start : in STD_LOGIC;
+
+        -- Puerto de entrada de CHA
+        sCh1In  : in std_logic_vector(13 downto 0);
+        sCh1H_Low : in std_logic_vector(15 downto 0);
+        sCh1H_High : in std_logic_vector(15 downto 0);
+        
+        -- Puerto de entrada de CHB
+        sCh2In  : in std_logic_vector(13 downto 0);
+        sCh2H_Low : in std_logic_vector(15 downto 0);
+        sCh2H_High : in std_logic_vector(15 downto 0);
+
+        -- AXI Stream outputs
+        m_axis_aclk	: in std_logic;
+		m_axis_aresetn	: in std_logic;
+		m_axis_tvalid	: out std_logic;
+		m_axis_tdata	: out std_logic_vector(C_M_AXIS_TDATA_WIDTH-1 downto 0);
+		m_axis_tstrb	: out std_logic_vector((C_M_AXIS_TDATA_WIDTH/8)-1 downto 0);
+		m_axis_tlast	: out std_logic;
+		m_axis_tready	: in std_logic
+    	);
+	end component TAR;
     
     signal clk : STD_LOGIC;
     signal rstn : STD_LOGIC;
     signal start : STD_LOGIC;
-    signal rstn_internal : STD_LOGIC;
+    signal rstn_start : STD_LOGIC;
     
     signal sCh1In  : std_logic_vector(13 downto 0) := (others => '0');
     signal sCh1H_Low : std_logic_vector(15 downto 0) := (others => '0');
@@ -172,7 +204,7 @@ architecture Behavioral of TAR_async_tb is
     constant h_high_data : histeresis := (x"1000", x"1FFF", x"2FFF"); -- 4096, 8191, 12287
 begin
 
-    rstn_internal <= rstn AND start;
+    rstn_start <= rstn AND start;
     m_axis_aclk <= clk;
     m_axis_aresetn <= rstn;
 
@@ -183,7 +215,7 @@ VP_DET_A : VP_DETECTOR
     )
     port map (
         clk     => clk,
-        rstn    => rstn,        
+        rstn    => rstn_start,        
         cad     => sCh1In,
         h_low   => sCh1H_Low,    
         h_high  => sCh1H_High,    
@@ -199,7 +231,7 @@ VP_DET_B : VP_DETECTOR
     )
     port map (
         clk     => clk,
-        rstn    => rstn,        
+        rstn    => rstn_start,        
         cad     => sCh2In,
         h_low   => sCh2H_Low,    
         h_high  => sCh2H_High,    
@@ -215,7 +247,7 @@ TIME_BASE_00 : TIME_BASE
     )
     port map (
         clk         => clk,
-        rstn        => rstn,    
+        rstn        => rstn_start,    
         timestamp   => timestamp,        
         of_introut  => of_introut
     );
@@ -228,7 +260,7 @@ PLS_FMT_00 : PULSE_FORMATTER
     )
     port map (
         clk                 => clk,
-        rstn                => rstn,    
+        rstn                => rstn_start,    
         cha_data            => cha_data,        
         cha_ts              => cha_ts,    
         cha_dr              => cha_dr,    
@@ -244,16 +276,42 @@ PLS_FMT_00 : PULSE_FORMATTER
         m_axis_tlast	    => m_axis_tlast,
         m_axis_tready	    => m_axis_tready         
     );
+
+-- TAR_00 : TAR
+-- 	generic map (
+--         TIMESTAMP_LEN           => 32,
+--         FIFO_DEPTH              => 16,
+-- 		C_M_AXIS_TDATA_WIDTH	=> 48
+-- 	)
+-- 	port map( 
+--         clk             => clk,
+--         rstn            => rstn,
+--         start           => start,
+--         sCh1In          => sCh1In,
+--         sCh1H_Low       => sCh1H_Low,
+--         sCh1H_High      => sCh1H_High,
+--         sCh2In          => sCh2In,
+--         sCh2H_Low       => sCh2H_Low,
+--         sCh2H_High      => sCh2H_High,
+--         m_axis_aclk     => m_axis_aclk,
+-- 		m_axis_aresetn  => m_axis_aresetn,
+-- 		m_axis_tvalid   => m_axis_tvalid,
+-- 		m_axis_tdata    => m_axis_tdata,
+-- 		m_axis_tstrb    => m_axis_tstrb,
+-- 		m_axis_tlast    => m_axis_tlast,
+-- 		m_axis_tready   => m_axis_tready
+--     );
+
     --Fin Conexionado
 
     -- Clock generation process
 clk_process : process 
     begin
         while true loop -- Limit simulation time
-        clk <= '1';
-        wait for CLK_PERIOD / 2;
-        clk <= '0';
-        wait for CLK_PERIOD / 2;
+            clk <= '0';
+            wait for CLK_PERIOD / 2;
+            clk <= '1';
+            wait for CLK_PERIOD / 2;
         end loop;
         wait;
     end process;
@@ -265,7 +323,7 @@ start_process: process
         start <= '0';
         wait for 2*CLK_PERIOD;
         rstn <= '1';
-        wait for 2*CLK_PERIOD;
+        wait for 10*CLK_PERIOD;
         start <= '1';
         wait;
     end process;

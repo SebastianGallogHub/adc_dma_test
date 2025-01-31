@@ -69,6 +69,9 @@ architecture tb of PULSE_FORMATTER_tb is
     constant TbPeriod : time := 10 ns; -- EDIT Put right period here
     signal TbClock : std_logic := '0';
     signal TbSimEnded : std_logic := '0';
+    
+    constant cha_data_source : std_logic_vector(13 downto 0) := "11111111101111";
+    constant chb_data_source : std_logic_vector(13 downto 0) := "11111111011111";
 
 begin
 
@@ -103,7 +106,7 @@ begin
         );
 
     -- Clock generation
-    TbClock <= not TbClock after TbPeriod/2 when TbSimEnded /= '1' else '0';
+    TbClock <= not TbClock after TbPeriod/2;-- when TbSimEnded /= '1' else '0';
 
     -- EDIT: Check that clk is really your main clock signal
     clk <= TbClock;
@@ -134,8 +137,8 @@ begin
         -- debe salir el dato f0000000bfff por m_axis_tdata y levantarse fifo_empty
         wait for TbPeriod;
         
-        cha_data <= (others=>'1');
-        cha_ts <= "1111" & (TS_LEN_tb-4 downto 0 => '0');
+        cha_data <= cha_data_source;
+        cha_ts <= "1111" & (TS_LEN_tb-5 downto 0 => '0');
         cha_dr <= '1';
         
         wait for TbPeriod;
@@ -148,8 +151,8 @@ begin
         -- debe salir el dato ffc000007fff por m_axis_tdata y levantarse fifo_empty
         wait for TbPeriod;
         
-        chb_data <= (others=>'1');
-        chb_ts <= "1111111111" & (TS_LEN_tb-10 downto 0 => '0');
+        chb_data <= chb_data_source;
+        chb_ts <= "1111111111" & (TS_LEN_tb-11 downto 0 => '0');
         chb_dr <= '1';
         
         wait for TbPeriod;
@@ -162,11 +165,11 @@ begin
         -- debe salir el dato f0000000bfff (cha) seguido de ffc000007fff (chb) por m_axis_tdata y luego de 2clk levantarse fifo_empty
         wait for TbPeriod;
         
-        cha_data <= (others=>'1');
-        cha_ts <= "1111" & (TS_LEN_tb-4 downto 0 => '0');
+        cha_data <= cha_data_source;
+        cha_ts <= "1111" & (TS_LEN_tb-5 downto 0 => '0');
         cha_dr <= '1';
-        chb_data <= (others=>'1');
-        chb_ts <= "1111111111" & (TS_LEN_tb-10 downto 0 => '0');
+        chb_data <= chb_data_source;
+        chb_ts <= "1111111111" & (TS_LEN_tb-11 downto 0 => '0');
         chb_dr <= '1';
         
         wait for TbPeriod;
@@ -192,8 +195,8 @@ begin
         -- debe salir el dato 00000000ffff (overflow) seguido de f0000000bfff (cha) por m_axis_tdata y luego de 2clk levantarse fifo_empty
         wait for TbPeriod;
         
-        cha_data <= (others=>'1');
-        cha_ts <= "1111" & (TS_LEN_tb-4 downto 0 => '0');
+        cha_data <= cha_data_source;
+        cha_ts <= "1111" & (TS_LEN_tb-5 downto 0 => '0');
         cha_dr <= '1';
         timebase_of_intr <= '1';
         
@@ -209,11 +212,11 @@ begin
         -- luego de 3clk levantarse fifo_empty
         wait for TbPeriod;
         
-        cha_data <= (others=>'1');
-        cha_ts <= "1111" & (TS_LEN_tb-4 downto 0 => '0');
+        cha_data <= cha_data_source;
+        cha_ts <= "1111" & (TS_LEN_tb-5 downto 0 => '0');
         cha_dr <= '1';
-        chb_data <= (others=>'1');
-        chb_ts <= "1111111111" & (TS_LEN_tb-10 downto 0 => '0');
+        chb_data <= chb_data_source;
+        chb_ts <= "1111111111" & (TS_LEN_tb-11 downto 0 => '0');
         chb_dr <= '1';
         timebase_of_intr <= '1';
         
@@ -228,8 +231,8 @@ begin
         -- TEST: Dato en el canal A
         -- debe salir el dato f0000000bfff por m_axis_tdata y levantarse fifo_empty luego de que m_axis_tready se pone en 1
         wait for TbPeriod;
-        cha_data <= (others=>'1');
-        cha_ts <= "1111" & (TS_LEN_tb-4 downto 0 => '0');
+        cha_data <= cha_data_source;
+        cha_ts <= "1111" & (TS_LEN_tb-5 downto 0 => '0');
         cha_dr <= '1';
         m_axis_tready <= '0';
         
@@ -246,7 +249,7 @@ begin
         -- Stop the clock and hence terminate the simulation
         wait for 10 * TbPeriod;
         TbSimEnded <= '1';
-        wait;
+        -- wait;
     end process;
 
 end tb;

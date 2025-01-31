@@ -7,7 +7,8 @@
       "name": "adc_dma_bd",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2023.1"
+      "tool_version": "2023.1",
+      "validated": "true"
     },
     "design_tree": {
       "processing_system7_0": "",
@@ -30,9 +31,7 @@
         "s00_couplers": {
           "auto_us": ""
         },
-        "s01_couplers": {
-          "auto_us": ""
-        },
+        "s01_couplers": {},
         "s02_couplers": {
           "auto_us": ""
         },
@@ -221,8 +220,20 @@
         "type": "clk",
         "direction": "I",
         "parameters": {
+          "CLK_DOMAIN": {
+            "value": "adc_dma_bd_sys_clock",
+            "value_src": "default"
+          },
           "FREQ_HZ": {
             "value": "125000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
           },
           "PHASE": {
             "value": "0.0"
@@ -1368,21 +1379,19 @@
         "xci_name": "adc_dma_bd_axi_dma_0_0",
         "xci_path": "ip/adc_dma_bd_axi_dma_0_0/adc_dma_bd_axi_dma_0_0.xci",
         "inst_hier_path": "axi_dma_0",
+        "parameters": {
+          "c_include_mm2s": {
+            "value": "0"
+          },
+          "c_include_s2mm_dre": {
+            "value": "1"
+          }
+        },
         "interface_ports": {
           "M_AXI_SG": {
             "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
             "mode": "Master",
             "address_space_ref": "Data_SG",
-            "base_address": {
-              "minimum": "0x00000000",
-              "maximum": "0xFFFFFFFF",
-              "width": "32"
-            }
-          },
-          "M_AXI_MM2S": {
-            "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-            "mode": "Master",
-            "address_space_ref": "Data_MM2S",
             "base_address": {
               "minimum": "0x00000000",
               "maximum": "0xFFFFFFFF",
@@ -1406,11 +1415,11 @@
               "range": "4G",
               "width": "32"
             },
-            "Data_MM2S": {
+            "Data_S2MM": {
               "range": "4G",
               "width": "32"
             },
-            "Data_S2MM": {
+            "Data_MM2S": {
               "range": "4G",
               "width": "32"
             }
@@ -2326,56 +2335,11 @@
                 "direction": "I"
               }
             },
-            "components": {
-              "auto_us": {
-                "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
-                "xci_name": "adc_dma_bd_auto_us_1",
-                "xci_path": "ip/adc_dma_bd_auto_us_1/adc_dma_bd_auto_us_1.xci",
-                "inst_hier_path": "axi_mem_intercon/s01_couplers/auto_us",
-                "parameters": {
-                  "MI_DATA_WIDTH": {
-                    "value": "64"
-                  },
-                  "SI_DATA_WIDTH": {
-                    "value": "32"
-                  }
-                },
-                "interface_ports": {
-                  "S_AXI": {
-                    "vlnv": "xilinx.com:interface:aximm_rtl:1.0",
-                    "mode": "Slave",
-                    "bridges": [
-                      "M_AXI"
-                    ]
-                  }
-                }
-              }
-            },
             "interface_nets": {
-              "auto_us_to_s01_couplers": {
-                "interface_ports": [
-                  "M_AXI",
-                  "auto_us/M_AXI"
-                ]
-              },
-              "s01_couplers_to_auto_us": {
+              "s01_couplers_to_s01_couplers": {
                 "interface_ports": [
                   "S_AXI",
-                  "auto_us/S_AXI"
-                ]
-              }
-            },
-            "nets": {
-              "S_ACLK_1": {
-                "ports": [
-                  "S_ACLK",
-                  "auto_us/s_axi_aclk"
-                ]
-              },
-              "S_ARESETN_1": {
-                "ports": [
-                  "S_ARESETN",
-                  "auto_us/s_axi_aresetn"
+                  "M_AXI"
                 ]
               }
             }
@@ -2430,8 +2394,8 @@
             "components": {
               "auto_us": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
-                "xci_name": "adc_dma_bd_auto_us_2",
-                "xci_path": "ip/adc_dma_bd_auto_us_2/adc_dma_bd_auto_us_2.xci",
+                "xci_name": "adc_dma_bd_auto_us_1",
+                "xci_path": "ip/adc_dma_bd_auto_us_1/adc_dma_bd_auto_us_1.xci",
                 "inst_hier_path": "axi_mem_intercon/s02_couplers/auto_us",
                 "parameters": {
                   "MI_DATA_WIDTH": {
@@ -2751,12 +2715,6 @@
           "ZmodADC1410_Controll_0/sSPI_IAP"
         ]
       },
-      "axi_dma_0_M_AXI_MM2S": {
-        "interface_ports": [
-          "axi_dma_0/M_AXI_MM2S",
-          "axi_mem_intercon/S01_AXI"
-        ]
-      },
       "axi_dma_0_M_AXI_S2MM": {
         "interface_ports": [
           "axi_dma_0/M_AXI_S2MM",
@@ -2971,7 +2929,6 @@
       },
       "axi_dma_0_mm2s_introut": {
         "ports": [
-          "axi_dma_0/mm2s_introut",
           "xlconcat_0/In0"
         ]
       },
@@ -3004,7 +2961,6 @@
           "axi_mem_intercon/M00_ACLK",
           "processing_system7_0/S_AXI_HP0_ACLK",
           "axi_mem_intercon/S01_ACLK",
-          "axi_dma_0/m_axi_mm2s_aclk",
           "axi_mem_intercon/S02_ACLK",
           "axi_dma_0/m_axi_s2mm_aclk",
           "processing_system7_0/M_AXI_GP0_ACLK",
@@ -3113,7 +3069,7 @@
               }
             }
           },
-          "Data_MM2S": {
+          "Data_S2MM": {
             "segments": {
               "SEG_processing_system7_0_HP0_DDR_LOWOCM": {
                 "address_block": "/processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM",
@@ -3122,7 +3078,7 @@
               }
             }
           },
-          "Data_S2MM": {
+          "Data_MM2S": {
             "segments": {
               "SEG_processing_system7_0_HP0_DDR_LOWOCM": {
                 "address_block": "/processing_system7_0/S_AXI_HP0/HP0_DDR_LOWOCM",

@@ -15,7 +15,7 @@
 -- Revision:
 -- Revision 0.01 - File Created
 -- Additional Comments:
--- 
+-- prueba de los puertos de entrada AXI-Lite y de salida de AXIStream mediante master_test
 ----------------------------------------------------------------------------------
 
 
@@ -42,8 +42,8 @@ architecture Behavioral of AXI_TAR_master_test_tb is
 		port (
 		OUT_REG0    : out std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
         OUT_REG1    : out std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
-        IN_REG2    : in std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
-        OUT_REG3    : out std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+        OUT_REG2    : out std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
+        IN_REG3     : in std_logic_vector(C_S_AXI_DATA_WIDTH-1 downto 0);
 		S_AXI_ACLK	: in std_logic;
 		S_AXI_ARESETN	: in std_logic;
 		S_AXI_AWADDR	: in std_logic_vector(C_S_AXI_ADDR_WIDTH-1 downto 0);
@@ -145,8 +145,8 @@ begin
 	port map (
 	    OUT_REG0 		=> slv_reg0,   
         OUT_REG1 		=> slv_reg1,
-        IN_REG2 		=> slv_reg2,
-        OUT_REG3 		=> slv_reg3,
+        OUT_REG2 		=> slv_reg2,
+        IN_REG3 		=> slv_reg3,
 		S_AXI_ACLK		=> s00_axi_aclk,
 		S_AXI_ARESETN	=> s00_axi_aresetn,
 		S_AXI_AWADDR	=> s00_axi_awaddr,
@@ -180,7 +180,7 @@ begin
 	    IADC2_SAMPLE 	=> sCh2In(15 downto 2),
         NUMBER_OF_SAMPLES_UNTIL_SEND => slv_reg1,
         INTR 			=> Introut,
-        COUNT 			=> slv_reg2,
+        COUNT 			=> slv_reg3,
 		M_AXIS_ACLK		=> m00_axis_aclk,
 		M_AXIS_ARESETN	=> m00_axis_aresetn,
 		M_AXIS_TVALID	=> m00_axis_tvalid,
@@ -206,18 +206,6 @@ begin
     end process;
 
     -- Secuencia de prueba
-    
---    axis_process: process
---    begin
---        while true loop
---            m00_axis_tready <= '1';
---            wait until (m00_axis_tvalid = '1');
---            m00_axis_tready <= '0';
---            wait for clk_period;
---            wait for clk_period;
---        end loop;
---        wait;
---    end process;
     
     axilite_process: process
     begin

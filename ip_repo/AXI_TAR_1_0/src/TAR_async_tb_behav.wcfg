@@ -12,16 +12,17 @@
    <zoom_setting>
       <ZoomStartTime time="0.000 ns"></ZoomStartTime>
       <ZoomEndTime time="4,000.001 ns"></ZoomEndTime>
-      <Cursor1Time time="700.000 ns"></Cursor1Time>
+      <Cursor1Time time="950.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="407"></NameColumnWidth>
-      <ValueColumnWidth column_width="167"></ValueColumnWidth>
+      <ValueColumnWidth column_width="135"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="5" />
    <wvobject type="group" fp_name="group979">
       <obj_property name="label">General</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject type="logic" fp_name="/TAR_async_tb/clk">
          <obj_property name="ElementShortName">clk</obj_property>
          <obj_property name="ObjectShortName">clk</obj_property>
@@ -33,10 +34,6 @@
       <wvobject type="logic" fp_name="/TAR_async_tb/start">
          <obj_property name="ElementShortName">start</obj_property>
          <obj_property name="ObjectShortName">start</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="/TAR_async_tb/rstn_internal">
-         <obj_property name="ElementShortName">rstn_internal</obj_property>
-         <obj_property name="ObjectShortName">rstn_internal</obj_property>
       </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group138">
@@ -56,15 +53,17 @@
             <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_HOLD</obj_property>
             <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
             <obj_property name="AnalogHorizLine">0.000000</obj_property>
-            <obj_property name="AnalogYRangeType">ANALOG_YRANGETYPE_AUTO</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
          </wvobject>
          <wvobject type="array" fp_name="/TAR_async_tb/sCh1H_Low">
             <obj_property name="ElementShortName">sCh1H_Low[15:0]</obj_property>
             <obj_property name="ObjectShortName">sCh1H_Low[15:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
          </wvobject>
          <wvobject type="array" fp_name="/TAR_async_tb/sCh1H_High">
             <obj_property name="ElementShortName">sCh1H_High[15:0]</obj_property>
             <obj_property name="ObjectShortName">sCh1H_High[15:0]</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
          </wvobject>
       </wvobject>
       <wvobject type="group" fp_name="group976">
@@ -75,8 +74,8 @@
             <obj_property name="ObjectShortName">cha_data[13:0]</obj_property>
          </wvobject>
          <wvobject type="array" fp_name="/TAR_async_tb/cha_ts">
-            <obj_property name="ElementShortName">cha_ts[7:0]</obj_property>
-            <obj_property name="ObjectShortName">cha_ts[7:0]</obj_property>
+            <obj_property name="ElementShortName">cha_ts[31:0]</obj_property>
+            <obj_property name="ObjectShortName">cha_ts[31:0]</obj_property>
          </wvobject>
          <wvobject type="logic" fp_name="/TAR_async_tb/cha_dr">
             <obj_property name="ElementShortName">cha_dr</obj_property>
@@ -87,6 +86,7 @@
    <wvobject type="group" fp_name="group974">
       <obj_property name="label">VP_DETECTOR_B</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject type="group" fp_name="group977">
          <obj_property name="label">INPUT</obj_property>
          <obj_property name="DisplayName">label</obj_property>
@@ -119,27 +119,13 @@
             <obj_property name="ObjectShortName">chb_data[13:0]</obj_property>
          </wvobject>
          <wvobject type="array" fp_name="/TAR_async_tb/chb_ts">
-            <obj_property name="ElementShortName">chb_ts[7:0]</obj_property>
-            <obj_property name="ObjectShortName">chb_ts[7:0]</obj_property>
+            <obj_property name="ElementShortName">chb_ts[31:0]</obj_property>
+            <obj_property name="ObjectShortName">chb_ts[31:0]</obj_property>
          </wvobject>
          <wvobject type="logic" fp_name="/TAR_async_tb/chb_dr">
             <obj_property name="ElementShortName">chb_dr</obj_property>
             <obj_property name="ObjectShortName">chb_dr</obj_property>
          </wvobject>
-      </wvobject>
-   </wvobject>
-   <wvobject type="group" fp_name="group44">
-      <obj_property name="label">TIME_BASE</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <wvobject type="logic" fp_name="/TAR_async_tb/of_introut">
-         <obj_property name="ElementShortName">of_introut</obj_property>
-         <obj_property name="ObjectShortName">of_introut</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="/TAR_async_tb/timestamp">
-         <obj_property name="ElementShortName">timestamp[7:0]</obj_property>
-         <obj_property name="ObjectShortName">timestamp[7:0]</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group193">
@@ -162,12 +148,221 @@
          <obj_property name="ElementShortName">m_axis_tvalid</obj_property>
          <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
       </wvobject>
-      <wvobject type="vbus" fp_name="vbus530">
-         <obj_property name="label">m_axis_tdata</obj_property>
+      <wvobject type="vbus" fp_name="vbus1069">
+         <obj_property name="label">m_axis_tdata[47:0]</obj_property>
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="isExpanded"></obj_property>
+         <wvobject type="vbus" fp_name="vbus1036">
+            <obj_property name="label">TS[47:16]</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[47]">
+               <obj_property name="ElementShortName">[47]</obj_property>
+               <obj_property name="ObjectShortName">[47]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[46]">
+               <obj_property name="ElementShortName">[46]</obj_property>
+               <obj_property name="ObjectShortName">[46]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[45]">
+               <obj_property name="ElementShortName">[45]</obj_property>
+               <obj_property name="ObjectShortName">[45]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[44]">
+               <obj_property name="ElementShortName">[44]</obj_property>
+               <obj_property name="ObjectShortName">[44]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[43]">
+               <obj_property name="ElementShortName">[43]</obj_property>
+               <obj_property name="ObjectShortName">[43]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[42]">
+               <obj_property name="ElementShortName">[42]</obj_property>
+               <obj_property name="ObjectShortName">[42]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[41]">
+               <obj_property name="ElementShortName">[41]</obj_property>
+               <obj_property name="ObjectShortName">[41]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[40]">
+               <obj_property name="ElementShortName">[40]</obj_property>
+               <obj_property name="ObjectShortName">[40]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[39]">
+               <obj_property name="ElementShortName">[39]</obj_property>
+               <obj_property name="ObjectShortName">[39]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[38]">
+               <obj_property name="ElementShortName">[38]</obj_property>
+               <obj_property name="ObjectShortName">[38]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[37]">
+               <obj_property name="ElementShortName">[37]</obj_property>
+               <obj_property name="ObjectShortName">[37]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[36]">
+               <obj_property name="ElementShortName">[36]</obj_property>
+               <obj_property name="ObjectShortName">[36]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[35]">
+               <obj_property name="ElementShortName">[35]</obj_property>
+               <obj_property name="ObjectShortName">[35]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[34]">
+               <obj_property name="ElementShortName">[34]</obj_property>
+               <obj_property name="ObjectShortName">[34]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[33]">
+               <obj_property name="ElementShortName">[33]</obj_property>
+               <obj_property name="ObjectShortName">[33]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[32]">
+               <obj_property name="ElementShortName">[32]</obj_property>
+               <obj_property name="ObjectShortName">[32]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[31]">
+               <obj_property name="ElementShortName">[31]</obj_property>
+               <obj_property name="ObjectShortName">[31]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[30]">
+               <obj_property name="ElementShortName">[30]</obj_property>
+               <obj_property name="ObjectShortName">[30]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[29]">
+               <obj_property name="ElementShortName">[29]</obj_property>
+               <obj_property name="ObjectShortName">[29]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[28]">
+               <obj_property name="ElementShortName">[28]</obj_property>
+               <obj_property name="ObjectShortName">[28]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[27]">
+               <obj_property name="ElementShortName">[27]</obj_property>
+               <obj_property name="ObjectShortName">[27]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[26]">
+               <obj_property name="ElementShortName">[26]</obj_property>
+               <obj_property name="ObjectShortName">[26]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[25]">
+               <obj_property name="ElementShortName">[25]</obj_property>
+               <obj_property name="ObjectShortName">[25]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[24]">
+               <obj_property name="ElementShortName">[24]</obj_property>
+               <obj_property name="ObjectShortName">[24]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[23]">
+               <obj_property name="ElementShortName">[23]</obj_property>
+               <obj_property name="ObjectShortName">[23]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[22]">
+               <obj_property name="ElementShortName">[22]</obj_property>
+               <obj_property name="ObjectShortName">[22]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[21]">
+               <obj_property name="ElementShortName">[21]</obj_property>
+               <obj_property name="ObjectShortName">[21]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[20]">
+               <obj_property name="ElementShortName">[20]</obj_property>
+               <obj_property name="ObjectShortName">[20]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[19]">
+               <obj_property name="ElementShortName">[19]</obj_property>
+               <obj_property name="ObjectShortName">[19]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[18]">
+               <obj_property name="ElementShortName">[18]</obj_property>
+               <obj_property name="ObjectShortName">[18]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[17]">
+               <obj_property name="ElementShortName">[17]</obj_property>
+               <obj_property name="ObjectShortName">[17]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[16]">
+               <obj_property name="ElementShortName">[16]</obj_property>
+               <obj_property name="ObjectShortName">[16]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="vbus" fp_name="vbus1033">
+            <obj_property name="label">CH[15:14]</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[15]">
+               <obj_property name="ElementShortName">[15]</obj_property>
+               <obj_property name="ObjectShortName">[15]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[14]">
+               <obj_property name="ElementShortName">[14]</obj_property>
+               <obj_property name="ObjectShortName">[14]</obj_property>
+            </wvobject>
+         </wvobject>
+         <wvobject type="vbus" fp_name="vbus1018">
+            <obj_property name="label">VP[13:0]</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[13]">
+               <obj_property name="ElementShortName">[13]</obj_property>
+               <obj_property name="ObjectShortName">[13]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[12]">
+               <obj_property name="ElementShortName">[12]</obj_property>
+               <obj_property name="ObjectShortName">[12]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[11]">
+               <obj_property name="ElementShortName">[11]</obj_property>
+               <obj_property name="ObjectShortName">[11]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[10]">
+               <obj_property name="ElementShortName">[10]</obj_property>
+               <obj_property name="ObjectShortName">[10]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[9]">
+               <obj_property name="ElementShortName">[9]</obj_property>
+               <obj_property name="ObjectShortName">[9]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[8]">
+               <obj_property name="ElementShortName">[8]</obj_property>
+               <obj_property name="ObjectShortName">[8]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[7]">
+               <obj_property name="ElementShortName">[7]</obj_property>
+               <obj_property name="ObjectShortName">[7]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[6]">
+               <obj_property name="ElementShortName">[6]</obj_property>
+               <obj_property name="ObjectShortName">[6]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[5]">
+               <obj_property name="ElementShortName">[5]</obj_property>
+               <obj_property name="ObjectShortName">[5]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[4]">
+               <obj_property name="ElementShortName">[4]</obj_property>
+               <obj_property name="ObjectShortName">[4]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[3]">
+               <obj_property name="ElementShortName">[3]</obj_property>
+               <obj_property name="ObjectShortName">[3]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[2]">
+               <obj_property name="ElementShortName">[2]</obj_property>
+               <obj_property name="ObjectShortName">[2]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[1]">
+               <obj_property name="ElementShortName">[1]</obj_property>
+               <obj_property name="ObjectShortName">[1]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[0]">
+               <obj_property name="ElementShortName">[0]</obj_property>
+               <obj_property name="ObjectShortName">[0]</obj_property>
+            </wvobject>
+         </wvobject>
+      </wvobject>
+      <wvobject type="vbus" fp_name="vbus530">
+         <obj_property name="label">m_axis_tdata_[31:0]</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
          <wvobject type="vbus" fp_name="vbus497">
-            <obj_property name="label">m_axis_tdata_ts</obj_property>
+            <obj_property name="label">TS[31:16]</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[23]">
@@ -204,9 +399,9 @@
             </wvobject>
          </wvobject>
          <wvobject type="vbus" fp_name="vbus494">
-            <obj_property name="label">m_axis_tdata_chn</obj_property>
+            <obj_property name="label">CH[15:14]</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="Radix">BINARYRADIX</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[15]">
                <obj_property name="ElementShortName">[15]</obj_property>
                <obj_property name="ObjectShortName">[15]</obj_property>
@@ -217,7 +412,7 @@
             </wvobject>
          </wvobject>
          <wvobject type="vbus" fp_name="vbus479">
-            <obj_property name="label">m_axis_tdata_vp_cad</obj_property>
+            <obj_property name="label">VP[13:0]</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tdata[13]">
                <obj_property name="ElementShortName">[13]</obj_property>
@@ -278,8 +473,8 @@
          </wvobject>
       </wvobject>
       <wvobject type="array" fp_name="/TAR_async_tb/m_axis_tstrb">
-         <obj_property name="ElementShortName">m_axis_tstrb[2:0]</obj_property>
-         <obj_property name="ObjectShortName">m_axis_tstrb[2:0]</obj_property>
+         <obj_property name="ElementShortName">m_axis_tstrb[5:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tstrb[5:0]</obj_property>
          <obj_property name="Radix">BINARYRADIX</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tlast">
@@ -289,6 +484,20 @@
       <wvobject type="logic" fp_name="/TAR_async_tb/m_axis_tready">
          <obj_property name="ElementShortName">m_axis_tready</obj_property>
          <obj_property name="ObjectShortName">m_axis_tready</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group44">
+      <obj_property name="label">TIME_BASE</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="logic" fp_name="/TAR_async_tb/of_introut">
+         <obj_property name="ElementShortName">of_introut</obj_property>
+         <obj_property name="ObjectShortName">of_introut</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/TAR_async_tb/timestamp">
+         <obj_property name="ElementShortName">timestamp[31:0]</obj_property>
+         <obj_property name="ObjectShortName">timestamp[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       </wvobject>
    </wvobject>
 </wave_config>

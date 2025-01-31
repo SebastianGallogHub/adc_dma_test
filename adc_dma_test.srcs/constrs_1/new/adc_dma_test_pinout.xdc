@@ -49,7 +49,7 @@ set_property -dict { PACKAGE_PIN P22   IOSTANDARD LVCMOS18 } [get_ports { dADC_D
 #set_property -dict { PACKAGE_PIN M20  } [get_ports { syzygy_a_p2c_clk_n }]; #IO_L13N_T2_MRCC Sch=syzygy_a_p2c_clk_n
 
 create_clock -period 10.000 -name DcoClk_0 -waveform {0.000 5.000} [get_ports DcoClk_0]
-create_generated_clock -name adcClkIn_p_0 -source [get_pins design_1_i/ZmodADC1410_Controll_0/U0/InstADC_ClkODDR/C] -divide_by 1 [get_ports adcClkIn_p_0]
+create_generated_clock -name adcClkIn_p_0 -source [get_pins adc_dma_db_i/ZmodADC1410_Controll_0/U0/InstADC_ClkODDR/C] -divide_by 1 [get_ports adcClkIn_p_0]
 
 set_input_delay -clock [get_clocks DcoClk_0] -clock_fall -min -add_delay 3.240 [get_ports {dADC_Data_0[*]}]
 set_input_delay -clock [get_clocks DcoClk_0] -clock_fall -max -add_delay 5.440 [get_ports {dADC_Data_0[*]}]

@@ -71,7 +71,7 @@ proc create_report { reportName command } {
 }
 OPTRACE "adc_dma_bd_processing_system7_0_0_synth_1" START { ROLLUP_AUTO }
 set_param checkpoint.writeSynthRtdsInDcp 1
-set_param synth.incrementalSynthesisCache ./.Xil/Vivado-2800-sebasHAL/incrSyn
+set_param synth.incrementalSynthesisCache ./.Xil/Vivado-2544-sebasHAL/incrSyn
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 set_param project.vivado.isBlockSynthRun true
