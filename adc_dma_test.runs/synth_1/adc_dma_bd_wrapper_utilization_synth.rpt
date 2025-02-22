@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-| Date         : Fri Jan 31 08:31:52 2025
+| Date         : Mon Feb 17 13:32:00 2025
 | Host         : sebasHAL running 64-bit Ubuntu 20.04.6 LTS
 | Command      : report_utilization -file adc_dma_bd_wrapper_utilization_synth.rpt -pb adc_dma_bd_wrapper_utilization_synth.pb
 | Design       : adc_dma_bd_wrapper
@@ -161,11 +161,15 @@ Warning! LUT value is adjusted to account for LUT combining.
 +-------------------------------------+------+
 | adc_dma_bd_xbar_1                   |    1 |
 | adc_dma_bd_xbar_0                   |    1 |
+| adc_dma_bd_system_ila_1_0           |    1 |
+| adc_dma_bd_system_ila_0_0           |    1 |
 | adc_dma_bd_rst_ps7_0_100M_1_0       |    1 |
 | adc_dma_bd_rst_ps7_0_100M_0         |    1 |
 | adc_dma_bd_processing_system7_0_0   |    1 |
 | adc_dma_bd_clk_wiz_0_0              |    1 |
+| adc_dma_bd_axis_data_fifo_0_0       |    1 |
 | adc_dma_bd_axi_dma_0_0              |    1 |
+| adc_dma_bd_auto_us_2                |    1 |
 | adc_dma_bd_auto_us_1                |    1 |
 | adc_dma_bd_auto_us_0                |    1 |
 | adc_dma_bd_auto_pc_1                |    1 |

@@ -64,4 +64,4 @@ set_property -dict { PACKAGE_PIN J21   IOSTANDARD LVCMOS18 } [get_ports { dADC_D
 set_property src_info {type:XDC file:1 line:47 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN P22   IOSTANDARD LVCMOS18 } [get_ports { dADC_Data_0[13] }]; #IO_L16N_T2 Sch=syzygy_a_s[25]
 set_property src_info {type:XDC file:1 line:52 export:INPUT save:INPUT read:READ} [current_design]
-create_generated_clock -name adcClkIn_p_0 -source [get_pins adc_dma_db_i/ZmodADC1410_Controll_0/U0/InstADC_ClkODDR/C] -divide_by 1 [get_ports adcClkIn_p_0]
+create_generated_clock -name adcClkIn_p_0 -source [get_pins adc_dma_bd_i/ZmodADC1410_Controll_0/U0/InstADC_ClkODDR/C] -divide_by 1 [get_ports adcClkIn_p_0]

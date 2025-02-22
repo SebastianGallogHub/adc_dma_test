@@ -3,8 +3,8 @@
 # SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Fri Jan 31 08:26:05 2025
-# Process ID: 4490
+# Start of session at: Mon Feb 17 10:46:17 2025
+# Process ID: 4685
 # Current directory: /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/adc_dma_bd_axi_dma_0_0_synth_1
 # Command line: vivado -log adc_dma_bd_axi_dma_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source adc_dma_bd_axi_dma_0_0.tcl
 # Log file: /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/adc_dma_bd_axi_dma_0_0_synth_1/adc_dma_bd_axi_dma_0_0.vds
@@ -12,9 +12,8 @@
 # Running On: sebasHAL, OS: Linux, CPU Frequency: 2400.000 MHz, CPU Physical cores: 2, Host memory: 3883 MB
 #-----------------------------------------------------------
 source adc_dma_bd_axi_dma_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1284.059 ; gain = 28.023 ; free physical = 110 ; free virtual = 2521
+create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1284.086 ; gain = 30.023 ; free physical = 110 ; free virtual = 2338
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sebas/Escritorio/proyecto/workspace/axi_stream_test/ip_repo/generator_1_0'.
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/ip_repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2023.1/data/ip'.
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: adc_dma_bd_axi_dma_0_0
@@ -25,11 +24,11 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg484-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 4652
+INFO: [Synth 8-7075] Helper process launched with PID 4862
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2044.016 ; gain = 376.770 ; free physical = 108 ; free virtual = 1540
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 2051.973 ; gain = 377.730 ; free physical = 109 ; free virtual = 1313
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_axi_dma_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_axi_dma_0_0/synth/adc_dma_bd_axi_dma_0_0.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_axi_dma_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_axi_dma_0_0/synth/adc_dma_bd_axi_dma_0_0.vhd:158]
 	Parameter C_S_AXI_LITE_ADDR_WIDTH bound to: 10 - type: integer 
 	Parameter C_S_AXI_LITE_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_DLYTMR_RESOLUTION bound to: 125 - type: integer 
@@ -38,7 +37,7 @@ INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_axi_dma_0_0' [/home/sebas/Es
 	Parameter C_NUM_MM2S_CHANNELS bound to: 1 - type: integer 
 	Parameter C_NUM_S2MM_CHANNELS bound to: 1 - type: integer 
 	Parameter C_INCLUDE_SG bound to: 1 - type: integer 
-	Parameter C_SG_INCLUDE_STSCNTRL_STRM bound to: 1 - type: integer 
+	Parameter C_SG_INCLUDE_STSCNTRL_STRM bound to: 0 - type: integer 
 	Parameter C_SG_USE_STSAPP_LENGTH bound to: 0 - type: integer 
 	Parameter C_SG_LENGTH_WIDTH bound to: 14 - type: integer 
 	Parameter C_M_AXI_SG_ADDR_WIDTH bound to: 32 - type: integer 
@@ -46,7 +45,7 @@ INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_axi_dma_0_0' [/home/sebas/Es
 	Parameter C_M_AXIS_MM2S_CNTRL_TDATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXIS_S2MM_STS_TDATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_MICRO_DMA bound to: 0 - type: integer 
-	Parameter C_INCLUDE_MM2S bound to: 0 - type: integer 
+	Parameter C_INCLUDE_MM2S bound to: 1 - type: integer 
 	Parameter C_INCLUDE_MM2S_SF bound to: 1 - type: integer 
 	Parameter C_MM2S_BURST_SIZE bound to: 16 - type: integer 
 	Parameter C_M_AXI_MM2S_ADDR_WIDTH bound to: 32 - type: integer 
@@ -55,14 +54,14 @@ INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_axi_dma_0_0' [/home/sebas/Es
 	Parameter C_INCLUDE_MM2S_DRE bound to: 0 - type: integer 
 	Parameter C_INCLUDE_S2MM bound to: 1 - type: integer 
 	Parameter C_INCLUDE_S2MM_SF bound to: 1 - type: integer 
-	Parameter C_S2MM_BURST_SIZE bound to: 16 - type: integer 
+	Parameter C_S2MM_BURST_SIZE bound to: 256 - type: integer 
 	Parameter C_M_AXI_S2MM_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_M_AXI_S2MM_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXIS_S2MM_TDATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_INCLUDE_S2MM_DRE bound to: 1 - type: integer 
 	Parameter C_INCREASE_THROUGHPUT bound to: 0 - type: integer 
 	Parameter C_FAMILY bound to: zynq - type: string 
-INFO: [Synth 8-3491] module 'axi_dma' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:21835' bound to instance 'U0' of component 'axi_dma' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_axi_dma_0_0/synth/adc_dma_bd_axi_dma_0_0.vhd:403]
+INFO: [Synth 8-3491] module 'axi_dma' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:21835' bound to instance 'U0' of component 'axi_dma' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_axi_dma_0_0/synth/adc_dma_bd_axi_dma_0_0.vhd:437]
 INFO: [Synth 8-638] synthesizing module 'axi_dma' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:22180]
 INFO: [Synth 8-638] synthesizing module 'axi_dma_rst_module' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:1595]
 INFO: [Synth 8-638] synthesizing module 'cdc_sync' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
@@ -700,6 +699,8 @@ INFO: [Synth 8-638] synthesizing module 'cdc_sync__parameterized4' [/home/sebas/
 	Parameter INIT bound to: 1'b0 
 INFO: [Synth 8-256] done synthesizing module 'cdc_sync__parameterized4' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 INFO: [Synth 8-256] done synthesizing module 'axi_dma_lite_if' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:2066]
+INFO: [Synth 8-638] synthesizing module 'axi_dma_register' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:3609]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma_register' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:3609]
 INFO: [Synth 8-638] synthesizing module 'axi_dma_register_s2mm' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:4855]
 INFO: [Synth 8-256] done synthesizing module 'axi_dma_register_s2mm' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:4855]
 INFO: [Synth 8-256] done synthesizing module 'axi_dma_reg_module' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:8438]
@@ -725,14 +726,6 @@ INFO: [Synth 8-256] done synthesizing module 'axi_sg_updt_cmdsts_if' (0#1) [/hom
 INFO: [Synth 8-256] done synthesizing module 'axi_sg_updt_mngr' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:25105]
 INFO: [Synth 8-638] synthesizing module 'axi_sg_updt_q_mngr' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:27329]
 INFO: [Synth 8-638] synthesizing module 'axi_sg_updt_queue' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:25456]
-INFO: [Synth 8-638] synthesizing module 'srl_fifo_f' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
-INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-638] synthesizing module 'cntr_incr_decr_addn_f' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
-INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
-INFO: [Synth 8-638] synthesizing module 'dynshreg_f' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
-INFO: [Synth 8-256] done synthesizing module 'dynshreg_f' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
-INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
 INFO: [Synth 8-256] done synthesizing module 'axi_sg_updt_queue' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:25456]
 INFO: [Synth 8-256] done synthesizing module 'axi_sg_updt_q_mngr' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:27329]
 INFO: [Synth 8-638] synthesizing module 'axi_sg_intrpt' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:27933]
@@ -759,22 +752,22 @@ INFO: [Synth 8-256] done synthesizing module 'axi_sg_mm2s_basic_wrap' (0#1) [/ho
 INFO: [Synth 8-638] synthesizing module 'axi_sg_s2mm_basic_wrap' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:16514]
 INFO: [Synth 8-638] synthesizing module 'axi_sg_wr_status_cntl' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:13571]
 INFO: [Synth 8-638] synthesizing module 'axi_sg_fifo__parameterized1' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:1890]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'cntr_incr_decr_addn_f' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_sg_fifo__parameterized1' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:1890]
+INFO: [Synth 8-638] synthesizing module 'axi_sg_fifo__parameterized2' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:1890]
 INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
 INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-638] synthesizing module 'cntr_incr_decr_addn_f__parameterized0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
-INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f__parameterized0' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
 INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
 INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized0' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
 INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized0' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
 INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized0' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
-INFO: [Synth 8-256] done synthesizing module 'axi_sg_fifo__parameterized1' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:1890]
-INFO: [Synth 8-638] synthesizing module 'axi_sg_fifo__parameterized2' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:1890]
-INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized1' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
-INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized1' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized1' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
-INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized1' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
-INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized1' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized1' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
 INFO: [Synth 8-256] done synthesizing module 'axi_sg_fifo__parameterized2' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:1890]
 INFO: [Synth 8-256] done synthesizing module 'axi_sg_wr_status_cntl' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:13571]
 INFO: [Synth 8-638] synthesizing module 'axi_sg_scc_wr' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:9830]
@@ -786,6 +779,26 @@ INFO: [Synth 8-256] done synthesizing module 'axi_sg_wrdata_cntl' (0#1) [/home/s
 INFO: [Synth 8-256] done synthesizing module 'axi_sg_s2mm_basic_wrap' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:16514]
 INFO: [Synth 8-256] done synthesizing module 'axi_sg_datamover' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:17745]
 INFO: [Synth 8-256] done synthesizing module 'axi_sg' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:28767]
+INFO: [Synth 8-638] synthesizing module 'axi_dma_mm2s_mngr' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:15180]
+INFO: [Synth 8-638] synthesizing module 'axi_dma_mm2s_sm' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:13369]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma_mm2s_sm' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:13369]
+INFO: [Synth 8-638] synthesizing module 'axi_dma_mm2s_sg_if' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:12449]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized1' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized1' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'cntr_incr_decr_addn_f__parameterized0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f__parameterized0' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized1' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized1' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized1' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized1' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma_mm2s_sg_if' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:12449]
+INFO: [Synth 8-638] synthesizing module 'axi_dma_mm2s_cmdsts_if' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:13962]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma_mm2s_cmdsts_if' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:13962]
+INFO: [Synth 8-638] synthesizing module 'axi_dma_mm2s_sts_mngr' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:14277]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma_mm2s_sts_mngr' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:14277]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma_mm2s_mngr' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:15180]
+INFO: [Synth 8-638] synthesizing module 'axi_dma_sofeof_gen' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:11443]
+INFO: [Synth 8-256] done synthesizing module 'axi_dma_sofeof_gen' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:11443]
 INFO: [Synth 8-638] synthesizing module 'axi_dma_s2mm_mngr' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:20566]
 INFO: [Synth 8-638] synthesizing module 'axi_dma_s2mm_sm' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:17782]
 INFO: [Synth 8-256] done synthesizing module 'axi_dma_s2mm_sm' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:17782]
@@ -795,21 +808,9 @@ INFO: [Synth 8-638] synthesizing module 'axi_dma_s2mm_cmdsts_if' [/home/sebas/Es
 INFO: [Synth 8-256] done synthesizing module 'axi_dma_s2mm_cmdsts_if' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:18830]
 INFO: [Synth 8-638] synthesizing module 'axi_dma_s2mm_sts_mngr' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:19260]
 INFO: [Synth 8-256] done synthesizing module 'axi_dma_s2mm_sts_mngr' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:19260]
-INFO: [Synth 8-638] synthesizing module 'axi_dma_s2mm_sts_strm' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:19562]
-INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized2' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
-INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized2' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized2' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
-INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized2' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
-INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized2' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized2' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
-INFO: [Synth 8-256] done synthesizing module 'axi_dma_s2mm_sts_strm' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:19562]
 INFO: [Synth 8-256] done synthesizing module 'axi_dma_s2mm_mngr' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:20566]
-INFO: [Synth 8-638] synthesizing module 'axi_dma_sofeof_gen' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:11443]
-INFO: [Synth 8-256] done synthesizing module 'axi_dma_sofeof_gen' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:11443]
 INFO: [Synth 8-638] synthesizing module 'axi_datamover' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:55439]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_mm2s_omit_wrap' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:53209]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_mm2s_omit_wrap' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:53209]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_full_wrap' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:49997]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_mm2s_full_wrap' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:53572]
 INFO: [Synth 8-638] synthesizing module 'axi_datamover_reset' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:153]
 INFO: [Synth 8-256] done synthesizing module 'axi_datamover_reset' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:153]
 INFO: [Synth 8-638] synthesizing module 'axi_datamover_cmd_status' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:2698]
@@ -818,84 +819,57 @@ INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo' (0#1) [/home/s
 INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
 INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized0' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
 INFO: [Synth 8-256] done synthesizing module 'axi_datamover_cmd_status' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:2698]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_wr_status_cntl' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:17704]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rd_status_cntl' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:13746]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rd_status_cntl' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:13746]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_pcc' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:7416]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_strb_gen2' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:4342]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_strb_gen2' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:4342]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_strb_gen2__parameterized0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:4342]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_strb_gen2__parameterized0' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:4342]
+INFO: [Synth 8-226] default block is never used [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:9490]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_pcc' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:7416]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_addr_cntl' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:10000]
 INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized1' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized2' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized2' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized2' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized2' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized2' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized2' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized1' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_addr_cntl' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:10000]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rddata_cntl' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:12185]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rdmux' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:10681]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rdmux' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:10681]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized2' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
 INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized3' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
 INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized3' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-638] synthesizing module 'cntr_incr_decr_addn_f__parameterized1' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
-INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f__parameterized1' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
 INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized3' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
 INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized3' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
 INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized3' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
 INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized3' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized1' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized2' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized2' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rddata_cntl' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:12185]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_rd_sf' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:20208]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized3' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
 INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized4' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
 INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized4' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
 INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized4' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
 INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized4' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
 INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized4' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
 INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized4' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized2' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wr_status_cntl' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:17704]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_ibttcc' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:25731]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_ibttcc' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:25731]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_skid_buf' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:19500]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_skid_buf' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:19500]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_realign' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:47011]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized3' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
-INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized5' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
-INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized5' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized5' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
-INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized5' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
-INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized5' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized5' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
 INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized3' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_dre' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:36563]
-INFO: [Synth 8-226] default block is never used [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:41821]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_dre_mux2_1_x_n' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:29950]
-INFO: [Synth 8-226] default block is never used [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:29966]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_dre_mux2_1_x_n' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:29950]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_dre_mux4_1_x_n' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:30097]
-INFO: [Synth 8-226] default block is never used [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:30113]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_dre_mux4_1_x_n' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:30097]
-INFO: [Synth 8-226] default block is never used [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:42049]
-INFO: [Synth 8-226] default block is never used [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:42096]
-INFO: [Synth 8-226] default block is never used [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:42143]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_dre' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:36563]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_scatter' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:45117]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_mssai_skid_buf' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:44167]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_ms_strb_set' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:42603]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_ms_strb_set' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:42603]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_mssai_skid_buf' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:44167]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_strb_gen2' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:4342]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_strb_gen2' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:4342]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_slice' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:44856]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_slice' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:44856]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized4' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
-INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized6' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
-INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized6' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized6' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
-INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized6' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
-INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized6' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized6' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized4' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_scatter' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:45117]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_realign' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:47011]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_indet_btt' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:28430]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_stbs_set' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:23410]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_stbs_set' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:23410]
 INFO: [Synth 8-638] synthesizing module 'axi_datamover_sfifo_autord' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1295]
 INFO: [Synth 8-638] synthesizing module 'sync_fifo_fg' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/3d41/hdl/lib_fifo_v1_0_rfs.vhd:2250]
-	Parameter FIFO_MEMORY_TYPE bound to: auto - type: string 
-	Parameter FIFO_WRITE_DEPTH bound to: 16 - type: integer 
-	Parameter WRITE_DATA_WIDTH bound to: 9 - type: integer 
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter FIFO_WRITE_DEPTH bound to: 128 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 39 - type: integer 
 	Parameter READ_MODE bound to: fwft - type: string 
 	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
 	Parameter FULL_RESET_VALUE bound to: 1 - type: integer 
 	Parameter USE_ADV_FEATURES bound to: 1F1F - type: string 
-	Parameter READ_DATA_WIDTH bound to: 9 - type: integer 
-	Parameter WR_DATA_COUNT_WIDTH bound to: 5 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 39 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 8 - type: integer 
 	Parameter PROG_FULL_THRESH bound to: 10 - type: integer 
 	Parameter RD_DATA_COUNT_WIDTH bound to: 4 - type: integer 
 	Parameter PROG_EMPTY_THRESH bound to: 10 - type: integer 
@@ -910,7 +884,6 @@ INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn' (0#1) [/tools/X
 INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized0' [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized0' (0#1) [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
-INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:508]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base' (0#1) [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
 INFO: [Synth 8-226] default block is never used [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1207]
 INFO: [Synth 8-226] default block is never used [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1274]
@@ -929,17 +902,89 @@ INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base' (0#1) [/tools/Xili
 INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_sync' (0#1) [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1955]
 INFO: [Synth 8-256] done synthesizing module 'sync_fifo_fg' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/3d41/hdl/lib_fifo_v1_0_rfs.vhd:2250]
 INFO: [Synth 8-256] done synthesizing module 'axi_datamover_sfifo_autord' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1295]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_rd_sf' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:20208]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_skid_buf' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:19500]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_skid_buf' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:19500]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_mm2s_full_wrap' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:53572]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_full_wrap' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:49997]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_cmd_status__parameterized0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:2698]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized4' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized4' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_cmd_status__parameterized0' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:2698]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_wr_status_cntl' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:17704]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized5' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized5' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized5' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'cntr_incr_decr_addn_f__parameterized1' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'cntr_incr_decr_addn_f__parameterized1' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:143]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized5' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized5' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized5' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized5' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized5' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized6' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized6' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized6' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized6' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized6' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized6' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized6' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized6' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wr_status_cntl' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:17704]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_ibttcc' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:25731]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_ibttcc' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:25731]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_realign' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:47011]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized7' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized7' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized7' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized7' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized7' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized7' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized7' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized7' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_dre' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:36563]
+INFO: [Synth 8-226] default block is never used [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:41821]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_dre_mux2_1_x_n' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:29950]
+INFO: [Synth 8-226] default block is never used [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:29966]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_dre_mux2_1_x_n' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:29950]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_dre_mux4_1_x_n' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:30097]
+INFO: [Synth 8-226] default block is never used [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:30113]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_dre_mux4_1_x_n' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:30097]
+INFO: [Synth 8-226] default block is never used [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:42049]
+INFO: [Synth 8-226] default block is never used [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:42096]
+INFO: [Synth 8-226] default block is never used [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:42143]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_dre' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:36563]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_s2mm_scatter' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:45117]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_mssai_skid_buf' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:44167]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_ms_strb_set' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:42603]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_ms_strb_set' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:42603]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_mssai_skid_buf' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:44167]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_slice' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:44856]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_slice' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:44856]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized8' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized8' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized8' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized8' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized8' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized8' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
+INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized8' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized8' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_scatter' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:45117]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_realign' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:47011]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_indet_btt' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:28430]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_stbs_set' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:23410]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_stbs_set' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:23410]
 INFO: [Synth 8-638] synthesizing module 'axi_datamover_sfifo_autord__parameterized0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1295]
 INFO: [Synth 8-638] synthesizing module 'sync_fifo_fg__parameterized0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/3d41/hdl/lib_fifo_v1_0_rfs.vhd:2250]
-	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
-	Parameter FIFO_WRITE_DEPTH bound to: 128 - type: integer 
-	Parameter WRITE_DATA_WIDTH bound to: 38 - type: integer 
+	Parameter FIFO_MEMORY_TYPE bound to: auto - type: string 
+	Parameter FIFO_WRITE_DEPTH bound to: 16 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 13 - type: integer 
 	Parameter READ_MODE bound to: fwft - type: string 
 	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
 	Parameter FULL_RESET_VALUE bound to: 1 - type: integer 
 	Parameter USE_ADV_FEATURES bound to: 1F1F - type: string 
-	Parameter READ_DATA_WIDTH bound to: 38 - type: integer 
-	Parameter WR_DATA_COUNT_WIDTH bound to: 8 - type: integer 
+	Parameter READ_DATA_WIDTH bound to: 13 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 5 - type: integer 
 	Parameter PROG_FULL_THRESH bound to: 10 - type: integer 
 	Parameter RD_DATA_COUNT_WIDTH bound to: 4 - type: integer 
 	Parameter PROG_EMPTY_THRESH bound to: 10 - type: integer 
@@ -954,6 +999,7 @@ INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized4'
 INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized5' [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized5' (0#1) [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized0' [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
+INFO: [Synth 8-6059] Synth Info: [XPM_MEMORY 20-1] MEMORY_PRIMITIVE (0) instructs Vivado Synthesis to choose the memory primitive type. Depending on their values, other XPM_MEMORY parameters may preclude the choice of certain memory primitive types. Review XPM_MEMORY documentation and parameter values to understand any limitations, or set MEMORY_PRIMITIVE to a different value.   [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:508]
 INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized0' (0#1) [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
 INFO: [Synth 8-226] default block is never used [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1207]
 INFO: [Synth 8-226] default block is never used [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1274]
@@ -966,19 +1012,48 @@ INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base__parameterized0' (0
 INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_sync__parameterized1' (0#1) [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1955]
 INFO: [Synth 8-256] done synthesizing module 'sync_fifo_fg__parameterized0' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/3d41/hdl/lib_fifo_v1_0_rfs.vhd:2250]
 INFO: [Synth 8-256] done synthesizing module 'axi_datamover_sfifo_autord__parameterized0' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1295]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_sfifo_autord__parameterized1' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1295]
+INFO: [Synth 8-638] synthesizing module 'sync_fifo_fg__parameterized1' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/3d41/hdl/lib_fifo_v1_0_rfs.vhd:2250]
+	Parameter FIFO_MEMORY_TYPE bound to: block - type: string 
+	Parameter FIFO_WRITE_DEPTH bound to: 2048 - type: integer 
+	Parameter WRITE_DATA_WIDTH bound to: 38 - type: integer 
+	Parameter READ_MODE bound to: fwft - type: string 
+	Parameter FIFO_READ_LATENCY bound to: 0 - type: integer 
+	Parameter FULL_RESET_VALUE bound to: 1 - type: integer 
+	Parameter USE_ADV_FEATURES bound to: 1F1F - type: string 
+	Parameter READ_DATA_WIDTH bound to: 38 - type: integer 
+	Parameter WR_DATA_COUNT_WIDTH bound to: 12 - type: integer 
+	Parameter PROG_FULL_THRESH bound to: 10 - type: integer 
+	Parameter RD_DATA_COUNT_WIDTH bound to: 4 - type: integer 
+	Parameter PROG_EMPTY_THRESH bound to: 10 - type: integer 
+	Parameter DOUT_RESET_VALUE bound to: 0 - type: string 
+	Parameter ECC_MODE bound to: no_ecc - type: string 
+	Parameter WAKEUP_TIME bound to: 0 - type: integer 
+INFO: [Synth 8-3491] module 'xpm_fifo_sync' declared at '/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1955' bound to instance 'xpm_fifo_sync_inst' of component 'xpm_fifo_sync' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/3d41/hdl/lib_fifo_v1_0_rfs.vhd:2627]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_sync__parameterized3' [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1955]
+INFO: [Synth 8-6157] synthesizing module 'xpm_fifo_base__parameterized1' [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:55]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized8' [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized8' (0#1) [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized9' [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized9' (0#1) [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized1' [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_memory_base__parameterized1' (0#1) [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:56]
+INFO: [Synth 8-226] default block is never used [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1207]
+INFO: [Synth 8-226] default block is never used [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1274]
+INFO: [Synth 8-226] default block is never used [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1296]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized10' [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized10' (0#1) [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6157] synthesizing module 'xpm_counter_updn__parameterized11' [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_counter_updn__parameterized11' (0#1) [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1859]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_base__parameterized1' (0#1) [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:55]
+INFO: [Synth 8-6155] done synthesizing module 'xpm_fifo_sync__parameterized3' (0#1) [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1955]
+INFO: [Synth 8-256] done synthesizing module 'sync_fifo_fg__parameterized1' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/3d41/hdl/lib_fifo_v1_0_rfs.vhd:2250]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_sfifo_autord__parameterized1' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1295]
 INFO: [Synth 8-638] synthesizing module 'axi_datamover_skid_buf__parameterized0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:19500]
 INFO: [Synth 8-256] done synthesizing module 'axi_datamover_skid_buf__parameterized0' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:19500]
 INFO: [Synth 8-256] done synthesizing module 'axi_datamover_indet_btt' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:28430]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_addr_cntl' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:10000]
-INFO: [Synth 8-638] synthesizing module 'axi_datamover_fifo__parameterized5' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
-INFO: [Synth 8-638] synthesizing module 'srl_fifo_f__parameterized7' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
-INFO: [Synth 8-638] synthesizing module 'srl_fifo_rbu_f__parameterized7' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-638] synthesizing module 'dynshreg_f__parameterized7' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
-INFO: [Synth 8-256] done synthesizing module 'dynshreg_f__parameterized7' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:397]
-INFO: [Synth 8-256] done synthesizing module 'srl_fifo_rbu_f__parameterized7' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:697]
-INFO: [Synth 8-256] done synthesizing module 'srl_fifo_f__parameterized7' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/51ce/hdl/lib_srl_fifo_v1_0_rfs.vhd:1000]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_fifo__parameterized5' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1886]
-INFO: [Synth 8-256] done synthesizing module 'axi_datamover_addr_cntl' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:10000]
+INFO: [Synth 8-638] synthesizing module 'axi_datamover_addr_cntl__parameterized0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:10000]
+INFO: [Synth 8-256] done synthesizing module 'axi_datamover_addr_cntl__parameterized0' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:10000]
 INFO: [Synth 8-638] synthesizing module 'axi_datamover_wrdata_cntl' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:15674]
 INFO: [Synth 8-256] done synthesizing module 'axi_datamover_wrdata_cntl' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:15674]
 INFO: [Synth 8-638] synthesizing module 'axi_datamover_skid2mm_buf' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:18998]
@@ -988,24 +1063,28 @@ INFO: [Synth 8-256] done synthesizing module 'axi_datamover_skid2mm_buf' (0#1) [
 INFO: [Synth 8-256] done synthesizing module 'axi_datamover_s2mm_full_wrap' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:49997]
 INFO: [Synth 8-256] done synthesizing module 'axi_datamover' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:55439]
 INFO: [Synth 8-256] done synthesizing module 'axi_dma' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:22180]
-INFO: [Synth 8-256] done synthesizing module 'adc_dma_bd_axi_dma_0_0' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_axi_dma_0_0/synth/adc_dma_bd_axi_dma_0_0.vhd:143]
+INFO: [Synth 8-256] done synthesizing module 'adc_dma_bd_axi_dma_0_0' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_axi_dma_0_0/synth/adc_dma_bd_axi_dma_0_0.vhd:158]
 WARNING: [Synth 8-6014] Unused sequential element GEN_ASYNC_RESET.p_soft_reset_d3_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:1277]
 WARNING: [Synth 8-6014] Unused sequential element awaddr_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:2160]
 WARNING: [Synth 8-6014] Unused sequential element wdata_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:2162]
 WARNING: [Synth 8-6014] Unused sequential element araddr_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:2164]
 WARNING: [Synth 8-6014] Unused sequential element sof_ftch_desc_del_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:21489]
 WARNING: [Synth 8-6014] Unused sequential element GEN_NOMULT_CHANNEL.counter_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:21577]
+WARNING: [Synth 8-6014] Unused sequential element GEN_MM2S.reg1_64_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:21659]
+WARNING: [Synth 8-6014] Unused sequential element GEN_MM2S.reg1_bd_64_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:21660]
+WARNING: [Synth 8-6014] Unused sequential element GEN_MM2S.queue_dout_new_64_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:21675]
+WARNING: [Synth 8-6014] Unused sequential element GEN_MM2S.queue_dout_new_bd_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:21676]
 WARNING: [Synth 8-6014] Unused sequential element GEN_S2MM.reg2_64_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:21820]
 WARNING: [Synth 8-6014] Unused sequential element GEN_S2MM.reg2_bd_64_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:21821]
 WARNING: [Synth 8-6014] Unused sequential element GEN_S2MM.queue_dout2_new_64_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:21836]
 WARNING: [Synth 8-6014] Unused sequential element GEN_S2MM.queue_dout2_new_bd_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:21837]
-WARNING: [Synth 8-6014] Unused sequential element FLOP_FOR_NOQUEUE.data_concat_tlast_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:23266]
 WARNING: [Synth 8-6014] Unused sequential element sig_cmd_stat_rst_int_reg_n_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:337]
 WARNING: [Synth 8-6014] Unused sequential element sig_mmap_rst_reg_n_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:340]
 WARNING: [Synth 8-6014] Unused sequential element sig_stream_rst_reg_n_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:343]
 WARNING: [Synth 8-6014] Unused sequential element sig_inhibit_rdy_n_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:2020]
 WARNING: [Synth 8-6014] Unused sequential element sig_inhibit_rdy_n_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:2020]
 WARNING: [Synth 8-6014] Unused sequential element sig_cmd_type_reg_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:7945]
+WARNING: [Synth 8-6014] Unused sequential element sig_cmd_tag_reg_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:7799]
 WARNING: [Synth 8-6014] Unused sequential element sig_cmd_reg_full_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:7951]
 WARNING: [Synth 8-6014] Unused sequential element sig_next_tag_reg_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:4966]
 WARNING: [Synth 8-6014] Unused sequential element sig_next_cmd_cmplt_reg_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:4973]
@@ -1020,11 +1099,26 @@ WARNING: [Synth 8-6014] Unused sequential element sig_s2mm_strm_wready_del_reg w
 WARNING: [Synth 8-6014] Unused sequential element sig_next_strt_strb_reg_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:12837]
 WARNING: [Synth 8-6014] Unused sequential element sig_first_dbeat_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:13099]
 WARNING: [Synth 8-6014] Unused sequential element sig_single_dbeat_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/85d0/hdl/axi_sg_v4_1_rfs.vhd:13101]
+WARNING: [Synth 8-6014] Unused sequential element queue_more_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:13830]
+WARNING: [Synth 8-6014] Unused sequential element updt_desc_reg1_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:12946]
 WARNING: [Synth 8-6014] Unused sequential element queue_more_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:18664]
 WARNING: [Synth 8-6014] Unused sequential element sig_cmd_stat_rst_int_reg_n_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:191]
 WARNING: [Synth 8-6014] Unused sequential element sig_mmap_rst_reg_n_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:194]
 WARNING: [Synth 8-6014] Unused sequential element sig_stream_rst_reg_n_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:197]
 WARNING: [Synth 8-6014] Unused sequential element sig_inhibit_rdy_n_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:2014]
+WARNING: [Synth 8-6014] Unused sequential element sig_inhibit_rdy_n_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:2014]
+WARNING: [Synth 8-6014] Unused sequential element sig_input_reg_full_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:8048]
+WARNING: [Synth 8-6014] Unused sequential element sig_xfer_reg_full_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:8359]
+WARNING: [Synth 8-6014] Unused sequential element sig_next_tag_reg_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:10410]
+WARNING: [Synth 8-6014] Unused sequential element sig_next_cmd_cmplt_reg_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:10417]
+WARNING: [Synth 8-6014] Unused sequential element sig_next_dre_src_align_reg_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:12886]
+WARNING: [Synth 8-6014] Unused sequential element sig_next_dre_dest_align_reg_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:12887]
+WARNING: [Synth 8-6014] Unused sequential element sig_coelsc_reg_empty_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:13225]
+WARNING: [Synth 8-6014] Unused sequential element gen_rd_b.gen_doutb_pipe.enb_pipe_reg[0] was removed.  [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:3071]
+WARNING: [Synth 8-6014] Unused sequential element gdvld.data_valid_std_reg was removed.  [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:537]
+WARNING: [Synth 8-6014] Unused sequential element gen_pntr_flags_cc.gae_cc_std.ram_aempty_i_reg was removed.  [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:969]
+WARNING: [Synth 8-6014] Unused sequential element gen_fwft.empty_fwft_fb_reg was removed.  [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_fifo/hdl/xpm_fifo.sv:1391]
+WARNING: [Synth 8-6014] Unused sequential element hold_ff_q_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:1513]
 WARNING: [Synth 8-6014] Unused sequential element sig_inhibit_rdy_n_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:2014]
 WARNING: [Synth 8-6014] Unused sequential element sig_input_reg_full_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:26374]
 WARNING: [Synth 8-6014] Unused sequential element sig_psm_ld_calc2_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:26578]
@@ -1052,54 +1146,72 @@ WARNING: [Synth 8-6014] Unused sequential element sig_next_tag_reg_reg was remov
 WARNING: [Synth 8-6014] Unused sequential element sig_next_cmd_cmplt_reg_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:10417]
 WARNING: [Synth 8-6014] Unused sequential element sig_next_last_strb_reg_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:16965]
 WARNING: [Synth 8-6014] Unused sequential element sig_next_eof_reg_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/e959/hdl/axi_datamover_v5_1_vh_rfs.vhd:16970]
-WARNING: [Synth 8-3848] Net m_axis_mm2s_tuser in module/entity axi_dma does not have driver. [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:22096]
-WARNING: [Synth 8-3848] Net m_axis_mm2s_tid in module/entity axi_dma does not have driver. [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:22097]
-WARNING: [Synth 8-3848] Net m_axis_mm2s_tdest in module/entity axi_dma does not have driver. [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:22098]
 WARNING: [Synth 8-3848] Net strm_valid in module/entity axi_dma does not have driver. [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:22741]
-WARNING: [Synth 8-3848] Net mm2s_cntrl_strm_stop in module/entity axi_dma does not have driver. [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:22732]
 WARNING: [Synth 8-3848] Net s2mm_desc_info_in in module/entity axi_dma does not have driver. [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/50c3/hdl/axi_dma_v7_1_vh_rfs.vhd:22714]
 WARNING: [Synth 8-7129] Port debeat_saddr_lsb[1] in module axi_datamover_wr_demux is either unconnected or has no load
 WARNING: [Synth 8-7129] Port debeat_saddr_lsb[0] in module axi_datamover_wr_demux is either unconnected or has no load
-WARNING: [Synth 8-7129] Port fifo_async_rd_reset in module axi_datamover_fifo__parameterized3 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo__parameterized3 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_async_rd_reset in module axi_datamover_fifo__parameterized7 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo__parameterized7 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port end_addr_offset[1] in module axi_datamover_strb_gen2 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port end_addr_offset[0] in module axi_datamover_strb_gen2 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port realign2wdc_eop_error in module axi_datamover_wrdata_cntl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port fifo_async_rd_reset in module axi_datamover_fifo__parameterized5 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo__parameterized5 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port data2addr_data_rdy in module axi_datamover_addr_cntl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_async_rd_reset in module axi_datamover_fifo__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port data2addr_data_rdy in module axi_datamover_addr_cntl__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port rd_clk in module xpm_fifo_rst is either unconnected or has no load
+WARNING: [Synth 8-7129] Port sleep in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port rsta in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port regcea in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port clkb in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[37] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[36] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[35] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[34] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[33] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[32] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[31] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[30] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[29] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[28] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[27] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[26] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[25] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[24] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[23] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[22] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[21] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[20] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[19] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[18] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[17] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[16] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[15] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[14] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[13] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[12] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[11] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[10] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[9] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[8] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[7] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[6] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[5] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[4] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[3] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[2] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[1] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port dinb[0] in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port SFIFO_Clr_Rd_Data_Valid in module axi_datamover_sfifo_autord__parameterized1 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port sleep in module xpm_memory_base__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port rsta in module xpm_memory_base__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port regcea in module xpm_memory_base__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port clkb in module xpm_memory_base__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[37] in module xpm_memory_base__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[36] in module xpm_memory_base__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[35] in module xpm_memory_base__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[34] in module xpm_memory_base__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[33] in module xpm_memory_base__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[32] in module xpm_memory_base__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[31] in module xpm_memory_base__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[30] in module xpm_memory_base__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[29] in module xpm_memory_base__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[28] in module xpm_memory_base__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[27] in module xpm_memory_base__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[26] in module xpm_memory_base__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[25] in module xpm_memory_base__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[24] in module xpm_memory_base__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[23] in module xpm_memory_base__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[22] in module xpm_memory_base__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[21] in module xpm_memory_base__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[20] in module xpm_memory_base__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[19] in module xpm_memory_base__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[18] in module xpm_memory_base__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[17] in module xpm_memory_base__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[16] in module xpm_memory_base__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[15] in module xpm_memory_base__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[14] in module xpm_memory_base__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[13] in module xpm_memory_base__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port dinb[12] in module xpm_memory_base__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port dinb[11] in module xpm_memory_base__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port dinb[10] in module xpm_memory_base__parameterized0 is either unconnected or has no load
@@ -1116,27 +1228,9 @@ WARNING: [Synth 8-7129] Port dinb[0] in module xpm_memory_base__parameterized0 i
 WARNING: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base__parameterized0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port SFIFO_Clr_Rd_Data_Valid in module axi_datamover_sfifo_autord__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port sleep in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port rsta in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port regcea in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port injectsbiterra in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port injectdbiterra in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port clkb in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[8] in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[7] in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[6] in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[5] in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[4] in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[3] in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[2] in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[1] in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port dinb[0] in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port injectsbiterrb in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port injectdbiterrb in module xpm_memory_base is either unconnected or has no load
-WARNING: [Synth 8-7129] Port SFIFO_Clr_Rd_Data_Valid in module axi_datamover_sfifo_autord is either unconnected or has no load
 WARNING: [Synth 8-7129] Port dre2ibtt_strt_addr_offset[0] in module axi_datamover_indet_btt is either unconnected or has no load
-WARNING: [Synth 8-7129] Port fifo_async_rd_reset in module axi_datamover_fifo__parameterized4 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo__parameterized4 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_async_rd_reset in module axi_datamover_fifo__parameterized8 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo__parameterized8 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port cmd2mstr_command[25] in module axi_datamover_ibttcc is either unconnected or has no load
 WARNING: [Synth 8-7129] Port cmd2mstr_command[24] in module axi_datamover_ibttcc is either unconnected or has no load
 WARNING: [Synth 8-7129] Port cmd2mstr_command[23] in module axi_datamover_ibttcc is either unconnected or has no load
@@ -1149,30 +1243,26 @@ WARNING: [Synth 8-7129] Port cmd2mstr_command[17] in module axi_datamover_ibttcc
 WARNING: [Synth 8-7129] Port cmd2mstr_command[16] in module axi_datamover_ibttcc is either unconnected or has no load
 WARNING: [Synth 8-7129] Port cmd2mstr_command[15] in module axi_datamover_ibttcc is either unconnected or has no load
 WARNING: [Synth 8-7129] Port cmd2mstr_command[14] in module axi_datamover_ibttcc is either unconnected or has no load
-WARNING: [Synth 8-7129] Port fifo_async_rd_reset in module axi_datamover_fifo__parameterized2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo__parameterized2 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port fifo_async_rd_reset in module axi_datamover_fifo__parameterized1 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo__parameterized1 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_async_rd_reset in module axi_datamover_fifo__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo__parameterized6 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_async_rd_reset in module axi_datamover_fifo__parameterized5 is either unconnected or has no load
+WARNING: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo__parameterized5 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port calc2wsc_calc_error in module axi_datamover_wr_status_cntl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port addr2wsc_fifo_empty in module axi_datamover_wr_status_cntl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port data2wsc_last_error in module axi_datamover_wr_status_cntl is either unconnected or has no load
-WARNING: [Synth 8-7129] Port fifo_async_rd_reset in module axi_datamover_fifo__parameterized0 is either unconnected or has no load
-WARNING: [Synth 8-7129] Port fifo_async_rd_clk in module axi_datamover_fifo__parameterized0 is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 2310.922 ; gain = 643.676 ; free physical = 114 ; free virtual = 1247
+Finished RTL Elaboration : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 2336.879 ; gain = 662.637 ; free physical = 123 ; free virtual = 1018
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 2310.922 ; gain = 643.676 ; free physical = 114 ; free virtual = 1248
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 2336.879 ; gain = 662.637 ; free physical = 122 ; free virtual = 1019
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:20 ; elapsed = 00:00:23 . Memory (MB): peak = 2310.922 ; gain = 643.676 ; free physical = 114 ; free virtual = 1248
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 2336.879 ; gain = 662.637 ; free physical = 122 ; free virtual = 1019
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.14 . Memory (MB): peak = 2310.922 ; gain = 0.000 ; free physical = 110 ; free virtual = 1250
-INFO: [Netlist 29-17] Analyzing 576 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.17 ; elapsed = 00:00:00.17 . Memory (MB): peak = 2336.879 ; gain = 0.000 ; free physical = 117 ; free virtual = 1020
+INFO: [Netlist 29-17] Analyzing 606 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -1190,44 +1280,48 @@ Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma
 Finished Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_axi_dma_0_0/adc_dma_bd_axi_dma_0_0_clocks.xdc] for cell 'U0'
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/tools/Xilinx/Vivado/2023.1/data/ip/xpm/xpm_fifo/tcl/xpm_fifo_rst.tcl]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/adc_dma_bd_axi_dma_0_0_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/adc_dma_bd_axi_dma_0_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-INFO: [Project 1-1714] 2 XPM XDC files have been applied to the design.
+INFO: [Project 1-1714] 3 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2368.750 ; gain = 0.000 ; free physical = 103 ; free virtual = 1246
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2395.707 ; gain = 0.000 ; free physical = 115 ; free virtual = 1024
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 576 instances were transformed.
-  FDR => FDRE: 576 instances
+  A total of 606 instances were transformed.
+  FDR => FDRE: 606 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2368.750 ; gain = 0.000 ; free physical = 103 ; free virtual = 1248
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.18 ; elapsed = 00:00:00.13 . Memory (MB): peak = 2395.707 ; gain = 0.000 ; free physical = 116 ; free virtual = 1027
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 2368.750 ; gain = 701.504 ; free physical = 116 ; free virtual = 1240
+Finished Constraint Validation : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 2395.707 ; gain = 721.465 ; free physical = 121 ; free virtual = 1015
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 2368.750 ; gain = 701.504 ; free physical = 116 ; free virtual = 1240
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 2395.707 ; gain = 721.465 ; free physical = 121 ; free virtual = 1015
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/adc_dma_bd_axi_dma_0_0_synth_1/dont_touch.xdc, line 9).
-Applied set_property KEEP_HIERARCHY = SOFT for U0/I_PRMRY_DATAMOVER/\GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER /\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT /I_XD_FIFO/\NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO /\xpm_fifo_instance.xpm_fifo_sync_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/I_PRMRY_DATAMOVER/\GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER /\GEN_INCLUDE_MM2S_SF.I_RD_SF /I_DATA_FIFO/\BLK_MEM.I_SYNC_FIFOGEN_FIFO /\xpm_fifo_instance.xpm_fifo_sync_inst . (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for U0/I_PRMRY_DATAMOVER/\GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER /\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT /I_DATA_FIFO/\BLK_MEM.I_SYNC_FIFOGEN_FIFO /\xpm_fifo_instance.xpm_fifo_sync_inst . (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for U0/I_PRMRY_DATAMOVER/\GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER /\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT /I_XD_FIFO/\NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO /\xpm_fifo_instance.xpm_fifo_sync_inst . (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:30 ; elapsed = 00:00:34 . Memory (MB): peak = 2368.750 ; gain = 701.504 ; free physical = 116 ; free virtual = 1240
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:33 ; elapsed = 00:00:37 . Memory (MB): peak = 2395.707 ; gain = 721.465 ; free physical = 121 ; free virtual = 1015
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'ftch_cs_reg' in module 'axi_sg_ftch_sm'
 INFO: [Synth 8-802] inferred FSM for state register 'updt_cs_reg' in module 'axi_sg_updt_sm'
 INFO: [Synth 8-802] inferred FSM for state register 'pntr_cs_reg' in module 'axi_sg_updt_queue'
+INFO: [Synth 8-802] inferred FSM for state register 'mm2s_cs_reg' in module 'axi_dma_mm2s_sm'
 INFO: [Synth 8-802] inferred FSM for state register 'GEN_SM_FOR_NO_LENGTH.s2mm_cs_reg' in module 'axi_dma_s2mm_sm'
+INFO: [Synth 8-802] inferred FSM for state register 'sig_pcc_sm_state_reg' in module 'axi_datamover_pcc'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base'
 INFO: [Synth 8-802] inferred FSM for state register 'sig_psm_state_reg' in module 'axi_datamover_ibttcc'
 INFO: [Synth 8-802] inferred FSM for state register 'sig_csm_state_reg' in module 'axi_datamover_ibttcc'
 INFO: [Synth 8-802] inferred FSM for state register 'sig_cmdcntl_sm_state_reg' in module 'axi_datamover_s2mm_realign'
-INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base'
 INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base__parameterized0'
+INFO: [Synth 8-802] inferred FSM for state register 'gen_fwft.curr_fwft_state_reg' in module 'xpm_fifo_base__parameterized1'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -1263,7 +1357,39 @@ INFO: [Synth 8-3354] encoded FSM with state register 'pntr_cs_reg' using encodin
                   iSTATE |                               10 |                               11
 *
 ---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'mm2s_cs_reg' using encoding 'sequential' in module 'axi_dma_mm2s_sm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+        fetch_descriptor |                               01 |                               01
+                  iSTATE |                               10 |                               11
+*
+---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'GEN_SM_FOR_NO_LENGTH.s2mm_cs_reg' using encoding 'sequential' in module 'axi_dma_s2mm_sm'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    init |                         00000001 |                              000
+            wait_for_cmd |                         00000010 |                              001
+                  calc_1 |                         00000100 |                              010
+                  calc_2 |                         00001000 |                              011
+                  calc_3 |                         00010000 |                              100
+       wait_on_xfer_push |                         00100000 |                              101
+             chk_if_done |                         01000000 |                              110
+              error_trap |                         10000000 |                              111
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'sig_pcc_sm_state_reg' using encoding 'one-hot' in module 'axi_datamover_pcc'
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 invalid |                               00 |                               00
+            stage1_valid |                               01 |                               10
+       both_stages_valid |                               10 |                               11
+            stage2_valid |                               11 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -1306,7 +1432,7 @@ INFO: [Synth 8-3354] encoded FSM with state register 'sig_cmdcntl_sm_state_reg' 
        both_stages_valid |                               10 |                               11
             stage2_valid |                               11 |                               01
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base'
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base__parameterized0'
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -1316,9 +1442,9 @@ INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM 
        both_stages_valid |                               10 |                               11
             stage2_valid |                               11 |                               01
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base__parameterized0'
+INFO: [Synth 8-3354] encoded FSM with state register 'gen_fwft.curr_fwft_state_reg' using encoding 'sequential' in module 'xpm_fifo_base__parameterized1'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:35 ; elapsed = 00:00:39 . Memory (MB): peak = 2368.750 ; gain = 701.504 ; free physical = 110 ; free virtual = 1237
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:39 ; elapsed = 00:00:43 . Memory (MB): peak = 2395.707 ; gain = 721.465 ; free physical = 112 ; free virtual = 1011
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -1326,87 +1452,101 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input   28 Bit       Adders := 1     
-	   2 Input   16 Bit       Adders := 1     
+	   2 Input   16 Bit       Adders := 3     
 	   3 Input   14 Bit       Adders := 1     
-	   2 Input    8 Bit       Adders := 6     
+	   4 Input   12 Bit       Adders := 4     
+	   2 Input   12 Bit       Adders := 2     
+	   2 Input   11 Bit       Adders := 4     
+	   4 Input   11 Bit       Adders := 5     
+	   3 Input   11 Bit       Adders := 1     
+	   2 Input    8 Bit       Adders := 10    
 	   4 Input    8 Bit       Adders := 4     
-	   2 Input    7 Bit       Adders := 5     
+	   2 Input    7 Bit       Adders := 3     
 	   4 Input    7 Bit       Adders := 5     
 	   3 Input    7 Bit       Adders := 1     
-	   3 Input    5 Bit       Adders := 3     
+	   2 Input    6 Bit       Adders := 1     
+	   3 Input    5 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 3     
 	   4 Input    5 Bit       Adders := 4     
-	   2 Input    5 Bit       Adders := 2     
+	   2 Input    4 Bit       Adders := 4     
 	   3 Input    4 Bit       Adders := 3     
-	   2 Input    4 Bit       Adders := 3     
 	   4 Input    4 Bit       Adders := 5     
-	   3 Input    3 Bit       Adders := 7     
-	   2 Input    3 Bit       Adders := 9     
-	   2 Input    2 Bit       Adders := 2     
-	   4 Input    2 Bit       Adders := 2     
+	   3 Input    3 Bit       Adders := 11    
+	   2 Input    3 Bit       Adders := 11    
+	   2 Input    2 Bit       Adders := 4     
+	   4 Input    2 Bit       Adders := 3     
 +---Registers : 
-	               91 Bit    Registers := 2     
-	               71 Bit    Registers := 1     
+	               91 Bit    Registers := 4     
+	               71 Bit    Registers := 2     
 	               68 Bit    Registers := 2     
 	               40 Bit    Registers := 2     
+	               39 Bit    Registers := 2     
 	               38 Bit    Registers := 2     
 	               35 Bit    Registers := 1     
 	               34 Bit    Registers := 6     
-	               33 Bit    Registers := 1     
-	               32 Bit    Registers := 26    
-	               26 Bit    Registers := 2     
+	               32 Bit    Registers := 33    
+	               26 Bit    Registers := 4     
 	               23 Bit    Registers := 2     
-	               16 Bit    Registers := 1     
-	               14 Bit    Registers := 9     
-	               13 Bit    Registers := 1     
+	               16 Bit    Registers := 6     
+	               14 Bit    Registers := 10    
+	               13 Bit    Registers := 2     
+	               12 Bit    Registers := 5     
+	               11 Bit    Registers := 7     
 	               10 Bit    Registers := 12    
-	                9 Bit    Registers := 3     
-	                8 Bit    Registers := 19    
+	                9 Bit    Registers := 1     
+	                8 Bit    Registers := 26    
 	                7 Bit    Registers := 9     
-	                6 Bit    Registers := 1     
-	                5 Bit    Registers := 11    
-	                4 Bit    Registers := 52    
-	                3 Bit    Registers := 15    
-	                2 Bit    Registers := 20    
-	                1 Bit    Registers := 551   
+	                6 Bit    Registers := 2     
+	                5 Bit    Registers := 10    
+	                4 Bit    Registers := 68    
+	                3 Bit    Registers := 22    
+	                2 Bit    Registers := 26    
+	                1 Bit    Registers := 775   
 +---RAMs : 
-	               4K Bit	(128 X 38 bit)          RAMs := 1     
-	              144 Bit	(16 X 9 bit)          RAMs := 1     
+	              76K Bit	(2048 X 38 bit)          RAMs := 1     
+	               4K Bit	(128 X 39 bit)          RAMs := 1     
+	              208 Bit	(16 X 13 bit)          RAMs := 1     
 +---Muxes : 
 	   2 Input   40 Bit        Muxes := 1     
-	   2 Input   34 Bit        Muxes := 4     
-	   2 Input   32 Bit        Muxes := 10    
+	   2 Input   34 Bit        Muxes := 2     
+	   2 Input   32 Bit        Muxes := 16    
 	   2 Input   28 Bit        Muxes := 2     
-	   2 Input   26 Bit        Muxes := 10    
+	   2 Input   26 Bit        Muxes := 12    
 	   2 Input   23 Bit        Muxes := 3     
-	   2 Input   16 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 4     
 	   2 Input   14 Bit        Muxes := 4     
 	   4 Input   14 Bit        Muxes := 2     
 	   3 Input   14 Bit        Muxes := 1     
-	   2 Input   11 Bit        Muxes := 2     
+	   2 Input   12 Bit        Muxes := 3     
+	   2 Input   11 Bit        Muxes := 7     
+	   3 Input   11 Bit        Muxes := 1     
 	   2 Input   10 Bit        Muxes := 5     
 	   4 Input   10 Bit        Muxes := 3     
-	   2 Input    8 Bit        Muxes := 12    
-	   3 Input    8 Bit        Muxes := 1     
-	   2 Input    7 Bit        Muxes := 10    
+	   2 Input    8 Bit        Muxes := 24    
+	   8 Input    8 Bit        Muxes := 1     
+	   2 Input    7 Bit        Muxes := 8     
 	   7 Input    7 Bit        Muxes := 1     
 	   2 Input    6 Bit        Muxes := 1     
 	   2 Input    5 Bit        Muxes := 4     
-	   2 Input    4 Bit        Muxes := 15    
-	   4 Input    4 Bit        Muxes := 5     
+	   2 Input    4 Bit        Muxes := 28    
+	   4 Input    4 Bit        Muxes := 9     
 	   5 Input    4 Bit        Muxes := 1     
-	   5 Input    3 Bit        Muxes := 6     
-	   2 Input    3 Bit        Muxes := 23    
+	  16 Input    3 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 18    
+	   3 Input    3 Bit        Muxes := 2     
 	   6 Input    3 Bit        Muxes := 2     
-	   3 Input    3 Bit        Muxes := 1     
-	   2 Input    2 Bit        Muxes := 86    
-	   4 Input    2 Bit        Muxes := 15    
-	   3 Input    2 Bit        Muxes := 2     
+	   5 Input    3 Bit        Muxes := 5     
+	   2 Input    2 Bit        Muxes := 120   
+	  14 Input    2 Bit        Muxes := 1     
+	   3 Input    2 Bit        Muxes := 3     
+	   4 Input    2 Bit        Muxes := 21    
 	  16 Input    2 Bit        Muxes := 1     
 	   6 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 234   
-	   4 Input    1 Bit        Muxes := 10    
-	   5 Input    1 Bit        Muxes := 3     
-	   3 Input    1 Bit        Muxes := 8     
+	   2 Input    1 Bit        Muxes := 310   
+	   4 Input    1 Bit        Muxes := 14    
+	   5 Input    1 Bit        Muxes := 5     
+	   3 Input    1 Bit        Muxes := 13    
+	   8 Input    1 Bit        Muxes := 3     
 	   7 Input    1 Bit        Muxes := 3     
 	   6 Input    1 Bit        Muxes := 7     
 ---------------------------------------------------------------------------------
@@ -1429,24 +1569,43 @@ INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5784] Optimized 1 bits of RAM "gen_wr_a.gen_word_narrow.mem_reg" due to constant propagation. Old ram width 39 bits, new ram width 38 bits.
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/REG_HRD_RST/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/REG_HRD_RST/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/REG_HRD_RST_OUT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/REG_HRD_RST_OUT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.GEN_PRMRY_GRTR_EQL_SCNDRY.HALT_PROCESS/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.GEN_PRMRY_GRTR_EQL_SCNDRY.HALT_PROCESS/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.REG_HALT_CMPLT_IN/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.REG_HALT_CMPLT_IN/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.REG_SOFT2PRMRY/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.REG_SOFT2PRMRY/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.REG_SOFT2PRMRY/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.REG_SOFT2PRMRY/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.REG_SOFT2PRMRY/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.REG_SOFT2PRMRY/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.REG_RESET_OUT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma.
-INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.REG_RESET_OUT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma.
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-3332] Sequential element (REG_HRD_RST/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma_rst_module.
+INFO: [Synth 8-3332] Sequential element (REG_HRD_RST/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma_rst_module.
+INFO: [Synth 8-3332] Sequential element (REG_HRD_RST_OUT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma_rst_module.
+INFO: [Synth 8-3332] Sequential element (REG_HRD_RST_OUT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma_rst_module.
+INFO: [Synth 8-3332] Sequential element (GEN_RESET_FOR_MM2S.RESET_I/GEN_ASYNC_RESET.GEN_PRMRY_GRTR_EQL_SCNDRY.HALT_PROCESS/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma_rst_module.
+INFO: [Synth 8-3332] Sequential element (GEN_RESET_FOR_MM2S.RESET_I/GEN_ASYNC_RESET.GEN_PRMRY_GRTR_EQL_SCNDRY.HALT_PROCESS/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma_rst_module.
+INFO: [Synth 8-3332] Sequential element (GEN_RESET_FOR_MM2S.RESET_I/GEN_ASYNC_RESET.REG_HALT_CMPLT_IN/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma_rst_module.
+INFO: [Synth 8-3332] Sequential element (GEN_RESET_FOR_MM2S.RESET_I/GEN_ASYNC_RESET.REG_HALT_CMPLT_IN/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma_rst_module.
+INFO: [Synth 8-3332] Sequential element (GEN_RESET_FOR_MM2S.RESET_I/GEN_ASYNC_RESET.REG_SOFT2PRMRY/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module axi_dma_rst_module.
+INFO: [Synth 8-3332] Sequential element (GEN_RESET_FOR_MM2S.RESET_I/GEN_ASYNC_RESET.REG_SOFT2PRMRY/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2) is unused and will be removed from module axi_dma_rst_module.
+INFO: [Synth 8-3332] Sequential element (GEN_RESET_FOR_MM2S.RESET_I/GEN_ASYNC_RESET.REG_SOFT2PRMRY/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3) is unused and will be removed from module axi_dma_rst_module.
+INFO: [Synth 8-3332] Sequential element (GEN_RESET_FOR_MM2S.RESET_I/GEN_ASYNC_RESET.REG_SOFT2PRMRY/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4) is unused and will be removed from module axi_dma_rst_module.
+INFO: [Synth 8-3332] Sequential element (GEN_RESET_FOR_MM2S.RESET_I/GEN_ASYNC_RESET.REG_SOFT2PRMRY/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma_rst_module.
+INFO: [Synth 8-3332] Sequential element (GEN_RESET_FOR_MM2S.RESET_I/GEN_ASYNC_RESET.REG_SOFT2PRMRY/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma_rst_module.
+INFO: [Synth 8-3332] Sequential element (GEN_RESET_FOR_MM2S.RESET_I/GEN_ASYNC_RESET.REG_RESET_OUT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma_rst_module.
+INFO: [Synth 8-3332] Sequential element (GEN_RESET_FOR_MM2S.RESET_I/GEN_ASYNC_RESET.REG_RESET_OUT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma_rst_module.
+INFO: [Synth 8-3332] Sequential element (GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.GEN_PRMRY_GRTR_EQL_SCNDRY.HALT_PROCESS/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma_rst_module.
+INFO: [Synth 8-3332] Sequential element (GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.GEN_PRMRY_GRTR_EQL_SCNDRY.HALT_PROCESS/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma_rst_module.
+INFO: [Synth 8-3332] Sequential element (GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.REG_HALT_CMPLT_IN/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma_rst_module.
+INFO: [Synth 8-3332] Sequential element (GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.REG_HALT_CMPLT_IN/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma_rst_module.
+INFO: [Synth 8-3332] Sequential element (GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.REG_SOFT2PRMRY/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to) is unused and will be removed from module axi_dma_rst_module.
+INFO: [Synth 8-3332] Sequential element (GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.REG_SOFT2PRMRY/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2) is unused and will be removed from module axi_dma_rst_module.
+INFO: [Synth 8-3332] Sequential element (GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.REG_SOFT2PRMRY/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3) is unused and will be removed from module axi_dma_rst_module.
+INFO: [Synth 8-3332] Sequential element (GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.REG_SOFT2PRMRY/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4) is unused and will be removed from module axi_dma_rst_module.
+INFO: [Synth 8-3332] Sequential element (GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.REG_SOFT2PRMRY/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma_rst_module.
+INFO: [Synth 8-3332] Sequential element (GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.REG_SOFT2PRMRY/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma_rst_module.
+INFO: [Synth 8-3332] Sequential element (GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.REG_RESET_OUT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma_rst_module.
+INFO: [Synth 8-3332] Sequential element (GEN_RESET_FOR_S2MM.RESET_I/GEN_ASYNC_RESET.REG_RESET_OUT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma_rst_module.
 INFO: [Synth 8-3332] Sequential element (GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.AWVLD_CDC_TO/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma_reg_module.
 INFO: [Synth 8-3332] Sequential element (GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.AWVLD_CDC_TO/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma_reg_module.
 INFO: [Synth 8-3332] Sequential element (GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.WVLD_CDC_TO/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5) is unused and will be removed from module axi_dma_reg_module.
@@ -1519,42 +1678,32 @@ INFO: [Synth 8-3332] Sequential element (GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC
 INFO: [Synth 8-3332] Sequential element (GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[8].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma_reg_module.
 INFO: [Synth 8-3332] Sequential element (GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[9].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma_reg_module.
 INFO: [Synth 8-3332] Sequential element (GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[10].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma_reg_module.
-INFO: [Synth 8-3332] Sequential element (GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[11].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma_reg_module.
-INFO: [Synth 8-3332] Sequential element (GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[12].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma_reg_module.
-INFO: [Synth 8-3332] Sequential element (GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[13].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma_reg_module.
-INFO: [Synth 8-3332] Sequential element (GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[14].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma_reg_module.
-INFO: [Synth 8-3332] Sequential element (GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[15].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma_reg_module.
-INFO: [Synth 8-3332] Sequential element (GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[16].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma_reg_module.
-INFO: [Synth 8-3332] Sequential element (GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[17].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma_reg_module.
-INFO: [Synth 8-3332] Sequential element (GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[18].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma_reg_module.
-INFO: [Synth 8-3332] Sequential element (GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[19].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma_reg_module.
-INFO: [Synth 8-3332] Sequential element (GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[20].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma_reg_module.
-INFO: [Synth 8-3332] Sequential element (GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[21].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma_reg_module.
-INFO: [Synth 8-3332] Sequential element (GEN_AXI_LITE_IF.AXI_LITE_IF_I/GEN_ASYNC_WRITE.REG_WADDR_TO_IPCLK1/GENERATE_LEVEL_P_S_CDC.MULTI_BIT.FOR_CROSS_PLEVEL_IN2SCNDRY_bus_d2[22].CROSS2_PLEVEL_IN2SCNDRY_s_level_out_bus_d2) is unused and will be removed from module axi_dma_reg_module.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:46 ; elapsed = 00:00:50 . Memory (MB): peak = 2368.750 ; gain = 701.504 ; free physical = 115 ; free virtual = 1235
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:01:00 . Memory (MB): peak = 2411.715 ; gain = 737.473 ; free physical = 111 ; free virtual = 993
 ---------------------------------------------------------------------------------
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Block RAM: Preliminary Mapping Report (see note below)
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Module Name                                                                                                                                                                                                                      | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER /\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 128 x 38(NO_CHANGE)    | W |   | 128 x 38(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                                                                                                                                                                                                    | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|U0/I_PRMRY_DATAMOVER/\GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst          | gen_wr_a.gen_word_narrow.mem_reg | 128 x 39(NO_CHANGE)    | W |   | 128 x 39(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|U0/I_PRMRY_DATAMOVER/\GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 38(NO_CHANGE)    | W |   | 2 K x 38(NO_CHANGE)    |   | R | Port A and B     | 1      | 2      | 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 Note: The table above is a preliminary report that shows the Block RAMs at the current stage of the synthesis flow. Some Block RAMs may be reimplemented as non Block RAM primitives later in the synthesis flow. Multiple instantiated Block RAMs are reported only once. 
 
 Distributed RAM: Preliminary Mapping Report (see note below)
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+-----------+----------------------+-------------+
-|Module Name                                                                                                                                                                                                                        | RTL Object                       | Inference | Size (Depth x Width) | Primitives  | 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+-----------+----------------------+-------------+
-|U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER /\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | Implied   | 16 x 9               | RAM32M x 2  | 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+-----------+----------------------+-------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+-----------+----------------------+-------------+
+|Module Name                                                                                                                                                                                                                      | RTL Object                       | Inference | Size (Depth x Width) | Primitives  | 
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+-----------+----------------------+-------------+
+|U0/I_PRMRY_DATAMOVER/\GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | Implied   | 16 x 13              | RAM32M x 3  | 
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+-----------+----------------------+-------------+
 
 Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
 ---------------------------------------------------------------------------------
@@ -1564,33 +1713,35 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:52 ; elapsed = 00:00:57 . Memory (MB): peak = 2368.750 ; gain = 701.504 ; free physical = 122 ; free virtual = 1233
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:01 ; elapsed = 00:01:06 . Memory (MB): peak = 2411.715 ; gain = 737.473 ; free physical = 118 ; free virtual = 987
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
+INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:56 ; elapsed = 00:01:00 . Memory (MB): peak = 2368.750 ; gain = 701.504 ; free physical = 121 ; free virtual = 1232
+Finished Timing Optimization : Time (s): cpu = 00:01:08 ; elapsed = 00:01:13 . Memory (MB): peak = 2411.715 ; gain = 737.473 ; free physical = 114 ; free virtual = 985
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 Block RAM: Final Mapping Report
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|Module Name                                                                                                                                                                                                                      | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
-|U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER /\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 128 x 38(NO_CHANGE)    | W |   | 128 x 38(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|Module Name                                                                                                                                                                                                                    | RTL Object                       | PORT A (Depth x Width) | W | R | PORT B (Depth x Width) | W | R | Ports driving FF | RAMB18 | RAMB36 | 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
+|U0/I_PRMRY_DATAMOVER/\GEN_MM2S_FULL.I_MM2S_FULL_WRAPPER/GEN_INCLUDE_MM2S_SF.I_RD_SF/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst          | gen_wr_a.gen_word_narrow.mem_reg | 128 x 39(NO_CHANGE)    | W |   | 128 x 39(NO_CHANGE)    |   | R | Port A and B     | 0      | 1      | 
+|U0/I_PRMRY_DATAMOVER/\GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_DATA_FIFO/BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | 2 K x 38(NO_CHANGE)    | W |   | 2 K x 38(NO_CHANGE)    |   | R | Port A and B     | 1      | 2      | 
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+------------------------+---+---+------------------------+---+---+------------------+--------+--------+
 
 
 Distributed RAM: Final Mapping Report
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+-----------+----------------------+-------------+
-|Module Name                                                                                                                                                                                                                        | RTL Object                       | Inference | Size (Depth x Width) | Primitives  | 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+-----------+----------------------+-------------+
-|U0/\I_PRMRY_DATAMOVER/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER /\GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | Implied   | 16 x 9               | RAM32M x 2  | 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+-----------+----------------------+-------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+-----------+----------------------+-------------+
+|Module Name                                                                                                                                                                                                                      | RTL Object                       | Inference | Size (Depth x Width) | Primitives  | 
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+-----------+----------------------+-------------+
+|U0/I_PRMRY_DATAMOVER/\GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/GEN_ENABLE_INDET_BTT_SF.I_INDET_BTT/I_XD_FIFO/NON_BLK_MEM.I_SYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_sync_inst /xpm_fifo_base_inst/\gen_sdpram.xpm_memory_base_inst  | gen_wr_a.gen_word_narrow.mem_reg | Implied   | 16 x 13              | RAM32M x 3  | 
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------+-----------+----------------------+-------------+
 
 ---------------------------------------------------------------------------------
 Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1599,7 +1750,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:58 ; elapsed = 00:01:02 . Memory (MB): peak = 2368.750 ; gain = 701.504 ; free physical = 120 ; free virtual = 1232
+Finished Technology Mapping : Time (s): cpu = 00:01:11 ; elapsed = 00:01:16 . Memory (MB): peak = 2411.715 ; gain = 737.473 ; free physical = 113 ; free virtual = 985
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -1619,37 +1770,37 @@ Finished Final Netlist Cleanup
 INFO: [Synth 8-3295] tying undriven pin I_AXI_DMA_REG_MODULE/strm_valid_int2_inferred:in0 to constant 0
 INFO: [Synth 8-3295] tying undriven pin I_AXI_DMA_REG_MODULE/strm_valid_int_cdc_to_inferred:in0 to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 2368.750 ; gain = 701.504 ; free physical = 119 ; free virtual = 1232
+Finished IO Insertion : Time (s): cpu = 00:01:16 ; elapsed = 00:01:21 . Memory (MB): peak = 2411.715 ; gain = 737.473 ; free physical = 113 ; free virtual = 984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 2368.750 ; gain = 701.504 ; free physical = 119 ; free virtual = 1232
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:16 ; elapsed = 00:01:21 . Memory (MB): peak = 2411.715 ; gain = 737.473 ; free physical = 113 ; free virtual = 984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:04 ; elapsed = 00:01:08 . Memory (MB): peak = 2368.750 ; gain = 701.504 ; free physical = 118 ; free virtual = 1231
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:17 ; elapsed = 00:01:22 . Memory (MB): peak = 2411.715 ; gain = 737.473 ; free physical = 113 ; free virtual = 984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:04 ; elapsed = 00:01:08 . Memory (MB): peak = 2368.750 ; gain = 701.504 ; free physical = 118 ; free virtual = 1231
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:17 ; elapsed = 00:01:22 . Memory (MB): peak = 2411.715 ; gain = 737.473 ; free physical = 113 ; free virtual = 984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:04 ; elapsed = 00:01:08 . Memory (MB): peak = 2368.750 ; gain = 701.504 ; free physical = 118 ; free virtual = 1232
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:17 ; elapsed = 00:01:22 . Memory (MB): peak = 2411.715 ; gain = 737.473 ; free physical = 113 ; free virtual = 984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:04 ; elapsed = 00:01:08 . Memory (MB): peak = 2368.750 ; gain = 701.504 ; free physical = 118 ; free virtual = 1232
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:17 ; elapsed = 00:01:22 . Memory (MB): peak = 2411.715 ; gain = 737.473 ; free physical = 113 ; free virtual = 984
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1659,15 +1810,16 @@ Dynamic Shift Register Report:
 +------------+---------------------------+--------+------------+--------+---------+--------+--------+--------+
 |Module Name | RTL Name                  | Length | Data Width | SRL16E | SRLC32E | Mux F7 | Mux F8 | Mux F9 | 
 +------------+---------------------------+--------+------------+--------+---------+--------+--------+--------+
-|dsrl        | INFERRED_GEN.data_reg[11] | 34     | 34         | 34     | 0       | 0      | 0      | 0      | 
-|dsrl__1     | INFERRED_GEN.data_reg[2]  | 2      | 2          | 2      | 0       | 0      | 0      | 0      | 
-|dsrl__2     | INFERRED_GEN.data_reg[2]  | 7      | 7          | 7      | 0       | 0      | 0      | 0      | 
-|dsrl__3     | INFERRED_GEN.data_reg[15] | 33     | 33         | 33     | 0       | 0      | 0      | 0      | 
-|dsrl__4     | INFERRED_GEN.data_reg[5]  | 2      | 2          | 2      | 0       | 0      | 0      | 0      | 
-|dsrl__5     | INFERRED_GEN.data_reg[5]  | 21     | 21         | 21     | 0       | 0      | 0      | 0      | 
-|dsrl__6     | INFERRED_GEN.data_reg[3]  | 27     | 27         | 27     | 0       | 0      | 0      | 0      | 
-|dsrl__7     | INFERRED_GEN.data_reg[15] | 9      | 9          | 9      | 0       | 0      | 0      | 0      | 
-|dsrl__8     | INFERRED_GEN.data_reg[3]  | 59     | 59         | 59     | 0       | 0      | 0      | 0      | 
+|dsrl        | INFERRED_GEN.data_reg[2]  | 2      | 2          | 2      | 0       | 0      | 0      | 0      | 
+|dsrl__1     | INFERRED_GEN.data_reg[2]  | 7      | 7          | 7      | 0       | 0      | 0      | 0      | 
+|dsrl__2     | INFERRED_GEN.data_reg[15] | 26     | 26         | 26     | 0       | 0      | 0      | 0      | 
+|dsrl__3     | INFERRED_GEN.data_reg[3]  | 59     | 59         | 59     | 0       | 0      | 0      | 0      | 
+|dsrl__4     | INFERRED_GEN.data_reg[3]  | 29     | 29         | 29     | 0       | 0      | 0      | 0      | 
+|dsrl__5     | INFERRED_GEN.data_reg[3]  | 8      | 8          | 8      | 0       | 0      | 0      | 0      | 
+|dsrl__6     | INFERRED_GEN.data_reg[5]  | 2      | 2          | 2      | 0       | 0      | 0      | 0      | 
+|dsrl__7     | INFERRED_GEN.data_reg[5]  | 21     | 21         | 21     | 0       | 0      | 0      | 0      | 
+|dsrl__8     | INFERRED_GEN.data_reg[3]  | 27     | 27         | 27     | 0       | 0      | 0      | 0      | 
+|dsrl__9     | INFERRED_GEN.data_reg[15] | 9      | 9          | 9      | 0       | 0      | 0      | 0      | 
 +------------+---------------------------+--------+------------+--------+---------+--------+--------+--------+
 
 ---------------------------------------------------------------------------------
@@ -1687,48 +1839,51 @@ Report Cell Usage:
 +------+---------+------+
 |      |Cell     |Count |
 +------+---------+------+
-|1     |CARRY4   |    29|
-|2     |LUT1     |    66|
-|3     |LUT2     |   152|
-|4     |LUT3     |   335|
-|5     |LUT4     |   272|
-|6     |LUT5     |   236|
-|7     |LUT6     |   384|
+|1     |CARRY4   |    69|
+|2     |LUT1     |    73|
+|3     |LUT2     |   250|
+|4     |LUT3     |   566|
+|5     |LUT4     |   423|
+|6     |LUT5     |   354|
+|7     |LUT6     |   531|
 |8     |RAM32M   |     2|
-|9     |RAMB36E1 |     1|
-|10    |SRL16E   |   167|
-|11    |FDR      |   247|
-|12    |FDRE     |  2204|
-|13    |FDSE     |    82|
+|9     |RAM32X1D |     1|
+|10    |RAMB18E1 |     1|
+|11    |RAMB36E1 |     3|
+|13    |SRL16E   |   188|
+|14    |FDR      |   263|
+|15    |FDRE     |  3187|
+|16    |FDSE     |   109|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:04 ; elapsed = 00:01:08 . Memory (MB): peak = 2368.750 ; gain = 701.504 ; free physical = 118 ; free virtual = 1232
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:17 ; elapsed = 00:01:22 . Memory (MB): peak = 2411.715 ; gain = 737.473 ; free physical = 113 ; free virtual = 984
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 304 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:59 ; elapsed = 00:01:04 . Memory (MB): peak = 2368.750 ; gain = 643.676 ; free physical = 118 ; free virtual = 1232
-Synthesis Optimization Complete : Time (s): cpu = 00:01:04 ; elapsed = 00:01:08 . Memory (MB): peak = 2368.758 ; gain = 701.504 ; free physical = 118 ; free virtual = 1232
+Synthesis finished with 0 errors, 0 critical warnings and 752 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:12 ; elapsed = 00:01:17 . Memory (MB): peak = 2411.715 ; gain = 678.645 ; free physical = 113 ; free virtual = 984
+Synthesis Optimization Complete : Time (s): cpu = 00:01:17 ; elapsed = 00:01:23 . Memory (MB): peak = 2411.723 ; gain = 737.473 ; free physical = 113 ; free virtual = 984
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 2368.758 ; gain = 0.000 ; free physical = 350 ; free virtual = 1476
-INFO: [Netlist 29-17] Analyzing 279 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.1 ; elapsed = 00:00:00.1 . Memory (MB): peak = 2411.723 ; gain = 0.000 ; free physical = 340 ; free virtual = 1221
+INFO: [Netlist 29-17] Analyzing 339 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2368.758 ; gain = 0.000 ; free physical = 322 ; free virtual = 1450
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2411.723 ; gain = 0.000 ; free physical = 338 ; free virtual = 1221
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 249 instances were transformed.
-  FDR => FDRE: 247 instances
+  A total of 266 instances were transformed.
+  FDR => FDRE: 263 instances
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 2 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 1 instance 
 
-Synth Design complete | Checksum: d9573550
+Synth Design complete | Checksum: bc315128
 INFO: [Common 17-83] Releasing license: Synthesis
-538 Infos, 170 Warnings, 0 Critical Warnings and 0 Errors encountered.
+614 Infos, 185 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:15 ; elapsed = 00:01:15 . Memory (MB): peak = 2368.758 ; gain = 1045.043 ; free physical = 322 ; free virtual = 1451
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1861.476; main = 1528.538; forked = 412.071
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3339.547; main = 2368.754; forked = 970.793
+synth_design: Time (s): cpu = 00:01:29 ; elapsed = 00:01:30 . Memory (MB): peak = 2411.723 ; gain = 1080.043 ; free physical = 337 ; free virtual = 1221
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1901.148; main = 1560.771; forked = 452.439
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3406.523; main = 2411.719; forked = 994.805
 INFO: [Common 17-1381] The checkpoint '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/adc_dma_bd_axi_dma_0_0_synth_1/adc_dma_bd_axi_dma_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP adc_dma_bd_axi_dma_0_0, cache-ID = bdef8d83267f7588
-INFO: [Coretcl 2-1174] Renamed 149 cell refs.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP adc_dma_bd_axi_dma_0_0, cache-ID = 1f00e2515de8be52
+INFO: [Coretcl 2-1174] Renamed 194 cell refs.
 INFO: [Common 17-1381] The checkpoint '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/adc_dma_bd_axi_dma_0_0_synth_1/adc_dma_bd_axi_dma_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file adc_dma_bd_axi_dma_0_0_utilization_synth.rpt -pb adc_dma_bd_axi_dma_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jan 31 08:27:42 2025...
+INFO: [Common 17-206] Exiting Vivado at Mon Feb 17 10:48:12 2025...

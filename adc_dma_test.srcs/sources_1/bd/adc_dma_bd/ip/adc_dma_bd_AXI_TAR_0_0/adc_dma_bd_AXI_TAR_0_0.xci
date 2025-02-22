@@ -4,7 +4,7 @@
     "xci_name": "adc_dma_bd_AXI_TAR_0_0",
     "cell_name": "AXI_TAR_0",
     "component_reference": "user.org:user:AXI_TAR:1.0",
-    "ip_revision": "15",
+    "ip_revision": "21",
     "gen_directory": "../../../../../../adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_AXI_TAR_0_0",
     "parameters": {
       "component_parameters": {
@@ -37,7 +37,7 @@
       },
       "runtime_parameters": {
         "IPCONTEXT": [ { "value": "IP_Integrator" } ],
-        "IPREVISION": [ { "value": "15" } ],
+        "IPREVISION": [ { "value": "21" } ],
         "MANAGED": [ { "value": "TRUE" } ],
         "OUTPUTDIR": [ { "value": "../../../../../../adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_AXI_TAR_0_0" } ],
         "SELECTEDSIMMODEL": [ { "value": "" } ],

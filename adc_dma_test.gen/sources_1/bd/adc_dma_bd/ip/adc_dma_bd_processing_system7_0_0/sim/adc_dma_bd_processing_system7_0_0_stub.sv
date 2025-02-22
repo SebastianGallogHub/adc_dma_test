@@ -153,7 +153,7 @@ module adc_dma_bd_processing_system7_0_0 (
   input bit [5 : 0] S_AXI_HP0_WID,
   input bit [63 : 0] S_AXI_HP0_WDATA,
   input bit [7 : 0] S_AXI_HP0_WSTRB,
-  input bit [2 : 0] IRQ_F2P,
+  input bit [1 : 0] IRQ_F2P,
   output bit_as_bool FCLK_CLK0,
   output bit_as_bool FCLK_CLK1,
   output bit_as_bool FCLK_RESET0_N,
@@ -274,7 +274,7 @@ module adc_dma_bd_processing_system7_0_0 (USB0_PORT_INDCTL,USB0_VBUS_PWRSELECT,U
   input bit [5 : 0] S_AXI_HP0_WID;
   input bit [63 : 0] S_AXI_HP0_WDATA;
   input bit [7 : 0] S_AXI_HP0_WSTRB;
-  input bit [2 : 0] IRQ_F2P;
+  input bit [1 : 0] IRQ_F2P;
   output wire FCLK_CLK0;
   output wire FCLK_CLK1;
   output wire FCLK_RESET0_N;

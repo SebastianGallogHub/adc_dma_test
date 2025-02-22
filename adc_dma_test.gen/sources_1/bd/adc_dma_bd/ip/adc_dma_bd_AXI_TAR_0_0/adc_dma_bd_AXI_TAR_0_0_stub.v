@@ -2,7 +2,7 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-// Date        : Fri Jan 31 08:25:24 2025
+// Date        : Mon Feb 17 10:59:02 2025
 // Host        : sebasHAL running 64-bit Ubuntu 20.04.6 LTS
 // Command     : write_verilog -force -mode synth_stub
 //               /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_AXI_TAR_0_0/adc_dma_bd_AXI_TAR_0_0_stub.v
@@ -22,11 +22,10 @@ module adc_dma_bd_AXI_TAR_0_0(SysClk, IRst_n, sCh1In, sCh2In, Introut,
   s00_axi_arvalid, s00_axi_arready, s00_axi_rdata, s00_axi_rresp, s00_axi_rvalid, 
   s00_axi_rready, m00_axis_aclk, m00_axis_aresetn, m00_axis_tvalid, m00_axis_tdata, 
   m00_axis_tstrb, m00_axis_tlast, m00_axis_tready)
-/* synthesis syn_black_box black_box_pad_pin="IRst_n,sCh1In[15:0],sCh2In[15:0],Introut,s00_axi_aresetn,s00_axi_awaddr[3:0],s00_axi_awprot[2:0],s00_axi_awvalid,s00_axi_awready,s00_axi_wdata[31:0],s00_axi_wstrb[3:0],s00_axi_wvalid,s00_axi_wready,s00_axi_bresp[1:0],s00_axi_bvalid,s00_axi_bready,s00_axi_araddr[3:0],s00_axi_arprot[2:0],s00_axi_arvalid,s00_axi_arready,s00_axi_rdata[31:0],s00_axi_rresp[1:0],s00_axi_rvalid,s00_axi_rready,m00_axis_aresetn,m00_axis_tvalid,m00_axis_tdata[31:0],m00_axis_tstrb[3:0],m00_axis_tlast,m00_axis_tready" */
-/* synthesis syn_force_seq_prim="SysClk" */
+/* synthesis syn_black_box black_box_pad_pin="SysClk,IRst_n,sCh1In[15:0],sCh2In[15:0],Introut,s00_axi_aresetn,s00_axi_awaddr[3:0],s00_axi_awprot[2:0],s00_axi_awvalid,s00_axi_awready,s00_axi_wdata[31:0],s00_axi_wstrb[3:0],s00_axi_wvalid,s00_axi_wready,s00_axi_bresp[1:0],s00_axi_bvalid,s00_axi_bready,s00_axi_araddr[3:0],s00_axi_arprot[2:0],s00_axi_arvalid,s00_axi_arready,s00_axi_rdata[31:0],s00_axi_rresp[1:0],s00_axi_rvalid,s00_axi_rready,m00_axis_aresetn,m00_axis_tvalid,m00_axis_tdata[31:0],m00_axis_tstrb[3:0],m00_axis_tlast,m00_axis_tready" */
 /* synthesis syn_force_seq_prim="s00_axi_aclk" */
 /* synthesis syn_force_seq_prim="m00_axis_aclk" */;
-  input SysClk /* synthesis syn_isclock = 1 */;
+  input SysClk;
   input IRst_n;
   input [15:0]sCh1In;
   input [15:0]sCh2In;

@@ -34,8 +34,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 entity TAR_async_tb is
 --  Port ( );
 generic(
-    TS_LEN_tb : integer := 32;
-    C_M_AXIS_TDATA_WIDTH_tb : integer := 48--24 -- 3
+    TS_LEN_tb : integer := 8;
+    C_M_AXIS_TDATA_WIDTH_tb : integer := 24--48--24 -- 3
 );
 end TAR_async_tb;
 

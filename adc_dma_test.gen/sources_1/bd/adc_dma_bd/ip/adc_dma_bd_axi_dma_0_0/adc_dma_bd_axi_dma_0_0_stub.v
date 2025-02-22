@@ -2,7 +2,7 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-// Date        : Fri Jan 31 08:27:41 2025
+// Date        : Mon Feb 17 10:48:11 2025
 // Host        : sebasHAL running 64-bit Ubuntu 20.04.6 LTS
 // Command     : write_verilog -force -mode synth_stub
 //               /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_axi_dma_0_0/adc_dma_bd_axi_dma_0_0_stub.v
@@ -16,30 +16,35 @@
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* x_core_info = "axi_dma,Vivado 2023.1" *)
 module adc_dma_bd_axi_dma_0_0(s_axi_lite_aclk, m_axi_sg_aclk, 
-  m_axi_s2mm_aclk, axi_resetn, s_axi_lite_awvalid, s_axi_lite_awready, s_axi_lite_awaddr, 
-  s_axi_lite_wvalid, s_axi_lite_wready, s_axi_lite_wdata, s_axi_lite_bresp, 
-  s_axi_lite_bvalid, s_axi_lite_bready, s_axi_lite_arvalid, s_axi_lite_arready, 
-  s_axi_lite_araddr, s_axi_lite_rvalid, s_axi_lite_rready, s_axi_lite_rdata, 
-  s_axi_lite_rresp, m_axi_sg_awaddr, m_axi_sg_awlen, m_axi_sg_awsize, m_axi_sg_awburst, 
-  m_axi_sg_awprot, m_axi_sg_awcache, m_axi_sg_awvalid, m_axi_sg_awready, m_axi_sg_wdata, 
-  m_axi_sg_wstrb, m_axi_sg_wlast, m_axi_sg_wvalid, m_axi_sg_wready, m_axi_sg_bresp, 
-  m_axi_sg_bvalid, m_axi_sg_bready, m_axi_sg_araddr, m_axi_sg_arlen, m_axi_sg_arsize, 
-  m_axi_sg_arburst, m_axi_sg_arprot, m_axi_sg_arcache, m_axi_sg_arvalid, m_axi_sg_arready, 
-  m_axi_sg_rdata, m_axi_sg_rresp, m_axi_sg_rlast, m_axi_sg_rvalid, m_axi_sg_rready, 
+  m_axi_mm2s_aclk, m_axi_s2mm_aclk, axi_resetn, s_axi_lite_awvalid, s_axi_lite_awready, 
+  s_axi_lite_awaddr, s_axi_lite_wvalid, s_axi_lite_wready, s_axi_lite_wdata, 
+  s_axi_lite_bresp, s_axi_lite_bvalid, s_axi_lite_bready, s_axi_lite_arvalid, 
+  s_axi_lite_arready, s_axi_lite_araddr, s_axi_lite_rvalid, s_axi_lite_rready, 
+  s_axi_lite_rdata, s_axi_lite_rresp, m_axi_sg_awaddr, m_axi_sg_awlen, m_axi_sg_awsize, 
+  m_axi_sg_awburst, m_axi_sg_awprot, m_axi_sg_awcache, m_axi_sg_awvalid, m_axi_sg_awready, 
+  m_axi_sg_wdata, m_axi_sg_wstrb, m_axi_sg_wlast, m_axi_sg_wvalid, m_axi_sg_wready, 
+  m_axi_sg_bresp, m_axi_sg_bvalid, m_axi_sg_bready, m_axi_sg_araddr, m_axi_sg_arlen, 
+  m_axi_sg_arsize, m_axi_sg_arburst, m_axi_sg_arprot, m_axi_sg_arcache, m_axi_sg_arvalid, 
+  m_axi_sg_arready, m_axi_sg_rdata, m_axi_sg_rresp, m_axi_sg_rlast, m_axi_sg_rvalid, 
+  m_axi_sg_rready, m_axi_mm2s_araddr, m_axi_mm2s_arlen, m_axi_mm2s_arsize, 
+  m_axi_mm2s_arburst, m_axi_mm2s_arprot, m_axi_mm2s_arcache, m_axi_mm2s_arvalid, 
+  m_axi_mm2s_arready, m_axi_mm2s_rdata, m_axi_mm2s_rresp, m_axi_mm2s_rlast, 
+  m_axi_mm2s_rvalid, m_axi_mm2s_rready, mm2s_prmry_reset_out_n, m_axis_mm2s_tdata, 
+  m_axis_mm2s_tkeep, m_axis_mm2s_tvalid, m_axis_mm2s_tready, m_axis_mm2s_tlast, 
   m_axi_s2mm_awaddr, m_axi_s2mm_awlen, m_axi_s2mm_awsize, m_axi_s2mm_awburst, 
   m_axi_s2mm_awprot, m_axi_s2mm_awcache, m_axi_s2mm_awvalid, m_axi_s2mm_awready, 
   m_axi_s2mm_wdata, m_axi_s2mm_wstrb, m_axi_s2mm_wlast, m_axi_s2mm_wvalid, 
   m_axi_s2mm_wready, m_axi_s2mm_bresp, m_axi_s2mm_bvalid, m_axi_s2mm_bready, 
   s2mm_prmry_reset_out_n, s_axis_s2mm_tdata, s_axis_s2mm_tkeep, s_axis_s2mm_tvalid, 
-  s_axis_s2mm_tready, s_axis_s2mm_tlast, s2mm_sts_reset_out_n, s_axis_s2mm_sts_tdata, 
-  s_axis_s2mm_sts_tkeep, s_axis_s2mm_sts_tvalid, s_axis_s2mm_sts_tready, 
-  s_axis_s2mm_sts_tlast, s2mm_introut, axi_dma_tstvec)
-/* synthesis syn_black_box black_box_pad_pin="axi_resetn,s_axi_lite_awvalid,s_axi_lite_awready,s_axi_lite_awaddr[9:0],s_axi_lite_wvalid,s_axi_lite_wready,s_axi_lite_wdata[31:0],s_axi_lite_bresp[1:0],s_axi_lite_bvalid,s_axi_lite_bready,s_axi_lite_arvalid,s_axi_lite_arready,s_axi_lite_araddr[9:0],s_axi_lite_rvalid,s_axi_lite_rready,s_axi_lite_rdata[31:0],s_axi_lite_rresp[1:0],m_axi_sg_awaddr[31:0],m_axi_sg_awlen[7:0],m_axi_sg_awsize[2:0],m_axi_sg_awburst[1:0],m_axi_sg_awprot[2:0],m_axi_sg_awcache[3:0],m_axi_sg_awvalid,m_axi_sg_awready,m_axi_sg_wdata[31:0],m_axi_sg_wstrb[3:0],m_axi_sg_wlast,m_axi_sg_wvalid,m_axi_sg_wready,m_axi_sg_bresp[1:0],m_axi_sg_bvalid,m_axi_sg_bready,m_axi_sg_araddr[31:0],m_axi_sg_arlen[7:0],m_axi_sg_arsize[2:0],m_axi_sg_arburst[1:0],m_axi_sg_arprot[2:0],m_axi_sg_arcache[3:0],m_axi_sg_arvalid,m_axi_sg_arready,m_axi_sg_rdata[31:0],m_axi_sg_rresp[1:0],m_axi_sg_rlast,m_axi_sg_rvalid,m_axi_sg_rready,m_axi_s2mm_awaddr[31:0],m_axi_s2mm_awlen[7:0],m_axi_s2mm_awsize[2:0],m_axi_s2mm_awburst[1:0],m_axi_s2mm_awprot[2:0],m_axi_s2mm_awcache[3:0],m_axi_s2mm_awvalid,m_axi_s2mm_awready,m_axi_s2mm_wdata[31:0],m_axi_s2mm_wstrb[3:0],m_axi_s2mm_wlast,m_axi_s2mm_wvalid,m_axi_s2mm_wready,m_axi_s2mm_bresp[1:0],m_axi_s2mm_bvalid,m_axi_s2mm_bready,s2mm_prmry_reset_out_n,s_axis_s2mm_tdata[31:0],s_axis_s2mm_tkeep[3:0],s_axis_s2mm_tvalid,s_axis_s2mm_tready,s_axis_s2mm_tlast,s2mm_sts_reset_out_n,s_axis_s2mm_sts_tdata[31:0],s_axis_s2mm_sts_tkeep[3:0],s_axis_s2mm_sts_tvalid,s_axis_s2mm_sts_tready,s_axis_s2mm_sts_tlast,s2mm_introut,axi_dma_tstvec[31:0]" */
+  s_axis_s2mm_tready, s_axis_s2mm_tlast, mm2s_introut, s2mm_introut, axi_dma_tstvec)
+/* synthesis syn_black_box black_box_pad_pin="axi_resetn,s_axi_lite_awvalid,s_axi_lite_awready,s_axi_lite_awaddr[9:0],s_axi_lite_wvalid,s_axi_lite_wready,s_axi_lite_wdata[31:0],s_axi_lite_bresp[1:0],s_axi_lite_bvalid,s_axi_lite_bready,s_axi_lite_arvalid,s_axi_lite_arready,s_axi_lite_araddr[9:0],s_axi_lite_rvalid,s_axi_lite_rready,s_axi_lite_rdata[31:0],s_axi_lite_rresp[1:0],m_axi_sg_awaddr[31:0],m_axi_sg_awlen[7:0],m_axi_sg_awsize[2:0],m_axi_sg_awburst[1:0],m_axi_sg_awprot[2:0],m_axi_sg_awcache[3:0],m_axi_sg_awvalid,m_axi_sg_awready,m_axi_sg_wdata[31:0],m_axi_sg_wstrb[3:0],m_axi_sg_wlast,m_axi_sg_wvalid,m_axi_sg_wready,m_axi_sg_bresp[1:0],m_axi_sg_bvalid,m_axi_sg_bready,m_axi_sg_araddr[31:0],m_axi_sg_arlen[7:0],m_axi_sg_arsize[2:0],m_axi_sg_arburst[1:0],m_axi_sg_arprot[2:0],m_axi_sg_arcache[3:0],m_axi_sg_arvalid,m_axi_sg_arready,m_axi_sg_rdata[31:0],m_axi_sg_rresp[1:0],m_axi_sg_rlast,m_axi_sg_rvalid,m_axi_sg_rready,m_axi_mm2s_araddr[31:0],m_axi_mm2s_arlen[7:0],m_axi_mm2s_arsize[2:0],m_axi_mm2s_arburst[1:0],m_axi_mm2s_arprot[2:0],m_axi_mm2s_arcache[3:0],m_axi_mm2s_arvalid,m_axi_mm2s_arready,m_axi_mm2s_rdata[31:0],m_axi_mm2s_rresp[1:0],m_axi_mm2s_rlast,m_axi_mm2s_rvalid,m_axi_mm2s_rready,mm2s_prmry_reset_out_n,m_axis_mm2s_tdata[31:0],m_axis_mm2s_tkeep[3:0],m_axis_mm2s_tvalid,m_axis_mm2s_tready,m_axis_mm2s_tlast,m_axi_s2mm_awaddr[31:0],m_axi_s2mm_awlen[7:0],m_axi_s2mm_awsize[2:0],m_axi_s2mm_awburst[1:0],m_axi_s2mm_awprot[2:0],m_axi_s2mm_awcache[3:0],m_axi_s2mm_awvalid,m_axi_s2mm_awready,m_axi_s2mm_wdata[31:0],m_axi_s2mm_wstrb[3:0],m_axi_s2mm_wlast,m_axi_s2mm_wvalid,m_axi_s2mm_wready,m_axi_s2mm_bresp[1:0],m_axi_s2mm_bvalid,m_axi_s2mm_bready,s2mm_prmry_reset_out_n,s_axis_s2mm_tdata[31:0],s_axis_s2mm_tkeep[3:0],s_axis_s2mm_tvalid,s_axis_s2mm_tready,s_axis_s2mm_tlast,mm2s_introut,s2mm_introut,axi_dma_tstvec[31:0]" */
 /* synthesis syn_force_seq_prim="s_axi_lite_aclk" */
 /* synthesis syn_force_seq_prim="m_axi_sg_aclk" */
+/* synthesis syn_force_seq_prim="m_axi_mm2s_aclk" */
 /* synthesis syn_force_seq_prim="m_axi_s2mm_aclk" */;
   input s_axi_lite_aclk /* synthesis syn_isclock = 1 */;
   input m_axi_sg_aclk /* synthesis syn_isclock = 1 */;
+  input m_axi_mm2s_aclk /* synthesis syn_isclock = 1 */;
   input m_axi_s2mm_aclk /* synthesis syn_isclock = 1 */;
   input axi_resetn;
   input s_axi_lite_awvalid;
@@ -87,6 +92,25 @@ module adc_dma_bd_axi_dma_0_0(s_axi_lite_aclk, m_axi_sg_aclk,
   input m_axi_sg_rlast;
   input m_axi_sg_rvalid;
   output m_axi_sg_rready;
+  output [31:0]m_axi_mm2s_araddr;
+  output [7:0]m_axi_mm2s_arlen;
+  output [2:0]m_axi_mm2s_arsize;
+  output [1:0]m_axi_mm2s_arburst;
+  output [2:0]m_axi_mm2s_arprot;
+  output [3:0]m_axi_mm2s_arcache;
+  output m_axi_mm2s_arvalid;
+  input m_axi_mm2s_arready;
+  input [31:0]m_axi_mm2s_rdata;
+  input [1:0]m_axi_mm2s_rresp;
+  input m_axi_mm2s_rlast;
+  input m_axi_mm2s_rvalid;
+  output m_axi_mm2s_rready;
+  output mm2s_prmry_reset_out_n;
+  output [31:0]m_axis_mm2s_tdata;
+  output [3:0]m_axis_mm2s_tkeep;
+  output m_axis_mm2s_tvalid;
+  input m_axis_mm2s_tready;
+  output m_axis_mm2s_tlast;
   output [31:0]m_axi_s2mm_awaddr;
   output [7:0]m_axi_s2mm_awlen;
   output [2:0]m_axi_s2mm_awsize;
@@ -109,12 +133,7 @@ module adc_dma_bd_axi_dma_0_0(s_axi_lite_aclk, m_axi_sg_aclk,
   input s_axis_s2mm_tvalid;
   output s_axis_s2mm_tready;
   input s_axis_s2mm_tlast;
-  output s2mm_sts_reset_out_n;
-  input [31:0]s_axis_s2mm_sts_tdata;
-  input [3:0]s_axis_s2mm_sts_tkeep;
-  input s_axis_s2mm_sts_tvalid;
-  output s_axis_s2mm_sts_tready;
-  input s_axis_s2mm_sts_tlast;
+  output mm2s_introut;
   output s2mm_introut;
   output [31:0]axi_dma_tstvec;
 endmodule

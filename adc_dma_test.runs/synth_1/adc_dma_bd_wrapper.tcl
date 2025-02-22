@@ -71,7 +71,7 @@ proc create_report { reportName command } {
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param checkpoint.writeSynthRtdsInDcp 1
-set_param synth.incrementalSynthesisCache ./.Xil/Vivado-3450-sebasHAL/incrSyn
+set_param synth.incrementalSynthesisCache ./.Xil/Vivado-3649-sebasHAL/incrSyn
 set_msg_config -id {Synth 8-256} -limit 10000
 set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
@@ -87,10 +87,7 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:eclypse-z7:part0:1.1 [current_project]
-set_property ip_repo_paths {
-  /home/sebas/Escritorio/proyecto/workspace/axi_stream_test/ip_repo/generator_1_0
-  /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/ip_repo
-} [current_project]
+set_property ip_repo_paths /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/ip_repo [current_project]
 update_ip_catalog
 set_property ip_output_repo /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
@@ -119,6 +116,9 @@ set_property used_in_implementation false [get_files -all /home/sebas/Escritorio
 set_property used_in_synthesis false [get_files -all /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_auto_us_1/adc_dma_bd_auto_us_1_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_auto_us_1/adc_dma_bd_auto_us_1_clocks.xdc]
 set_property used_in_implementation false [get_files -all /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_auto_us_1/adc_dma_bd_auto_us_1_ooc.xdc]
+set_property used_in_synthesis false [get_files -all /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_auto_us_2/adc_dma_bd_auto_us_2_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_auto_us_2/adc_dma_bd_auto_us_2_clocks.xdc]
+set_property used_in_implementation false [get_files -all /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_auto_us_2/adc_dma_bd_auto_us_2_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_auto_pc_1/adc_dma_bd_auto_pc_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_clk_wiz_0_0/adc_dma_bd_clk_wiz_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_clk_wiz_0_0/adc_dma_bd_clk_wiz_0_0.xdc]
@@ -131,6 +131,19 @@ set_property used_in_implementation false [get_files -all /home/sebas/Escritorio
 set_property used_in_implementation false [get_files -all /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_rst_ps7_0_100M_1_0/adc_dma_bd_rst_ps7_0_100M_1_0_board.xdc]
 set_property used_in_implementation false [get_files -all /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_rst_ps7_0_100M_1_0/adc_dma_bd_rst_ps7_0_100M_1_0.xdc]
 set_property used_in_implementation false [get_files -all /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_rst_ps7_0_100M_1_0/adc_dma_bd_rst_ps7_0_100M_1_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_system_ila_0_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_system_ila_0_0/bd_0/ip/ip_0/bd_8d3f_ila_lib_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_system_ila_0_0/bd_0/bd_8d3f_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_system_ila_0_0/adc_dma_bd_system_ila_0_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_system_ila_1_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_system_ila_1_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila_impl.xdc]
+set_property used_in_implementation false [get_files -all /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_system_ila_1_0/bd_0/ip/ip_0/ila_v6_2/constraints/ila.xdc]
+set_property used_in_implementation false [get_files -all /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_system_ila_1_0/bd_0/ip/ip_0/bd_4d6e_ila_lib_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_system_ila_1_0/bd_0/bd_4d6e_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_system_ila_1_0/adc_dma_bd_system_ila_1_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_axis_data_fifo_0_0/adc_dma_bd_axis_data_fifo_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/adc_dma_bd_ooc.xdc]
 
 OPTRACE "Adding files" END { }
