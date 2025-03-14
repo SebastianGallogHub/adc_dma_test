@@ -48,8 +48,8 @@
       "xlconstant_0": "",
       "system_ila_0": "",
       "system_ila_1": "",
-      "AXI_TAR_0": "",
-      "axis_data_fifo_0": ""
+      "axis_data_fifo_0": "",
+      "AXI_TAR_0": ""
     },
     "interface_ports": {
       "DDR": {
@@ -2890,12 +2890,6 @@
           }
         }
       },
-      "AXI_TAR_0": {
-        "vlnv": "user.org:user:AXI_TAR:1.0",
-        "xci_name": "adc_dma_bd_AXI_TAR_0_0",
-        "xci_path": "ip/adc_dma_bd_AXI_TAR_0_0/adc_dma_bd_AXI_TAR_0_0.xci",
-        "inst_hier_path": "AXI_TAR_0"
-      },
       "axis_data_fifo_0": {
         "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
         "xci_name": "adc_dma_bd_axis_data_fifo_0_0",
@@ -2907,6 +2901,17 @@
           },
           "FIFO_MODE": {
             "value": "1"
+          }
+        }
+      },
+      "AXI_TAR_0": {
+        "vlnv": "user.org:user:AXI_TAR:1.0",
+        "xci_name": "adc_dma_bd_AXI_TAR_0_0",
+        "xci_path": "ip/adc_dma_bd_AXI_TAR_0_0/adc_dma_bd_AXI_TAR_0_0.xci",
+        "inst_hier_path": "AXI_TAR_0",
+        "parameters": {
+          "G_MARK_DEBUG": {
+            "value": "true"
           }
         }
       }
@@ -3250,9 +3255,9 @@
           "axi_dma_0/m_axi_mm2s_aclk",
           "axi_mem_intercon/S02_ACLK",
           "system_ila_0/clk",
+          "axis_data_fifo_0/s_axis_aclk",
           "AXI_TAR_0/s00_axi_aclk",
-          "AXI_TAR_0/m00_axis_aclk",
-          "axis_data_fifo_0/s_axis_aclk"
+          "AXI_TAR_0/m00_axis_aclk"
         ]
       },
       "processing_system7_0_FCLK_CLK1": {
@@ -3298,9 +3303,9 @@
           "axi_mem_intercon/S01_ARESETN",
           "axi_mem_intercon/S02_ARESETN",
           "system_ila_0/resetn",
+          "axis_data_fifo_0/s_axis_aresetn",
           "AXI_TAR_0/s00_axi_aresetn",
-          "AXI_TAR_0/m00_axis_aresetn",
-          "axis_data_fifo_0/s_axis_aresetn"
+          "AXI_TAR_0/m00_axis_aresetn"
         ]
       },
       "sys_clock_1": {

@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: user.org:user:AXI_TAR:1.0
--- IP Revision: 21
+-- IP Revision: 23
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;
@@ -99,7 +99,8 @@ ARCHITECTURE adc_dma_bd_AXI_TAR_0_0_arch OF adc_dma_bd_AXI_TAR_0_0 IS
       C_M00_AXIS_TDATA_WIDTH : INTEGER;
       C_M00_AXIS_START_COUNT : INTEGER;
       C_S00_AXI_DATA_WIDTH : INTEGER;
-      C_S00_AXI_ADDR_WIDTH : INTEGER
+      C_S00_AXI_ADDR_WIDTH : INTEGER;
+      G_MARK_DEBUG : STRING
     );
     PORT (
       SysClk : IN STD_LOGIC;
@@ -186,7 +187,8 @@ BEGIN
       C_M00_AXIS_TDATA_WIDTH => 32,
       C_M00_AXIS_START_COUNT => 32,
       C_S00_AXI_DATA_WIDTH => 32,
-      C_S00_AXI_ADDR_WIDTH => 4
+      C_S00_AXI_ADDR_WIDTH => 4,
+      G_MARK_DEBUG => "true"
     )
     PORT MAP (
       SysClk => SysClk,

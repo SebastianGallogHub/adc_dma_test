@@ -2,7 +2,7 @@
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
---Date        : Mon Feb 17 10:31:59 2025
+--Date        : Fri Feb 28 11:18:42 2025
 --Host        : sebasHAL running 64-bit Ubuntu 20.04.6 LTS
 --Command     : generate_target adc_dma_bd.bd
 --Design      : adc_dma_bd
@@ -1743,7 +1743,6 @@ entity s02_couplers_imp_17G4XYG is
     M_AXI_wvalid : out STD_LOGIC;
     S_ACLK : in STD_LOGIC;
     S_ARESETN : in STD_LOGIC;
-    S_AXI_arready : out STD_LOGIC;
     S_AXI_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     S_AXI_awburst : in STD_LOGIC_VECTOR ( 1 downto 0 );
     S_AXI_awcache : in STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -1755,10 +1754,6 @@ entity s02_couplers_imp_17G4XYG is
     S_AXI_bready : in STD_LOGIC;
     S_AXI_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     S_AXI_bvalid : out STD_LOGIC;
-    S_AXI_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    S_AXI_rlast : out STD_LOGIC;
-    S_AXI_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    S_AXI_rvalid : out STD_LOGIC;
     S_AXI_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     S_AXI_wlast : in STD_LOGIC;
     S_AXI_wready : out STD_LOGIC;
@@ -2026,7 +2021,6 @@ entity adc_dma_bd_axi_mem_intercon_0 is
     S01_AXI_rvalid : out STD_LOGIC;
     S02_ACLK : in STD_LOGIC;
     S02_ARESETN : in STD_LOGIC;
-    S02_AXI_arready : out STD_LOGIC;
     S02_AXI_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     S02_AXI_awburst : in STD_LOGIC_VECTOR ( 1 downto 0 );
     S02_AXI_awcache : in STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -2038,10 +2032,6 @@ entity adc_dma_bd_axi_mem_intercon_0 is
     S02_AXI_bready : in STD_LOGIC;
     S02_AXI_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
     S02_AXI_bvalid : out STD_LOGIC;
-    S02_AXI_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    S02_AXI_rlast : out STD_LOGIC;
-    S02_AXI_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    S02_AXI_rvalid : out STD_LOGIC;
     S02_AXI_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     S02_AXI_wlast : in STD_LOGIC;
     S02_AXI_wready : out STD_LOGIC;
@@ -2177,7 +2167,6 @@ architecture STRUCTURE of adc_dma_bd_axi_mem_intercon_0 is
   signal axi_mem_intercon_to_s01_couplers_RREADY : STD_LOGIC;
   signal axi_mem_intercon_to_s01_couplers_RRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal axi_mem_intercon_to_s01_couplers_RVALID : STD_LOGIC;
-  signal axi_mem_intercon_to_s02_couplers_ARREADY : STD_LOGIC;
   signal axi_mem_intercon_to_s02_couplers_AWADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal axi_mem_intercon_to_s02_couplers_AWBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal axi_mem_intercon_to_s02_couplers_AWCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -2189,10 +2178,6 @@ architecture STRUCTURE of adc_dma_bd_axi_mem_intercon_0 is
   signal axi_mem_intercon_to_s02_couplers_BREADY : STD_LOGIC;
   signal axi_mem_intercon_to_s02_couplers_BRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal axi_mem_intercon_to_s02_couplers_BVALID : STD_LOGIC;
-  signal axi_mem_intercon_to_s02_couplers_RDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
-  signal axi_mem_intercon_to_s02_couplers_RLAST : STD_LOGIC;
-  signal axi_mem_intercon_to_s02_couplers_RRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
-  signal axi_mem_intercon_to_s02_couplers_RVALID : STD_LOGIC;
   signal axi_mem_intercon_to_s02_couplers_WDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal axi_mem_intercon_to_s02_couplers_WLAST : STD_LOGIC;
   signal axi_mem_intercon_to_s02_couplers_WREADY : STD_LOGIC;
@@ -2394,14 +2379,9 @@ begin
   S01_AXI_rlast <= axi_mem_intercon_to_s01_couplers_RLAST;
   S01_AXI_rresp(1 downto 0) <= axi_mem_intercon_to_s01_couplers_RRESP(1 downto 0);
   S01_AXI_rvalid <= axi_mem_intercon_to_s01_couplers_RVALID;
-  S02_AXI_arready <= axi_mem_intercon_to_s02_couplers_ARREADY;
   S02_AXI_awready <= axi_mem_intercon_to_s02_couplers_AWREADY;
   S02_AXI_bresp(1 downto 0) <= axi_mem_intercon_to_s02_couplers_BRESP(1 downto 0);
   S02_AXI_bvalid <= axi_mem_intercon_to_s02_couplers_BVALID;
-  S02_AXI_rdata(31 downto 0) <= axi_mem_intercon_to_s02_couplers_RDATA(31 downto 0);
-  S02_AXI_rlast <= axi_mem_intercon_to_s02_couplers_RLAST;
-  S02_AXI_rresp(1 downto 0) <= axi_mem_intercon_to_s02_couplers_RRESP(1 downto 0);
-  S02_AXI_rvalid <= axi_mem_intercon_to_s02_couplers_RVALID;
   S02_AXI_wready <= axi_mem_intercon_to_s02_couplers_WREADY;
   axi_mem_intercon_ACLK_net <= ACLK;
   axi_mem_intercon_ARESETN_net <= ARESETN;
@@ -2668,7 +2648,6 @@ s02_couplers: entity work.s02_couplers_imp_17G4XYG
       M_AXI_wvalid => s02_couplers_to_xbar_WVALID,
       S_ACLK => axi_mem_intercon_ACLK_net,
       S_ARESETN => axi_mem_intercon_ARESETN_net,
-      S_AXI_arready => axi_mem_intercon_to_s02_couplers_ARREADY,
       S_AXI_awaddr(31 downto 0) => axi_mem_intercon_to_s02_couplers_AWADDR(31 downto 0),
       S_AXI_awburst(1 downto 0) => axi_mem_intercon_to_s02_couplers_AWBURST(1 downto 0),
       S_AXI_awcache(3 downto 0) => axi_mem_intercon_to_s02_couplers_AWCACHE(3 downto 0),
@@ -2680,10 +2659,6 @@ s02_couplers: entity work.s02_couplers_imp_17G4XYG
       S_AXI_bready => axi_mem_intercon_to_s02_couplers_BREADY,
       S_AXI_bresp(1 downto 0) => axi_mem_intercon_to_s02_couplers_BRESP(1 downto 0),
       S_AXI_bvalid => axi_mem_intercon_to_s02_couplers_BVALID,
-      S_AXI_rdata(31 downto 0) => axi_mem_intercon_to_s02_couplers_RDATA(31 downto 0),
-      S_AXI_rlast => axi_mem_intercon_to_s02_couplers_RLAST,
-      S_AXI_rresp(1 downto 0) => axi_mem_intercon_to_s02_couplers_RRESP(1 downto 0),
-      S_AXI_rvalid => axi_mem_intercon_to_s02_couplers_RVALID,
       S_AXI_wdata(31 downto 0) => axi_mem_intercon_to_s02_couplers_WDATA(31 downto 0),
       S_AXI_wlast => axi_mem_intercon_to_s02_couplers_WLAST,
       S_AXI_wready => axi_mem_intercon_to_s02_couplers_WREADY,
@@ -3597,10 +3572,10 @@ entity adc_dma_bd is
     sRelayComL_0 : out STD_LOGIC;
     sys_clock : in STD_LOGIC
   );
-  attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of adc_dma_bd : entity is "adc_dma_bd,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=adc_dma_bd,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=31,numReposBlks=21,numNonXlnxBlks=2,numHierBlks=10,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=8,da_board_cnt=3,da_clkrst_cnt=25,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
-  attribute HW_HANDOFF : string;
-  attribute HW_HANDOFF of adc_dma_bd : entity is "adc_dma_bd.hwdef";
+  attribute core_generation_info : string;
+  attribute core_generation_info of adc_dma_bd : entity is "adc_dma_bd,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=adc_dma_bd,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=31,numReposBlks=21,numNonXlnxBlks=2,numHierBlks=10,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=8,da_board_cnt=3,da_clkrst_cnt=25,da_ps7_cnt=1,synth_mode=OOC_per_IP}";
+  attribute hw_handoff : string;
+  attribute hw_handoff of adc_dma_bd : entity is "adc_dma_bd.hwdef";
 end adc_dma_bd;
 
 architecture STRUCTURE of adc_dma_bd is
@@ -4021,12 +3996,12 @@ architecture STRUCTURE of adc_dma_bd is
     SLOT_1_AXIS_tlast : in STD_LOGIC;
     SLOT_1_AXIS_tvalid : in STD_LOGIC;
     SLOT_1_AXIS_tready : in STD_LOGIC;
-    resetn : in STD_LOGIC;
     SLOT_2_AXIS_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
     SLOT_2_AXIS_tstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     SLOT_2_AXIS_tlast : in STD_LOGIC;
     SLOT_2_AXIS_tvalid : in STD_LOGIC;
-    SLOT_2_AXIS_tready : in STD_LOGIC
+    SLOT_2_AXIS_tready : in STD_LOGIC;
+    resetn : in STD_LOGIC
   );
   end component adc_dma_bd_system_ila_0_0;
   component adc_dma_bd_system_ila_1_0 is
@@ -4037,6 +4012,22 @@ architecture STRUCTURE of adc_dma_bd is
     probe2 : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   end component adc_dma_bd_system_ila_1_0;
+  component adc_dma_bd_axis_data_fifo_0_0 is
+  port (
+    s_axis_aresetn : in STD_LOGIC;
+    s_axis_aclk : in STD_LOGIC;
+    s_axis_tvalid : in STD_LOGIC;
+    s_axis_tready : out STD_LOGIC;
+    s_axis_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axis_tstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s_axis_tlast : in STD_LOGIC;
+    m_axis_tvalid : out STD_LOGIC;
+    m_axis_tready : in STD_LOGIC;
+    m_axis_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    m_axis_tstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_axis_tlast : out STD_LOGIC
+  );
+  end component adc_dma_bd_axis_data_fifo_0_0;
   component adc_dma_bd_AXI_TAR_0_0 is
   port (
     SysClk : in STD_LOGIC;
@@ -4074,48 +4065,32 @@ architecture STRUCTURE of adc_dma_bd is
     m00_axis_tready : in STD_LOGIC
   );
   end component adc_dma_bd_AXI_TAR_0_0;
-  component adc_dma_bd_axis_data_fifo_0_0 is
-  port (
-    s_axis_aresetn : in STD_LOGIC;
-    s_axis_aclk : in STD_LOGIC;
-    s_axis_tvalid : in STD_LOGIC;
-    s_axis_tready : out STD_LOGIC;
-    s_axis_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    s_axis_tstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s_axis_tlast : in STD_LOGIC;
-    m_axis_tvalid : out STD_LOGIC;
-    m_axis_tready : in STD_LOGIC;
-    m_axis_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m_axis_tstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
-    m_axis_tlast : out STD_LOGIC
-  );
-  end component adc_dma_bd_axis_data_fifo_0_0;
   signal AXI_TAR_0_Introut : STD_LOGIC;
-  attribute DEBUG : string;
-  attribute DEBUG of AXI_TAR_0_Introut : signal is "true";
   attribute MARK_DEBUG : boolean;
   attribute MARK_DEBUG of AXI_TAR_0_Introut : signal is std.standard.true;
+  attribute debug : string;
+  attribute debug of AXI_TAR_0_Introut : signal is "true";
   signal AXI_TAR_0_M00_AXIS_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
-  attribute CONN_BUS_INFO : string;
-  attribute CONN_BUS_INFO of AXI_TAR_0_M00_AXIS_TDATA : signal is "AXI_TAR_0_M00_AXIS xilinx.com:interface:axis:1.0 None TDATA";
-  attribute DEBUG of AXI_TAR_0_M00_AXIS_TDATA : signal is "true";
   attribute MARK_DEBUG of AXI_TAR_0_M00_AXIS_TDATA : signal is std.standard.true;
+  attribute conn_bus_info : string;
+  attribute conn_bus_info of AXI_TAR_0_M00_AXIS_TDATA : signal is "AXI_TAR_0_M00_AXIS xilinx.com:interface:axis:1.0 None TDATA";
+  attribute debug of AXI_TAR_0_M00_AXIS_TDATA : signal is "true";
   signal AXI_TAR_0_M00_AXIS_TLAST : STD_LOGIC;
-  attribute CONN_BUS_INFO of AXI_TAR_0_M00_AXIS_TLAST : signal is "AXI_TAR_0_M00_AXIS xilinx.com:interface:axis:1.0 None TLAST";
-  attribute DEBUG of AXI_TAR_0_M00_AXIS_TLAST : signal is "true";
   attribute MARK_DEBUG of AXI_TAR_0_M00_AXIS_TLAST : signal is std.standard.true;
+  attribute conn_bus_info of AXI_TAR_0_M00_AXIS_TLAST : signal is "AXI_TAR_0_M00_AXIS xilinx.com:interface:axis:1.0 None TLAST";
+  attribute debug of AXI_TAR_0_M00_AXIS_TLAST : signal is "true";
   signal AXI_TAR_0_M00_AXIS_TREADY : STD_LOGIC;
-  attribute CONN_BUS_INFO of AXI_TAR_0_M00_AXIS_TREADY : signal is "AXI_TAR_0_M00_AXIS xilinx.com:interface:axis:1.0 None TREADY";
-  attribute DEBUG of AXI_TAR_0_M00_AXIS_TREADY : signal is "true";
   attribute MARK_DEBUG of AXI_TAR_0_M00_AXIS_TREADY : signal is std.standard.true;
+  attribute conn_bus_info of AXI_TAR_0_M00_AXIS_TREADY : signal is "AXI_TAR_0_M00_AXIS xilinx.com:interface:axis:1.0 None TREADY";
+  attribute debug of AXI_TAR_0_M00_AXIS_TREADY : signal is "true";
   signal AXI_TAR_0_M00_AXIS_TSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
-  attribute CONN_BUS_INFO of AXI_TAR_0_M00_AXIS_TSTRB : signal is "AXI_TAR_0_M00_AXIS xilinx.com:interface:axis:1.0 None TSTRB";
-  attribute DEBUG of AXI_TAR_0_M00_AXIS_TSTRB : signal is "true";
   attribute MARK_DEBUG of AXI_TAR_0_M00_AXIS_TSTRB : signal is std.standard.true;
+  attribute conn_bus_info of AXI_TAR_0_M00_AXIS_TSTRB : signal is "AXI_TAR_0_M00_AXIS xilinx.com:interface:axis:1.0 None TSTRB";
+  attribute debug of AXI_TAR_0_M00_AXIS_TSTRB : signal is "true";
   signal AXI_TAR_0_M00_AXIS_TVALID : STD_LOGIC;
-  attribute CONN_BUS_INFO of AXI_TAR_0_M00_AXIS_TVALID : signal is "AXI_TAR_0_M00_AXIS xilinx.com:interface:axis:1.0 None TVALID";
-  attribute DEBUG of AXI_TAR_0_M00_AXIS_TVALID : signal is "true";
   attribute MARK_DEBUG of AXI_TAR_0_M00_AXIS_TVALID : signal is std.standard.true;
+  attribute conn_bus_info of AXI_TAR_0_M00_AXIS_TVALID : signal is "AXI_TAR_0_M00_AXIS xilinx.com:interface:axis:1.0 None TVALID";
+  attribute debug of AXI_TAR_0_M00_AXIS_TVALID : signal is "true";
   signal AXI_ZmodADC1410_0_mCalibCh1_HgAddCoef : STD_LOGIC_VECTOR ( 17 downto 0 );
   signal AXI_ZmodADC1410_0_mCalibCh1_HgMultCoef : STD_LOGIC_VECTOR ( 17 downto 0 );
   signal AXI_ZmodADC1410_0_mCalibCh1_LgAddCoef : STD_LOGIC_VECTOR ( 17 downto 0 );
@@ -4152,15 +4127,15 @@ architecture STRUCTURE of adc_dma_bd is
   signal ZmodADC1410_Controll_0_sCh1GainH : STD_LOGIC;
   signal ZmodADC1410_Controll_0_sCh1GainL : STD_LOGIC;
   signal ZmodADC1410_Controll_0_sCh1Out : STD_LOGIC_VECTOR ( 15 downto 0 );
-  attribute DEBUG of ZmodADC1410_Controll_0_sCh1Out : signal is "true";
   attribute MARK_DEBUG of ZmodADC1410_Controll_0_sCh1Out : signal is std.standard.true;
+  attribute debug of ZmodADC1410_Controll_0_sCh1Out : signal is "true";
   signal ZmodADC1410_Controll_0_sCh2CouplingH : STD_LOGIC;
   signal ZmodADC1410_Controll_0_sCh2CouplingL : STD_LOGIC;
   signal ZmodADC1410_Controll_0_sCh2GainH : STD_LOGIC;
   signal ZmodADC1410_Controll_0_sCh2GainL : STD_LOGIC;
   signal ZmodADC1410_Controll_0_sCh2Out : STD_LOGIC_VECTOR ( 15 downto 0 );
-  attribute DEBUG of ZmodADC1410_Controll_0_sCh2Out : signal is "true";
   attribute MARK_DEBUG of ZmodADC1410_Controll_0_sCh2Out : signal is std.standard.true;
+  attribute debug of ZmodADC1410_Controll_0_sCh2Out : signal is "true";
   signal ZmodADC1410_Controll_0_sInitDone_n : STD_LOGIC;
   signal ZmodADC1410_Controll_0_sRelayComH : STD_LOGIC;
   signal ZmodADC1410_Controll_0_sRelayComL : STD_LOGIC;
@@ -4177,70 +4152,55 @@ architecture STRUCTURE of adc_dma_bd is
   signal axi_dma_0_M_AXI_MM2S_RREADY : STD_LOGIC;
   signal axi_dma_0_M_AXI_MM2S_RRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal axi_dma_0_M_AXI_MM2S_RVALID : STD_LOGIC;
-  signal axi_dma_0_M_AXI_S2MM_ARREADY : STD_LOGIC;
-  attribute CONN_BUS_INFO of axi_dma_0_M_AXI_S2MM_ARREADY : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 ARREADY";
-  attribute DONT_TOUCH : boolean;
-  attribute DONT_TOUCH of axi_dma_0_M_AXI_S2MM_ARREADY : signal is std.standard.true;
   signal axi_dma_0_M_AXI_S2MM_AWADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
-  attribute CONN_BUS_INFO of axi_dma_0_M_AXI_S2MM_AWADDR : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 AWADDR";
+  attribute DONT_TOUCH : boolean;
   attribute DONT_TOUCH of axi_dma_0_M_AXI_S2MM_AWADDR : signal is std.standard.true;
+  attribute conn_bus_info of axi_dma_0_M_AXI_S2MM_AWADDR : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 AWADDR";
   signal axi_dma_0_M_AXI_S2MM_AWBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
-  attribute CONN_BUS_INFO of axi_dma_0_M_AXI_S2MM_AWBURST : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 AWBURST";
   attribute DONT_TOUCH of axi_dma_0_M_AXI_S2MM_AWBURST : signal is std.standard.true;
+  attribute conn_bus_info of axi_dma_0_M_AXI_S2MM_AWBURST : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 AWBURST";
   signal axi_dma_0_M_AXI_S2MM_AWCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
-  attribute CONN_BUS_INFO of axi_dma_0_M_AXI_S2MM_AWCACHE : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 AWCACHE";
   attribute DONT_TOUCH of axi_dma_0_M_AXI_S2MM_AWCACHE : signal is std.standard.true;
+  attribute conn_bus_info of axi_dma_0_M_AXI_S2MM_AWCACHE : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 AWCACHE";
   signal axi_dma_0_M_AXI_S2MM_AWLEN : STD_LOGIC_VECTOR ( 7 downto 0 );
-  attribute CONN_BUS_INFO of axi_dma_0_M_AXI_S2MM_AWLEN : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 AWLEN";
   attribute DONT_TOUCH of axi_dma_0_M_AXI_S2MM_AWLEN : signal is std.standard.true;
+  attribute conn_bus_info of axi_dma_0_M_AXI_S2MM_AWLEN : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 AWLEN";
   signal axi_dma_0_M_AXI_S2MM_AWPROT : STD_LOGIC_VECTOR ( 2 downto 0 );
-  attribute CONN_BUS_INFO of axi_dma_0_M_AXI_S2MM_AWPROT : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 AWPROT";
   attribute DONT_TOUCH of axi_dma_0_M_AXI_S2MM_AWPROT : signal is std.standard.true;
+  attribute conn_bus_info of axi_dma_0_M_AXI_S2MM_AWPROT : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 AWPROT";
   signal axi_dma_0_M_AXI_S2MM_AWREADY : STD_LOGIC;
-  attribute CONN_BUS_INFO of axi_dma_0_M_AXI_S2MM_AWREADY : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 AWREADY";
   attribute DONT_TOUCH of axi_dma_0_M_AXI_S2MM_AWREADY : signal is std.standard.true;
+  attribute conn_bus_info of axi_dma_0_M_AXI_S2MM_AWREADY : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 AWREADY";
   signal axi_dma_0_M_AXI_S2MM_AWSIZE : STD_LOGIC_VECTOR ( 2 downto 0 );
-  attribute CONN_BUS_INFO of axi_dma_0_M_AXI_S2MM_AWSIZE : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 AWSIZE";
   attribute DONT_TOUCH of axi_dma_0_M_AXI_S2MM_AWSIZE : signal is std.standard.true;
+  attribute conn_bus_info of axi_dma_0_M_AXI_S2MM_AWSIZE : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 AWSIZE";
   signal axi_dma_0_M_AXI_S2MM_AWVALID : STD_LOGIC;
-  attribute CONN_BUS_INFO of axi_dma_0_M_AXI_S2MM_AWVALID : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 AWVALID";
   attribute DONT_TOUCH of axi_dma_0_M_AXI_S2MM_AWVALID : signal is std.standard.true;
+  attribute conn_bus_info of axi_dma_0_M_AXI_S2MM_AWVALID : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 AWVALID";
   signal axi_dma_0_M_AXI_S2MM_BREADY : STD_LOGIC;
-  attribute CONN_BUS_INFO of axi_dma_0_M_AXI_S2MM_BREADY : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 BREADY";
   attribute DONT_TOUCH of axi_dma_0_M_AXI_S2MM_BREADY : signal is std.standard.true;
+  attribute conn_bus_info of axi_dma_0_M_AXI_S2MM_BREADY : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 BREADY";
   signal axi_dma_0_M_AXI_S2MM_BRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
-  attribute CONN_BUS_INFO of axi_dma_0_M_AXI_S2MM_BRESP : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 BRESP";
   attribute DONT_TOUCH of axi_dma_0_M_AXI_S2MM_BRESP : signal is std.standard.true;
+  attribute conn_bus_info of axi_dma_0_M_AXI_S2MM_BRESP : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 BRESP";
   signal axi_dma_0_M_AXI_S2MM_BVALID : STD_LOGIC;
-  attribute CONN_BUS_INFO of axi_dma_0_M_AXI_S2MM_BVALID : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 BVALID";
   attribute DONT_TOUCH of axi_dma_0_M_AXI_S2MM_BVALID : signal is std.standard.true;
-  signal axi_dma_0_M_AXI_S2MM_RDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
-  attribute CONN_BUS_INFO of axi_dma_0_M_AXI_S2MM_RDATA : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 RDATA";
-  attribute DONT_TOUCH of axi_dma_0_M_AXI_S2MM_RDATA : signal is std.standard.true;
-  signal axi_dma_0_M_AXI_S2MM_RLAST : STD_LOGIC;
-  attribute CONN_BUS_INFO of axi_dma_0_M_AXI_S2MM_RLAST : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 RLAST";
-  attribute DONT_TOUCH of axi_dma_0_M_AXI_S2MM_RLAST : signal is std.standard.true;
-  signal axi_dma_0_M_AXI_S2MM_RRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
-  attribute CONN_BUS_INFO of axi_dma_0_M_AXI_S2MM_RRESP : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 RRESP";
-  attribute DONT_TOUCH of axi_dma_0_M_AXI_S2MM_RRESP : signal is std.standard.true;
-  signal axi_dma_0_M_AXI_S2MM_RVALID : STD_LOGIC;
-  attribute CONN_BUS_INFO of axi_dma_0_M_AXI_S2MM_RVALID : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 RVALID";
-  attribute DONT_TOUCH of axi_dma_0_M_AXI_S2MM_RVALID : signal is std.standard.true;
+  attribute conn_bus_info of axi_dma_0_M_AXI_S2MM_BVALID : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 BVALID";
   signal axi_dma_0_M_AXI_S2MM_WDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
-  attribute CONN_BUS_INFO of axi_dma_0_M_AXI_S2MM_WDATA : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 WDATA";
   attribute DONT_TOUCH of axi_dma_0_M_AXI_S2MM_WDATA : signal is std.standard.true;
+  attribute conn_bus_info of axi_dma_0_M_AXI_S2MM_WDATA : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 WDATA";
   signal axi_dma_0_M_AXI_S2MM_WLAST : STD_LOGIC;
-  attribute CONN_BUS_INFO of axi_dma_0_M_AXI_S2MM_WLAST : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 WLAST";
   attribute DONT_TOUCH of axi_dma_0_M_AXI_S2MM_WLAST : signal is std.standard.true;
+  attribute conn_bus_info of axi_dma_0_M_AXI_S2MM_WLAST : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 WLAST";
   signal axi_dma_0_M_AXI_S2MM_WREADY : STD_LOGIC;
-  attribute CONN_BUS_INFO of axi_dma_0_M_AXI_S2MM_WREADY : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 WREADY";
   attribute DONT_TOUCH of axi_dma_0_M_AXI_S2MM_WREADY : signal is std.standard.true;
+  attribute conn_bus_info of axi_dma_0_M_AXI_S2MM_WREADY : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 WREADY";
   signal axi_dma_0_M_AXI_S2MM_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
-  attribute CONN_BUS_INFO of axi_dma_0_M_AXI_S2MM_WSTRB : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 WSTRB";
   attribute DONT_TOUCH of axi_dma_0_M_AXI_S2MM_WSTRB : signal is std.standard.true;
+  attribute conn_bus_info of axi_dma_0_M_AXI_S2MM_WSTRB : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 WSTRB";
   signal axi_dma_0_M_AXI_S2MM_WVALID : STD_LOGIC;
-  attribute CONN_BUS_INFO of axi_dma_0_M_AXI_S2MM_WVALID : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 WVALID";
   attribute DONT_TOUCH of axi_dma_0_M_AXI_S2MM_WVALID : signal is std.standard.true;
+  attribute conn_bus_info of axi_dma_0_M_AXI_S2MM_WVALID : signal is "axi_dma_0_M_AXI_S2MM xilinx.com:interface:aximm:1.0 AXI4 WVALID";
   signal axi_dma_0_M_AXI_SG_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal axi_dma_0_M_AXI_SG_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal axi_dma_0_M_AXI_SG_ARCACHE : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -4310,25 +4270,25 @@ architecture STRUCTURE of adc_dma_bd is
   signal axi_mem_intercon_M00_AXI_WSTRB : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal axi_mem_intercon_M00_AXI_WVALID : STD_LOGIC;
   signal axis_data_fifo_0_M_AXIS_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
-  attribute CONN_BUS_INFO of axis_data_fifo_0_M_AXIS_TDATA : signal is "axis_data_fifo_0_M_AXIS xilinx.com:interface:axis:1.0 None TDATA";
-  attribute DEBUG of axis_data_fifo_0_M_AXIS_TDATA : signal is "true";
   attribute MARK_DEBUG of axis_data_fifo_0_M_AXIS_TDATA : signal is std.standard.true;
+  attribute conn_bus_info of axis_data_fifo_0_M_AXIS_TDATA : signal is "axis_data_fifo_0_M_AXIS xilinx.com:interface:axis:1.0 None TDATA";
+  attribute debug of axis_data_fifo_0_M_AXIS_TDATA : signal is "true";
   signal axis_data_fifo_0_M_AXIS_TLAST : STD_LOGIC;
-  attribute CONN_BUS_INFO of axis_data_fifo_0_M_AXIS_TLAST : signal is "axis_data_fifo_0_M_AXIS xilinx.com:interface:axis:1.0 None TLAST";
-  attribute DEBUG of axis_data_fifo_0_M_AXIS_TLAST : signal is "true";
   attribute MARK_DEBUG of axis_data_fifo_0_M_AXIS_TLAST : signal is std.standard.true;
+  attribute conn_bus_info of axis_data_fifo_0_M_AXIS_TLAST : signal is "axis_data_fifo_0_M_AXIS xilinx.com:interface:axis:1.0 None TLAST";
+  attribute debug of axis_data_fifo_0_M_AXIS_TLAST : signal is "true";
   signal axis_data_fifo_0_M_AXIS_TREADY : STD_LOGIC;
-  attribute CONN_BUS_INFO of axis_data_fifo_0_M_AXIS_TREADY : signal is "axis_data_fifo_0_M_AXIS xilinx.com:interface:axis:1.0 None TREADY";
-  attribute DEBUG of axis_data_fifo_0_M_AXIS_TREADY : signal is "true";
   attribute MARK_DEBUG of axis_data_fifo_0_M_AXIS_TREADY : signal is std.standard.true;
+  attribute conn_bus_info of axis_data_fifo_0_M_AXIS_TREADY : signal is "axis_data_fifo_0_M_AXIS xilinx.com:interface:axis:1.0 None TREADY";
+  attribute debug of axis_data_fifo_0_M_AXIS_TREADY : signal is "true";
   signal axis_data_fifo_0_M_AXIS_TSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
-  attribute CONN_BUS_INFO of axis_data_fifo_0_M_AXIS_TSTRB : signal is "axis_data_fifo_0_M_AXIS xilinx.com:interface:axis:1.0 None TSTRB";
-  attribute DEBUG of axis_data_fifo_0_M_AXIS_TSTRB : signal is "true";
   attribute MARK_DEBUG of axis_data_fifo_0_M_AXIS_TSTRB : signal is std.standard.true;
+  attribute conn_bus_info of axis_data_fifo_0_M_AXIS_TSTRB : signal is "axis_data_fifo_0_M_AXIS xilinx.com:interface:axis:1.0 None TSTRB";
+  attribute debug of axis_data_fifo_0_M_AXIS_TSTRB : signal is "true";
   signal axis_data_fifo_0_M_AXIS_TVALID : STD_LOGIC;
-  attribute CONN_BUS_INFO of axis_data_fifo_0_M_AXIS_TVALID : signal is "axis_data_fifo_0_M_AXIS xilinx.com:interface:axis:1.0 None TVALID";
-  attribute DEBUG of axis_data_fifo_0_M_AXIS_TVALID : signal is "true";
   attribute MARK_DEBUG of axis_data_fifo_0_M_AXIS_TVALID : signal is std.standard.true;
+  attribute conn_bus_info of axis_data_fifo_0_M_AXIS_TVALID : signal is "axis_data_fifo_0_M_AXIS xilinx.com:interface:axis:1.0 None TVALID";
+  attribute debug of axis_data_fifo_0_M_AXIS_TVALID : signal is "true";
   signal clk_wiz_0_clk_out1 : STD_LOGIC;
   signal dADC_Data_0_1 : STD_LOGIC_VECTOR ( 13 downto 0 );
   signal processing_system7_0_DDR_ADDR : STD_LOGIC_VECTOR ( 14 downto 0 );
@@ -4481,33 +4441,33 @@ architecture STRUCTURE of adc_dma_bd is
   signal NLW_rst_ps7_0_100M_1_bus_struct_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_ps7_0_100M_1_interconnect_aresetn_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
   signal NLW_rst_ps7_0_100M_1_peripheral_reset_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
-  attribute X_INTERFACE_INFO : string;
-  attribute X_INTERFACE_INFO of DDR_cas_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CAS_N";
-  attribute X_INTERFACE_INFO of DDR_ck_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CK_N";
-  attribute X_INTERFACE_INFO of DDR_ck_p : signal is "xilinx.com:interface:ddrx:1.0 DDR CK_P";
-  attribute X_INTERFACE_INFO of DDR_cke : signal is "xilinx.com:interface:ddrx:1.0 DDR CKE";
-  attribute X_INTERFACE_INFO of DDR_cs_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CS_N";
-  attribute X_INTERFACE_INFO of DDR_odt : signal is "xilinx.com:interface:ddrx:1.0 DDR ODT";
-  attribute X_INTERFACE_INFO of DDR_ras_n : signal is "xilinx.com:interface:ddrx:1.0 DDR RAS_N";
-  attribute X_INTERFACE_INFO of DDR_reset_n : signal is "xilinx.com:interface:ddrx:1.0 DDR RESET_N";
-  attribute X_INTERFACE_INFO of DDR_we_n : signal is "xilinx.com:interface:ddrx:1.0 DDR WE_N";
-  attribute X_INTERFACE_INFO of FIXED_IO_ddr_vrn : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO DDR_VRN";
-  attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of FIXED_IO_ddr_vrn : signal is "XIL_INTERFACENAME FIXED_IO, CAN_DEBUG false";
-  attribute X_INTERFACE_INFO of FIXED_IO_ddr_vrp : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO DDR_VRP";
-  attribute X_INTERFACE_INFO of FIXED_IO_ps_clk : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK";
-  attribute X_INTERFACE_INFO of FIXED_IO_ps_porb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB";
-  attribute X_INTERFACE_INFO of FIXED_IO_ps_srstb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB";
-  attribute X_INTERFACE_INFO of sys_clock : signal is "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK";
-  attribute X_INTERFACE_PARAMETER of sys_clock : signal is "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN adc_dma_bd_sys_clock, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute X_INTERFACE_INFO of DDR_addr : signal is "xilinx.com:interface:ddrx:1.0 DDR ADDR";
-  attribute X_INTERFACE_PARAMETER of DDR_addr : signal is "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250";
-  attribute X_INTERFACE_INFO of DDR_ba : signal is "xilinx.com:interface:ddrx:1.0 DDR BA";
-  attribute X_INTERFACE_INFO of DDR_dm : signal is "xilinx.com:interface:ddrx:1.0 DDR DM";
-  attribute X_INTERFACE_INFO of DDR_dq : signal is "xilinx.com:interface:ddrx:1.0 DDR DQ";
-  attribute X_INTERFACE_INFO of DDR_dqs_n : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_N";
-  attribute X_INTERFACE_INFO of DDR_dqs_p : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_P";
-  attribute X_INTERFACE_INFO of FIXED_IO_mio : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO";
+  attribute x_interface_info : string;
+  attribute x_interface_info of DDR_cas_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CAS_N";
+  attribute x_interface_info of DDR_ck_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CK_N";
+  attribute x_interface_info of DDR_ck_p : signal is "xilinx.com:interface:ddrx:1.0 DDR CK_P";
+  attribute x_interface_info of DDR_cke : signal is "xilinx.com:interface:ddrx:1.0 DDR CKE";
+  attribute x_interface_info of DDR_cs_n : signal is "xilinx.com:interface:ddrx:1.0 DDR CS_N";
+  attribute x_interface_info of DDR_odt : signal is "xilinx.com:interface:ddrx:1.0 DDR ODT";
+  attribute x_interface_info of DDR_ras_n : signal is "xilinx.com:interface:ddrx:1.0 DDR RAS_N";
+  attribute x_interface_info of DDR_reset_n : signal is "xilinx.com:interface:ddrx:1.0 DDR RESET_N";
+  attribute x_interface_info of DDR_we_n : signal is "xilinx.com:interface:ddrx:1.0 DDR WE_N";
+  attribute x_interface_info of FIXED_IO_ddr_vrn : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO DDR_VRN";
+  attribute x_interface_parameter : string;
+  attribute x_interface_parameter of FIXED_IO_ddr_vrn : signal is "XIL_INTERFACENAME FIXED_IO, CAN_DEBUG false";
+  attribute x_interface_info of FIXED_IO_ddr_vrp : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO DDR_VRP";
+  attribute x_interface_info of FIXED_IO_ps_clk : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_CLK";
+  attribute x_interface_info of FIXED_IO_ps_porb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_PORB";
+  attribute x_interface_info of FIXED_IO_ps_srstb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO PS_SRSTB";
+  attribute x_interface_info of sys_clock : signal is "xilinx.com:signal:clock:1.0 CLK.SYS_CLOCK CLK";
+  attribute x_interface_parameter of sys_clock : signal is "XIL_INTERFACENAME CLK.SYS_CLOCK, CLK_DOMAIN adc_dma_bd_sys_clock, FREQ_HZ 125000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute x_interface_info of DDR_addr : signal is "xilinx.com:interface:ddrx:1.0 DDR ADDR";
+  attribute x_interface_parameter of DDR_addr : signal is "XIL_INTERFACENAME DDR, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250";
+  attribute x_interface_info of DDR_ba : signal is "xilinx.com:interface:ddrx:1.0 DDR BA";
+  attribute x_interface_info of DDR_dm : signal is "xilinx.com:interface:ddrx:1.0 DDR DM";
+  attribute x_interface_info of DDR_dq : signal is "xilinx.com:interface:ddrx:1.0 DDR DQ";
+  attribute x_interface_info of DDR_dqs_n : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_N";
+  attribute x_interface_info of DDR_dqs_p : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_P";
+  attribute x_interface_info of FIXED_IO_mio : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO";
 begin
   DcoClk_0_1 <= DcoClk_0;
   adcClkIn_n_0 <= ZmodADC1410_Controll_0_adcClkIn_n;
@@ -4863,7 +4823,6 @@ axi_mem_intercon: entity work.adc_dma_bd_axi_mem_intercon_0
       S01_AXI_rvalid => axi_dma_0_M_AXI_MM2S_RVALID,
       S02_ACLK => processing_system7_0_FCLK_CLK0,
       S02_ARESETN => rst_ps7_0_100M_peripheral_aresetn(0),
-      S02_AXI_arready => axi_dma_0_M_AXI_S2MM_ARREADY,
       S02_AXI_awaddr(31 downto 0) => axi_dma_0_M_AXI_S2MM_AWADDR(31 downto 0),
       S02_AXI_awburst(1 downto 0) => axi_dma_0_M_AXI_S2MM_AWBURST(1 downto 0),
       S02_AXI_awcache(3 downto 0) => axi_dma_0_M_AXI_S2MM_AWCACHE(3 downto 0),
@@ -4875,10 +4834,6 @@ axi_mem_intercon: entity work.adc_dma_bd_axi_mem_intercon_0
       S02_AXI_bready => axi_dma_0_M_AXI_S2MM_BREADY,
       S02_AXI_bresp(1 downto 0) => axi_dma_0_M_AXI_S2MM_BRESP(1 downto 0),
       S02_AXI_bvalid => axi_dma_0_M_AXI_S2MM_BVALID,
-      S02_AXI_rdata(31 downto 0) => axi_dma_0_M_AXI_S2MM_RDATA(31 downto 0),
-      S02_AXI_rlast => axi_dma_0_M_AXI_S2MM_RLAST,
-      S02_AXI_rresp(1 downto 0) => axi_dma_0_M_AXI_S2MM_RRESP(1 downto 0),
-      S02_AXI_rvalid => axi_dma_0_M_AXI_S2MM_RVALID,
       S02_AXI_wdata(31 downto 0) => axi_dma_0_M_AXI_S2MM_WDATA(31 downto 0),
       S02_AXI_wlast => axi_dma_0_M_AXI_S2MM_WLAST,
       S02_AXI_wready => axi_dma_0_M_AXI_S2MM_WREADY,
@@ -5164,7 +5119,7 @@ system_ila_0: component adc_dma_bd_system_ila_0_0
       SLOT_0_AXI_arlock(0) => '0',
       SLOT_0_AXI_arprot(2 downto 0) => B"000",
       SLOT_0_AXI_arqos(3 downto 0) => B"0000",
-      SLOT_0_AXI_arready => axi_dma_0_M_AXI_S2MM_ARREADY,
+      SLOT_0_AXI_arready => '0',
       SLOT_0_AXI_arregion(3 downto 0) => B"0000",
       SLOT_0_AXI_arsize(2 downto 0) => B"010",
       SLOT_0_AXI_arvalid => '0',
@@ -5182,11 +5137,11 @@ system_ila_0: component adc_dma_bd_system_ila_0_0
       SLOT_0_AXI_bready => axi_dma_0_M_AXI_S2MM_BREADY,
       SLOT_0_AXI_bresp(1 downto 0) => axi_dma_0_M_AXI_S2MM_BRESP(1 downto 0),
       SLOT_0_AXI_bvalid => axi_dma_0_M_AXI_S2MM_BVALID,
-      SLOT_0_AXI_rdata(31 downto 0) => axi_dma_0_M_AXI_S2MM_RDATA(31 downto 0),
-      SLOT_0_AXI_rlast => axi_dma_0_M_AXI_S2MM_RLAST,
+      SLOT_0_AXI_rdata(31 downto 0) => B"00000000000000000000000000000000",
+      SLOT_0_AXI_rlast => '0',
       SLOT_0_AXI_rready => '0',
-      SLOT_0_AXI_rresp(1 downto 0) => axi_dma_0_M_AXI_S2MM_RRESP(1 downto 0),
-      SLOT_0_AXI_rvalid => axi_dma_0_M_AXI_S2MM_RVALID,
+      SLOT_0_AXI_rresp(1 downto 0) => B"00",
+      SLOT_0_AXI_rvalid => '0',
       SLOT_0_AXI_wdata(31 downto 0) => axi_dma_0_M_AXI_S2MM_WDATA(31 downto 0),
       SLOT_0_AXI_wlast => axi_dma_0_M_AXI_S2MM_WLAST,
       SLOT_0_AXI_wready => axi_dma_0_M_AXI_S2MM_WREADY,

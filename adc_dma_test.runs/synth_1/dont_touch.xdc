@@ -69,10 +69,10 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_dma_bd_
 # IP: bd/adc_dma_bd/ip/adc_dma_bd_system_ila_1_0/adc_dma_bd_system_ila_1_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_dma_bd_system_ila_1_0 || ORIG_REF_NAME==adc_dma_bd_system_ila_1_0} -quiet] -quiet
 
-# IP: bd/adc_dma_bd/ip/adc_dma_bd_AXI_TAR_0_0/adc_dma_bd_AXI_TAR_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_dma_bd_AXI_TAR_0_0 || ORIG_REF_NAME==adc_dma_bd_AXI_TAR_0_0} -quiet] -quiet
-
 # IP: bd/adc_dma_bd/ip/adc_dma_bd_axis_data_fifo_0_0/adc_dma_bd_axis_data_fifo_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_dma_bd_axis_data_fifo_0_0 || ORIG_REF_NAME==adc_dma_bd_axis_data_fifo_0_0} -quiet] -quiet
+
+# IP: bd/adc_dma_bd/ip/adc_dma_bd_AXI_TAR_0_0/adc_dma_bd_AXI_TAR_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_dma_bd_AXI_TAR_0_0 || ORIG_REF_NAME==adc_dma_bd_AXI_TAR_0_0} -quiet] -quiet
 
 # XDC: /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/adc_dma_bd_ooc.xdc

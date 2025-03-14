@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="40">
   <CompositeFile CompositeFileTopName="adc_dma_bd" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1739799148"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1739799148"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1739799148"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1739799148"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1740752352"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1740752352"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1740752352"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1740752352"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="synth/adc_dma_bd.vhd" Type="VHDL">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>

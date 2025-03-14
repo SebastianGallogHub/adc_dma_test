@@ -899,12 +899,8 @@
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
-            <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Feb 17 13:59:03 UTC 2025</spirit:value>
-          </spirit:parameter>
-          <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:38a3810b</spirit:value>
+            <spirit:value>9:39f84887</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -918,11 +914,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Feb 17 13:32:22 UTC 2025</spirit:value>
+            <spirit:value>Fri Feb 28 14:19:11 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:38a3810b</spirit:value>
+            <spirit:value>9:39f84887</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -933,7 +929,7 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:38a3810b</spirit:value>
+            <spirit:value>9:39f84887</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -949,11 +945,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Feb 17 13:32:22 UTC 2025</spirit:value>
+            <spirit:value>Wed Feb 26 20:38:25 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:73480e2d</spirit:value>
+            <spirit:value>9:cdd05699</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -969,11 +965,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Feb 17 13:32:22 UTC 2025</spirit:value>
+            <spirit:value>Fri Feb 28 14:19:11 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:73480e2d</spirit:value>
+            <spirit:value>9:cdd05699</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -989,11 +985,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Feb 17 13:32:22 UTC 2025</spirit:value>
+            <spirit:value>Wed Feb 26 20:38:25 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:38a3810b</spirit:value>
+            <spirit:value>9:39f84887</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1009,11 +1005,11 @@
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>GENtimestamp</spirit:name>
-            <spirit:value>Mon Feb 17 13:32:22 UTC 2025</spirit:value>
+            <spirit:value>Fri Feb 28 14:19:11 UTC 2025</spirit:value>
           </spirit:parameter>
           <spirit:parameter>
             <spirit:name>outputProductCRC</spirit:name>
-            <spirit:value>9:38a3810b</spirit:value>
+            <spirit:value>9:39f84887</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -1526,6 +1522,11 @@
         <spirit:description>Width of S_AXI address bus</spirit:description>
         <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH" spirit:order="6" spirit:rangeType="long">4</spirit:value>
       </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="string">
+        <spirit:name>G_MARK_DEBUG</spirit:name>
+        <spirit:displayName>G Mark Debug</spirit:displayName>
+        <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.G_MARK_DEBUG">true</spirit:value>
+      </spirit:modelParameter>
     </spirit:modelParameters>
   </spirit:model>
   <spirit:choices>
@@ -1549,6 +1550,11 @@
       <spirit:name>choice_list_9d8b0d81</spirit:name>
       <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
       <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_pairs_08277433</spirit:name>
+      <spirit:enumeration spirit:text="Activado">true</spirit:enumeration>
+      <spirit:enumeration spirit:text="Desactivado">false</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_pairs_ce1226b1</spirit:name>
@@ -1623,15 +1629,15 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlbehavioralsimulation_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/523a/hdl/AXI_TAR_v1_0_S00_AXI.vhd</spirit:name>
+        <spirit:name>../../ipshared/4965/hdl/AXI_TAR_v1_0_S00_AXI.vhd</spirit:name>
         <spirit:userFileType>vhdlSource-2008</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/523a/hdl/master_test.vhd</spirit:name>
+        <spirit:name>../../ipshared/4965/hdl/master_test.vhd</spirit:name>
         <spirit:userFileType>vhdlSource-2008</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/523a/hdl/AXI_TAR_v1_0.vhd</spirit:name>
+        <spirit:name>../../ipshared/4965/hdl/AXI_TAR_v1_0.vhd</spirit:name>
         <spirit:userFileType>vhdlSource-2008</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1646,15 +1652,15 @@
     <spirit:fileSet>
       <spirit:name>xilinx_vhdlsynthesis_view_fileset</spirit:name>
       <spirit:file>
-        <spirit:name>../../ipshared/523a/hdl/AXI_TAR_v1_0_S00_AXI.vhd</spirit:name>
+        <spirit:name>../../ipshared/4965/hdl/AXI_TAR_v1_0_S00_AXI.vhd</spirit:name>
         <spirit:userFileType>vhdlSource-2008</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/523a/hdl/master_test.vhd</spirit:name>
+        <spirit:name>../../ipshared/4965/hdl/master_test.vhd</spirit:name>
         <spirit:userFileType>vhdlSource-2008</spirit:userFileType>
       </spirit:file>
       <spirit:file>
-        <spirit:name>../../ipshared/523a/hdl/AXI_TAR_v1_0.vhd</spirit:name>
+        <spirit:name>../../ipshared/4965/hdl/AXI_TAR_v1_0.vhd</spirit:name>
         <spirit:userFileType>vhdlSource-2008</spirit:userFileType>
       </spirit:file>
     </spirit:fileSet>
@@ -1735,11 +1741,16 @@
       <spirit:name>Component_Name</spirit:name>
       <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">adc_dma_bd_AXI_TAR_0_0</spirit:value>
     </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>G_MARK_DEBUG</spirit:name>
+      <spirit:displayName>Debug via ILA</spirit:displayName>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.G_MARK_DEBUG" spirit:choiceRef="choice_pairs_08277433">true</spirit:value>
+    </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:displayName>AXI_TAR_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>21</xilinx:coreRevision>
+      <xilinx:coreRevision>23</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.INTROUT.PortWidth" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.INTROUT.SENSITIVITY" xilinx:valuePermission="bd"/>
@@ -1804,16 +1815,17 @@
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_CLK.FREQ_TOLERANCE_HZ" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_CLK.PHASE" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_RST.POLARITY" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.G_MARK_DEBUG" xilinx:valueSource="user"/>
       </xilinx:configElementInfos>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2023.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="3c791c16"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="ebfb2a64"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="2d4f1c6f"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="0a6c5d70"/>
-      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="2ddc08c8"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="ca783775"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="9a78efd4"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="71bae092"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

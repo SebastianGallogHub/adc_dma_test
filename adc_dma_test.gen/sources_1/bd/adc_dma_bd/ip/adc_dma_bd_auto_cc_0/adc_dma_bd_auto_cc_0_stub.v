@@ -2,7 +2,7 @@
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-// Date        : Thu Nov 14 18:51:15 2024
+// Date        : Fri Feb  7 14:39:39 2025
 // Host        : sebasHAL running 64-bit Ubuntu 20.04.6 LTS
 // Command     : write_verilog -force -mode synth_stub -rename_top adc_dma_bd_auto_cc_0 -prefix
 //               adc_dma_bd_auto_cc_0_ adc_dma_bd_auto_cc_0_stub.v
