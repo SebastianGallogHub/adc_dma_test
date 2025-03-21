@@ -24,7 +24,8 @@ entity TAR is
     generic (
         TIMESTAMP_LEN        : INTEGER := 32;
         FIFO_DEPTH           : INTEGER := 16;
-        C_M_AXIS_TDATA_WIDTH : INTEGER := 48
+        C_M_AXIS_TDATA_WIDTH : INTEGER := 48;
+        G_MARK_DEBUG         : STRING  := "false"
     );
     port (
         clk   : in STD_LOGIC;
@@ -56,7 +57,8 @@ end TAR;
 architecture Behavioral of TAR is
     component VP_DETECTOR is
         generic (
-            TS_LEN : INTEGER := 32
+            TS_LEN       : INTEGER := 32;
+            G_MARK_DEBUG : STRING  := "false"
         );
         port (
             clk    : in STD_LOGIC;
@@ -75,7 +77,8 @@ architecture Behavioral of TAR is
         generic (
             TS_LEN               : INTEGER := 32;
             FIFO_DEPTH           : INTEGER := 16;
-            C_M_AXIS_TDATA_WIDTH : INTEGER := 48
+            C_M_AXIS_TDATA_WIDTH : INTEGER := 48;
+            G_MARK_DEBUG         : STRING  := "false"
         );
         port (
             clk              : in STD_LOGIC;
@@ -124,13 +127,17 @@ architecture Behavioral of TAR is
     signal of_introut : STD_LOGIC := '0';
 
     signal rstn_start : STD_LOGIC := '0';
+
+    attribute MARK_DEBUG : STRING;
+
 begin
 
     rstn_start <= rstn and start;
 
     VP_DET_A : VP_DETECTOR
     generic map(
-        TS_LEN => TIMESTAMP_LEN
+        TS_LEN       => TIMESTAMP_LEN,
+        G_MARK_DEBUG => G_MARK_DEBUG
     )
     port map(
         clk    => clk,
@@ -146,7 +153,8 @@ begin
 
     VP_DET_B : VP_DETECTOR
     generic map(
-        TS_LEN => TIMESTAMP_LEN
+        TS_LEN       => TIMESTAMP_LEN,
+        G_MARK_DEBUG => G_MARK_DEBUG
     )
     port map(
         clk    => clk,
@@ -175,7 +183,8 @@ begin
     generic map(
         TS_LEN               => TIMESTAMP_LEN,
         FIFO_DEPTH           => FIFO_DEPTH,
-        C_M_AXIS_TDATA_WIDTH => C_M_AXIS_TDATA_WIDTH
+        C_M_AXIS_TDATA_WIDTH => C_M_AXIS_TDATA_WIDTH,
+        G_MARK_DEBUG         => G_MARK_DEBUG
     )
     port map(
         clk              => clk,
