@@ -10,12 +10,12 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0"></ZoomStartTime>
-      <ZoomEndTime time="21"></ZoomEndTime>
+      <ZoomEndTime time="16"></ZoomEndTime>
       <Cursor1Time time="0"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="684"></NameColumnWidth>
-      <ValueColumnWidth column_width="135"></ValueColumnWidth>
+      <NameColumnWidth column_width="683"></NameColumnWidth>
+      <ValueColumnWidth column_width="128"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="7" />
    <wvobject type="array" fp_name="adc_dma_bd_i/AXI_TAR_0/U0/slv_reg0">

@@ -10,15 +10,25 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="25.228 ns"></ZoomStartTime>
-      <ZoomEndTime time="359.635 ns"></ZoomEndTime>
-      <Cursor1Time time="130.000 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="2,355.001 ns"></ZoomEndTime>
+      <Cursor1Time time="1,355.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="457"></NameColumnWidth>
+      <NameColumnWidth column_width="433"></NameColumnWidth>
       <ValueColumnWidth column_width="128"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="5" />
+   <wave_markers>
+      <marker label="" time="215000" />
+      <marker label="" time="305000" />
+      <marker label="" time="445000" />
+      <marker label="" time="585000" />
+      <marker label="" time="735000" />
+      <marker label="" time="885000" />
+      <marker label="" time="1035000" />
+      <marker label="" time="1185000" />
+   </wave_markers>
    <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/clk">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -31,6 +41,11 @@
       <obj_property name="label">INPUT</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/PULSE_FORMATTER_tb/timebase_ts">
+         <obj_property name="ElementShortName">timebase_ts[31:0]</obj_property>
+         <obj_property name="ObjectShortName">timebase_ts[31:0]</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      </wvobject>
       <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/timebase_of_intr">
          <obj_property name="ElementShortName">timebase_of_intr</obj_property>
          <obj_property name="ObjectShortName">timebase_of_intr</obj_property>
@@ -87,12 +102,113 @@
          <obj_property name="ObjectShortName">m_axis_tvalid</obj_property>
       </wvobject>
       <wvobject type="vbus" fp_name="vbus1874">
-         <obj_property name="label">m_axis_tdata[47:0]</obj_property>
+         <obj_property name="label">m_axis_tdata[55:0]</obj_property>
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="isExpanded"></obj_property>
+         <wvobject type="vbus" fp_name="vbus132">
+            <obj_property name="label">&amp;</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/m_axis_tdata[55]">
+               <obj_property name="ElementShortName">[55]</obj_property>
+               <obj_property name="ObjectShortName">[55]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/m_axis_tdata[54]">
+               <obj_property name="ElementShortName">[54]</obj_property>
+               <obj_property name="ObjectShortName">[54]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/m_axis_tdata[53]">
+               <obj_property name="ElementShortName">[53]</obj_property>
+               <obj_property name="ObjectShortName">[53]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/m_axis_tdata[52]">
+               <obj_property name="ElementShortName">[52]</obj_property>
+               <obj_property name="ObjectShortName">[52]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/m_axis_tdata[51]">
+               <obj_property name="ElementShortName">[51]</obj_property>
+               <obj_property name="ObjectShortName">[51]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/m_axis_tdata[50]">
+               <obj_property name="ElementShortName">[50]</obj_property>
+               <obj_property name="ObjectShortName">[50]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/m_axis_tdata[49]">
+               <obj_property name="ElementShortName">[49]</obj_property>
+               <obj_property name="ObjectShortName">[49]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/m_axis_tdata[48]">
+               <obj_property name="ElementShortName">[48]</obj_property>
+               <obj_property name="ObjectShortName">[48]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/m_axis_tdata[47]">
+               <obj_property name="ElementShortName">[47]</obj_property>
+               <obj_property name="ObjectShortName">[47]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/m_axis_tdata[46]">
+               <obj_property name="ElementShortName">[46]</obj_property>
+               <obj_property name="ObjectShortName">[46]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/m_axis_tdata[45]">
+               <obj_property name="ElementShortName">[45]</obj_property>
+               <obj_property name="ObjectShortName">[45]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/m_axis_tdata[44]">
+               <obj_property name="ElementShortName">[44]</obj_property>
+               <obj_property name="ObjectShortName">[44]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/m_axis_tdata[43]">
+               <obj_property name="ElementShortName">[43]</obj_property>
+               <obj_property name="ObjectShortName">[43]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/m_axis_tdata[42]">
+               <obj_property name="ElementShortName">[42]</obj_property>
+               <obj_property name="ObjectShortName">[42]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/m_axis_tdata[41]">
+               <obj_property name="ElementShortName">[41]</obj_property>
+               <obj_property name="ObjectShortName">[41]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/m_axis_tdata[40]">
+               <obj_property name="ElementShortName">[40]</obj_property>
+               <obj_property name="ObjectShortName">[40]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/m_axis_tdata[39]">
+               <obj_property name="ElementShortName">[39]</obj_property>
+               <obj_property name="ObjectShortName">[39]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/m_axis_tdata[38]">
+               <obj_property name="ElementShortName">[38]</obj_property>
+               <obj_property name="ObjectShortName">[38]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/m_axis_tdata[37]">
+               <obj_property name="ElementShortName">[37]</obj_property>
+               <obj_property name="ObjectShortName">[37]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/m_axis_tdata[36]">
+               <obj_property name="ElementShortName">[36]</obj_property>
+               <obj_property name="ObjectShortName">[36]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/m_axis_tdata[35]">
+               <obj_property name="ElementShortName">[35]</obj_property>
+               <obj_property name="ObjectShortName">[35]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/m_axis_tdata[34]">
+               <obj_property name="ElementShortName">[34]</obj_property>
+               <obj_property name="ObjectShortName">[34]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/m_axis_tdata[33]">
+               <obj_property name="ElementShortName">[33]</obj_property>
+               <obj_property name="ObjectShortName">[33]</obj_property>
+            </wvobject>
+            <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/m_axis_tdata[32]">
+               <obj_property name="ElementShortName">[32]</obj_property>
+               <obj_property name="ObjectShortName">[32]</obj_property>
+            </wvobject>
+         </wvobject>
          <wvobject type="vbus" fp_name="vbus1841">
             <obj_property name="label">TS[16:31]</obj_property>
             <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
             <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/m_axis_tdata[47]">
                <obj_property name="ElementShortName">[47]</obj_property>
                <obj_property name="ObjectShortName">[47]</obj_property>
@@ -296,8 +412,8 @@
          </wvobject>
       </wvobject>
       <wvobject type="array" fp_name="/PULSE_FORMATTER_tb/m_axis_tstrb">
-         <obj_property name="ElementShortName">m_axis_tstrb[5:0]</obj_property>
-         <obj_property name="ObjectShortName">m_axis_tstrb[5:0]</obj_property>
+         <obj_property name="ElementShortName">m_axis_tstrb[6:0]</obj_property>
+         <obj_property name="ObjectShortName">m_axis_tstrb[6:0]</obj_property>
       </wvobject>
       <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/m_axis_tlast">
          <obj_property name="ElementShortName">m_axis_tlast</obj_property>
@@ -311,6 +427,7 @@
    <wvobject type="group" fp_name="group206">
       <obj_property name="label">FIFO</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
       <wvobject type="logic" fp_name="/PULSE_FORMATTER_tb/fifo_full">
          <obj_property name="ElementShortName">fifo_full</obj_property>
          <obj_property name="ObjectShortName">fifo_full</obj_property>

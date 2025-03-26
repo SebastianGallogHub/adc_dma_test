@@ -89,6 +89,7 @@ architecture Behavioral of TAR is
             chb_data         : in STD_LOGIC_VECTOR(13 downto 0);
             chb_ts           : in STD_LOGIC_VECTOR(TS_LEN - 1 downto 0);
             chb_dr           : in STD_LOGIC;
+            timebase_ts      : in STD_LOGIC_VECTOR(TS_LEN - 1 downto 0);
             timebase_of_intr : in STD_LOGIC;
             m_axis_aclk      : in STD_LOGIC;
             m_axis_aresetn   : in STD_LOGIC;
@@ -195,6 +196,7 @@ begin
         chb_data         => chb_vp,
         chb_ts           => chb_ts,
         chb_dr           => chb_dr,
+        timebase_ts      => timestamp,
         timebase_of_intr => of_introut,
         m_axis_aclk      => m_axis_aclk,
         m_axis_aresetn   => m_axis_aresetn,

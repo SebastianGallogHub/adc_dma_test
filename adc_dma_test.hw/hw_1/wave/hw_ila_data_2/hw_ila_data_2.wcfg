@@ -10,11 +10,11 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0"></ZoomStartTime>
-      <ZoomEndTime time="2,049"></ZoomEndTime>
-      <Cursor1Time time="297"></Cursor1Time>
+      <ZoomEndTime time="1,613"></ZoomEndTime>
+      <Cursor1Time time="1,024"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="529"></NameColumnWidth>
+      <NameColumnWidth column_width="521"></NameColumnWidth>
       <ValueColumnWidth column_width="128"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="3" />
@@ -35,6 +35,8 @@
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
       <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="AnalogYRangeMin">20</obj_property>
+      <obj_property name="AnalogYRRangeMax">22</obj_property>
       <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe1_1[15]">
          <obj_property name="ElementShortName">[15]</obj_property>
          <obj_property name="ObjectShortName">[15]</obj_property>

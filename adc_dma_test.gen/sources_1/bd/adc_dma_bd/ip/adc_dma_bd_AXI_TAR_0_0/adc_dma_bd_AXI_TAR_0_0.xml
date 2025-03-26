@@ -1377,11 +1377,6 @@
       <spirit:enumeration>32</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
-      <spirit:name>choice_list_922c4437</spirit:name>
-      <spirit:enumeration>32</spirit:enumeration>
-      <spirit:enumeration>48</spirit:enumeration>
-    </spirit:choice>
-    <spirit:choice>
       <spirit:name>choice_list_99a1d2b9</spirit:name>
       <spirit:enumeration>LEVEL_HIGH</spirit:enumeration>
       <spirit:enumeration>LEVEL_LOW</spirit:enumeration>
@@ -1392,6 +1387,11 @@
       <spirit:name>choice_list_9d8b0d81</spirit:name>
       <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
       <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_b13006f2</spirit:name>
+      <spirit:enumeration>32</spirit:enumeration>
+      <spirit:enumeration>56</spirit:enumeration>
     </spirit:choice>
     <spirit:choice>
       <spirit:name>choice_pairs_08277433</spirit:name>
@@ -1410,7 +1410,7 @@
       <spirit:name>C_M00_AXIS_TDATA_WIDTH</spirit:name>
       <spirit:displayName>C M00 AXIS TDATA WIDTH</spirit:displayName>
       <spirit:description>Width of S_AXIS address bus. The slave accepts the read and write addresses of width C_M_AXIS_TDATA_WIDTH.</spirit:description>
-      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_M00_AXIS_TDATA_WIDTH" spirit:choiceRef="choice_list_922c4437" spirit:order="3">32</spirit:value>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_M00_AXIS_TDATA_WIDTH" spirit:choiceRef="choice_list_b13006f2" spirit:order="3">32</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>C_M00_AXIS_START_COUNT</spirit:name>
@@ -1481,7 +1481,7 @@
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:displayName>AXI_TAR_v1.0</xilinx:displayName>
-      <xilinx:coreRevision>26</xilinx:coreRevision>
+      <xilinx:coreRevision>27</xilinx:coreRevision>
       <xilinx:configElementInfos>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.INTROUT.PortWidth" xilinx:valuePermission="bd"/>
         <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.INTROUT.SENSITIVITY" xilinx:valuePermission="bd"/>
@@ -1553,10 +1553,10 @@
       <xilinx:xilinxVersion>2023.1</xilinx:xilinxVersion>
       <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="3c791c16"/>
       <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="96bb11cf"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="c087c7b9"/>
       <xilinx:checksum xilinx:scope="ports" xilinx:value="8f367f8c"/>
       <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="ca0041b6"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="71bae092"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="3613dc5b"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

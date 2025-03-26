@@ -64,15 +64,17 @@ end PULSE_FORMATTER;
 architecture Behavioral of PULSE_FORMATTER is
     -- FIFO memory
     type fifo_array is array (0 to FIFO_DEPTH - 1) of STD_LOGIC_VECTOR(C_M_AXIS_TDATA_WIDTH - 1 downto 0);
-    signal fifo_mem   : fifo_array                        := (others => (others => '0'));
-    signal fifo_count : INTEGER range 0 to FIFO_DEPTH     := 0;
-    signal wr_ptr     : INTEGER range 0 to FIFO_DEPTH - 1 := 0;
-    signal rd_ptr     : INTEGER range 0 to FIFO_DEPTH - 1 := 0;
-    signal of_flg     : STD_LOGIC                         := '0';
+    signal fifo_mem     : fifo_array                        := (others => (others => '0'));
+    signal fifo_count   : INTEGER range 0 to FIFO_DEPTH     := 0;
+    signal wr_ptr       : INTEGER range 0 to FIFO_DEPTH - 1 := 0;
+    signal rd_ptr       : INTEGER range 0 to FIFO_DEPTH - 1 := 0;
+    signal of_pend_flg  : INTEGER                           := 0;
+    signal cha_pend_flg : INTEGER                           := 0;
+    signal chb_pend_flg : INTEGER                           := 0;
 
-    signal cha_fifo_reg : STD_LOGIC_VECTOR(C_M_AXIS_TDATA_WIDTH - 1 downto 0) := (others => 0);
-    signal chb_fifo_reg : STD_LOGIC_VECTOR(C_M_AXIS_TDATA_WIDTH - 1 downto 0) := (others => 0);
-    signal of__fifo_reg : STD_LOGIC_VECTOR(C_M_AXIS_TDATA_WIDTH - 1 downto 0) := (others => 0);
+    signal cha_fifo_reg : STD_LOGIC_VECTOR(C_M_AXIS_TDATA_WIDTH - 1 downto 0) := (others => '0');
+    signal chb_fifo_reg : STD_LOGIC_VECTOR(C_M_AXIS_TDATA_WIDTH - 1 downto 0) := (others => '0');
+    signal of_fifo_reg  : STD_LOGIC_VECTOR(C_M_AXIS_TDATA_WIDTH - 1 downto 0) := (others => '0');
 
     constant OF_TS_DATA : STD_LOGIC_VECTOR(13 downto 0)         := (others => '1');
     constant OF_TS_TS   : STD_LOGIC_VECTOR(TS_LEN - 1 downto 0) := (others => '0');
@@ -82,7 +84,7 @@ architecture Behavioral of PULSE_FORMATTER is
     constant CH_B : STD_LOGIC_VECTOR(1 downto 0) := "10";
     constant T_OF : STD_LOGIC_VECTOR(1 downto 0) := "11";
 
-    constant MEDIO_PULSO : INTEGER := 50000;
+    constant MEDIO_PULSO : STD_LOGIC_VECTOR(TS_LEN - 1 downto 0) := "00000000000000000000000000110010"; -- 50 ciclos @ 100MHz
 
     attribute MARK_DEBUG : STRING;
     -- Variables internas1
@@ -96,7 +98,7 @@ begin
     -- para mayor eficiencia
     cha_fifo_reg <= CMD_HEADER & cha_ts & CH_A & cha_data;
     chb_fifo_reg <= CMD_HEADER & chb_ts & CH_B & chb_data;
-    of__fifo_reg <= CMD_HEADER & OF_TS_TS & T_OF & OF_TS_DATA;
+    of_fifo_reg  <= CMD_HEADER & OF_TS_TS & T_OF & OF_TS_DATA;
 
     m_axis_tstrb <= (others => '1');
 
@@ -118,145 +120,136 @@ begin
         --     wr_ptr           <= (wr_ptr + 1) mod FIFO_DEPTH;
         --     fifo_count       <= fifo_count + 1;
         -- end procedure;
-        variable wr_ptr_v     : INTEGER range 0 to FIFO_DEPTH - 1 := 0;
-        variable rd_ptr_v     : INTEGER range 0 to FIFO_DEPTH - 1 := 0;
-        variable fifo_count_v : INTEGER range 0 to FIFO_DEPTH     := 0;
-        variable of_flg_v     : STD_LOGIC                         := '0';
+        variable wr_ptr_v       : INTEGER range 0 to FIFO_DEPTH - 1 := 0;
+        variable rd_ptr_v       : INTEGER range 0 to FIFO_DEPTH - 1 := 0;
+        variable fifo_count_v   : INTEGER range 0 to FIFO_DEPTH     := 0;
+        variable of_pend_flg_v  : INTEGER                           := 0;
+        variable cha_pend_flg_v : INTEGER                           := 0;
+        variable chb_pend_flg_v : INTEGER                           := 0;
     begin
         if (rising_edge(clk)) then
             if rstn = '0' then
                 wr_ptr        <= 0;
                 rd_ptr        <= 0;
                 fifo_count    <= 0;
-                of_flg        <= '0';
+                cha_pend_flg  <= 0;
+                chb_pend_flg  <= 0;
+                of_pend_flg   <= 0;
                 m_axis_tdata  <= (others => '0');
                 m_axis_tvalid <= '0';
                 m_axis_tlast  <= '0';
             else
                 --Durante el proceso manipulo variables para que la cantidad sea actualizada al instante
-                wr_ptr_v     := wr_ptr;
-                rd_ptr_v     := rd_ptr;
-                of_flg_v     := of_flg;
-                fifo_count_v := fifo_count;
+                wr_ptr_v       := wr_ptr;
+                rd_ptr_v       := rd_ptr;
+                of_pend_flg_v  := of_pend_flg;
+                cha_pend_flg_v := cha_pend_flg;
+                chb_pend_flg_v := chb_pend_flg;
+                fifo_count_v   := fifo_count;
+
+                --------------------------------------------------------------------------------------------------
 
                 -- Levanto una bandera para señalizar que hay un OF pendiente
-                if (timebase_of_intr = '1' and fifo_count_v < FIFO_DEPTH) then
-                    of_flg_v <= '1';
+                if (timebase_of_intr = '1') then
+                    of_pend_flg_v := 1;
                 end if;
 
-                -- Para toda esta sección, si no hay espacio en el FIFO se pierden los datos
+                --------------------------------------------------------------------------------------------------
 
-                -- Si hay un OF pendiente y se pasó del límite de seguridad de medio pulso, lo registro
-                if (of_flg_v = '1' and timebase_ts >= MEDIO_PULSO and fifo_count_v < FIFO_DEPTH) then
-                    of_flg_v           <= '0'; -- Ya no hay OF pendientes
-                    fifo_mem(wr_ptr_v) <= of__fifo_reg;
-                    wr_ptr_v     := (wr_ptr_v + 1) mod FIFO_DEPTH;
-                    fifo_count_v := fifo_count_v + 1;
+                -- Consideramos como referencia medio pulso normalizado por lo que sólo capturamos aquí 
+                -- la ocurrencia de un dr por canal ya que sería físicamente imposible que ocurrieran más
+                -- por resolución
+                if (of_pend_flg_v = 1 and timebase_ts < MEDIO_PULSO) then
+                    if (cha_dr = '1') then
+                        cha_pend_flg_v := 1;
+                    end if;
+
+                    if (chb_dr = '1') then
+                        chb_pend_flg_v := 1;
+                    end if;
                 end if;
 
-                if (of_flg = '1' and cha_dr = '1' and chb_dr = '1' and fifo_count_v < FIFO_DEPTH - 2) then
-                    -- Escribir en el FIFO según sus ts
+                --------------------------------------------------------------------------------------------------
 
-                    if (cha_ts < MEDIO_PULSO and chb_ts < MEDIO_PULSO) then
-                        -- Ambos máximos se dieron después OF
+                -- Al superar la referencia de MEDIO_PULSO se registra el OF y las entradas pendientes en 
+                -- orden, en función del ts. El CHA tiene prioridad.
+                if (of_pend_flg_v = 1 and timebase_ts >= MEDIO_PULSO) then
 
-                        fifo_mem(wr_ptr_v) <= of__fifo_reg; -- OF
-                        wr_ptr_v := (wr_ptr_v + 1) mod FIFO_DEPTH;
-
-                        -- Prioridad CHA
-                        fifo_mem(wr_ptr_v) <= cha_fifo_reg; -- CHA
-                        wr_ptr_v := (wr_ptr_v + 1) mod FIFO_DEPTH;
-
-                        fifo_mem(wr_ptr_v) <= chb_fifo_reg; -- CHB
-                        wr_ptr_v := (wr_ptr_v + 1) mod FIFO_DEPTH;
-
-                    elsif (cha_ts < MEDIO_PULSO and chb_ts > MEDIO_PULSO) then
-                        -- El máximo de CHA se dio después de OF 
-                        -- El máximo de CHB se dio antes de OF 
-
-                        fifo_mem(wr_ptr_v) <= chb_fifo_reg; -- CHB
-                        wr_ptr_v := (wr_ptr_v + 1) mod FIFO_DEPTH;
-
-                        fifo_mem(wr_ptr_v) <= of__fifo_reg; -- OF
-                        wr_ptr_v := (wr_ptr_v + 1) mod FIFO_DEPTH;
+                    if (cha_pend_flg_v = 1 and cha_ts > MEDIO_PULSO and fifo_count < FIFO_DEPTH) then
 
                         fifo_mem(wr_ptr_v) <= cha_fifo_reg; -- CHA
-                        wr_ptr_v := (wr_ptr_v + 1) mod FIFO_DEPTH;
-
-                    elsif (cha_ts > MEDIO_PULSO and chb_ts < MEDIO_PULSO) then
-                        -- El máximo de CHA se dio antes de OF 
-                        -- El máximo de CHB se dio después de OF 
-
-                        fifo_mem(wr_ptr_v) <= cha_fifo_reg; -- CHA
-                        wr_ptr_v := (wr_ptr_v + 1) mod FIFO_DEPTH;
-
-                        fifo_mem(wr_ptr_v) <= of__fifo_reg; -- OF
-                        wr_ptr_v := (wr_ptr_v + 1) mod FIFO_DEPTH;
-
-                        fifo_mem(wr_ptr_v) <= chb_fifo_reg; -- CHB
-                        wr_ptr_v := (wr_ptr_v + 1) mod FIFO_DEPTH;
-
-                    elsif (cha_ts > MEDIO_PULSO and chb_ts > MEDIO_PULSO) then
-                        -- Ambos máximos se dieron antes OF
-
-                        -- Prioridad CHA
-                        fifo_mem(wr_ptr_v) <= cha_fifo_reg; -- CHA
-                        wr_ptr_v := (wr_ptr_v + 1) mod FIFO_DEPTH;
-
-                        fifo_mem(wr_ptr_v) <= chb_fifo_reg; -- CHB
-                        wr_ptr_v := (wr_ptr_v + 1) mod FIFO_DEPTH;
-
-                        fifo_mem(wr_ptr_v) <= of__fifo_reg; -- OF
-                        wr_ptr_v := (wr_ptr_v + 1) mod FIFO_DEPTH;
+                        cha_pend_flg_v := 0;                -- Limpio bandera
+                        wr_ptr_v       := (wr_ptr_v + 1) mod FIFO_DEPTH;
+                        fifo_count_v   := fifo_count_v + 1;
                     end if;
 
-                    of_flg_v <= '0';                  -- Ya no hay OF pendientes
-                    fifo_count_v := fifo_count_v + 3; -- Se registraron 3 valores
+                    if (chb_pend_flg_v = 1 and chb_ts > MEDIO_PULSO and fifo_count < FIFO_DEPTH) then
 
-                elsif (cha_dr = '1' and chb_dr = '1' and fifo_count_v < FIFO_DEPTH - 1) then
-                    -- Escribir en el FIFO según prioridad
+                        fifo_mem(wr_ptr_v) <= chb_fifo_reg; -- CHB
+                        chb_pend_flg_v := 0;                -- Limpio bandera
+                        wr_ptr_v       := (wr_ptr_v + 1) mod FIFO_DEPTH;
+                        fifo_count_v   := fifo_count_v + 1;
+                    end if;
 
-                    -- Prioridad CHA  
-                    fifo_mem(wr_ptr_v) <= cha_fifo_reg; -- CHA
-                    wr_ptr_v := (wr_ptr_v + 1) mod FIFO_DEPTH;
+                    if (fifo_count < FIFO_DEPTH) then
 
-                    fifo_mem(wr_ptr_v) <= chb_fifo_reg; -- CHB
-                    wr_ptr_v := (wr_ptr_v + 1) mod FIFO_DEPTH;
+                        fifo_mem(wr_ptr_v) <= of_fifo_reg; -- OF
+                        of_pend_flg_v := 0;                -- Limpio bandera
+                        wr_ptr_v      := (wr_ptr_v + 1) mod FIFO_DEPTH;
+                        fifo_count_v  := fifo_count_v + 1;
+                    end if;
 
-                    fifo_count_v := fifo_count_v + 2; -- Se registraron 2 valores 
+                    if (cha_pend_flg_v = 1 and cha_ts <= MEDIO_PULSO and fifo_count < FIFO_DEPTH) then
 
-                elsif (cha_dr = '1' and fifo_count_v < FIFO_DEPTH) then
+                        fifo_mem(wr_ptr_v) <= cha_fifo_reg; -- CHA
+                        cha_pend_flg_v := 0;                -- Limpio bandera
+                        wr_ptr_v       := (wr_ptr_v + 1) mod FIFO_DEPTH;
+                        fifo_count_v   := fifo_count_v + 1;
+                    end if;
 
-                    -- Si hay un OF pendiente lo registro primero, si el ts de CHA pertenece
-                    -- al período en curso
-                    if (of_flg_v = '1' and cha_ts < MEDIO_PULSO) then
-                        of_flg_v           <= '0';          -- Ya no hay OF pendientes
-                        fifo_mem(wr_ptr_v) <= of__fifo_reg; -- OF
+                    if (chb_pend_flg_v = 1 and chb_ts <= MEDIO_PULSO and fifo_count < FIFO_DEPTH) then
+
+                        fifo_mem(wr_ptr_v) <= chb_fifo_reg; -- CHB
+                        chb_pend_flg_v := 0;                -- Limpio bandera
+                        wr_ptr_v       := (wr_ptr_v + 1) mod FIFO_DEPTH;
+                        fifo_count_v   := fifo_count_v + 1;
+                    end if;
+                end if;
+
+                --------------------------------------------------------------------------------------------------
+
+                -- Luego de registrar el OF y las entradas que pudieran quedar pendientes, a medida que lleguen 
+                -- los datos se registran en el FIFO con prioridad por CHA en caso de concurrencia
+                if (of_pend_flg = 0 and timebase_ts >= MEDIO_PULSO) then
+
+                    if (cha_dr = '1' and chb_dr = '1' and fifo_count_v < FIFO_DEPTH - 1) then
+
+                        -- Prioridad CHA  
+                        fifo_mem(wr_ptr_v) <= cha_fifo_reg; -- CHA
+                        wr_ptr_v := (wr_ptr_v + 1) mod FIFO_DEPTH;
+
+                        fifo_mem(wr_ptr_v) <= chb_fifo_reg; -- CHB
+                        wr_ptr_v := (wr_ptr_v + 1) mod FIFO_DEPTH;
+
+                        fifo_count_v := fifo_count_v + 2; -- Se registraron 2 valores 
+
+                    elsif (cha_dr = '1' and fifo_count_v < FIFO_DEPTH) then
+
+                        fifo_mem(wr_ptr_v) <= cha_fifo_reg; -- CHA
                         wr_ptr_v     := (wr_ptr_v + 1) mod FIFO_DEPTH;
                         fifo_count_v := fifo_count_v + 1;
-                    end if;
 
-                    fifo_mem(wr_ptr_v) <= cha_fifo_reg; -- CHA
-                    wr_ptr_v     := (wr_ptr_v + 1) mod FIFO_DEPTH;
-                    fifo_count_v := fifo_count_v + 1;
+                    elsif (chb_dr = '1' and fifo_count_v < FIFO_DEPTH) then
 
-                elsif (chb_dr = '1' and fifo_count_v < FIFO_DEPTH) then
-
-                    -- IDEM CHA
-                    if (of_flg_v = '1' and chb_ts < MEDIO_PULSO) then
-                        of_flg_v           <= '0';          -- Ya no hay OF pendientes
-                        fifo_mem(wr_ptr_v) <= of__fifo_reg; -- OF
+                        fifo_mem(wr_ptr_v) <= chb_fifo_reg; -- CHB
                         wr_ptr_v     := (wr_ptr_v + 1) mod FIFO_DEPTH;
                         fifo_count_v := fifo_count_v + 1;
+
                     end if;
-
-                    fifo_mem(wr_ptr_v) <= chb_fifo_reg; -- CHB
-                    wr_ptr_v     := (wr_ptr_v + 1) mod FIFO_DEPTH;
-                    fifo_count_v := fifo_count_v + 1;
-
                 end if;
 
                 -------------------------------------------------------------------------------
+
                 -- M_Axis lee del FIFO
                 if (m_axis_tready = '1' and fifo_count > 0) then
                     -- Por seguridad se agrega un delay de 1 ciclo para la lectura,
@@ -276,10 +269,12 @@ begin
                 end if;
 
                 -- Estos valores se van a ver reflejados en las señales al siguiente pulso de clk
-                wr_ptr     <= wr_ptr_v;
-                rd_ptr     <= rd_ptr_v;
-                of_flg     <= of_flg_v;
-                fifo_count <= fifo_count_v;
+                wr_ptr       <= wr_ptr_v;
+                rd_ptr       <= rd_ptr_v;
+                of_pend_flg  <= of_pend_flg_v;
+                cha_pend_flg <= cha_pend_flg_v;
+                chb_pend_flg <= chb_pend_flg_v;
+                fifo_count   <= fifo_count_v;
 
             end if;
         end if;
