@@ -57,18 +57,18 @@ architecture Behavioral of VP_DETECTOR is
     -- no directamente en los puertos de la entidad
     attribute MARK_DEBUG : STRING;
     -- Entradas/salidas
-    signal in_h_low_debug                   : STD_LOGIC_VECTOR (15 downto 0);
-    signal in_h_high_debug                  : STD_LOGIC_VECTOR (15 downto 0);
-    attribute MARK_DEBUG of in_h_low_debug  : signal is G_MARK_DEBUG; -- histéresis
-    attribute MARK_DEBUG of in_h_high_debug : signal is G_MARK_DEBUG; -- histéresis
+    signal h_low_ila                   : STD_LOGIC_VECTOR (15 downto 0);
+    signal h_high_ila                  : STD_LOGIC_VECTOR (15 downto 0);
+    attribute MARK_DEBUG of h_low_ila  : signal is G_MARK_DEBUG; -- histéresis
+    attribute MARK_DEBUG of h_high_ila : signal is G_MARK_DEBUG; -- histéresis
     -- Variables internas 
     attribute MARK_DEBUG of vp_internal : signal is G_MARK_DEBUG; -- valor cambia cuando se sale de la histéresis
     attribute MARK_DEBUG of dr_temp     : signal is G_MARK_DEBUG;
     attribute MARK_DEBUG of vp_temp     : signal is G_MARK_DEBUG;
     attribute MARK_DEBUG of ts_temp     : signal is G_MARK_DEBUG;
 begin
-    in_h_low_debug  <= h_low;
-    in_h_high_debug <= h_high;
+    h_low_ila  <= h_low;
+    h_high_ila <= h_high;
 
     process (clk, rstn)
     begin

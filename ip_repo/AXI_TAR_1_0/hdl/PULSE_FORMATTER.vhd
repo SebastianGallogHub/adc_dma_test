@@ -68,9 +68,9 @@ architecture Behavioral of PULSE_FORMATTER is
     signal fifo_count   : INTEGER range 0 to FIFO_DEPTH     := 0;
     signal wr_ptr       : INTEGER range 0 to FIFO_DEPTH - 1 := 0;
     signal rd_ptr       : INTEGER range 0 to FIFO_DEPTH - 1 := 0;
-    signal of_pend_flg  : INTEGER                           := 0;
-    signal cha_pend_flg : INTEGER                           := 0;
-    signal chb_pend_flg : INTEGER                           := 0;
+    signal of_pend_flg  : INTEGER range 0 to 1              := 0;
+    signal cha_pend_flg : INTEGER range 0 to 1              := 0;
+    signal chb_pend_flg : INTEGER range 0 to 1              := 0;
 
     signal cha_fifo_reg : STD_LOGIC_VECTOR(C_M_AXIS_TDATA_WIDTH - 1 downto 0) := (others => '0');
     signal chb_fifo_reg : STD_LOGIC_VECTOR(C_M_AXIS_TDATA_WIDTH - 1 downto 0) := (others => '0');
@@ -87,11 +87,18 @@ architecture Behavioral of PULSE_FORMATTER is
     constant MEDIO_PULSO : STD_LOGIC_VECTOR(TS_LEN - 1 downto 0) := "00000000000000000000000000110010"; -- 50 ciclos @ 100MHz
 
     attribute MARK_DEBUG : STRING;
-    -- Variables internas1
-    attribute MARK_DEBUG of fifo_count : signal is G_MARK_DEBUG;
-    attribute MARK_DEBUG of fifo_mem   : signal is G_MARK_DEBUG; -- Especial atención por si no lo captura ILA
-    attribute MARK_DEBUG of wr_ptr     : signal is G_MARK_DEBUG;
-    attribute MARK_DEBUG of rd_ptr     : signal is G_MARK_DEBUG;
+    -- Entradas/salidas
+    signal fifo_full_ila                   : STD_LOGIC;
+    signal fifo_empty_ila                  : STD_LOGIC;
+    attribute MARK_DEBUG of fifo_empty_ila : signal is G_MARK_DEBUG;
+    attribute MARK_DEBUG of fifo_full_ila  : signal is G_MARK_DEBUG;
+    -- Variables internas
+    attribute MARK_DEBUG of fifo_count   : signal is G_MARK_DEBUG;
+    attribute MARK_DEBUG of fifo_mem     : signal is G_MARK_DEBUG; -- Especial atención por si no lo captura ILA
+    attribute MARK_DEBUG of wr_ptr       : signal is G_MARK_DEBUG;
+    attribute MARK_DEBUG of rd_ptr       : signal is G_MARK_DEBUG;
+    attribute MARK_DEBUG of cha_fifo_reg : signal is G_MARK_DEBUG;
+    attribute MARK_DEBUG of chb_fifo_reg : signal is G_MARK_DEBUG;
 
 begin
     -- Los registros incluyen el formato de envío de datos por UART posterior 
@@ -108,6 +115,9 @@ begin
     fifo_empty <= '1' when fifo_count = 0 else
         '0';
 
+    fifo_full_ila  <= fifo_full;
+    fifo_empty_ila <= fifo_empty;
+
     process (clk) --is
         -- Procedure to write data into FIFO
         -- procedure write_fifo (
@@ -123,9 +133,9 @@ begin
         variable wr_ptr_v       : INTEGER range 0 to FIFO_DEPTH - 1 := 0;
         variable rd_ptr_v       : INTEGER range 0 to FIFO_DEPTH - 1 := 0;
         variable fifo_count_v   : INTEGER range 0 to FIFO_DEPTH     := 0;
-        variable of_pend_flg_v  : INTEGER                           := 0;
-        variable cha_pend_flg_v : INTEGER                           := 0;
-        variable chb_pend_flg_v : INTEGER                           := 0;
+        variable of_pend_flg_v  : INTEGER range 0 to 1              := 0;
+        variable cha_pend_flg_v : INTEGER range 0 to 1              := 0;
+        variable chb_pend_flg_v : INTEGER range 0 to 1              := 0;
     begin
         if (rising_edge(clk)) then
             if rstn = '0' then
