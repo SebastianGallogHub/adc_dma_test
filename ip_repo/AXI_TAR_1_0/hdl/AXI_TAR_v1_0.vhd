@@ -122,7 +122,7 @@ architecture arch_imp of AXI_TAR_v1_0 is
 		generic (
 			TIMESTAMP_LEN        : INTEGER := 32;
 			FIFO_DEPTH           : INTEGER := 16;
-			C_M_AXIS_TDATA_WIDTH : INTEGER := 48;
+			C_M_AXIS_TDATA_WIDTH : INTEGER := 64;
 			G_MARK_DEBUG         : STRING  := "false"
 		);
 		port (
@@ -296,8 +296,8 @@ begin
 		sCh1H_High     => slv_reg1(31 downto 16),
 		sCh1H_Low      => slv_reg1(15 downto 0),
 		sCh2In         => sCh2In(15 downto 2),
-		sCh2H_High     => slv_reg2(31 downto 16),
-		sCh2H_Low      => slv_reg2(15 downto 0),
+		sCh2H_High     => slv_reg2_in(31 downto 16),
+		sCh2H_Low      => slv_reg2_in(15 downto 0),
 		m_axis_aclk    => tar_m00_axis_aclk,
 		m_axis_aresetn => tar_m00_axis_aresetn,
 		m_axis_tvalid  => tar_m00_axis_tvalid,

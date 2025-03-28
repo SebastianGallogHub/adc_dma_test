@@ -19,7 +19,7 @@ architecture tb of PULSE_FORMATTER_tb is
         generic (
             TS_LEN               : INTEGER := 32;
             FIFO_DEPTH           : INTEGER := 16;
-            C_M_AXIS_TDATA_WIDTH : INTEGER := 56 -- 1B '&' + 4B ts + 2B ch+vp = 7B
+            C_M_AXIS_TDATA_WIDTH : INTEGER := 64 -- 1B "&" + 4B ts + 2B (ch+vp) + 1B "'" = 8B
         );
         port (
             clk              : in STD_LOGIC;
@@ -61,7 +61,7 @@ architecture tb of PULSE_FORMATTER_tb is
     signal m_axis_aclk    : STD_LOGIC;
     signal m_axis_aresetn : STD_LOGIC;
     signal m_axis_tvalid  : STD_LOGIC;
-    signal m_axis_tdata   : STD_LOGIC_VECTOR(55 downto 0);
+    signal m_axis_tdata   : STD_LOGIC_VECTOR(63 downto 0);
     signal m_axis_tstrb   : STD_LOGIC_VECTOR(6 downto 0);
     signal m_axis_tlast   : STD_LOGIC;
     signal m_axis_tready  : STD_LOGIC;

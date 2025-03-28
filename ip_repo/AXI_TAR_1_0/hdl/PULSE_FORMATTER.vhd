@@ -26,7 +26,7 @@ entity PULSE_FORMATTER is
     generic (
         TS_LEN               : INTEGER := 32;
         FIFO_DEPTH           : INTEGER := 16;
-        C_M_AXIS_TDATA_WIDTH : INTEGER := 56; -- 1B '&' + 4B ts + 2B ch+vp = 7B
+        C_M_AXIS_TDATA_WIDTH : INTEGER := 64; -- 1B "&" + 4B ts + 2B (ch+vp) + 1B "'" = 8B
         G_MARK_DEBUG         : STRING  := "false"
     );
     port (
@@ -79,6 +79,7 @@ architecture Behavioral of PULSE_FORMATTER is
     constant OF_TS_DATA : STD_LOGIC_VECTOR(13 downto 0)         := (others => '1');
     constant OF_TS_TS   : STD_LOGIC_VECTOR(TS_LEN - 1 downto 0) := (others => '0');
     constant CMD_HEADER : STD_LOGIC_VECTOR(7 downto 0)          := "00100110";
+    constant CMD_FOOTER : STD_LOGIC_VECTOR(7 downto 0)          := "00100111";
 
     constant CH_A : STD_LOGIC_VECTOR(1 downto 0) := "01";
     constant CH_B : STD_LOGIC_VECTOR(1 downto 0) := "10";
@@ -103,20 +104,20 @@ architecture Behavioral of PULSE_FORMATTER is
 begin
     -- Los registros incluyen el formato de envío de datos por UART posterior 
     -- para mayor eficiencia
-    cha_fifo_reg <= CMD_HEADER & cha_ts & CH_A & cha_data;
-    chb_fifo_reg <= CMD_HEADER & chb_ts & CH_B & chb_data;
-    of_fifo_reg  <= CMD_HEADER & OF_TS_TS & T_OF & OF_TS_DATA;
+    cha_fifo_reg <= CMD_HEADER & cha_ts & CH_A & cha_data & CMD_FOOTER;
+    chb_fifo_reg <= CMD_HEADER & chb_ts & CH_B & chb_data & CMD_FOOTER;
+    of_fifo_reg  <= CMD_HEADER & OF_TS_TS & T_OF & OF_TS_DATA & CMD_FOOTER;
 
     m_axis_tstrb <= (others => '1');
 
     -- Señales de estad de FIFO 
-    fifo_full <= '1' when fifo_count = FIFO_DEPTH else
+    fifo_full_ila <= '1' when fifo_count = FIFO_DEPTH else
         '0';
-    fifo_empty <= '1' when fifo_count = 0 else
+    fifo_empty_ila <= '1' when fifo_count = 0 else
         '0';
 
-    fifo_full_ila  <= fifo_full;
-    fifo_empty_ila <= fifo_empty;
+    fifo_full  <= fifo_full_ila;
+    fifo_empty <= fifo_empty_ila;
 
     process (clk) --is
         -- Procedure to write data into FIFO

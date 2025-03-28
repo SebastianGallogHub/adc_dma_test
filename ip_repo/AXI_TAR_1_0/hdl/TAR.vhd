@@ -24,7 +24,7 @@ entity TAR is
     generic (
         TIMESTAMP_LEN        : INTEGER := 32;
         FIFO_DEPTH           : INTEGER := 16;
-        C_M_AXIS_TDATA_WIDTH : INTEGER := 48;
+        C_M_AXIS_TDATA_WIDTH : INTEGER := 64;
         G_MARK_DEBUG         : STRING  := "false"
     );
     port (
@@ -77,7 +77,7 @@ architecture Behavioral of TAR is
         generic (
             TS_LEN               : INTEGER := 32;
             FIFO_DEPTH           : INTEGER := 16;
-            C_M_AXIS_TDATA_WIDTH : INTEGER := 48;
+            C_M_AXIS_TDATA_WIDTH : INTEGER := 64;
             G_MARK_DEBUG         : STRING  := "false"
         );
         port (

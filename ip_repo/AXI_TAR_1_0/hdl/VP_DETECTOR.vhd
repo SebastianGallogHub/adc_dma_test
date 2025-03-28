@@ -63,7 +63,7 @@ architecture Behavioral of VP_DETECTOR is
     attribute MARK_DEBUG of h_high_ila : signal is G_MARK_DEBUG; -- histéresis
     -- Variables internas 
     attribute MARK_DEBUG of vp_internal : signal is G_MARK_DEBUG; -- valor cambia cuando se sale de la histéresis
-    attribute MARK_DEBUG of dr_temp     : signal is G_MARK_DEBUG;
+    attribute MARK_DEBUG of dr_internal : signal is G_MARK_DEBUG;
     attribute MARK_DEBUG of vp_temp     : signal is G_MARK_DEBUG;
     attribute MARK_DEBUG of ts_temp     : signal is G_MARK_DEBUG;
 begin
