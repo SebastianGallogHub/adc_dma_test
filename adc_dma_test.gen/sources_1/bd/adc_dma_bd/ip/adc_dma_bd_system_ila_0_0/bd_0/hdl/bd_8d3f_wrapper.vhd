@@ -36,25 +36,25 @@ entity bd_8d3f_wrapper is
     SLOT_0_AXI_bready : in STD_LOGIC;
     SLOT_0_AXI_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     SLOT_0_AXI_bvalid : in STD_LOGIC;
-    SLOT_0_AXI_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    SLOT_0_AXI_rdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
     SLOT_0_AXI_rlast : in STD_LOGIC;
     SLOT_0_AXI_rready : in STD_LOGIC;
     SLOT_0_AXI_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     SLOT_0_AXI_rvalid : in STD_LOGIC;
-    SLOT_0_AXI_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    SLOT_0_AXI_wdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
     SLOT_0_AXI_wlast : in STD_LOGIC;
     SLOT_0_AXI_wready : in STD_LOGIC;
-    SLOT_0_AXI_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    SLOT_0_AXI_wstrb : in STD_LOGIC_VECTOR ( 7 downto 0 );
     SLOT_0_AXI_wvalid : in STD_LOGIC;
-    SLOT_1_AXIS_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    SLOT_1_AXIS_tdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
     SLOT_1_AXIS_tlast : in STD_LOGIC;
     SLOT_1_AXIS_tready : in STD_LOGIC;
-    SLOT_1_AXIS_tstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    SLOT_1_AXIS_tstrb : in STD_LOGIC_VECTOR ( 7 downto 0 );
     SLOT_1_AXIS_tvalid : in STD_LOGIC;
-    SLOT_2_AXIS_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    SLOT_2_AXIS_tdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
     SLOT_2_AXIS_tlast : in STD_LOGIC;
     SLOT_2_AXIS_tready : in STD_LOGIC;
-    SLOT_2_AXIS_tstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    SLOT_2_AXIS_tstrb : in STD_LOGIC_VECTOR ( 7 downto 0 );
     SLOT_2_AXIS_tvalid : in STD_LOGIC;
     clk : in STD_LOGIC;
     resetn : in STD_LOGIC
@@ -83,24 +83,24 @@ architecture STRUCTURE of bd_8d3f_wrapper is
     SLOT_0_AXI_bready : in STD_LOGIC;
     SLOT_0_AXI_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     SLOT_0_AXI_bvalid : in STD_LOGIC;
-    SLOT_0_AXI_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    SLOT_0_AXI_rdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
     SLOT_0_AXI_rlast : in STD_LOGIC;
     SLOT_0_AXI_rready : in STD_LOGIC;
     SLOT_0_AXI_rvalid : in STD_LOGIC;
-    SLOT_0_AXI_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    SLOT_0_AXI_wdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
     SLOT_0_AXI_wlast : in STD_LOGIC;
     SLOT_0_AXI_wready : in STD_LOGIC;
-    SLOT_0_AXI_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    SLOT_0_AXI_wstrb : in STD_LOGIC_VECTOR ( 7 downto 0 );
     SLOT_0_AXI_wvalid : in STD_LOGIC;
-    SLOT_1_AXIS_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    SLOT_1_AXIS_tdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
     SLOT_1_AXIS_tlast : in STD_LOGIC;
     SLOT_1_AXIS_tready : in STD_LOGIC;
-    SLOT_1_AXIS_tstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    SLOT_1_AXIS_tstrb : in STD_LOGIC_VECTOR ( 7 downto 0 );
     SLOT_1_AXIS_tvalid : in STD_LOGIC;
-    SLOT_2_AXIS_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    SLOT_2_AXIS_tdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
     SLOT_2_AXIS_tlast : in STD_LOGIC;
     SLOT_2_AXIS_tready : in STD_LOGIC;
-    SLOT_2_AXIS_tstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    SLOT_2_AXIS_tstrb : in STD_LOGIC_VECTOR ( 7 downto 0 );
     SLOT_2_AXIS_tvalid : in STD_LOGIC;
     SLOT_0_AXI_arburst : in STD_LOGIC_VECTOR ( 1 downto 0 );
     SLOT_0_AXI_arlock : in STD_LOGIC_VECTOR ( 0 to 0 );
@@ -141,25 +141,25 @@ bd_8d3f_i: component bd_8d3f
       SLOT_0_AXI_bready => SLOT_0_AXI_bready,
       SLOT_0_AXI_bresp(1 downto 0) => SLOT_0_AXI_bresp(1 downto 0),
       SLOT_0_AXI_bvalid => SLOT_0_AXI_bvalid,
-      SLOT_0_AXI_rdata(31 downto 0) => SLOT_0_AXI_rdata(31 downto 0),
+      SLOT_0_AXI_rdata(63 downto 0) => SLOT_0_AXI_rdata(63 downto 0),
       SLOT_0_AXI_rlast => SLOT_0_AXI_rlast,
       SLOT_0_AXI_rready => SLOT_0_AXI_rready,
       SLOT_0_AXI_rresp(1 downto 0) => SLOT_0_AXI_rresp(1 downto 0),
       SLOT_0_AXI_rvalid => SLOT_0_AXI_rvalid,
-      SLOT_0_AXI_wdata(31 downto 0) => SLOT_0_AXI_wdata(31 downto 0),
+      SLOT_0_AXI_wdata(63 downto 0) => SLOT_0_AXI_wdata(63 downto 0),
       SLOT_0_AXI_wlast => SLOT_0_AXI_wlast,
       SLOT_0_AXI_wready => SLOT_0_AXI_wready,
-      SLOT_0_AXI_wstrb(3 downto 0) => SLOT_0_AXI_wstrb(3 downto 0),
+      SLOT_0_AXI_wstrb(7 downto 0) => SLOT_0_AXI_wstrb(7 downto 0),
       SLOT_0_AXI_wvalid => SLOT_0_AXI_wvalid,
-      SLOT_1_AXIS_tdata(31 downto 0) => SLOT_1_AXIS_tdata(31 downto 0),
+      SLOT_1_AXIS_tdata(63 downto 0) => SLOT_1_AXIS_tdata(63 downto 0),
       SLOT_1_AXIS_tlast => SLOT_1_AXIS_tlast,
       SLOT_1_AXIS_tready => SLOT_1_AXIS_tready,
-      SLOT_1_AXIS_tstrb(3 downto 0) => SLOT_1_AXIS_tstrb(3 downto 0),
+      SLOT_1_AXIS_tstrb(7 downto 0) => SLOT_1_AXIS_tstrb(7 downto 0),
       SLOT_1_AXIS_tvalid => SLOT_1_AXIS_tvalid,
-      SLOT_2_AXIS_tdata(31 downto 0) => SLOT_2_AXIS_tdata(31 downto 0),
+      SLOT_2_AXIS_tdata(63 downto 0) => SLOT_2_AXIS_tdata(63 downto 0),
       SLOT_2_AXIS_tlast => SLOT_2_AXIS_tlast,
       SLOT_2_AXIS_tready => SLOT_2_AXIS_tready,
-      SLOT_2_AXIS_tstrb(3 downto 0) => SLOT_2_AXIS_tstrb(3 downto 0),
+      SLOT_2_AXIS_tstrb(7 downto 0) => SLOT_2_AXIS_tstrb(7 downto 0),
       SLOT_2_AXIS_tvalid => SLOT_2_AXIS_tvalid,
       clk => clk,
       resetn => resetn

@@ -36,33 +36,33 @@ entity bd_8d3f is
     SLOT_0_AXI_bready : in STD_LOGIC;
     SLOT_0_AXI_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     SLOT_0_AXI_bvalid : in STD_LOGIC;
-    SLOT_0_AXI_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    SLOT_0_AXI_rdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
     SLOT_0_AXI_rlast : in STD_LOGIC;
     SLOT_0_AXI_rready : in STD_LOGIC;
     SLOT_0_AXI_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     SLOT_0_AXI_rvalid : in STD_LOGIC;
-    SLOT_0_AXI_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    SLOT_0_AXI_wdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
     SLOT_0_AXI_wlast : in STD_LOGIC;
     SLOT_0_AXI_wready : in STD_LOGIC;
-    SLOT_0_AXI_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    SLOT_0_AXI_wstrb : in STD_LOGIC_VECTOR ( 7 downto 0 );
     SLOT_0_AXI_wvalid : in STD_LOGIC;
-    SLOT_1_AXIS_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    SLOT_1_AXIS_tdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
     SLOT_1_AXIS_tlast : in STD_LOGIC;
     SLOT_1_AXIS_tready : in STD_LOGIC;
-    SLOT_1_AXIS_tstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    SLOT_1_AXIS_tstrb : in STD_LOGIC_VECTOR ( 7 downto 0 );
     SLOT_1_AXIS_tvalid : in STD_LOGIC;
-    SLOT_2_AXIS_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    SLOT_2_AXIS_tdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
     SLOT_2_AXIS_tlast : in STD_LOGIC;
     SLOT_2_AXIS_tready : in STD_LOGIC;
-    SLOT_2_AXIS_tstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    SLOT_2_AXIS_tstrb : in STD_LOGIC_VECTOR ( 7 downto 0 );
     SLOT_2_AXIS_tvalid : in STD_LOGIC;
     clk : in STD_LOGIC;
     resetn : in STD_LOGIC
   );
-  attribute core_generation_info : string;
-  attribute core_generation_info of bd_8d3f : entity is "bd_8d3f,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=bd_8d3f,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=8,numReposBlks=8,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=SBD,synth_mode=Global}";
-  attribute hw_handoff : string;
-  attribute hw_handoff of bd_8d3f : entity is "adc_dma_bd_system_ila_0_0.hwdef";
+  attribute CORE_GENERATION_INFO : string;
+  attribute CORE_GENERATION_INFO of bd_8d3f : entity is "bd_8d3f,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=bd_8d3f,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=8,numReposBlks=8,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=SBD,synth_mode=Global}";
+  attribute HW_HANDOFF : string;
+  attribute HW_HANDOFF of bd_8d3f : entity is "adc_dma_bd_system_ila_0_0.hwdef";
 end bd_8d3f;
 
 architecture STRUCTURE of bd_8d3f is
@@ -79,21 +79,21 @@ architecture STRUCTURE of bd_8d3f is
     probe7 : in STD_LOGIC_VECTOR ( 1 downto 0 );
     probe8 : in STD_LOGIC_VECTOR ( 1 downto 0 );
     probe9 : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    probe10 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    probe11 : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    probe10 : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    probe11 : in STD_LOGIC_VECTOR ( 7 downto 0 );
     probe12 : in STD_LOGIC_VECTOR ( 1 downto 0 );
     probe13 : in STD_LOGIC_VECTOR ( 2 downto 0 );
     probe14 : in STD_LOGIC_VECTOR ( 1 downto 0 );
     probe15 : in STD_LOGIC_VECTOR ( 1 downto 0 );
     probe16 : in STD_LOGIC_VECTOR ( 2 downto 0 );
     probe17 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe18 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    probe19 : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    probe18 : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    probe19 : in STD_LOGIC_VECTOR ( 7 downto 0 );
     probe20 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe21 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe22 : in STD_LOGIC_VECTOR ( 0 to 0 );
-    probe23 : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    probe24 : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    probe23 : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    probe24 : in STD_LOGIC_VECTOR ( 7 downto 0 );
     probe25 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe26 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe27 : in STD_LOGIC_VECTOR ( 0 to 0 )
@@ -114,8 +114,8 @@ architecture STRUCTURE of bd_8d3f is
     slot_0_axi_awcache : in STD_LOGIC_VECTOR ( 3 downto 0 );
     slot_0_axi_awvalid : in STD_LOGIC;
     slot_0_axi_awready : in STD_LOGIC;
-    slot_0_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    slot_0_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    slot_0_axi_wdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    slot_0_axi_wstrb : in STD_LOGIC_VECTOR ( 7 downto 0 );
     slot_0_axi_wlast : in STD_LOGIC;
     slot_0_axi_wvalid : in STD_LOGIC;
     slot_0_axi_wready : in STD_LOGIC;
@@ -129,19 +129,19 @@ architecture STRUCTURE of bd_8d3f is
     slot_0_axi_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     slot_0_axi_arvalid : in STD_LOGIC;
     slot_0_axi_arready : in STD_LOGIC;
-    slot_0_axi_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    slot_0_axi_rdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
     slot_0_axi_rlast : in STD_LOGIC;
     slot_0_axi_rvalid : in STD_LOGIC;
     slot_0_axi_rready : in STD_LOGIC;
     slot_1_axis_tvalid : in STD_LOGIC;
     slot_1_axis_tready : in STD_LOGIC;
-    slot_1_axis_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    slot_1_axis_tstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    slot_1_axis_tdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    slot_1_axis_tstrb : in STD_LOGIC_VECTOR ( 7 downto 0 );
     slot_1_axis_tlast : in STD_LOGIC;
     slot_2_axis_tvalid : in STD_LOGIC;
     slot_2_axis_tready : in STD_LOGIC;
-    slot_2_axis_tdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    slot_2_axis_tstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    slot_2_axis_tdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    slot_2_axis_tstrb : in STD_LOGIC_VECTOR ( 7 downto 0 );
     slot_2_axis_tlast : in STD_LOGIC;
     m_slot_0_axi_awaddr : out STD_LOGIC_VECTOR ( 31 downto 0 );
     m_slot_0_axi_awprot : out STD_LOGIC_VECTOR ( 2 downto 0 );
@@ -150,8 +150,8 @@ architecture STRUCTURE of bd_8d3f is
     m_slot_0_axi_awcache : out STD_LOGIC_VECTOR ( 3 downto 0 );
     m_slot_0_axi_awvalid : out STD_LOGIC;
     m_slot_0_axi_awready : out STD_LOGIC;
-    m_slot_0_axi_wdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m_slot_0_axi_wstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_slot_0_axi_wdata : out STD_LOGIC_VECTOR ( 63 downto 0 );
+    m_slot_0_axi_wstrb : out STD_LOGIC_VECTOR ( 7 downto 0 );
     m_slot_0_axi_wlast : out STD_LOGIC;
     m_slot_0_axi_wvalid : out STD_LOGIC;
     m_slot_0_axi_wready : out STD_LOGIC;
@@ -165,13 +165,13 @@ architecture STRUCTURE of bd_8d3f is
     m_slot_0_axi_rready : out STD_LOGIC;
     m_slot_1_axis_tvalid : out STD_LOGIC;
     m_slot_1_axis_tready : out STD_LOGIC;
-    m_slot_1_axis_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m_slot_1_axis_tstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_slot_1_axis_tdata : out STD_LOGIC_VECTOR ( 63 downto 0 );
+    m_slot_1_axis_tstrb : out STD_LOGIC_VECTOR ( 7 downto 0 );
     m_slot_1_axis_tlast : out STD_LOGIC;
     m_slot_2_axis_tvalid : out STD_LOGIC;
     m_slot_2_axis_tready : out STD_LOGIC;
-    m_slot_2_axis_tdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    m_slot_2_axis_tstrb : out STD_LOGIC_VECTOR ( 3 downto 0 );
+    m_slot_2_axis_tdata : out STD_LOGIC_VECTOR ( 63 downto 0 );
+    m_slot_2_axis_tstrb : out STD_LOGIC_VECTOR ( 7 downto 0 );
     m_slot_2_axis_tlast : out STD_LOGIC
   );
   end component bd_8d3f_g_inst_0;
@@ -193,8 +193,8 @@ architecture STRUCTURE of bd_8d3f is
     pc_axi_awvalid : in STD_LOGIC;
     pc_axi_awready : in STD_LOGIC;
     pc_axi_wlast : in STD_LOGIC;
-    pc_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    pc_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    pc_axi_wdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
+    pc_axi_wstrb : in STD_LOGIC_VECTOR ( 7 downto 0 );
     pc_axi_wvalid : in STD_LOGIC;
     pc_axi_wready : in STD_LOGIC;
     pc_axi_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -212,7 +212,7 @@ architecture STRUCTURE of bd_8d3f is
     pc_axi_arvalid : in STD_LOGIC;
     pc_axi_arready : in STD_LOGIC;
     pc_axi_rlast : in STD_LOGIC;
-    pc_axi_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    pc_axi_rdata : in STD_LOGIC_VECTOR ( 63 downto 0 );
     pc_axi_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     pc_axi_rvalid : in STD_LOGIC;
     pc_axi_rready : in STD_LOGIC
@@ -255,15 +255,15 @@ architecture STRUCTURE of bd_8d3f is
     dout : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   end component bd_8d3f_slot_0_r_0;
-  signal Conn1_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal Conn1_TDATA : STD_LOGIC_VECTOR ( 63 downto 0 );
   signal Conn1_TLAST : STD_LOGIC;
   signal Conn1_TREADY : STD_LOGIC;
-  signal Conn1_TSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal Conn1_TSTRB : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal Conn1_TVALID : STD_LOGIC;
-  signal Conn2_TDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal Conn2_TDATA : STD_LOGIC_VECTOR ( 63 downto 0 );
   signal Conn2_TLAST : STD_LOGIC;
   signal Conn2_TREADY : STD_LOGIC;
-  signal Conn2_TSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal Conn2_TSTRB : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal Conn2_TVALID : STD_LOGIC;
   signal Conn_ARADDR : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal Conn_ARBURST : STD_LOGIC_VECTOR ( 1 downto 0 );
@@ -290,15 +290,15 @@ architecture STRUCTURE of bd_8d3f is
   signal Conn_BREADY : STD_LOGIC;
   signal Conn_BRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal Conn_BVALID : STD_LOGIC;
-  signal Conn_RDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal Conn_RDATA : STD_LOGIC_VECTOR ( 63 downto 0 );
   signal Conn_RLAST : STD_LOGIC;
   signal Conn_RREADY : STD_LOGIC;
   signal Conn_RRESP : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal Conn_RVALID : STD_LOGIC;
-  signal Conn_WDATA : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal Conn_WDATA : STD_LOGIC_VECTOR ( 63 downto 0 );
   signal Conn_WLAST : STD_LOGIC;
   signal Conn_WREADY : STD_LOGIC;
-  signal Conn_WSTRB : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal Conn_WSTRB : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal Conn_WVALID : STD_LOGIC;
   signal clk_1 : STD_LOGIC;
   signal net_slot_0_apc_pc_asserted : STD_LOGIC;
@@ -326,87 +326,87 @@ architecture STRUCTURE of bd_8d3f is
   signal net_slot_0_axi_rready : STD_LOGIC;
   signal net_slot_0_axi_rvalid : STD_LOGIC;
   signal net_slot_0_axi_w_ctrl : STD_LOGIC_VECTOR ( 2 downto 0 );
-  signal net_slot_0_axi_wdata : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal net_slot_0_axi_wdata : STD_LOGIC_VECTOR ( 63 downto 0 );
   signal net_slot_0_axi_wlast : STD_LOGIC;
   signal net_slot_0_axi_wready : STD_LOGIC;
-  signal net_slot_0_axi_wstrb : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal net_slot_0_axi_wstrb : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal net_slot_0_axi_wvalid : STD_LOGIC;
-  signal net_slot_1_axis_tdata : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal net_slot_1_axis_tdata : STD_LOGIC_VECTOR ( 63 downto 0 );
   signal net_slot_1_axis_tlast : STD_LOGIC;
   signal net_slot_1_axis_tready : STD_LOGIC;
-  signal net_slot_1_axis_tstrb : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal net_slot_1_axis_tstrb : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal net_slot_1_axis_tvalid : STD_LOGIC;
-  signal net_slot_2_axis_tdata : STD_LOGIC_VECTOR ( 31 downto 0 );
+  signal net_slot_2_axis_tdata : STD_LOGIC_VECTOR ( 63 downto 0 );
   signal net_slot_2_axis_tlast : STD_LOGIC;
   signal net_slot_2_axis_tready : STD_LOGIC;
-  signal net_slot_2_axis_tstrb : STD_LOGIC_VECTOR ( 3 downto 0 );
+  signal net_slot_2_axis_tstrb : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal net_slot_2_axis_tvalid : STD_LOGIC;
   signal resetn_1 : STD_LOGIC;
   signal NLW_slot_0_apc_pc_status_UNCONNECTED : STD_LOGIC_VECTOR ( 159 downto 0 );
-  attribute x_interface_info : string;
-  attribute x_interface_info of SLOT_0_AXI_arready : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARREADY";
-  attribute x_interface_info of SLOT_0_AXI_arvalid : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARVALID";
-  attribute x_interface_info of SLOT_0_AXI_awready : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWREADY";
-  attribute x_interface_info of SLOT_0_AXI_awvalid : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWVALID";
-  attribute x_interface_info of SLOT_0_AXI_bready : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI BREADY";
-  attribute x_interface_info of SLOT_0_AXI_bvalid : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI BVALID";
-  attribute x_interface_info of SLOT_0_AXI_rlast : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI RLAST";
-  attribute x_interface_info of SLOT_0_AXI_rready : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI RREADY";
-  attribute x_interface_info of SLOT_0_AXI_rvalid : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI RVALID";
-  attribute x_interface_info of SLOT_0_AXI_wlast : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI WLAST";
-  attribute x_interface_info of SLOT_0_AXI_wready : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI WREADY";
-  attribute x_interface_info of SLOT_0_AXI_wvalid : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI WVALID";
-  attribute x_interface_info of SLOT_1_AXIS_tlast : signal is "xilinx.com:interface:axis:1.0 SLOT_1_AXIS TLAST";
-  attribute x_interface_info of SLOT_1_AXIS_tready : signal is "xilinx.com:interface:axis:1.0 SLOT_1_AXIS TREADY";
-  attribute x_interface_info of SLOT_1_AXIS_tvalid : signal is "xilinx.com:interface:axis:1.0 SLOT_1_AXIS TVALID";
-  attribute x_interface_info of SLOT_2_AXIS_tlast : signal is "xilinx.com:interface:axis:1.0 SLOT_2_AXIS TLAST";
-  attribute x_interface_info of SLOT_2_AXIS_tready : signal is "xilinx.com:interface:axis:1.0 SLOT_2_AXIS TREADY";
-  attribute x_interface_info of SLOT_2_AXIS_tvalid : signal is "xilinx.com:interface:axis:1.0 SLOT_2_AXIS TVALID";
-  attribute x_interface_info of clk : signal is "xilinx.com:signal:clock:1.0 CLK.CLK CLK";
-  attribute x_interface_parameter : string;
-  attribute x_interface_parameter of clk : signal is "XIL_INTERFACENAME CLK.CLK, ASSOCIATED_BUSIF SLOT_0_AXI:SLOT_1_AXIS:SLOT_2_AXIS, ASSOCIATED_RESET resetn, CLK_DOMAIN adc_dma_bd_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 1e+08, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
-  attribute x_interface_info of resetn : signal is "xilinx.com:signal:reset:1.0 RST.RESETN RST";
-  attribute x_interface_parameter of resetn : signal is "XIL_INTERFACENAME RST.RESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW";
-  attribute x_interface_info of SLOT_0_AXI_araddr : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARADDR";
-  attribute x_interface_parameter of SLOT_0_AXI_araddr : signal is "XIL_INTERFACENAME SLOT_0_AXI, ADDR_WIDTH 32, ARUSER_WIDTH 0, AWUSER_WIDTH 0, BUSER_WIDTH 0, CLK_DOMAIN adc_dma_bd_processing_system7_0_0_FCLK_CLK0, DATA_WIDTH 32, FREQ_HZ 1e+08, HAS_BRESP 1, HAS_BURST 0, HAS_CACHE 1, HAS_LOCK 0, HAS_PROT 1, HAS_QOS 0, HAS_REGION 0, HAS_RRESP 0, HAS_WSTRB 1, ID_WIDTH 0, INSERT_VIP 0, MAX_BURST_LENGTH 256, NUM_READ_OUTSTANDING 2, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 16, NUM_WRITE_THREADS 1, PHASE 0.0, PROTOCOL AXI4, READ_WRITE_MODE WRITE_ONLY, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 0, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0";
-  attribute x_interface_info of SLOT_0_AXI_arburst : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARBURST";
-  attribute x_interface_info of SLOT_0_AXI_arcache : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARCACHE";
-  attribute x_interface_info of SLOT_0_AXI_arlen : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARLEN";
-  attribute x_interface_info of SLOT_0_AXI_arlock : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARLOCK";
-  attribute x_interface_info of SLOT_0_AXI_arprot : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARPROT";
-  attribute x_interface_info of SLOT_0_AXI_arqos : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARQOS";
-  attribute x_interface_info of SLOT_0_AXI_arregion : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARREGION";
-  attribute x_interface_info of SLOT_0_AXI_arsize : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARSIZE";
-  attribute x_interface_info of SLOT_0_AXI_awaddr : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWADDR";
-  attribute x_interface_info of SLOT_0_AXI_awburst : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWBURST";
-  attribute x_interface_info of SLOT_0_AXI_awcache : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWCACHE";
-  attribute x_interface_info of SLOT_0_AXI_awlen : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWLEN";
-  attribute x_interface_info of SLOT_0_AXI_awlock : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWLOCK";
-  attribute x_interface_info of SLOT_0_AXI_awprot : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWPROT";
-  attribute x_interface_info of SLOT_0_AXI_awqos : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWQOS";
-  attribute x_interface_info of SLOT_0_AXI_awregion : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWREGION";
-  attribute x_interface_info of SLOT_0_AXI_awsize : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWSIZE";
-  attribute x_interface_info of SLOT_0_AXI_bresp : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI BRESP";
-  attribute x_interface_info of SLOT_0_AXI_rdata : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI RDATA";
-  attribute x_interface_info of SLOT_0_AXI_rresp : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI RRESP";
-  attribute x_interface_info of SLOT_0_AXI_wdata : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI WDATA";
-  attribute x_interface_info of SLOT_0_AXI_wstrb : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI WSTRB";
-  attribute x_interface_info of SLOT_1_AXIS_tdata : signal is "xilinx.com:interface:axis:1.0 SLOT_1_AXIS TDATA";
-  attribute x_interface_parameter of SLOT_1_AXIS_tdata : signal is "XIL_INTERFACENAME SLOT_1_AXIS, CLK_DOMAIN adc_dma_bd_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 1e+08, HAS_TKEEP 0, HAS_TLAST 1, HAS_TREADY 1, HAS_TSTRB 1, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0";
-  attribute x_interface_info of SLOT_1_AXIS_tstrb : signal is "xilinx.com:interface:axis:1.0 SLOT_1_AXIS TSTRB";
-  attribute x_interface_info of SLOT_2_AXIS_tdata : signal is "xilinx.com:interface:axis:1.0 SLOT_2_AXIS TDATA";
-  attribute x_interface_parameter of SLOT_2_AXIS_tdata : signal is "XIL_INTERFACENAME SLOT_2_AXIS, CLK_DOMAIN adc_dma_bd_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 1e+08, HAS_TKEEP 0, HAS_TLAST 1, HAS_TREADY 1, HAS_TSTRB 1, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 4, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0";
-  attribute x_interface_info of SLOT_2_AXIS_tstrb : signal is "xilinx.com:interface:axis:1.0 SLOT_2_AXIS TSTRB";
+  attribute X_INTERFACE_INFO : string;
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_arready : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARREADY";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_arvalid : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARVALID";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_awready : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWREADY";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_awvalid : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWVALID";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_bready : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI BREADY";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_bvalid : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI BVALID";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_rlast : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI RLAST";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_rready : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI RREADY";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_rvalid : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI RVALID";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_wlast : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI WLAST";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_wready : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI WREADY";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_wvalid : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI WVALID";
+  attribute X_INTERFACE_INFO of SLOT_1_AXIS_tlast : signal is "xilinx.com:interface:axis:1.0 SLOT_1_AXIS TLAST";
+  attribute X_INTERFACE_INFO of SLOT_1_AXIS_tready : signal is "xilinx.com:interface:axis:1.0 SLOT_1_AXIS TREADY";
+  attribute X_INTERFACE_INFO of SLOT_1_AXIS_tvalid : signal is "xilinx.com:interface:axis:1.0 SLOT_1_AXIS TVALID";
+  attribute X_INTERFACE_INFO of SLOT_2_AXIS_tlast : signal is "xilinx.com:interface:axis:1.0 SLOT_2_AXIS TLAST";
+  attribute X_INTERFACE_INFO of SLOT_2_AXIS_tready : signal is "xilinx.com:interface:axis:1.0 SLOT_2_AXIS TREADY";
+  attribute X_INTERFACE_INFO of SLOT_2_AXIS_tvalid : signal is "xilinx.com:interface:axis:1.0 SLOT_2_AXIS TVALID";
+  attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 CLK.CLK CLK";
+  attribute X_INTERFACE_PARAMETER : string;
+  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME CLK.CLK, ASSOCIATED_BUSIF SLOT_0_AXI:SLOT_1_AXIS:SLOT_2_AXIS, ASSOCIATED_RESET resetn, CLK_DOMAIN adc_dma_bd_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.0";
+  attribute X_INTERFACE_INFO of resetn : signal is "xilinx.com:signal:reset:1.0 RST.RESETN RST";
+  attribute X_INTERFACE_PARAMETER of resetn : signal is "XIL_INTERFACENAME RST.RESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_araddr : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARADDR";
+  attribute X_INTERFACE_PARAMETER of SLOT_0_AXI_araddr : signal is "XIL_INTERFACENAME SLOT_0_AXI, ADDR_WIDTH 32, ARUSER_WIDTH 0, AWUSER_WIDTH 0, BUSER_WIDTH 0, CLK_DOMAIN adc_dma_bd_processing_system7_0_0_FCLK_CLK0, DATA_WIDTH 64, FREQ_HZ 100000000, HAS_BRESP 1, HAS_BURST 0, HAS_CACHE 1, HAS_LOCK 0, HAS_PROT 1, HAS_QOS 0, HAS_REGION 0, HAS_RRESP 0, HAS_WSTRB 1, ID_WIDTH 0, INSERT_VIP 0, MAX_BURST_LENGTH 256, NUM_READ_OUTSTANDING 2, NUM_READ_THREADS 1, NUM_WRITE_OUTSTANDING 16, NUM_WRITE_THREADS 1, PHASE 0.0, PROTOCOL AXI4, READ_WRITE_MODE WRITE_ONLY, RUSER_BITS_PER_BYTE 0, RUSER_WIDTH 0, SUPPORTS_NARROW_BURST 0, WUSER_BITS_PER_BYTE 0, WUSER_WIDTH 0";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_arburst : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARBURST";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_arcache : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARCACHE";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_arlen : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARLEN";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_arlock : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARLOCK";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_arprot : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARPROT";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_arqos : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARQOS";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_arregion : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARREGION";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_arsize : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI ARSIZE";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_awaddr : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWADDR";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_awburst : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWBURST";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_awcache : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWCACHE";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_awlen : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWLEN";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_awlock : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWLOCK";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_awprot : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWPROT";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_awqos : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWQOS";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_awregion : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWREGION";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_awsize : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI AWSIZE";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_bresp : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI BRESP";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_rdata : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI RDATA";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_rresp : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI RRESP";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_wdata : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI WDATA";
+  attribute X_INTERFACE_INFO of SLOT_0_AXI_wstrb : signal is "xilinx.com:interface:aximm:1.0 SLOT_0_AXI WSTRB";
+  attribute X_INTERFACE_INFO of SLOT_1_AXIS_tdata : signal is "xilinx.com:interface:axis:1.0 SLOT_1_AXIS TDATA";
+  attribute X_INTERFACE_PARAMETER of SLOT_1_AXIS_tdata : signal is "XIL_INTERFACENAME SLOT_1_AXIS, CLK_DOMAIN adc_dma_bd_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 100000000, HAS_TKEEP 0, HAS_TLAST 1, HAS_TREADY 1, HAS_TSTRB 1, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0";
+  attribute X_INTERFACE_INFO of SLOT_1_AXIS_tstrb : signal is "xilinx.com:interface:axis:1.0 SLOT_1_AXIS TSTRB";
+  attribute X_INTERFACE_INFO of SLOT_2_AXIS_tdata : signal is "xilinx.com:interface:axis:1.0 SLOT_2_AXIS TDATA";
+  attribute X_INTERFACE_PARAMETER of SLOT_2_AXIS_tdata : signal is "XIL_INTERFACENAME SLOT_2_AXIS, CLK_DOMAIN adc_dma_bd_processing_system7_0_0_FCLK_CLK0, FREQ_HZ 100000000, HAS_TKEEP 0, HAS_TLAST 1, HAS_TREADY 1, HAS_TSTRB 1, INSERT_VIP 0, LAYERED_METADATA undef, PHASE 0.0, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0";
+  attribute X_INTERFACE_INFO of SLOT_2_AXIS_tstrb : signal is "xilinx.com:interface:axis:1.0 SLOT_2_AXIS TSTRB";
 begin
-  Conn1_TDATA(31 downto 0) <= SLOT_1_AXIS_tdata(31 downto 0);
+  Conn1_TDATA(63 downto 0) <= SLOT_1_AXIS_tdata(63 downto 0);
   Conn1_TLAST <= SLOT_1_AXIS_tlast;
   Conn1_TREADY <= SLOT_1_AXIS_tready;
-  Conn1_TSTRB(3 downto 0) <= SLOT_1_AXIS_tstrb(3 downto 0);
+  Conn1_TSTRB(7 downto 0) <= SLOT_1_AXIS_tstrb(7 downto 0);
   Conn1_TVALID <= SLOT_1_AXIS_tvalid;
-  Conn2_TDATA(31 downto 0) <= SLOT_2_AXIS_tdata(31 downto 0);
+  Conn2_TDATA(63 downto 0) <= SLOT_2_AXIS_tdata(63 downto 0);
   Conn2_TLAST <= SLOT_2_AXIS_tlast;
   Conn2_TREADY <= SLOT_2_AXIS_tready;
-  Conn2_TSTRB(3 downto 0) <= SLOT_2_AXIS_tstrb(3 downto 0);
+  Conn2_TSTRB(7 downto 0) <= SLOT_2_AXIS_tstrb(7 downto 0);
   Conn2_TVALID <= SLOT_2_AXIS_tvalid;
   Conn_ARADDR(31 downto 0) <= SLOT_0_AXI_araddr(31 downto 0);
   Conn_ARBURST(1 downto 0) <= SLOT_0_AXI_arburst(1 downto 0);
@@ -433,15 +433,15 @@ begin
   Conn_BREADY <= SLOT_0_AXI_bready;
   Conn_BRESP(1 downto 0) <= SLOT_0_AXI_bresp(1 downto 0);
   Conn_BVALID <= SLOT_0_AXI_bvalid;
-  Conn_RDATA(31 downto 0) <= SLOT_0_AXI_rdata(31 downto 0);
+  Conn_RDATA(63 downto 0) <= SLOT_0_AXI_rdata(63 downto 0);
   Conn_RLAST <= SLOT_0_AXI_rlast;
   Conn_RREADY <= SLOT_0_AXI_rready;
   Conn_RRESP(1 downto 0) <= SLOT_0_AXI_rresp(1 downto 0);
   Conn_RVALID <= SLOT_0_AXI_rvalid;
-  Conn_WDATA(31 downto 0) <= SLOT_0_AXI_wdata(31 downto 0);
+  Conn_WDATA(63 downto 0) <= SLOT_0_AXI_wdata(63 downto 0);
   Conn_WLAST <= SLOT_0_AXI_wlast;
   Conn_WREADY <= SLOT_0_AXI_wready;
-  Conn_WSTRB(3 downto 0) <= SLOT_0_AXI_wstrb(3 downto 0);
+  Conn_WSTRB(7 downto 0) <= SLOT_0_AXI_wstrb(7 downto 0);
   Conn_WVALID <= SLOT_0_AXI_wvalid;
   clk_1 <= clk;
   resetn_1 <= resetn;
@@ -468,20 +468,20 @@ g_inst: component bd_8d3f_g_inst_0
       m_slot_0_axi_rlast => net_slot_0_axi_rlast,
       m_slot_0_axi_rready => net_slot_0_axi_rready,
       m_slot_0_axi_rvalid => net_slot_0_axi_rvalid,
-      m_slot_0_axi_wdata(31 downto 0) => net_slot_0_axi_wdata(31 downto 0),
+      m_slot_0_axi_wdata(63 downto 0) => net_slot_0_axi_wdata(63 downto 0),
       m_slot_0_axi_wlast => net_slot_0_axi_wlast,
       m_slot_0_axi_wready => net_slot_0_axi_wready,
-      m_slot_0_axi_wstrb(3 downto 0) => net_slot_0_axi_wstrb(3 downto 0),
+      m_slot_0_axi_wstrb(7 downto 0) => net_slot_0_axi_wstrb(7 downto 0),
       m_slot_0_axi_wvalid => net_slot_0_axi_wvalid,
-      m_slot_1_axis_tdata(31 downto 0) => net_slot_1_axis_tdata(31 downto 0),
+      m_slot_1_axis_tdata(63 downto 0) => net_slot_1_axis_tdata(63 downto 0),
       m_slot_1_axis_tlast => net_slot_1_axis_tlast,
       m_slot_1_axis_tready => net_slot_1_axis_tready,
-      m_slot_1_axis_tstrb(3 downto 0) => net_slot_1_axis_tstrb(3 downto 0),
+      m_slot_1_axis_tstrb(7 downto 0) => net_slot_1_axis_tstrb(7 downto 0),
       m_slot_1_axis_tvalid => net_slot_1_axis_tvalid,
-      m_slot_2_axis_tdata(31 downto 0) => net_slot_2_axis_tdata(31 downto 0),
+      m_slot_2_axis_tdata(63 downto 0) => net_slot_2_axis_tdata(63 downto 0),
       m_slot_2_axis_tlast => net_slot_2_axis_tlast,
       m_slot_2_axis_tready => net_slot_2_axis_tready,
-      m_slot_2_axis_tstrb(3 downto 0) => net_slot_2_axis_tstrb(3 downto 0),
+      m_slot_2_axis_tstrb(7 downto 0) => net_slot_2_axis_tstrb(7 downto 0),
       m_slot_2_axis_tvalid => net_slot_2_axis_tvalid,
       slot_0_axi_araddr(31 downto 0) => Conn_ARADDR(31 downto 0),
       slot_0_axi_arcache(3 downto 0) => Conn_ARCACHE(3 downto 0),
@@ -500,24 +500,24 @@ g_inst: component bd_8d3f_g_inst_0
       slot_0_axi_bready => Conn_BREADY,
       slot_0_axi_bresp(1 downto 0) => Conn_BRESP(1 downto 0),
       slot_0_axi_bvalid => Conn_BVALID,
-      slot_0_axi_rdata(31 downto 0) => Conn_RDATA(31 downto 0),
+      slot_0_axi_rdata(63 downto 0) => Conn_RDATA(63 downto 0),
       slot_0_axi_rlast => Conn_RLAST,
       slot_0_axi_rready => Conn_RREADY,
       slot_0_axi_rvalid => Conn_RVALID,
-      slot_0_axi_wdata(31 downto 0) => Conn_WDATA(31 downto 0),
+      slot_0_axi_wdata(63 downto 0) => Conn_WDATA(63 downto 0),
       slot_0_axi_wlast => Conn_WLAST,
       slot_0_axi_wready => Conn_WREADY,
-      slot_0_axi_wstrb(3 downto 0) => Conn_WSTRB(3 downto 0),
+      slot_0_axi_wstrb(7 downto 0) => Conn_WSTRB(7 downto 0),
       slot_0_axi_wvalid => Conn_WVALID,
-      slot_1_axis_tdata(31 downto 0) => Conn1_TDATA(31 downto 0),
+      slot_1_axis_tdata(63 downto 0) => Conn1_TDATA(63 downto 0),
       slot_1_axis_tlast => Conn1_TLAST,
       slot_1_axis_tready => Conn1_TREADY,
-      slot_1_axis_tstrb(3 downto 0) => Conn1_TSTRB(3 downto 0),
+      slot_1_axis_tstrb(7 downto 0) => Conn1_TSTRB(7 downto 0),
       slot_1_axis_tvalid => Conn1_TVALID,
-      slot_2_axis_tdata(31 downto 0) => Conn2_TDATA(31 downto 0),
+      slot_2_axis_tdata(63 downto 0) => Conn2_TDATA(63 downto 0),
       slot_2_axis_tlast => Conn2_TLAST,
       slot_2_axis_tready => Conn2_TREADY,
-      slot_2_axis_tstrb(3 downto 0) => Conn2_TSTRB(3 downto 0),
+      slot_2_axis_tstrb(7 downto 0) => Conn2_TSTRB(7 downto 0),
       slot_2_axis_tvalid => Conn2_TVALID
     );
 ila_lib: component bd_8d3f_ila_lib_0
@@ -525,22 +525,22 @@ ila_lib: component bd_8d3f_ila_lib_0
       clk => clk_1,
       probe0(1 downto 0) => net_slot_0_axi_ar_cnt(1 downto 0),
       probe1(1 downto 0) => net_slot_0_axi_aw_cnt(1 downto 0),
-      probe10(31 downto 0) => net_slot_0_axi_wdata(31 downto 0),
-      probe11(3 downto 0) => net_slot_0_axi_wstrb(3 downto 0),
+      probe10(63 downto 0) => net_slot_0_axi_wdata(63 downto 0),
+      probe11(7 downto 0) => net_slot_0_axi_wstrb(7 downto 0),
       probe12(1 downto 0) => net_slot_0_axi_aw_ctrl(1 downto 0),
       probe13(2 downto 0) => net_slot_0_axi_w_ctrl(2 downto 0),
       probe14(1 downto 0) => net_slot_0_axi_b_ctrl(1 downto 0),
       probe15(1 downto 0) => net_slot_0_axi_ar_ctrl(1 downto 0),
       probe16(2 downto 0) => net_slot_0_axi_r_ctrl(2 downto 0),
       probe17(0) => net_slot_0_apc_pc_asserted,
-      probe18(31 downto 0) => net_slot_1_axis_tdata(31 downto 0),
-      probe19(3 downto 0) => net_slot_1_axis_tstrb(3 downto 0),
+      probe18(63 downto 0) => net_slot_1_axis_tdata(63 downto 0),
+      probe19(7 downto 0) => net_slot_1_axis_tstrb(7 downto 0),
       probe2(31 downto 0) => net_slot_0_axi_awaddr(31 downto 0),
       probe20(0) => net_slot_1_axis_tvalid,
       probe21(0) => net_slot_1_axis_tready,
       probe22(0) => net_slot_1_axis_tlast,
-      probe23(31 downto 0) => net_slot_2_axis_tdata(31 downto 0),
-      probe24(3 downto 0) => net_slot_2_axis_tstrb(3 downto 0),
+      probe23(63 downto 0) => net_slot_2_axis_tdata(63 downto 0),
+      probe24(7 downto 0) => net_slot_2_axis_tstrb(7 downto 0),
       probe25(0) => net_slot_2_axis_tvalid,
       probe26(0) => net_slot_2_axis_tready,
       probe27(0) => net_slot_2_axis_tlast,
@@ -582,15 +582,15 @@ slot_0_apc: component bd_8d3f_slot_0_apc_0
       pc_axi_bready => Conn_BREADY,
       pc_axi_bresp(1 downto 0) => Conn_BRESP(1 downto 0),
       pc_axi_bvalid => Conn_BVALID,
-      pc_axi_rdata(31 downto 0) => Conn_RDATA(31 downto 0),
+      pc_axi_rdata(63 downto 0) => Conn_RDATA(63 downto 0),
       pc_axi_rlast => Conn_RLAST,
       pc_axi_rready => Conn_RREADY,
       pc_axi_rresp(1 downto 0) => Conn_RRESP(1 downto 0),
       pc_axi_rvalid => Conn_RVALID,
-      pc_axi_wdata(31 downto 0) => Conn_WDATA(31 downto 0),
+      pc_axi_wdata(63 downto 0) => Conn_WDATA(63 downto 0),
       pc_axi_wlast => Conn_WLAST,
       pc_axi_wready => Conn_WREADY,
-      pc_axi_wstrb(3 downto 0) => Conn_WSTRB(3 downto 0),
+      pc_axi_wstrb(7 downto 0) => Conn_WSTRB(7 downto 0),
       pc_axi_wvalid => Conn_WVALID,
       pc_status(159 downto 0) => NLW_slot_0_apc_pc_status_UNCONNECTED(159 downto 0)
     );

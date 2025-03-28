@@ -52,7 +52,7 @@
 
 (* X_CORE_INFO = "axi_protocol_checker_v2_0_14_top,Vivado 2023.1" *)
 (* CHECK_LICENSE_TYPE = "bd_8d3f_slot_0_apc_0,axi_protocol_checker_v2_0_14_top,{}" *)
-(* CORE_GENERATION_INFO = "bd_8d3f_slot_0_apc_0,axi_protocol_checker_v2_0_14_top,{x_ipProduct=Vivado 2023.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_protocol_checker,x_ipVersion=2.0,x_ipCoreRevision=14,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_AXI_PROTOCOL=0,C_AXI_ID_WIDTH=1,C_AXI_DATA_WIDTH=32,C_AXI_ADDR_WIDTH=32,C_AXI_AWUSER_WIDTH=1,C_AXI_ARUSER_WIDTH=1,C_AXI_WUSER_WIDTH=1,C_AXI_RUSER_WIDTH=1,C_AXI_BUSER_WIDTH=1,C_HAS_WSTRB=1,C_PC_MAXRBURSTS=2,C_PC_MAXWBURSTS=2,C_PC_EXMON_WIDTH=0,C_PC_AW_MAXWAITS=0,C_PC_AR_MAXW\
+(* CORE_GENERATION_INFO = "bd_8d3f_slot_0_apc_0,axi_protocol_checker_v2_0_14_top,{x_ipProduct=Vivado 2023.1,x_ipVendor=xilinx.com,x_ipLibrary=ip,x_ipName=axi_protocol_checker,x_ipVersion=2.0,x_ipCoreRevision=14,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,C_AXI_PROTOCOL=0,C_AXI_ID_WIDTH=1,C_AXI_DATA_WIDTH=64,C_AXI_ADDR_WIDTH=32,C_AXI_AWUSER_WIDTH=1,C_AXI_ARUSER_WIDTH=1,C_AXI_WUSER_WIDTH=1,C_AXI_RUSER_WIDTH=1,C_AXI_BUSER_WIDTH=1,C_HAS_WSTRB=1,C_PC_MAXRBURSTS=2,C_PC_MAXWBURSTS=2,C_PC_EXMON_WIDTH=0,C_PC_AW_MAXWAITS=0,C_PC_AR_MAXW\
 AITS=0,C_PC_W_MAXWAITS=0,C_PC_R_MAXWAITS=0,C_PC_B_MAXWAITS=0,C_PC_MAX_CONTINUOUS_RTRANSFERS_WAITS=0,C_PC_MAX_CONTINUOUS_WTRANSFERS_WAITS=0,C_PC_MAX_WLAST_TO_AWVALID_WAITS=0,C_PC_MAX_WRITE_TO_BVALID_WAITS=0,C_PC_LIGHT_WEIGHT=0,C_PC_MASTER_SIDE=0,C_PC_MESSAGE_LEVEL=2,C_PC_SUPPORTS_NARROW_BURST=1,C_PC_MAX_BURST_LENGTH=256,C_PC_HAS_SYSTEM_RESET=0,C_ENABLE_CONTROL=0,C_PC_STATUS_WIDTH=160,C_CHK_ERR_RESP=0,C_ENABLE_MARK_DEBUG=0}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module bd_8d3f_slot_0_apc_0 (
@@ -99,7 +99,7 @@ module bd_8d3f_slot_0_apc_0 (
 
 output wire [159 : 0] pc_status;
 output wire pc_asserted;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME aclk, ASSOCIATED_BUSIF S_AXI:PC_AXI, ASSOCIATED_RESET aresetn, FREQ_HZ 1e+08, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN adc_dma_bd_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME aclk, ASSOCIATED_BUSIF S_AXI:PC_AXI, ASSOCIATED_RESET aresetn, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN adc_dma_bd_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 aclk CLK" *)
 input wire aclk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME aresetn, POLARITY ACTIVE_LOW, INSERT_VIP 0" *)
@@ -130,9 +130,9 @@ input wire pc_axi_awready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 PC_AXI WLAST" *)
 input wire pc_axi_wlast;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 PC_AXI WDATA" *)
-input wire [31 : 0] pc_axi_wdata;
+input wire [63 : 0] pc_axi_wdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 PC_AXI WSTRB" *)
-input wire [3 : 0] pc_axi_wstrb;
+input wire [7 : 0] pc_axi_wstrb;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 PC_AXI WVALID" *)
 input wire pc_axi_wvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 PC_AXI WREADY" *)
@@ -168,20 +168,20 @@ input wire pc_axi_arready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 PC_AXI RLAST" *)
 input wire pc_axi_rlast;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 PC_AXI RDATA" *)
-input wire [31 : 0] pc_axi_rdata;
+input wire [63 : 0] pc_axi_rdata;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 PC_AXI RRESP" *)
 input wire [1 : 0] pc_axi_rresp;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 PC_AXI RVALID" *)
 input wire pc_axi_rvalid;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME PC_AXI, DATA_WIDTH 32, PROTOCOL AXI4, FREQ_HZ 1e+08, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 1, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN adc_dma_bd_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS 1, \
-NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME PC_AXI, DATA_WIDTH 64, PROTOCOL AXI4, FREQ_HZ 100000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 0, ARUSER_WIDTH 0, WUSER_WIDTH 0, RUSER_WIDTH 0, BUSER_WIDTH 0, READ_WRITE_MODE READ_WRITE, HAS_BURST 1, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 1, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 1, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN adc_dma_bd_processing_system7_0_0_FCLK_CLK0, NUM_READ_THREADS\
+ 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 PC_AXI RREADY" *)
 input wire pc_axi_rready;
 
   axi_protocol_checker_v2_0_14_top #(
     .C_AXI_PROTOCOL(0),
     .C_AXI_ID_WIDTH(1),
-    .C_AXI_DATA_WIDTH(32),
+    .C_AXI_DATA_WIDTH(64),
     .C_AXI_ADDR_WIDTH(32),
     .C_AXI_AWUSER_WIDTH(1),
     .C_AXI_ARUSER_WIDTH(1),

@@ -6,7 +6,6 @@ vhdl xil_defaultlib  \
 "../../../bd/adc_dma_bd/ipshared/b810/src/AD9648_SPI.vhd" \
 "../../../bd/adc_dma_bd/ipshared/b810/src/ZmodADC1410_Controller.vhd" \
 "../../../bd/adc_dma_bd/ip/adc_dma_bd_ZmodADC1410_Controll_0_0/sim/adc_dma_bd_ZmodADC1410_Controll_0_0.vhd" \
-"../../../bd/adc_dma_bd/ip/adc_dma_bd_rst_ps7_0_100M_0/sim/adc_dma_bd_rst_ps7_0_100M_0.vhd" \
 "../../../bd/adc_dma_bd/ipshared/ce55/src/AXI_ZmodADC1410_v1_0_S00_AXI.vhd" \
 "../../../bd/adc_dma_bd/ipshared/ce55/src/Circular_Buffer.vhd" \
 "../../../bd/adc_dma_bd/ipshared/ce55/src/SyncAsync.vhd" \
@@ -15,18 +14,26 @@ vhdl xil_defaultlib  \
 "../../../bd/adc_dma_bd/ipshared/ce55/src/SPI_Adapter.vhd" \
 "../../../bd/adc_dma_bd/ipshared/ce55/src/AXI_ZmodADC1410_v1_0.vhd" \
 "../../../bd/adc_dma_bd/ip/adc_dma_bd_AXI_ZmodADC1410_0_0/sim/adc_dma_bd_AXI_ZmodADC1410_0_0.vhd" \
-"../../../bd/adc_dma_bd/ip/adc_dma_bd_rst_ps7_0_100M_1_0/sim/adc_dma_bd_rst_ps7_0_100M_1_0.vhd" \
-"../../../bd/adc_dma_bd/ip/adc_dma_bd_system_ila_0_0/bd_0/ip/ip_0/sim/bd_8d3f_ila_lib_0.vhd" \
 "../../../bd/adc_dma_bd/ip/adc_dma_bd_system_ila_0_0/bd_0/sim/bd_8d3f.vhd" \
+"../../../bd/adc_dma_bd/ip/adc_dma_bd_system_ila_0_0/bd_0/ip/ip_0/sim/bd_8d3f_ila_lib_0.vhd" \
 "../../../bd/adc_dma_bd/ip/adc_dma_bd_system_ila_0_0/sim/adc_dma_bd_system_ila_0_0.vhd" \
-"../../../bd/adc_dma_bd/ip/adc_dma_bd_system_ila_1_0/bd_0/ip/ip_0/sim/bd_4d6e_ila_lib_0.vhd" \
 "../../../bd/adc_dma_bd/ip/adc_dma_bd_system_ila_1_0/bd_0/sim/bd_4d6e.vhd" \
+"../../../bd/adc_dma_bd/ip/adc_dma_bd_system_ila_1_0/bd_0/ip/ip_0/sim/bd_4d6e_ila_lib_0.vhd" \
 "../../../bd/adc_dma_bd/ip/adc_dma_bd_system_ila_1_0/sim/adc_dma_bd_system_ila_1_0.vhd" \
+"../../../bd/adc_dma_bd/ip/adc_dma_bd_rst_ps7_0_100M_0/sim/adc_dma_bd_rst_ps7_0_100M_0.vhd" \
+"../../../bd/adc_dma_bd/ip/adc_dma_bd_rst_ps7_0_100M_1_0/sim/adc_dma_bd_rst_ps7_0_100M_1_0.vhd" \
 
 vhdl2008 xil_defaultlib  \
-"../../../bd/adc_dma_bd/ipshared/4965/hdl/AXI_TAR_v1_0_S00_AXI.vhd" \
-"../../../bd/adc_dma_bd/ipshared/4965/hdl/master_test.vhd" \
-"../../../bd/adc_dma_bd/ipshared/4965/hdl/AXI_TAR_v1_0.vhd" \
+"../../../bd/adc_dma_bd/ipshared/6844/hdl/AXI_TAR_v1_0_S00_AXI.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../bd/adc_dma_bd/ipshared/6844/hdl/PULSE_FORMATTER.vhd" \
+"../../../bd/adc_dma_bd/ipshared/6844/hdl/TAR.vhd" \
+"../../../bd/adc_dma_bd/ipshared/6844/hdl/TIME_BASE.vhd" \
+"../../../bd/adc_dma_bd/ipshared/6844/hdl/VP_DETECTOR.vhd" \
+
+vhdl2008 xil_defaultlib  \
+"../../../bd/adc_dma_bd/ipshared/6844/hdl/AXI_TAR_v1_0.vhd" \
 
 vhdl xil_defaultlib  \
 "../../../bd/adc_dma_bd/ip/adc_dma_bd_AXI_TAR_0_0/sim/adc_dma_bd_AXI_TAR_0_0.vhd" \

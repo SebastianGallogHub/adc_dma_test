@@ -3,8 +3,8 @@
 # SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Fri Feb 28 13:02:19 2025
-# Process ID: 12813
+# Start of session at: Wed Mar 26 23:30:38 2025
+# Process ID: 120068
 # Current directory: /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1
 # Command line: vivado -log adc_dma_bd_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source adc_dma_bd_wrapper.tcl
 # Log file: /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/adc_dma_bd_wrapper.vds
@@ -12,11 +12,11 @@
 # Running On: sebasHAL, OS: Linux, CPU Frequency: 2400.000 MHz, CPU Physical cores: 2, Host memory: 3883 MB
 #-----------------------------------------------------------
 source adc_dma_bd_wrapper.tcl -notrace
-create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1316.066 ; gain = 0.023 ; free physical = 118 ; free virtual = 2165
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1295.254 ; gain = 0.023 ; free physical = 110 ; free virtual = 1895
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/ip_repo'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2023.1/data/ip'.
-add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1408.176 ; gain = 92.109 ; free physical = 124 ; free virtual = 2080
+add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1401.629 ; gain = 93.500 ; free physical = 110 ; free virtual = 1783
 Command: read_checkpoint -auto_incremental -incremental /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.srcs/utils_1/imports/synth_1/adc_dma_bd_wrapper.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.srcs/utils_1/imports/synth_1/adc_dma_bd_wrapper.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -29,85 +29,83 @@ INFO: [Designutils 20-5440] No compile time benefit to using incremental synthes
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 12985
+INFO: [Synth 8-7075] Helper process launched with PID 120259
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 2129.477 ; gain = 376.770 ; free physical = 202 ; free virtual = 1102
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 2129.898 ; gain = 377.801 ; free physical = 137 ; free virtual = 820
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_wrapper' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/hdl/adc_dma_bd_wrapper.vhd:60]
-INFO: [Synth 8-3491] module 'adc_dma_bd' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:3532' bound to instance 'adc_dma_bd_i' of component 'adc_dma_bd' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/hdl/adc_dma_bd_wrapper.vhd:106]
-INFO: [Synth 8-638] synthesizing module 'adc_dma_bd' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:3581]
-INFO: [Synth 8-3491] module 'adc_dma_bd_AXI_TAR_0_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_AXI_TAR_0_0_stub.vhdl:6' bound to instance 'AXI_TAR_0' of component 'adc_dma_bd_AXI_TAR_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:4490]
-INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_AXI_TAR_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_AXI_TAR_0_0_stub.vhdl:45]
-INFO: [Synth 8-3491] module 'adc_dma_bd_AXI_ZmodADC1410_0_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_AXI_ZmodADC1410_0_0_stub.vhdl:6' bound to instance 'AXI_ZmodADC1410_0' of component 'adc_dma_bd_AXI_ZmodADC1410_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:4526]
-INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_AXI_ZmodADC1410_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_AXI_ZmodADC1410_0_0_stub.vhdl:69]
-INFO: [Synth 8-3491] module 'adc_dma_bd_ZmodADC1410_Controll_0_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_ZmodADC1410_Controll_0_0_stub.vhdl:6' bound to instance 'ZmodADC1410_Controll_0' of component 'adc_dma_bd_ZmodADC1410_Controll_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:4586]
-INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_ZmodADC1410_Controll_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_ZmodADC1410_Controll_0_0_stub.vhdl:61]
-WARNING: [Synth 8-5640] Port 'axi_dma_tstvec' is missing in component declaration [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:3698]
-INFO: [Synth 8-3491] module 'adc_dma_bd_axi_dma_0_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_axi_dma_0_0_stub.vhdl:6' bound to instance 'axi_dma_0' of component 'adc_dma_bd_axi_dma_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:4638]
-INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_axi_dma_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_axi_dma_0_0_stub.vhdl:106]
-INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_axi_mem_intercon_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:2043]
+INFO: [Synth 8-3491] module 'adc_dma_bd' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:3412' bound to instance 'adc_dma_bd_i' of component 'adc_dma_bd' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/hdl/adc_dma_bd_wrapper.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'adc_dma_bd' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:3461]
+INFO: [Synth 8-3491] module 'adc_dma_bd_AXI_TAR_0_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_AXI_TAR_0_0_stub.vhdl:6' bound to instance 'AXI_TAR_0' of component 'adc_dma_bd_AXI_TAR_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:4370]
+INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_AXI_TAR_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_AXI_TAR_0_0_stub.vhdl:45]
+INFO: [Synth 8-3491] module 'adc_dma_bd_AXI_ZmodADC1410_0_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_AXI_ZmodADC1410_0_0_stub.vhdl:6' bound to instance 'AXI_ZmodADC1410_0' of component 'adc_dma_bd_AXI_ZmodADC1410_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:4406]
+INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_AXI_ZmodADC1410_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_AXI_ZmodADC1410_0_0_stub.vhdl:69]
+INFO: [Synth 8-3491] module 'adc_dma_bd_ZmodADC1410_Controll_0_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_ZmodADC1410_Controll_0_0_stub.vhdl:6' bound to instance 'ZmodADC1410_Controll_0' of component 'adc_dma_bd_ZmodADC1410_Controll_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:4466]
+INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_ZmodADC1410_Controll_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_ZmodADC1410_Controll_0_0_stub.vhdl:61]
+WARNING: [Synth 8-5640] Port 'axi_dma_tstvec' is missing in component declaration [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:3462]
+INFO: [Synth 8-3491] module 'adc_dma_bd_axi_dma_0_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_axi_dma_0_0_stub.vhdl:6' bound to instance 'axi_dma_0' of component 'adc_dma_bd_axi_dma_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:4518]
+INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_axi_dma_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_axi_dma_0_0_stub.vhdl:106]
+INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_axi_mem_intercon_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:1929]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_EGIQW5' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:197]
-INFO: [Synth 8-3491] module 'adc_dma_bd_auto_pc_1' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_auto_pc_1_stub.vhdl:6' bound to instance 'auto_pc' of component 'adc_dma_bd_auto_pc_1' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:440]
-INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_auto_pc_1' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_auto_pc_1_stub.vhdl:91]
+INFO: [Synth 8-3491] module 'adc_dma_bd_auto_pc_1' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_auto_pc_1_stub.vhdl:6' bound to instance 'auto_pc' of component 'adc_dma_bd_auto_pc_1' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:440]
+INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_auto_pc_1' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_auto_pc_1_stub.vhdl:91]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_EGIQW5' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:197]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_NYIKIS' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:1254]
-INFO: [Synth 8-3491] module 'adc_dma_bd_auto_us_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_auto_us_0_stub.vhdl:6' bound to instance 'auto_us' of component 'adc_dma_bd_auto_us_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:1462]
-INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_auto_us_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_auto_us_0_stub.vhdl:84]
+INFO: [Synth 8-3491] module 'adc_dma_bd_auto_us_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_auto_us_0_stub.vhdl:6' bound to instance 'auto_us' of component 'adc_dma_bd_auto_us_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:1462]
+INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_auto_us_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_auto_us_0_stub.vhdl:84]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_NYIKIS' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:1254]
 INFO: [Synth 8-638] synthesizing module 's01_couplers_imp_E7UZAA' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:1579]
-INFO: [Synth 8-3491] module 'adc_dma_bd_auto_us_1' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_auto_us_1_stub.vhdl:6' bound to instance 'auto_us' of component 'adc_dma_bd_auto_us_1' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:1680]
-INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_auto_us_1' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_auto_us_1_stub.vhdl:46]
+INFO: [Synth 8-3491] module 'adc_dma_bd_auto_us_1' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_auto_us_1_stub.vhdl:6' bound to instance 'auto_us' of component 'adc_dma_bd_auto_us_1' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:1680]
+INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_auto_us_1' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_auto_us_1_stub.vhdl:46]
 INFO: [Synth 8-256] done synthesizing module 's01_couplers_imp_E7UZAA' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:1579]
-INFO: [Synth 8-638] synthesizing module 's02_couplers_imp_17G4XYG' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:1765]
-INFO: [Synth 8-3491] module 'adc_dma_bd_auto_us_2' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_auto_us_2_stub.vhdl:6' bound to instance 'auto_us' of component 'adc_dma_bd_auto_us_2' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:1884]
-INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_auto_us_2' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_auto_us_2_stub.vhdl:52]
-INFO: [Synth 8-256] done synthesizing module 's02_couplers_imp_17G4XYG' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:1765]
-INFO: [Synth 8-3491] module 'adc_dma_bd_xbar_1' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_xbar_1_stub.vhdl:6' bound to instance 'xbar' of component 'adc_dma_bd_xbar_1' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:2668]
-INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_xbar_1' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_xbar_1_stub.vhdl:90]
-INFO: [Synth 8-256] done synthesizing module 'adc_dma_bd_axi_mem_intercon_0' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:2043]
-INFO: [Synth 8-3491] module 'adc_dma_bd_axis_data_fifo_0_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_axis_data_fifo_0_0_stub.vhdl:6' bound to instance 'axis_data_fifo_0' of component 'adc_dma_bd_axis_data_fifo_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:4843]
-INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_axis_data_fifo_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_axis_data_fifo_0_0_stub.vhdl:24]
-INFO: [Synth 8-3491] module 'adc_dma_bd_clk_wiz_0_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_clk_wiz_0_0_stub.vhdl:6' bound to instance 'clk_wiz_0' of component 'adc_dma_bd_clk_wiz_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:4858]
-INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_clk_wiz_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_clk_wiz_0_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'adc_dma_bd_processing_system7_0_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_processing_system7_0_0_stub.vhdl:6' bound to instance 'processing_system7_0' of component 'adc_dma_bd_processing_system7_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:4864]
-INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_processing_system7_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_processing_system7_0_0_stub.vhdl:124]
-INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_ps7_0_axi_periph_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:2927]
+INFO: [Synth 8-638] synthesizing module 's02_couplers_imp_17G4XYG' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:1763]
+INFO: [Synth 8-256] done synthesizing module 's02_couplers_imp_17G4XYG' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:1763]
+INFO: [Synth 8-3491] module 'adc_dma_bd_xbar_1' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_xbar_1_stub.vhdl:6' bound to instance 'xbar' of component 'adc_dma_bd_xbar_1' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:2550]
+INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_xbar_1' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_xbar_1_stub.vhdl:90]
+INFO: [Synth 8-256] done synthesizing module 'adc_dma_bd_axi_mem_intercon_0' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:1929]
+INFO: [Synth 8-3491] module 'adc_dma_bd_axis_data_fifo_0_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_axis_data_fifo_0_0_stub.vhdl:6' bound to instance 'axis_data_fifo_0' of component 'adc_dma_bd_axis_data_fifo_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:4723]
+INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_axis_data_fifo_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_axis_data_fifo_0_0_stub.vhdl:24]
+INFO: [Synth 8-3491] module 'adc_dma_bd_clk_wiz_0_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_clk_wiz_0_0_stub.vhdl:6' bound to instance 'clk_wiz_0' of component 'adc_dma_bd_clk_wiz_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:4738]
+INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_clk_wiz_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_clk_wiz_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'adc_dma_bd_processing_system7_0_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_processing_system7_0_0_stub.vhdl:6' bound to instance 'processing_system7_0' of component 'adc_dma_bd_processing_system7_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:4744]
+INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_processing_system7_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_processing_system7_0_0_stub.vhdl:124]
+INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_ps7_0_axi_periph_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:2807]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_14GCQAB' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:56]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_14GCQAB' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:56]
 INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_1VVYI51' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:574]
 INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_1VVYI51' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:574]
 INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_P92V1B' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:685]
-INFO: [Synth 8-3491] module 'adc_dma_bd_auto_cc_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_auto_cc_0_stub.vhdl:6' bound to instance 'auto_cc' of component 'adc_dma_bd_auto_cc_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:817]
-INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_auto_cc_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_auto_cc_0_stub.vhdl:54]
+INFO: [Synth 8-3491] module 'adc_dma_bd_auto_cc_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_auto_cc_0_stub.vhdl:6' bound to instance 'auto_cc' of component 'adc_dma_bd_auto_cc_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:817]
+INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_auto_cc_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_auto_cc_0_stub.vhdl:54]
 INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_P92V1B' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:685]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1VKN4K2' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:933]
-INFO: [Synth 8-3491] module 'adc_dma_bd_auto_pc_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_auto_pc_0_stub.vhdl:6' bound to instance 'auto_pc' of component 'adc_dma_bd_auto_pc_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:1116]
-INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_auto_pc_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_auto_pc_0_stub.vhdl:71]
+INFO: [Synth 8-3491] module 'adc_dma_bd_auto_pc_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_auto_pc_0_stub.vhdl:6' bound to instance 'auto_pc' of component 'adc_dma_bd_auto_pc_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:1116]
+INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_auto_pc_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_auto_pc_0_stub.vhdl:71]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1VKN4K2' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:933]
-INFO: [Synth 8-3491] module 'adc_dma_bd_xbar_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_xbar_0_stub.vhdl:6' bound to instance 'xbar' of component 'adc_dma_bd_xbar_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:3446]
-INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_xbar_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_xbar_0_stub.vhdl:52]
-INFO: [Synth 8-256] done synthesizing module 'adc_dma_bd_ps7_0_axi_periph_0' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:2927]
-INFO: [Synth 8-3491] module 'adc_dma_bd_rst_ps7_0_100M_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_rst_ps7_0_100M_0_stub.vhdl:6' bound to instance 'rst_ps7_0_100M' of component 'adc_dma_bd_rst_ps7_0_100M_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:5087]
-INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_rst_ps7_0_100M_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_rst_ps7_0_100M_0_stub.vhdl:22]
-INFO: [Synth 8-3491] module 'adc_dma_bd_rst_ps7_0_100M_1_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_rst_ps7_0_100M_1_0_stub.vhdl:6' bound to instance 'rst_ps7_0_100M_1' of component 'adc_dma_bd_rst_ps7_0_100M_1_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:5100]
-INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_rst_ps7_0_100M_1_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_rst_ps7_0_100M_1_0_stub.vhdl:22]
-INFO: [Synth 8-3491] module 'adc_dma_bd_system_ila_0_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_system_ila_0_0_stub.vhdl:6' bound to instance 'system_ila_0' of component 'adc_dma_bd_system_ila_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:5113]
-INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_system_ila_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_system_ila_0_0_stub.vhdl:59]
-INFO: [Synth 8-3491] module 'adc_dma_bd_system_ila_1_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_system_ila_1_0_stub.vhdl:6' bound to instance 'system_ila_1' of component 'adc_dma_bd_system_ila_1_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:5163]
-INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_system_ila_1_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-12813-sebasHAL/realtime/adc_dma_bd_system_ila_1_0_stub.vhdl:16]
-INFO: [Synth 8-3491] module 'adc_dma_bd_xlconcat_0_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_xlconcat_0_0/synth/adc_dma_bd_xlconcat_0_0.v:53' bound to instance 'xlconcat_0' of component 'adc_dma_bd_xlconcat_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:5170]
+INFO: [Synth 8-3491] module 'adc_dma_bd_xbar_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_xbar_0_stub.vhdl:6' bound to instance 'xbar' of component 'adc_dma_bd_xbar_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:3326]
+INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_xbar_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_xbar_0_stub.vhdl:52]
+INFO: [Synth 8-256] done synthesizing module 'adc_dma_bd_ps7_0_axi_periph_0' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:2807]
+INFO: [Synth 8-3491] module 'adc_dma_bd_rst_ps7_0_100M_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_rst_ps7_0_100M_0_stub.vhdl:6' bound to instance 'rst_ps7_0_100M' of component 'adc_dma_bd_rst_ps7_0_100M_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:4967]
+INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_rst_ps7_0_100M_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_rst_ps7_0_100M_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'adc_dma_bd_rst_ps7_0_100M_1_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_rst_ps7_0_100M_1_0_stub.vhdl:6' bound to instance 'rst_ps7_0_100M_1' of component 'adc_dma_bd_rst_ps7_0_100M_1_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:4980]
+INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_rst_ps7_0_100M_1_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_rst_ps7_0_100M_1_0_stub.vhdl:22]
+INFO: [Synth 8-3491] module 'adc_dma_bd_system_ila_0_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_system_ila_0_0_stub.vhdl:6' bound to instance 'system_ila_0' of component 'adc_dma_bd_system_ila_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:4993]
+INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_system_ila_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_system_ila_0_0_stub.vhdl:59]
+INFO: [Synth 8-3491] module 'adc_dma_bd_system_ila_1_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_system_ila_1_0_stub.vhdl:6' bound to instance 'system_ila_1' of component 'adc_dma_bd_system_ila_1_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:5043]
+INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_system_ila_1_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/.Xil/Vivado-120068-sebasHAL/realtime/adc_dma_bd_system_ila_1_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'adc_dma_bd_xlconcat_0_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_xlconcat_0_0/synth/adc_dma_bd_xlconcat_0_0.v:53' bound to instance 'xlconcat_0' of component 'adc_dma_bd_xlconcat_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:5050]
 INFO: [Synth 8-6157] synthesizing module 'adc_dma_bd_xlconcat_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_xlconcat_0_0/synth/adc_dma_bd_xlconcat_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_4_xlconcat' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
 INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_4_xlconcat' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/4b67/hdl/xlconcat_v2_1_vl_rfs.v:14]
 INFO: [Synth 8-6155] done synthesizing module 'adc_dma_bd_xlconcat_0_0' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_xlconcat_0_0/synth/adc_dma_bd_xlconcat_0_0.v:53]
-INFO: [Synth 8-3491] module 'adc_dma_bd_xlconstant_0_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_xlconstant_0_0/synth/adc_dma_bd_xlconstant_0_0.v:53' bound to instance 'xlconstant_0' of component 'adc_dma_bd_xlconstant_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:5176]
+INFO: [Synth 8-3491] module 'adc_dma_bd_xlconstant_0_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_xlconstant_0_0/synth/adc_dma_bd_xlconstant_0_0.v:53' bound to instance 'xlconstant_0' of component 'adc_dma_bd_xlconstant_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:5056]
 INFO: [Synth 8-6157] synthesizing module 'adc_dma_bd_xlconstant_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_xlconstant_0_0/synth/adc_dma_bd_xlconstant_0_0.v:53]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/b0f2/hdl/xlconstant_v1_1_vl_rfs.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'adc_dma_bd_xlconstant_0_0' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_xlconstant_0_0/synth/adc_dma_bd_xlconstant_0_0.v:53]
-INFO: [Synth 8-256] done synthesizing module 'adc_dma_bd' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:3581]
+INFO: [Synth 8-256] done synthesizing module 'adc_dma_bd' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:3461]
 INFO: [Synth 8-256] done synthesizing module 'adc_dma_bd_wrapper' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/hdl/adc_dma_bd_wrapper.vhd:60]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlconcat_0'. This will prevent further optimization [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:5170]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'xlconcat_0'. This will prevent further optimization [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/synth/adc_dma_bd.vhd:5050]
 WARNING: [Synth 8-7129] Port In2[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In3[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 WARNING: [Synth 8-7129] Port In4[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
@@ -210,24 +208,22 @@ WARNING: [Synth 8-7129] Port In100[0] in module xlconcat_v2_1_4_xlconcat is eith
 WARNING: [Synth 8-7129] Port In101[0] in module xlconcat_v2_1_4_xlconcat is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2224.383 ; gain = 471.676 ; free physical = 98 ; free virtual = 988
+Finished RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2223.805 ; gain = 471.707 ; free physical = 110 ; free virtual = 671
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2236.258 ; gain = 483.551 ; free physical = 117 ; free virtual = 987
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2238.648 ; gain = 486.551 ; free physical = 107 ; free virtual = 671
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2236.258 ; gain = 483.551 ; free physical = 117 ; free virtual = 987
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2238.648 ; gain = 486.551 ; free physical = 107 ; free virtual = 671
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2236.258 ; gain = 0.000 ; free physical = 108 ; free virtual = 986
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2238.648 ; gain = 0.000 ; free physical = 116 ; free virtual = 672
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_processing_system7_0_0/adc_dma_bd_processing_system7_0_0/adc_dma_bd_processing_system7_0_0_in_context.xdc] for cell 'adc_dma_bd_i/processing_system7_0'
-Finished Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_processing_system7_0_0/adc_dma_bd_processing_system7_0_0/adc_dma_bd_processing_system7_0_0_in_context.xdc] for cell 'adc_dma_bd_i/processing_system7_0'
 Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_axi_dma_0_0/adc_dma_bd_axi_dma_0_0/adc_dma_bd_axi_dma_0_0_in_context.xdc] for cell 'adc_dma_bd_i/axi_dma_0'
 Finished Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_axi_dma_0_0/adc_dma_bd_axi_dma_0_0/adc_dma_bd_axi_dma_0_0_in_context.xdc] for cell 'adc_dma_bd_i/axi_dma_0'
 Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_ZmodADC1410_Controll_0_0/adc_dma_bd_ZmodADC1410_Controll_0_0/adc_dma_bd_ZmodADC1410_Controll_0_0_in_context.xdc] for cell 'adc_dma_bd_i/ZmodADC1410_Controll_0'
@@ -238,30 +234,30 @@ Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma
 Finished Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_auto_pc_0/adc_dma_bd_auto_pc_0/adc_dma_bd_auto_pc_0_in_context.xdc] for cell 'adc_dma_bd_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_auto_cc_0/adc_dma_bd_auto_cc_0/adc_dma_bd_auto_cc_0_in_context.xdc] for cell 'adc_dma_bd_i/ps7_0_axi_periph/m02_couplers/auto_cc'
 Finished Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_auto_cc_0/adc_dma_bd_auto_cc_0/adc_dma_bd_auto_cc_0_in_context.xdc] for cell 'adc_dma_bd_i/ps7_0_axi_periph/m02_couplers/auto_cc'
-Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_rst_ps7_0_100M_0/adc_dma_bd_rst_ps7_0_100M_0/adc_dma_bd_rst_ps7_0_100M_1_0_in_context.xdc] for cell 'adc_dma_bd_i/rst_ps7_0_100M'
-Finished Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_rst_ps7_0_100M_0/adc_dma_bd_rst_ps7_0_100M_0/adc_dma_bd_rst_ps7_0_100M_1_0_in_context.xdc] for cell 'adc_dma_bd_i/rst_ps7_0_100M'
 Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_xbar_1/adc_dma_bd_xbar_1/adc_dma_bd_xbar_1_in_context.xdc] for cell 'adc_dma_bd_i/axi_mem_intercon/xbar'
 Finished Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_xbar_1/adc_dma_bd_xbar_1/adc_dma_bd_xbar_1_in_context.xdc] for cell 'adc_dma_bd_i/axi_mem_intercon/xbar'
 Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_auto_us_0/adc_dma_bd_auto_us_0/adc_dma_bd_auto_us_0_in_context.xdc] for cell 'adc_dma_bd_i/axi_mem_intercon/s00_couplers/auto_us'
 Finished Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_auto_us_0/adc_dma_bd_auto_us_0/adc_dma_bd_auto_us_0_in_context.xdc] for cell 'adc_dma_bd_i/axi_mem_intercon/s00_couplers/auto_us'
-Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_auto_us_1/adc_dma_bd_auto_us_1/adc_dma_bd_auto_us_2_in_context.xdc] for cell 'adc_dma_bd_i/axi_mem_intercon/s01_couplers/auto_us'
-Finished Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_auto_us_1/adc_dma_bd_auto_us_1/adc_dma_bd_auto_us_2_in_context.xdc] for cell 'adc_dma_bd_i/axi_mem_intercon/s01_couplers/auto_us'
-Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_auto_us_2/adc_dma_bd_auto_us_2/adc_dma_bd_auto_us_1_in_context.xdc] for cell 'adc_dma_bd_i/axi_mem_intercon/s02_couplers/auto_us'
-Finished Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_auto_us_2/adc_dma_bd_auto_us_2/adc_dma_bd_auto_us_1_in_context.xdc] for cell 'adc_dma_bd_i/axi_mem_intercon/s02_couplers/auto_us'
+Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_auto_us_1/adc_dma_bd_auto_us_1/adc_dma_bd_auto_us_1_in_context.xdc] for cell 'adc_dma_bd_i/axi_mem_intercon/s01_couplers/auto_us'
+Finished Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_auto_us_1/adc_dma_bd_auto_us_1/adc_dma_bd_auto_us_1_in_context.xdc] for cell 'adc_dma_bd_i/axi_mem_intercon/s01_couplers/auto_us'
 Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_auto_pc_1/adc_dma_bd_auto_pc_1/adc_dma_bd_auto_pc_1_in_context.xdc] for cell 'adc_dma_bd_i/axi_mem_intercon/m00_couplers/auto_pc'
 Finished Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_auto_pc_1/adc_dma_bd_auto_pc_1/adc_dma_bd_auto_pc_1_in_context.xdc] for cell 'adc_dma_bd_i/axi_mem_intercon/m00_couplers/auto_pc'
-Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_clk_wiz_0_0/adc_dma_bd_clk_wiz_0_0/adc_dma_bd_clk_wiz_0_0_in_context.xdc] for cell 'adc_dma_bd_i/clk_wiz_0'
-Finished Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_clk_wiz_0_0/adc_dma_bd_clk_wiz_0_0/adc_dma_bd_clk_wiz_0_0_in_context.xdc] for cell 'adc_dma_bd_i/clk_wiz_0'
 Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_AXI_ZmodADC1410_0_0/adc_dma_bd_AXI_ZmodADC1410_0_0/adc_dma_bd_AXI_ZmodADC1410_0_0_in_context.xdc] for cell 'adc_dma_bd_i/AXI_ZmodADC1410_0'
 Finished Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_AXI_ZmodADC1410_0_0/adc_dma_bd_AXI_ZmodADC1410_0_0/adc_dma_bd_AXI_ZmodADC1410_0_0_in_context.xdc] for cell 'adc_dma_bd_i/AXI_ZmodADC1410_0'
-Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_rst_ps7_0_100M_1_0/adc_dma_bd_rst_ps7_0_100M_1_0/adc_dma_bd_rst_ps7_0_100M_1_0_in_context.xdc] for cell 'adc_dma_bd_i/rst_ps7_0_100M_1'
-Finished Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_rst_ps7_0_100M_1_0/adc_dma_bd_rst_ps7_0_100M_1_0/adc_dma_bd_rst_ps7_0_100M_1_0_in_context.xdc] for cell 'adc_dma_bd_i/rst_ps7_0_100M_1'
 Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_system_ila_0_0/adc_dma_bd_system_ila_0_0/adc_dma_bd_system_ila_0_0_in_context.xdc] for cell 'adc_dma_bd_i/system_ila_0'
 Finished Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_system_ila_0_0/adc_dma_bd_system_ila_0_0/adc_dma_bd_system_ila_0_0_in_context.xdc] for cell 'adc_dma_bd_i/system_ila_0'
 Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_system_ila_1_0/adc_dma_bd_system_ila_1_0/adc_dma_bd_system_ila_1_0_in_context.xdc] for cell 'adc_dma_bd_i/system_ila_1'
 Finished Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_system_ila_1_0/adc_dma_bd_system_ila_1_0/adc_dma_bd_system_ila_1_0_in_context.xdc] for cell 'adc_dma_bd_i/system_ila_1'
 Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_axis_data_fifo_0_0/adc_dma_bd_axis_data_fifo_0_0/adc_dma_bd_axis_data_fifo_0_0_in_context.xdc] for cell 'adc_dma_bd_i/axis_data_fifo_0'
 Finished Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_axis_data_fifo_0_0/adc_dma_bd_axis_data_fifo_0_0/adc_dma_bd_axis_data_fifo_0_0_in_context.xdc] for cell 'adc_dma_bd_i/axis_data_fifo_0'
+Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_clk_wiz_0_0/adc_dma_bd_clk_wiz_0_0/adc_dma_bd_clk_wiz_0_0_in_context.xdc] for cell 'adc_dma_bd_i/clk_wiz_0'
+Finished Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_clk_wiz_0_0/adc_dma_bd_clk_wiz_0_0/adc_dma_bd_clk_wiz_0_0_in_context.xdc] for cell 'adc_dma_bd_i/clk_wiz_0'
+Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_processing_system7_0_0/adc_dma_bd_processing_system7_0_0/adc_dma_bd_processing_system7_0_0_in_context.xdc] for cell 'adc_dma_bd_i/processing_system7_0'
+Finished Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_processing_system7_0_0/adc_dma_bd_processing_system7_0_0/adc_dma_bd_processing_system7_0_0_in_context.xdc] for cell 'adc_dma_bd_i/processing_system7_0'
+Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_rst_ps7_0_100M_0/adc_dma_bd_rst_ps7_0_100M_0/adc_dma_bd_rst_ps7_0_100M_0_in_context.xdc] for cell 'adc_dma_bd_i/rst_ps7_0_100M'
+Finished Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_rst_ps7_0_100M_0/adc_dma_bd_rst_ps7_0_100M_0/adc_dma_bd_rst_ps7_0_100M_0_in_context.xdc] for cell 'adc_dma_bd_i/rst_ps7_0_100M'
+Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_rst_ps7_0_100M_1_0/adc_dma_bd_rst_ps7_0_100M_1_0/adc_dma_bd_rst_ps7_0_100M_0_in_context.xdc] for cell 'adc_dma_bd_i/rst_ps7_0_100M_1'
+Finished Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_rst_ps7_0_100M_1_0/adc_dma_bd_rst_ps7_0_100M_1_0/adc_dma_bd_rst_ps7_0_100M_0_in_context.xdc] for cell 'adc_dma_bd_i/rst_ps7_0_100M_1'
 Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_AXI_TAR_0_0/adc_dma_bd_AXI_TAR_0_0/adc_dma_bd_AXI_TAR_0_0_in_context.xdc] for cell 'adc_dma_bd_i/AXI_TAR_0'
 Finished Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_AXI_TAR_0_0/adc_dma_bd_AXI_TAR_0_0/adc_dma_bd_AXI_TAR_0_0_in_context.xdc] for cell 'adc_dma_bd_i/AXI_TAR_0'
 Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.srcs/constrs_1/new/adc_dma_test_pinout.xdc]
@@ -274,26 +270,34 @@ Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma
 Finished Parsing XDC File [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2271.242 ; gain = 0.000 ; free physical = 105 ; free virtual = 1015
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2279.570 ; gain = 0.000 ; free physical = 120 ; free virtual = 661
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2271.242 ; gain = 0.000 ; free physical = 104 ; free virtual = 1015
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.05 . Memory (MB): peak = 2279.570 ; gain = 0.000 ; free physical = 119 ; free virtual = 662
 INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2271.242 ; gain = 518.535 ; free physical = 121 ; free virtual = 1009
+Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 2279.570 ; gain = 527.473 ; free physical = 118 ; free virtual = 657
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 2271.242 ; gain = 518.535 ; free physical = 121 ; free virtual = 1009
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 2279.570 ; gain = 527.473 ; free physical = 117 ; free virtual = 657
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for adcClkIn_n_0. (constraint file  /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_ZmodADC1410_Controll_0_0/adc_dma_bd_ZmodADC1410_Controll_0_0/adc_dma_bd_ZmodADC1410_Controll_0_0_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for adcClkIn_n_0. (constraint file  /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_ZmodADC1410_Controll_0_0/adc_dma_bd_ZmodADC1410_Controll_0_0/adc_dma_bd_ZmodADC1410_Controll_0_0_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for adcClkIn_p_0. (constraint file  /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_ZmodADC1410_Controll_0_0/adc_dma_bd_ZmodADC1410_Controll_0_0/adc_dma_bd_ZmodADC1410_Controll_0_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for adcClkIn_p_0. (constraint file  /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_ZmodADC1410_Controll_0_0/adc_dma_bd_ZmodADC1410_Controll_0_0/adc_dma_bd_ZmodADC1410_Controll_0_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for sADC_SDIO_0. (constraint file  /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_ZmodADC1410_Controll_0_0/adc_dma_bd_ZmodADC1410_Controll_0_0/adc_dma_bd_ZmodADC1410_Controll_0_0_in_context.xdc, line 5).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sADC_SDIO_0. (constraint file  /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_ZmodADC1410_Controll_0_0/adc_dma_bd_ZmodADC1410_Controll_0_0/adc_dma_bd_ZmodADC1410_Controll_0_0_in_context.xdc, line 6).
+Applied set_property IO_BUFFER_TYPE = NONE for sys_clock. (constraint file  /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_clk_wiz_0_0/adc_dma_bd_clk_wiz_0_0/adc_dma_bd_clk_wiz_0_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clock. (constraint file  /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_clk_wiz_0_0/adc_dma_bd_clk_wiz_0_0/adc_dma_bd_clk_wiz_0_0_in_context.xdc, line 4).
 Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[0]. (constraint file  /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_processing_system7_0_0/adc_dma_bd_processing_system7_0_0/adc_dma_bd_processing_system7_0_0_in_context.xdc, line 3).
 Applied set_property CLOCK_BUFFER_TYPE = NONE for DDR_addr[0]. (constraint file  /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_processing_system7_0_0/adc_dma_bd_processing_system7_0_0/adc_dma_bd_processing_system7_0_0_in_context.xdc, line 4).
 Applied set_property IO_BUFFER_TYPE = NONE for DDR_addr[10]. (constraint file  /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_processing_system7_0_0/adc_dma_bd_processing_system7_0_0/adc_dma_bd_processing_system7_0_0_in_context.xdc, line 5).
@@ -554,43 +558,34 @@ Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_porb. (constraint fil
 Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ps_porb. (constraint file  /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_processing_system7_0_0/adc_dma_bd_processing_system7_0_0/adc_dma_bd_processing_system7_0_0_in_context.xdc, line 260).
 Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint file  /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_processing_system7_0_0/adc_dma_bd_processing_system7_0_0/adc_dma_bd_processing_system7_0_0_in_context.xdc, line 261).
 Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_ps_srstb. (constraint file  /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_processing_system7_0_0/adc_dma_bd_processing_system7_0_0/adc_dma_bd_processing_system7_0_0_in_context.xdc, line 262).
-Applied set_property IO_BUFFER_TYPE = NONE for adcClkIn_n_0. (constraint file  /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_ZmodADC1410_Controll_0_0/adc_dma_bd_ZmodADC1410_Controll_0_0/adc_dma_bd_ZmodADC1410_Controll_0_0_in_context.xdc, line 1).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for adcClkIn_n_0. (constraint file  /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_ZmodADC1410_Controll_0_0/adc_dma_bd_ZmodADC1410_Controll_0_0/adc_dma_bd_ZmodADC1410_Controll_0_0_in_context.xdc, line 2).
-Applied set_property IO_BUFFER_TYPE = NONE for adcClkIn_p_0. (constraint file  /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_ZmodADC1410_Controll_0_0/adc_dma_bd_ZmodADC1410_Controll_0_0/adc_dma_bd_ZmodADC1410_Controll_0_0_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for adcClkIn_p_0. (constraint file  /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_ZmodADC1410_Controll_0_0/adc_dma_bd_ZmodADC1410_Controll_0_0/adc_dma_bd_ZmodADC1410_Controll_0_0_in_context.xdc, line 4).
-Applied set_property IO_BUFFER_TYPE = NONE for sADC_SDIO_0. (constraint file  /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_ZmodADC1410_Controll_0_0/adc_dma_bd_ZmodADC1410_Controll_0_0/adc_dma_bd_ZmodADC1410_Controll_0_0_in_context.xdc, line 5).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for sADC_SDIO_0. (constraint file  /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_ZmodADC1410_Controll_0_0/adc_dma_bd_ZmodADC1410_Controll_0_0/adc_dma_bd_ZmodADC1410_Controll_0_0_in_context.xdc, line 6).
-Applied set_property IO_BUFFER_TYPE = NONE for sys_clock. (constraint file  /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_clk_wiz_0_0/adc_dma_bd_clk_wiz_0_0/adc_dma_bd_clk_wiz_0_0_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for sys_clock. (constraint file  /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_clk_wiz_0_0/adc_dma_bd_clk_wiz_0_0/adc_dma_bd_clk_wiz_0_0_in_context.xdc, line 4).
 Applied set_property KEEP_HIERARCHY = SOFT for adc_dma_bd_i. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for adc_dma_bd_i/processing_system7_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for adc_dma_bd_i/axi_dma_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for adc_dma_bd_i/ZmodADC1410_Controll_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for adc_dma_bd_i/ps7_0_axi_periph/xbar. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for adc_dma_bd_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for adc_dma_bd_i/ps7_0_axi_periph/m02_couplers/auto_cc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for adc_dma_bd_i/ps7_0_axi_periph. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for adc_dma_bd_i/rst_ps7_0_100M. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for adc_dma_bd_i/axi_mem_intercon/xbar. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for adc_dma_bd_i/axi_mem_intercon/s00_couplers/auto_us. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for adc_dma_bd_i/axi_mem_intercon/s01_couplers/auto_us. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for adc_dma_bd_i/axi_mem_intercon/s02_couplers/auto_us. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for adc_dma_bd_i/axi_mem_intercon/m00_couplers/auto_pc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for adc_dma_bd_i/axi_mem_intercon. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for adc_dma_bd_i/xlconcat_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for adc_dma_bd_i/clk_wiz_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for adc_dma_bd_i/AXI_ZmodADC1410_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for adc_dma_bd_i/rst_ps7_0_100M_1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for adc_dma_bd_i/xlconstant_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for adc_dma_bd_i/system_ila_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for adc_dma_bd_i/system_ila_1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for adc_dma_bd_i/axis_data_fifo_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for adc_dma_bd_i/clk_wiz_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for adc_dma_bd_i/processing_system7_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for adc_dma_bd_i/rst_ps7_0_100M. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for adc_dma_bd_i/rst_ps7_0_100M_1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for adc_dma_bd_i/AXI_TAR_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2271.242 ; gain = 518.535 ; free physical = 121 ; free virtual = 1010
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:22 . Memory (MB): peak = 2279.570 ; gain = 527.473 ; free physical = 117 ; free virtual = 658
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2271.242 ; gain = 518.535 ; free physical = 116 ; free virtual = 1006
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 2279.570 ; gain = 527.473 ; free physical = 113 ; free virtual = 656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -613,25 +608,25 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 2271.242 ; gain = 518.535 ; free physical = 113 ; free virtual = 1008
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:24 . Memory (MB): peak = 2279.570 ; gain = 527.473 ; free physical = 119 ; free virtual = 657
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 2271.242 ; gain = 518.535 ; free physical = 104 ; free virtual = 1008
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 2279.570 ; gain = 527.473 ; free physical = 107 ; free virtual = 660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 2271.242 ; gain = 518.535 ; free physical = 104 ; free virtual = 1008
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 2279.570 ; gain = 527.473 ; free physical = 117 ; free virtual = 660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 2271.242 ; gain = 518.535 ; free physical = 104 ; free virtual = 1007
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 2279.570 ; gain = 527.473 ; free physical = 128 ; free virtual = 660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -649,37 +644,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 2271.242 ; gain = 518.535 ; free physical = 115 ; free virtual = 1008
+Finished IO Insertion : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 2279.570 ; gain = 527.473 ; free physical = 127 ; free virtual = 659
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 2271.242 ; gain = 518.535 ; free physical = 115 ; free virtual = 1008
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 2279.570 ; gain = 527.473 ; free physical = 127 ; free virtual = 659
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 2271.242 ; gain = 518.535 ; free physical = 115 ; free virtual = 1008
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 2279.570 ; gain = 527.473 ; free physical = 127 ; free virtual = 659
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 2271.242 ; gain = 518.535 ; free physical = 115 ; free virtual = 1008
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 2279.570 ; gain = 527.473 ; free physical = 127 ; free virtual = 660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 2271.242 ; gain = 518.535 ; free physical = 115 ; free virtual = 1008
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 2279.570 ; gain = 527.473 ; free physical = 127 ; free virtual = 660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 2271.242 ; gain = 518.535 ; free physical = 115 ; free virtual = 1008
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 2279.570 ; gain = 527.473 ; free physical = 127 ; free virtual = 660
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -693,21 +688,20 @@ Report BlackBoxes:
 |2     |adc_dma_bd_auto_pc_1                |         1|
 |3     |adc_dma_bd_auto_us_0                |         1|
 |4     |adc_dma_bd_auto_us_1                |         1|
-|5     |adc_dma_bd_auto_us_2                |         1|
-|6     |adc_dma_bd_xbar_0                   |         1|
-|7     |adc_dma_bd_auto_cc_0                |         1|
-|8     |adc_dma_bd_auto_pc_0                |         1|
-|9     |adc_dma_bd_AXI_TAR_0_0              |         1|
-|10    |adc_dma_bd_AXI_ZmodADC1410_0_0      |         1|
-|11    |adc_dma_bd_ZmodADC1410_Controll_0_0 |         1|
-|12    |adc_dma_bd_axi_dma_0_0              |         1|
-|13    |adc_dma_bd_axis_data_fifo_0_0       |         1|
-|14    |adc_dma_bd_clk_wiz_0_0              |         1|
-|15    |adc_dma_bd_processing_system7_0_0   |         1|
-|16    |adc_dma_bd_rst_ps7_0_100M_0         |         1|
-|17    |adc_dma_bd_rst_ps7_0_100M_1_0       |         1|
-|18    |adc_dma_bd_system_ila_0_0           |         1|
-|19    |adc_dma_bd_system_ila_1_0           |         1|
+|5     |adc_dma_bd_xbar_0                   |         1|
+|6     |adc_dma_bd_auto_cc_0                |         1|
+|7     |adc_dma_bd_auto_pc_0                |         1|
+|8     |adc_dma_bd_AXI_TAR_0_0              |         1|
+|9     |adc_dma_bd_AXI_ZmodADC1410_0_0      |         1|
+|10    |adc_dma_bd_ZmodADC1410_Controll_0_0 |         1|
+|11    |adc_dma_bd_axi_dma_0_0              |         1|
+|12    |adc_dma_bd_axis_data_fifo_0_0       |         1|
+|13    |adc_dma_bd_clk_wiz_0_0              |         1|
+|14    |adc_dma_bd_processing_system7_0_0   |         1|
+|15    |adc_dma_bd_rst_ps7_0_100M_0         |         1|
+|16    |adc_dma_bd_rst_ps7_0_100M_1_0       |         1|
+|17    |adc_dma_bd_system_ila_0_0           |         1|
+|18    |adc_dma_bd_system_ila_1_0           |         1|
 +------+------------------------------------+----------+
 
 Report Cell Usage: 
@@ -722,41 +716,40 @@ Report Cell Usage:
 |6     |adc_dma_bd_auto_pc_1_bbox                |     1|
 |7     |adc_dma_bd_auto_us_0_bbox                |     1|
 |8     |adc_dma_bd_auto_us_1_bbox                |     1|
-|9     |adc_dma_bd_auto_us_2_bbox                |     1|
-|10    |adc_dma_bd_axi_dma_0_0_bbox              |     1|
-|11    |adc_dma_bd_axis_data_fifo_0_0_bbox       |     1|
-|12    |adc_dma_bd_clk_wiz_0_0_bbox              |     1|
-|13    |adc_dma_bd_processing_system7_0_0_bbox   |     1|
-|14    |adc_dma_bd_rst_ps7_0_100M_0_bbox         |     1|
-|15    |adc_dma_bd_rst_ps7_0_100M_1_0_bbox       |     1|
-|16    |adc_dma_bd_system_ila_0_0_bbox           |     1|
-|17    |adc_dma_bd_system_ila_1_0_bbox           |     1|
-|18    |adc_dma_bd_xbar_0_bbox                   |     1|
-|19    |adc_dma_bd_xbar_1_bbox                   |     1|
-|20    |IBUF                                     |    15|
-|21    |OBUF                                     |    13|
+|9     |adc_dma_bd_axi_dma_0_0_bbox              |     1|
+|10    |adc_dma_bd_axis_data_fifo_0_0_bbox       |     1|
+|11    |adc_dma_bd_clk_wiz_0_0_bbox              |     1|
+|12    |adc_dma_bd_processing_system7_0_0_bbox   |     1|
+|13    |adc_dma_bd_rst_ps7_0_100M_0_bbox         |     1|
+|14    |adc_dma_bd_rst_ps7_0_100M_1_0_bbox       |     1|
+|15    |adc_dma_bd_system_ila_0_0_bbox           |     1|
+|16    |adc_dma_bd_system_ila_1_0_bbox           |     1|
+|17    |adc_dma_bd_xbar_0_bbox                   |     1|
+|18    |adc_dma_bd_xbar_1_bbox                   |     1|
+|19    |IBUF                                     |    15|
+|20    |OBUF                                     |    13|
 +------+-----------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 2271.242 ; gain = 518.535 ; free physical = 115 ; free virtual = 1008
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 2279.570 ; gain = 527.473 ; free physical = 127 ; free virtual = 660
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 21 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 2271.242 ; gain = 483.551 ; free physical = 115 ; free virtual = 1008
-Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:32 . Memory (MB): peak = 2271.250 ; gain = 518.535 ; free physical = 115 ; free virtual = 1008
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:31 . Memory (MB): peak = 2279.570 ; gain = 486.551 ; free physical = 126 ; free virtual = 659
+Synthesis Optimization Complete : Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 2279.578 ; gain = 527.473 ; free physical = 126 ; free virtual = 659
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2271.250 ; gain = 0.000 ; free physical = 118 ; free virtual = 1014
+Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.04 . Memory (MB): peak = 2279.578 ; gain = 0.000 ; free physical = 114 ; free virtual = 661
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2271.250 ; gain = 0.000 ; free physical = 353 ; free virtual = 1251
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2279.578 ; gain = 0.000 ; free physical = 342 ; free virtual = 902
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 768a7
+Synth Design complete | Checksum: 78a8e4a0
 INFO: [Common 17-83] Releasing license: Synthesis
-97 Infos, 104 Warnings, 0 Critical Warnings and 0 Errors encountered.
+95 Infos, 104 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:40 ; elapsed = 00:00:38 . Memory (MB): peak = 2271.250 ; gain = 857.137 ; free physical = 351 ; free virtual = 1251
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1764.768; main = 1403.570; forked = 415.827
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3242.039; main = 2271.246; forked = 970.793
+synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:42 . Memory (MB): peak = 2279.578 ; gain = 871.012 ; free physical = 340 ; free virtual = 902
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 1735.890; main = 1418.572; forked = 385.251
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3250.367; main = 2279.574; forked = 970.793
 INFO: [Common 17-1381] The checkpoint '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/synth_1/adc_dma_bd_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file adc_dma_bd_wrapper_utilization_synth.rpt -pb adc_dma_bd_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Feb 28 13:03:22 2025...
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 26 23:31:49 2025...

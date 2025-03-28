@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0x1C31D3C39890D205",
+      "boundary_crc": "0x1C72C59F2F3913EF",
       "design_src": "SBD",
       "device": "xc7z020clg484-1",
       "name": "bd_8d3f",
@@ -48,11 +48,11 @@
             "value_src": "default_prop"
           },
           "DATA_WIDTH": {
-            "value": "32",
+            "value": "64",
             "value_src": "default"
           },
           "FREQ_HZ": {
-            "value": "1e+08",
+            "value": "100000000",
             "value_src": "default"
           },
           "HAS_BRESP": {
@@ -163,7 +163,7 @@
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "1e+08",
+            "value": "100000000",
             "value_src": "default"
           },
           "HAS_TKEEP": {
@@ -195,7 +195,7 @@
             "value_src": "default"
           },
           "TDATA_NUM_BYTES": {
-            "value": "4",
+            "value": "8",
             "value_src": "default"
           },
           "TDEST_WIDTH": {
@@ -222,7 +222,7 @@
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "1e+08",
+            "value": "100000000",
             "value_src": "default"
           },
           "HAS_TKEEP": {
@@ -254,7 +254,7 @@
             "value_src": "default"
           },
           "TDATA_NUM_BYTES": {
-            "value": "4",
+            "value": "8",
             "value_src": "default_prop"
           },
           "TDEST_WIDTH": {
@@ -288,8 +288,8 @@
             "value_src": "default_prop"
           },
           "FREQ_HZ": {
-            "value": "1e+08",
-            "value_src": "default_prop"
+            "value": "100000000",
+            "value_src": "default"
           },
           "FREQ_TOLERANCE_HZ": {
             "value": "0",
@@ -364,13 +364,13 @@
             "value": "0"
           },
           "C_PROBE10_WIDTH": {
-            "value": "32"
+            "value": "64"
           },
           "C_PROBE11_TYPE": {
             "value": "0"
           },
           "C_PROBE11_WIDTH": {
-            "value": "4"
+            "value": "8"
           },
           "C_PROBE12_TYPE": {
             "value": "0"
@@ -412,13 +412,13 @@
             "value": "0"
           },
           "C_PROBE18_WIDTH": {
-            "value": "32"
+            "value": "64"
           },
           "C_PROBE19_TYPE": {
             "value": "0"
           },
           "C_PROBE19_WIDTH": {
-            "value": "4"
+            "value": "8"
           },
           "C_PROBE1_TYPE": {
             "value": "0"
@@ -448,13 +448,13 @@
             "value": "0"
           },
           "C_PROBE23_WIDTH": {
-            "value": "32"
+            "value": "64"
           },
           "C_PROBE24_TYPE": {
             "value": "0"
           },
           "C_PROBE24_WIDTH": {
-            "value": "4"
+            "value": "8"
           },
           "C_PROBE25_TYPE": {
             "value": "0"
@@ -576,7 +576,7 @@
             "value": "1"
           },
           "C_SLOT_0_AXI_DATA_WIDTH": {
-            "value": "32"
+            "value": "64"
           },
           "C_SLOT_0_AXI_ID_WIDTH": {
             "value": "0"
@@ -636,7 +636,7 @@
             "value": "1"
           },
           "C_SLOT_1_AXIS_TDATA_WIDTH": {
-            "value": "32"
+            "value": "64"
           },
           "C_SLOT_1_AXIS_TDEST_WIDTH": {
             "value": "0"
@@ -663,7 +663,7 @@
             "value": "FT"
           },
           "C_SLOT_2_AXIS_TDATA_WIDTH": {
-            "value": "32"
+            "value": "64"
           },
           "C_SLOT_2_AXIS_TDEST_WIDTH": {
             "value": "0"
@@ -710,7 +710,7 @@
             "value": "0"
           },
           "DATA_WIDTH": {
-            "value": "32"
+            "value": "64"
           },
           "ENABLE_MARK_DEBUG": {
             "value": "0"
