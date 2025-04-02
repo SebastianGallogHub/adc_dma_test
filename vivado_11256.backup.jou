@@ -1,0 +1,54 @@
+#-----------------------------------------------------------
+# Vivado v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
+# IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
+# SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
+# Start of session at: Tue Apr  1 21:23:53 2025
+# Process ID: 11256
+# Current directory: C:/TAR
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9348 C:\TAR\adc_dma_test.xpr
+# Log file: C:/TAR/vivado.log
+# Journal file: C:/TAR\vivado.jou
+# Running On: DESKTOP-N93DAM9, OS: Windows, CPU Frequency: 1190 MHz, CPU Physical cores: 4, Host memory: 8341 MB
+#-----------------------------------------------------------
+start_gui
+open_project C:/TAR/adc_dma_test.xpr
+update_compile_order -fileset sources_1
+open_bd_design {C:/TAR/adc_dma_test.srcs/sources_1/bd/adc_dma_bd/adc_dma_bd.bd}
+open_bd_design {C:/TAR/adc_dma_test.srcs/sources_1/bd/adc_dma_bd/adc_dma_bd.bd}
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 2048 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+connect_debug_port u_ila_0/clk [get_nets [list adc_dma_bd_i/processing_system7_0/inst/FCLK_CLK1 ]]
+set_property port_width 64 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[0]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[1]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[2]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[3]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[4]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[5]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[6]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[7]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[8]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[9]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[10]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[11]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[12]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[13]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[14]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[15]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[16]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[17]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[18]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[19]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[20]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[21]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[22]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[23]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[24]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[25]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[26]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[27]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[28]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[29]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[30]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[31]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[32]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[33]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[34]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[35]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[36]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[37]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[38]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[39]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[40]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[41]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[42]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[43]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[44]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[45]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[46]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[47]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[48]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[49]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[50]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[51]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[52]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[53]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[54]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[55]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[56]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[57]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[58]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[59]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[60]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[61]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[62]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[63]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 64 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[0]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[1]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[2]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[3]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[4]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[5]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[6]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[7]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[8]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[9]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[10]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[11]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[12]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[13]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[14]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[15]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[16]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[17]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[18]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[19]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[20]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[21]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[22]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[23]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[24]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[25]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[26]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[27]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[28]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[29]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[30]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[31]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[32]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[33]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[34]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[35]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[36]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[37]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[38]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[39]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[40]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[41]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[42]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[43]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[44]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[45]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[46]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[47]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[48]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[49]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[50]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[51]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[52]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[53]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[54]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[55]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[56]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[57]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[58]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[59]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[60]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[61]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[62]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[63]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/fifo_empty_ila ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/fifo_full_ila ]]
+save_constraints
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+close_design
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+write_hw_platform -fixed -include_bit -force -file C:/TAR/adc_dma_bd_wrapper.xsa

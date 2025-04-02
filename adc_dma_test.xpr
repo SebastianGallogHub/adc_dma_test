@@ -98,14 +98,14 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="adc_dma_bd.bd" FileRelPathName="ip/adc_dma_bd_AXI_TAR_0_0/adc_dma_bd_AXI_TAR_0_0.xci">
-          <Proxy FileSetName="adc_dma_bd_AXI_TAR_0_0"/>
+        <CompFileExtendedInfo CompFileName="adc_dma_bd.bd" FileRelPathName="ip/adc_dma_bd_processing_system7_0_0/adc_dma_bd_processing_system7_0_0.xci">
+          <Proxy FileSetName="adc_dma_bd_processing_system7_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="adc_dma_bd.bd" FileRelPathName="ip/adc_dma_bd_clk_wiz_0_0/adc_dma_bd_clk_wiz_0_0.xci">
           <Proxy FileSetName="adc_dma_bd_clk_wiz_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="adc_dma_bd.bd" FileRelPathName="ip/adc_dma_bd_processing_system7_0_0/adc_dma_bd_processing_system7_0_0.xci">
-          <Proxy FileSetName="adc_dma_bd_processing_system7_0_0"/>
+        <CompFileExtendedInfo CompFileName="adc_dma_bd.bd" FileRelPathName="ip/adc_dma_bd_AXI_TAR_0_0/adc_dma_bd_AXI_TAR_0_0.xci">
+          <Proxy FileSetName="adc_dma_bd_AXI_TAR_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/adc_dma_bd/hdl/adc_dma_bd_wrapper.vhd">
@@ -235,9 +235,7 @@
     </Run>
     <Run Id="adc_dma_bd_AXI_TAR_0_0_synth_1" Type="Ft3:Synth" SrcSet="adc_dma_bd_AXI_TAR_0_0" Part="xc7z020clg484-1" ConstrsSet="adc_dma_bd_AXI_TAR_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/adc_dma_bd_AXI_TAR_0_0_synth_1" IncludeInArchive="true" IsChild="false" AutoIncrementalDir="$PSRCDIR/utils_1/imports/adc_dma_bd_AXI_TAR_0_0_synth_1" AutoRQSDir="$PSRCDIR/utils_1/imports/adc_dma_bd_AXI_TAR_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -299,9 +297,7 @@
     </Run>
     <Run Id="adc_dma_bd_AXI_TAR_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg484-1" ConstrsSet="adc_dma_bd_AXI_TAR_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="adc_dma_bd_AXI_TAR_0_0_synth_1" IncludeInArchive="false" IsChild="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/adc_dma_bd_AXI_TAR_0_0_impl_1" AutoRQSDir="$PSRCDIR/utils_1/imports/adc_dma_bd_AXI_TAR_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2023"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
