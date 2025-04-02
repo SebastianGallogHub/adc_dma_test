@@ -10,12 +10,12 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0"></ZoomStartTime>
-      <ZoomEndTime time="15"></ZoomEndTime>
+      <ZoomEndTime time="16"></ZoomEndTime>
       <Cursor1Time time="0"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="772"></NameColumnWidth>
-      <ValueColumnWidth column_width="149"></ValueColumnWidth>
+      <NameColumnWidth column_width="705"></NameColumnWidth>
+      <ValueColumnWidth column_width="128"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="3" />
    <wvobject type="group" fp_name="group32">
@@ -24,7 +24,7 @@
       <obj_property name="Detail_Data">Interface_(i1:s1)_(AXI_TAR_0_M00_AXIS)_tooltip</obj_property>
       <obj_property name="Render_Data">Interface_(i1:s1)_(AXI_TAR_0_M00_AXIS)</obj_property>
       <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
-      <obj_property name="CustomSignalColor">OliveDrab</obj_property>
+      <obj_property name="CustomSignalColor">Cornsilk</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
       <wvobject type="group" fp_name="group33">
@@ -62,8 +62,8 @@
          </wvobject>
          <wvobject type="array" fp_name="adc_dma_bd_i/system_ila_0/U0/net_slot_1_axis_tdata">
             <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_0/U0/net_slot_1_axis_tdata[31:0]</obj_property>
-            <obj_property name="ObjectShortName">net_slot_1_axis_tdata[31:0]</obj_property>
+            <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_0/U0/net_slot_1_axis_tdata[63:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_1_axis_tdata[63:0]</obj_property>
             <obj_property name="label">slot_1 : AXI_TAR_0_M00_AXIS : TDATA</obj_property>
             <obj_property name="Radix">HEXRADIX</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
@@ -215,10 +215,9 @@
       <obj_property name="Detail_Data">Interface_(i1:s2)_(axis_data_fifo_0_M_AXIS)_tooltip</obj_property>
       <obj_property name="Render_Data">Interface_(i1:s2)_(axis_data_fifo_0_M_AXIS)</obj_property>
       <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
-      <obj_property name="CustomSignalColor">OliveDrab</obj_property>
+      <obj_property name="CustomSignalColor">Cornsilk</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="group" fp_name="group39">
          <obj_property name="label">slot_2 : axis_data_fifo_0_M_AXIS : T Channel</obj_property>
          <obj_property name="DisplayName">label</obj_property>
@@ -254,8 +253,8 @@
          </wvobject>
          <wvobject type="array" fp_name="adc_dma_bd_i/system_ila_0/U0/net_slot_2_axis_tdata">
             <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_0/U0/net_slot_2_axis_tdata[31:0]</obj_property>
-            <obj_property name="ObjectShortName">net_slot_2_axis_tdata[31:0]</obj_property>
+            <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_0/U0/net_slot_2_axis_tdata[63:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_2_axis_tdata[63:0]</obj_property>
             <obj_property name="label">slot_2 : axis_data_fifo_0_M_AXIS : TDATA</obj_property>
             <obj_property name="Radix">HEXRADIX</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
@@ -269,7 +268,7 @@
       <obj_property name="Detail_Data">Interface_(i1:s0)_(axi_dma_0_M_AXI_S2MM)_tooltip</obj_property>
       <obj_property name="Render_Data">Interface_(i1:s0)_(axi_dma_0_M_AXI_S2MM)</obj_property>
       <obj_property name="EnumTransactionColorTable">0=blank</obj_property>
-      <obj_property name="CustomSignalColor">OliveDrab</obj_property>
+      <obj_property name="CustomSignalColor">Cornsilk</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_ENUM_TRANSACTION</obj_property>
       <obj_property name="isExpanded"></obj_property>
@@ -474,17 +473,17 @@
          </wvobject>
          <wvobject type="array" fp_name="adc_dma_bd_i/system_ila_0/U0/net_slot_0_axi_wdata">
             <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_0/U0/net_slot_0_axi_wdata[31:0]</obj_property>
-            <obj_property name="ObjectShortName">net_slot_0_axi_wdata[31:0]</obj_property>
+            <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_0/U0/net_slot_0_axi_wdata[63:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_wdata[63:0]</obj_property>
             <obj_property name="label">slot_0 : axi_dma_0_M_AXI_S2MM : WDATA</obj_property>
             <obj_property name="Radix">HEXRADIX</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>
             <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
          </wvobject>
          <wvobject type="array" fp_name="adc_dma_bd_i/system_ila_0/U0/net_slot_0_axi_wstrb">
-            <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_0/U0/net_slot_0_axi_wstrb[3:0]</obj_property>
-            <obj_property name="ObjectShortName">net_slot_0_axi_wstrb[3:0]</obj_property>
+            <obj_property name="DisplayName">FullPathName</obj_property>
+            <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_0/U0/net_slot_0_axi_wstrb[7:0]</obj_property>
+            <obj_property name="ObjectShortName">net_slot_0_axi_wstrb[7:0]</obj_property>
             <obj_property name="label">slot_0 : axi_dma_0_M_AXI_S2MM : WSTRB</obj_property>
             <obj_property name="Radix">HEXRADIX</obj_property>
             <obj_property name="LABELRADIX">true</obj_property>

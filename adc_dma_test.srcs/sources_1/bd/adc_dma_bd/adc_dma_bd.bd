@@ -305,7 +305,7 @@
       "axi_dma_0": {
         "vlnv": "xilinx.com:ip:axi_dma:7.1",
         "xci_name": "adc_dma_bd_axi_dma_0_0",
-        "xci_path": "ip/adc_dma_bd_axi_dma_0_0/adc_dma_bd_axi_dma_0_0.xci",
+        "xci_path": "ip\\adc_dma_bd_axi_dma_0_0\\adc_dma_bd_axi_dma_0_0.xci",
         "inst_hier_path": "axi_dma_0",
         "parameters": {
           "c_include_mm2s": {
@@ -376,7 +376,7 @@
       "ZmodADC1410_Controll_0": {
         "vlnv": "xilinx.com:user:ZmodADC1410_Controller:1.0",
         "xci_name": "adc_dma_bd_ZmodADC1410_Controll_0_0",
-        "xci_path": "ip/adc_dma_bd_ZmodADC1410_Controll_0_0/adc_dma_bd_ZmodADC1410_Controll_0_0.xci",
+        "xci_path": "ip\\adc_dma_bd_ZmodADC1410_Controll_0_0\\adc_dma_bd_ZmodADC1410_Controll_0_0.xci",
         "inst_hier_path": "ZmodADC1410_Controll_0",
         "parameters": {
           "kExtCalibEn": {
@@ -395,7 +395,7 @@
       },
       "ps7_0_axi_periph": {
         "vlnv": "xilinx.com:ip:axi_interconnect:2.1",
-        "xci_path": "ip/adc_dma_bd_ps7_0_axi_periph_0/adc_dma_bd_ps7_0_axi_periph_0.xci",
+        "xci_path": "ip\\adc_dma_bd_ps7_0_axi_periph_0\\adc_dma_bd_ps7_0_axi_periph_0.xci",
         "inst_hier_path": "ps7_0_axi_periph",
         "xci_name": "adc_dma_bd_ps7_0_axi_periph_0",
         "parameters": {
@@ -508,7 +508,7 @@
           "xbar": {
             "vlnv": "xilinx.com:ip:axi_crossbar:2.1",
             "xci_name": "adc_dma_bd_xbar_0",
-            "xci_path": "ip/adc_dma_bd_xbar_0/adc_dma_bd_xbar_0.xci",
+            "xci_path": "ip\\adc_dma_bd_xbar_0\\adc_dma_bd_xbar_0.xci",
             "inst_hier_path": "ps7_0_axi_periph/xbar",
             "parameters": {
               "NUM_MI": {
@@ -584,7 +584,7 @@
               "auto_pc": {
                 "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
                 "xci_name": "adc_dma_bd_auto_pc_0",
-                "xci_path": "ip/adc_dma_bd_auto_pc_0/adc_dma_bd_auto_pc_0.xci",
+                "xci_path": "ip\\adc_dma_bd_auto_pc_0\\adc_dma_bd_auto_pc_0.xci",
                 "inst_hier_path": "ps7_0_axi_periph/s00_couplers/auto_pc",
                 "parameters": {
                   "MI_PROTOCOL": {
@@ -797,7 +797,7 @@
               "auto_cc": {
                 "vlnv": "xilinx.com:ip:axi_clock_converter:2.1",
                 "xci_name": "adc_dma_bd_auto_cc_0",
-                "xci_path": "ip/adc_dma_bd_auto_cc_0/adc_dma_bd_auto_cc_0.xci",
+                "xci_path": "ip\\adc_dma_bd_auto_cc_0\\adc_dma_bd_auto_cc_0.xci",
                 "inst_hier_path": "ps7_0_axi_periph/m02_couplers/auto_cc",
                 "interface_ports": {
                   "S_AXI": {
@@ -975,7 +975,7 @@
       },
       "axi_mem_intercon": {
         "vlnv": "xilinx.com:ip:axi_interconnect:2.1",
-        "xci_path": "ip/adc_dma_bd_axi_mem_intercon_0/adc_dma_bd_axi_mem_intercon_0.xci",
+        "xci_path": "ip\\adc_dma_bd_axi_mem_intercon_0\\adc_dma_bd_axi_mem_intercon_0.xci",
         "inst_hier_path": "axi_mem_intercon",
         "xci_name": "adc_dma_bd_axi_mem_intercon_0",
         "parameters": {
@@ -1091,7 +1091,7 @@
           "xbar": {
             "vlnv": "xilinx.com:ip:axi_crossbar:2.1",
             "xci_name": "adc_dma_bd_xbar_1",
-            "xci_path": "ip/adc_dma_bd_xbar_1/adc_dma_bd_xbar_1.xci",
+            "xci_path": "ip\\adc_dma_bd_xbar_1\\adc_dma_bd_xbar_1.xci",
             "inst_hier_path": "axi_mem_intercon/xbar",
             "parameters": {
               "NUM_MI": {
@@ -1179,7 +1179,7 @@
               "auto_us": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
                 "xci_name": "adc_dma_bd_auto_us_0",
-                "xci_path": "ip/adc_dma_bd_auto_us_0/adc_dma_bd_auto_us_0.xci",
+                "xci_path": "ip\\adc_dma_bd_auto_us_0\\adc_dma_bd_auto_us_0.xci",
                 "inst_hier_path": "axi_mem_intercon/s00_couplers/auto_us",
                 "parameters": {
                   "MI_DATA_WIDTH": {
@@ -1280,7 +1280,7 @@
               "auto_us": {
                 "vlnv": "xilinx.com:ip:axi_dwidth_converter:2.1",
                 "xci_name": "adc_dma_bd_auto_us_1",
-                "xci_path": "ip/adc_dma_bd_auto_us_1/adc_dma_bd_auto_us_1.xci",
+                "xci_path": "ip\\adc_dma_bd_auto_us_1\\adc_dma_bd_auto_us_1.xci",
                 "inst_hier_path": "axi_mem_intercon/s01_couplers/auto_us",
                 "parameters": {
                   "MI_DATA_WIDTH": {
@@ -1437,7 +1437,7 @@
               "auto_pc": {
                 "vlnv": "xilinx.com:ip:axi_protocol_converter:2.1",
                 "xci_name": "adc_dma_bd_auto_pc_1",
-                "xci_path": "ip/adc_dma_bd_auto_pc_1/adc_dma_bd_auto_pc_1.xci",
+                "xci_path": "ip\\adc_dma_bd_auto_pc_1\\adc_dma_bd_auto_pc_1.xci",
                 "inst_hier_path": "axi_mem_intercon/m00_couplers/auto_pc",
                 "parameters": {
                   "MI_PROTOCOL": {
@@ -1572,7 +1572,7 @@
       "xlconcat_0": {
         "vlnv": "xilinx.com:ip:xlconcat:2.1",
         "xci_name": "adc_dma_bd_xlconcat_0_0",
-        "xci_path": "ip/adc_dma_bd_xlconcat_0_0/adc_dma_bd_xlconcat_0_0.xci",
+        "xci_path": "ip\\adc_dma_bd_xlconcat_0_0\\adc_dma_bd_xlconcat_0_0.xci",
         "inst_hier_path": "xlconcat_0",
         "parameters": {
           "NUM_PORTS": {
@@ -1583,13 +1583,13 @@
       "AXI_ZmodADC1410_0": {
         "vlnv": "natinst.com:user:AXI_ZmodADC1410:1.0",
         "xci_name": "adc_dma_bd_AXI_ZmodADC1410_0_0",
-        "xci_path": "ip/adc_dma_bd_AXI_ZmodADC1410_0_0/adc_dma_bd_AXI_ZmodADC1410_0_0.xci",
+        "xci_path": "ip\\adc_dma_bd_AXI_ZmodADC1410_0_0\\adc_dma_bd_AXI_ZmodADC1410_0_0.xci",
         "inst_hier_path": "AXI_ZmodADC1410_0"
       },
       "xlconstant_0": {
         "vlnv": "xilinx.com:ip:xlconstant:1.1",
         "xci_name": "adc_dma_bd_xlconstant_0_0",
-        "xci_path": "ip/adc_dma_bd_xlconstant_0_0/adc_dma_bd_xlconstant_0_0.xci",
+        "xci_path": "ip\\adc_dma_bd_xlconstant_0_0\\adc_dma_bd_xlconstant_0_0.xci",
         "inst_hier_path": "xlconstant_0",
         "parameters": {
           "CONST_VAL": {
@@ -1603,7 +1603,7 @@
       "system_ila_0": {
         "vlnv": "xilinx.com:ip:system_ila:1.1",
         "xci_name": "adc_dma_bd_system_ila_0_0",
-        "xci_path": "ip/adc_dma_bd_system_ila_0_0/adc_dma_bd_system_ila_0_0.xci",
+        "xci_path": "ip\\adc_dma_bd_system_ila_0_0\\adc_dma_bd_system_ila_0_0.xci",
         "inst_hier_path": "system_ila_0",
         "parameters": {
           "C_DATA_DEPTH": {
@@ -1700,7 +1700,7 @@
       "system_ila_1": {
         "vlnv": "xilinx.com:ip:system_ila:1.1",
         "xci_name": "adc_dma_bd_system_ila_1_0",
-        "xci_path": "ip/adc_dma_bd_system_ila_1_0/adc_dma_bd_system_ila_1_0.xci",
+        "xci_path": "ip\\adc_dma_bd_system_ila_1_0\\adc_dma_bd_system_ila_1_0.xci",
         "inst_hier_path": "system_ila_1",
         "parameters": {
           "C_DATA_DEPTH": {
@@ -1726,7 +1726,7 @@
       "axis_data_fifo_0": {
         "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
         "xci_name": "adc_dma_bd_axis_data_fifo_0_0",
-        "xci_path": "ip/adc_dma_bd_axis_data_fifo_0_0/adc_dma_bd_axis_data_fifo_0_0.xci",
+        "xci_path": "ip\\adc_dma_bd_axis_data_fifo_0_0\\adc_dma_bd_axis_data_fifo_0_0.xci",
         "inst_hier_path": "axis_data_fifo_0",
         "parameters": {
           "FIFO_DEPTH": {
@@ -1740,7 +1740,7 @@
       "clk_wiz_0": {
         "vlnv": "xilinx.com:ip:clk_wiz:6.0",
         "xci_name": "adc_dma_bd_clk_wiz_0_0",
-        "xci_path": "ip/adc_dma_bd_clk_wiz_0_0/adc_dma_bd_clk_wiz_0_0.xci",
+        "xci_path": "ip\\adc_dma_bd_clk_wiz_0_0\\adc_dma_bd_clk_wiz_0_0.xci",
         "inst_hier_path": "clk_wiz_0",
         "parameters": {
           "CLKIN1_JITTER_PS": {
@@ -1784,7 +1784,7 @@
       "processing_system7_0": {
         "vlnv": "xilinx.com:ip:processing_system7:5.5",
         "xci_name": "adc_dma_bd_processing_system7_0_0",
-        "xci_path": "ip/adc_dma_bd_processing_system7_0_0/adc_dma_bd_processing_system7_0_0.xci",
+        "xci_path": "ip\\adc_dma_bd_processing_system7_0_0\\adc_dma_bd_processing_system7_0_0.xci",
         "inst_hier_path": "processing_system7_0",
         "parameters": {
           "PCW_ACT_APU_PERIPHERAL_FREQMHZ": {
@@ -3628,19 +3628,19 @@
       "rst_ps7_0_100M": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "adc_dma_bd_rst_ps7_0_100M_0",
-        "xci_path": "ip/adc_dma_bd_rst_ps7_0_100M_0/adc_dma_bd_rst_ps7_0_100M_0.xci",
+        "xci_path": "ip\\adc_dma_bd_rst_ps7_0_100M_0\\adc_dma_bd_rst_ps7_0_100M_0.xci",
         "inst_hier_path": "rst_ps7_0_100M"
       },
       "rst_ps7_0_100M_1": {
         "vlnv": "xilinx.com:ip:proc_sys_reset:5.0",
         "xci_name": "adc_dma_bd_rst_ps7_0_100M_1_0",
-        "xci_path": "ip/adc_dma_bd_rst_ps7_0_100M_1_0/adc_dma_bd_rst_ps7_0_100M_1_0.xci",
+        "xci_path": "ip\\adc_dma_bd_rst_ps7_0_100M_1_0\\adc_dma_bd_rst_ps7_0_100M_1_0.xci",
         "inst_hier_path": "rst_ps7_0_100M_1"
       },
       "AXI_TAR_0": {
         "vlnv": "user.org:user:AXI_TAR:1.0",
         "xci_name": "adc_dma_bd_AXI_TAR_0_0",
-        "xci_path": "ip/adc_dma_bd_AXI_TAR_0_0/adc_dma_bd_AXI_TAR_0_0.xci",
+        "xci_path": "ip\\adc_dma_bd_AXI_TAR_0_0\\adc_dma_bd_AXI_TAR_0_0.xci",
         "inst_hier_path": "AXI_TAR_0",
         "parameters": {
           "C_M00_AXIS_TDATA_WIDTH": {

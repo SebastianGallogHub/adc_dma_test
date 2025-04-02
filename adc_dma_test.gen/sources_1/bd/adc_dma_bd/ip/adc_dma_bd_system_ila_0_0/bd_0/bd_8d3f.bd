@@ -324,7 +324,7 @@
       "ila_lib": {
         "vlnv": "xilinx.com:ip:ila:6.2",
         "xci_name": "bd_8d3f_ila_lib_0",
-        "xci_path": "ip/ip_0/bd_8d3f_ila_lib_0.xci",
+        "xci_path": "ip\\ip_0\\bd_8d3f_ila_lib_0.xci",
         "inst_hier_path": "ila_lib",
         "parameters": {
           "ALL_PROBE_SAME_MU": {
@@ -536,7 +536,7 @@
       "g_inst": {
         "vlnv": "xilinx.com:ip:gigantic_mux:1.0",
         "xci_name": "bd_8d3f_g_inst_0",
-        "xci_path": "ip/ip_1/bd_8d3f_g_inst_0.xci",
+        "xci_path": "ip\\ip_1\\bd_8d3f_g_inst_0.xci",
         "inst_hier_path": "g_inst",
         "parameters": {
           "C_EN_GIGAMUX": {
@@ -694,7 +694,7 @@
       "slot_0_apc": {
         "vlnv": "xilinx.com:ip:axi_protocol_checker:2.0",
         "xci_name": "bd_8d3f_slot_0_apc_0",
-        "xci_path": "ip/ip_2/bd_8d3f_slot_0_apc_0.xci",
+        "xci_path": "ip\\ip_2\\bd_8d3f_slot_0_apc_0.xci",
         "inst_hier_path": "slot_0_apc",
         "parameters": {
           "ADDR_WIDTH": {
@@ -765,13 +765,13 @@
       "slot_0_aw": {
         "vlnv": "xilinx.com:ip:xlconcat:2.1",
         "xci_name": "bd_8d3f_slot_0_aw_0",
-        "xci_path": "ip/ip_3/bd_8d3f_slot_0_aw_0.xci",
+        "xci_path": "ip\\ip_3\\bd_8d3f_slot_0_aw_0.xci",
         "inst_hier_path": "slot_0_aw"
       },
       "slot_0_w": {
         "vlnv": "xilinx.com:ip:xlconcat:2.1",
         "xci_name": "bd_8d3f_slot_0_w_0",
-        "xci_path": "ip/ip_4/bd_8d3f_slot_0_w_0.xci",
+        "xci_path": "ip\\ip_4\\bd_8d3f_slot_0_w_0.xci",
         "inst_hier_path": "slot_0_w",
         "parameters": {
           "NUM_PORTS": {
@@ -782,19 +782,19 @@
       "slot_0_b": {
         "vlnv": "xilinx.com:ip:xlconcat:2.1",
         "xci_name": "bd_8d3f_slot_0_b_0",
-        "xci_path": "ip/ip_5/bd_8d3f_slot_0_b_0.xci",
+        "xci_path": "ip\\ip_5\\bd_8d3f_slot_0_b_0.xci",
         "inst_hier_path": "slot_0_b"
       },
       "slot_0_ar": {
         "vlnv": "xilinx.com:ip:xlconcat:2.1",
         "xci_name": "bd_8d3f_slot_0_ar_0",
-        "xci_path": "ip/ip_6/bd_8d3f_slot_0_ar_0.xci",
+        "xci_path": "ip\\ip_6\\bd_8d3f_slot_0_ar_0.xci",
         "inst_hier_path": "slot_0_ar"
       },
       "slot_0_r": {
         "vlnv": "xilinx.com:ip:xlconcat:2.1",
         "xci_name": "bd_8d3f_slot_0_r_0",
-        "xci_path": "ip/ip_7/bd_8d3f_slot_0_r_0.xci",
+        "xci_path": "ip\\ip_7\\bd_8d3f_slot_0_r_0.xci",
         "inst_hier_path": "slot_0_r",
         "parameters": {
           "NUM_PORTS": {

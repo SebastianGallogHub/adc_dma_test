@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: user.org:user:AXI_TAR:1.0
--- IP Revision: 31
+-- IP Revision: 37
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;

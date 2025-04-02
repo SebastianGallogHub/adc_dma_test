@@ -1,9 +1,9 @@
 --Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 --Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
---Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
---Date        : Wed Mar 26 20:09:03 2025
---Host        : sebasHAL running 64-bit Ubuntu 20.04.6 LTS
+--Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+--Date        : Tue Apr  1 20:14:00 2025
+--Host        : DESKTOP-N93DAM9 running 64-bit major release  (build 9200)
 --Command     : generate_target adc_dma_bd_wrapper.bd
 --Design      : adc_dma_bd_wrapper
 --Purpose     : IP block netlist

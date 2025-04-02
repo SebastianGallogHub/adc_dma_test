@@ -2,24 +2,24 @@
 <Root MajorVersion="0" MinorVersion="40">
   <CompositeFile CompositeFileTopName="bd_4d6e" CanBeSetAsTop="true" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1743030549"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1743030549"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1743030549"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1743030549"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1743549247"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1743549247"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1743549247"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1743549247"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
-      <File Name="synth/bd_4d6e.vhd" Type="VHDL">
+      <File Name="synth\bd_4d6e.vhd" Type="VHDL">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
-      <File Name="sim/bd_4d6e.vhd" Type="VHDL">
+      <File Name="sim\bd_4d6e.vhd" Type="VHDL">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
-      <File Name="sim/bd_4d6e.protoinst">
+      <File Name="sim\bd_4d6e.protoinst">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
@@ -33,13 +33,13 @@
         <UsedIn Val="OUT_OF_CONTEXT"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
-      <File Name="hw_handoff/adc_dma_bd_system_ila_1_0.hwh" Type="HwHandoff">
+      <File Name="hw_handoff\adc_dma_bd_system_ila_1_0.hwh" Type="HwHandoff">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
-      <File Name="synth/adc_dma_bd_system_ila_1_0.hwdef">
+      <File Name="synth\adc_dma_bd_system_ila_1_0.hwdef">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>

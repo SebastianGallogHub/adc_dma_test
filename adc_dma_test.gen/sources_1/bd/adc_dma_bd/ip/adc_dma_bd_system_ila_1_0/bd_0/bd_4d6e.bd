@@ -61,7 +61,7 @@
       "ila_lib": {
         "vlnv": "xilinx.com:ip:ila:6.2",
         "xci_name": "bd_4d6e_ila_lib_0",
-        "xci_path": "ip/ip_0/bd_4d6e_ila_lib_0.xci",
+        "xci_path": "ip\\ip_0\\bd_4d6e_ila_lib_0.xci",
         "inst_hier_path": "ila_lib",
         "parameters": {
           "ALL_PROBE_SAME_MU": {

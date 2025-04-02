@@ -1,83 +1,76 @@
 #-----------------------------------------------------------
 # Vivado v2023.1 (64-bit)
-# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Wed Mar 26 20:10:41 2025
-# Process ID: 108527
-# Current directory: /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/adc_dma_bd_AXI_TAR_0_0_synth_1
-# Command line: vivado -log adc_dma_bd_AXI_TAR_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source adc_dma_bd_AXI_TAR_0_0.tcl
-# Log file: /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/adc_dma_bd_AXI_TAR_0_0_synth_1/adc_dma_bd_AXI_TAR_0_0.vds
-# Journal file: /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/adc_dma_bd_AXI_TAR_0_0_synth_1/vivado.jou
-# Running On: sebasHAL, OS: Linux, CPU Frequency: 2400.000 MHz, CPU Physical cores: 2, Host memory: 3883 MB
+# Start of session at: Tue Apr  1 20:14:35 2025
+# Process ID: 7204
+# Current directory: C:/TAR/adc_dma_test.runs/adc_dma_bd_AXI_TAR_0_0_synth_1
+# Command line: vivado.exe -log adc_dma_bd_AXI_TAR_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source adc_dma_bd_AXI_TAR_0_0.tcl
+# Log file: C:/TAR/adc_dma_test.runs/adc_dma_bd_AXI_TAR_0_0_synth_1/adc_dma_bd_AXI_TAR_0_0.vds
+# Journal file: C:/TAR/adc_dma_test.runs/adc_dma_bd_AXI_TAR_0_0_synth_1\vivado.jou
+# Running On: DESKTOP-N93DAM9, OS: Windows, CPU Frequency: 1190 MHz, CPU Physical cores: 4, Host memory: 8341 MB
 #-----------------------------------------------------------
 source adc_dma_bd_AXI_TAR_0_0.tcl -notrace
-create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1299.961 ; gain = 27.023 ; free physical = 848 ; free virtual = 2675
+create_project: Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 426.070 ; gain = 162.027
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/ip_repo'.
-INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2023.1/data/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/TAR/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2023.1/data/ip'.
 INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: adc_dma_bd_AXI_TAR_0_0
 Command: synth_design -top adc_dma_bd_AXI_TAR_0_0 -part xc7z020clg484-1 -incremental_mode off -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg484-1
-INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 108649
+INFO: [Synth 8-7075] Helper process launched with PID 9020
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2064.887 ; gain = 377.770 ; free physical = 114 ; free virtual = 1656
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1289.324 ; gain = 409.770
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_AXI_TAR_0_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_AXI_TAR_0_0/synth/adc_dma_bd_AXI_TAR_0_0.vhd:94]
+INFO: [Synth 8-638] synthesizing module 'adc_dma_bd_AXI_TAR_0_0' [c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_AXI_TAR_0_0/synth/adc_dma_bd_AXI_TAR_0_0.vhd:94]
 	Parameter C_M00_AXIS_TDATA_WIDTH bound to: 64 - type: integer 
 	Parameter C_M00_AXIS_START_COUNT bound to: 32 - type: integer 
 	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S00_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter G_MARK_DEBUG bound to: true - type: string 
-INFO: [Synth 8-3491] module 'AXI_TAR_v1_0' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/AXI_TAR_v1_0.vhd:5' bound to instance 'U0' of component 'AXI_TAR_v1_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_AXI_TAR_0_0/synth/adc_dma_bd_AXI_TAR_0_0.vhd:185]
-INFO: [Synth 8-638] synthesizing module 'AXI_TAR_v1_0' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/AXI_TAR_v1_0.vhd:60]
+INFO: [Synth 8-3491] module 'AXI_TAR_v1_0' declared at 'c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/1cf1/hdl/AXI_TAR_v1_0.vhd:5' bound to instance 'U0' of component 'AXI_TAR_v1_0' [c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_AXI_TAR_0_0/synth/adc_dma_bd_AXI_TAR_0_0.vhd:185]
+INFO: [Synth 8-638] synthesizing module 'AXI_TAR_v1_0' [c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/1cf1/hdl/AXI_TAR_v1_0.vhd:60]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-3491] module 'AXI_TAR_v1_0_S00_AXI' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/AXI_TAR_v1_0_S00_AXI.vhd:5' bound to instance 'AXI_TAR_v1_0_S00_AXI_inst' of component 'AXI_TAR_v1_0_S00_AXI' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/AXI_TAR_v1_0.vhd:230]
-INFO: [Synth 8-638] synthesizing module 'AXI_TAR_v1_0_S00_AXI' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/AXI_TAR_v1_0_S00_AXI.vhd:91]
-INFO: [Synth 8-226] default block is never used [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/AXI_TAR_v1_0_S00_AXI.vhd:229]
-INFO: [Synth 8-226] default block is never used [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/AXI_TAR_v1_0_S00_AXI.vhd:359]
-WARNING: [Synth 8-614] signal 'reg2mode' is read in the process but is not in the sensitivity list [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/AXI_TAR_v1_0_S00_AXI.vhd:354]
-WARNING: [Synth 8-614] signal 'IN_REG2' is read in the process but is not in the sensitivity list [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/AXI_TAR_v1_0_S00_AXI.vhd:354]
-WARNING: [Synth 8-614] signal 'IN_REG3' is read in the process but is not in the sensitivity list [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/AXI_TAR_v1_0_S00_AXI.vhd:354]
-INFO: [Synth 8-256] done synthesizing module 'AXI_TAR_v1_0_S00_AXI' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/AXI_TAR_v1_0_S00_AXI.vhd:91]
+INFO: [Synth 8-3491] module 'AXI_TAR_v1_0_S00_AXI' declared at 'c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/1cf1/hdl/AXI_TAR_v1_0_S00_AXI.vhd:5' bound to instance 'AXI_TAR_v1_0_S00_AXI_inst' of component 'AXI_TAR_v1_0_S00_AXI' [c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/1cf1/hdl/AXI_TAR_v1_0.vhd:236]
+INFO: [Synth 8-638] synthesizing module 'AXI_TAR_v1_0_S00_AXI' [c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/1cf1/hdl/AXI_TAR_v1_0_S00_AXI.vhd:92]
+INFO: [Synth 8-226] default block is never used [c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/1cf1/hdl/AXI_TAR_v1_0_S00_AXI.vhd:230]
+INFO: [Synth 8-226] default block is never used [c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/1cf1/hdl/AXI_TAR_v1_0_S00_AXI.vhd:360]
+INFO: [Synth 8-256] done synthesizing module 'AXI_TAR_v1_0_S00_AXI' (0#1) [c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/1cf1/hdl/AXI_TAR_v1_0_S00_AXI.vhd:92]
 	Parameter C_M_AXIS_TDATA_WIDTH bound to: 64 - type: integer 
 	Parameter G_MARK_DEBUG bound to: true - type: string 
-INFO: [Synth 8-3491] module 'TAR' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/TAR.vhd:23' bound to instance 'TAR_00' of component 'TAR' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/AXI_TAR_v1_0.vhd:286]
-INFO: [Synth 8-638] synthesizing module 'TAR' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/TAR.vhd:57]
+INFO: [Synth 8-3491] module 'TAR' declared at 'c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/1cf1/hdl/TAR.vhd:23' bound to instance 'TAR_00' of component 'TAR' [c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/1cf1/hdl/AXI_TAR_v1_0.vhd:293]
+INFO: [Synth 8-638] synthesizing module 'TAR' [c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/1cf1/hdl/TAR.vhd:57]
 	Parameter TS_LEN bound to: 32 - type: integer 
 	Parameter G_MARK_DEBUG bound to: true - type: string 
-INFO: [Synth 8-3491] module 'VP_DETECTOR' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/VP_DETECTOR.vhd:25' bound to instance 'VP_DET_A' of component 'VP_DETECTOR' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/TAR.vhd:138]
-INFO: [Synth 8-638] synthesizing module 'VP_DETECTOR' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/VP_DETECTOR.vhd:46]
-INFO: [Synth 8-256] done synthesizing module 'VP_DETECTOR' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/VP_DETECTOR.vhd:46]
+INFO: [Synth 8-3491] module 'VP_DETECTOR' declared at 'c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/1cf1/hdl/VP_DETECTOR.vhd:25' bound to instance 'VP_DET_A' of component 'VP_DETECTOR' [c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/1cf1/hdl/TAR.vhd:138]
+INFO: [Synth 8-638] synthesizing module 'VP_DETECTOR' [c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/1cf1/hdl/VP_DETECTOR.vhd:46]
+INFO: [Synth 8-256] done synthesizing module 'VP_DETECTOR' (0#1) [c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/1cf1/hdl/VP_DETECTOR.vhd:46]
 	Parameter TS_LEN bound to: 32 - type: integer 
 	Parameter G_MARK_DEBUG bound to: true - type: string 
-INFO: [Synth 8-3491] module 'VP_DETECTOR' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/VP_DETECTOR.vhd:25' bound to instance 'VP_DET_B' of component 'VP_DETECTOR' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/TAR.vhd:155]
+INFO: [Synth 8-3491] module 'VP_DETECTOR' declared at 'c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/1cf1/hdl/VP_DETECTOR.vhd:25' bound to instance 'VP_DET_B' of component 'VP_DETECTOR' [c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/1cf1/hdl/TAR.vhd:155]
 	Parameter TS_LEN bound to: 32 - type: integer 
-INFO: [Synth 8-3491] module 'TIME_BASE' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/TIME_BASE.vhd:25' bound to instance 'TIME_BASE_00' of component 'TIME_BASE' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/TAR.vhd:172]
-INFO: [Synth 8-638] synthesizing module 'TIME_BASE' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/TIME_BASE.vhd:37]
-INFO: [Synth 8-256] done synthesizing module 'TIME_BASE' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/TIME_BASE.vhd:37]
+INFO: [Synth 8-3491] module 'TIME_BASE' declared at 'c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/1cf1/hdl/TIME_BASE.vhd:25' bound to instance 'TIME_BASE_00' of component 'TIME_BASE' [c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/1cf1/hdl/TAR.vhd:172]
+INFO: [Synth 8-638] synthesizing module 'TIME_BASE' [c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/1cf1/hdl/TIME_BASE.vhd:37]
+INFO: [Synth 8-256] done synthesizing module 'TIME_BASE' (0#1) [c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/1cf1/hdl/TIME_BASE.vhd:37]
 	Parameter TS_LEN bound to: 32 - type: integer 
 	Parameter FIFO_DEPTH bound to: 16 - type: integer 
 	Parameter C_M_AXIS_TDATA_WIDTH bound to: 64 - type: integer 
 	Parameter G_MARK_DEBUG bound to: true - type: string 
-INFO: [Synth 8-3491] module 'PULSE_FORMATTER' declared at '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/PULSE_FORMATTER.vhd:25' bound to instance 'PLS_FMT_00' of component 'PULSE_FORMATTER' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/TAR.vhd:183]
-INFO: [Synth 8-638] synthesizing module 'PULSE_FORMATTER' [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/PULSE_FORMATTER.vhd:64]
-INFO: [Synth 8-256] done synthesizing module 'PULSE_FORMATTER' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/PULSE_FORMATTER.vhd:64]
-INFO: [Synth 8-256] done synthesizing module 'TAR' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/TAR.vhd:57]
-INFO: [Synth 8-256] done synthesizing module 'AXI_TAR_v1_0' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/AXI_TAR_v1_0.vhd:60]
-INFO: [Synth 8-256] done synthesizing module 'adc_dma_bd_AXI_TAR_0_0' (0#1) [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_AXI_TAR_0_0/synth/adc_dma_bd_AXI_TAR_0_0.vhd:94]
-WARNING: [Synth 8-6014] Unused sequential element slv_reg3_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/AXI_TAR_v1_0_S00_AXI.vhd:225]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'VP_DET_A'. This will prevent further optimization [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/TAR.vhd:138]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'VP_DET_B'. This will prevent further optimization [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/TAR.vhd:155]
-INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'PLS_FMT_00'. This will prevent further optimization [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/TAR.vhd:183]
-WARNING: [Synth 8-6026] Ignoring keep related attribute (keep/mark_debug/dont_touch) applied on memory [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/PULSE_FORMATTER.vhd:67]
-WARNING: [Synth 8-6014] Unused sequential element m_axis_tlast_reg was removed.  [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/PULSE_FORMATTER.vhd:151]
+INFO: [Synth 8-3491] module 'PULSE_FORMATTER' declared at 'c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/1cf1/hdl/PULSE_FORMATTER.vhd:25' bound to instance 'PLS_FMT_00' of component 'PULSE_FORMATTER' [c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/1cf1/hdl/TAR.vhd:183]
+INFO: [Synth 8-638] synthesizing module 'PULSE_FORMATTER' [c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/1cf1/hdl/PULSE_FORMATTER.vhd:64]
+INFO: [Synth 8-256] done synthesizing module 'PULSE_FORMATTER' (0#1) [c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/1cf1/hdl/PULSE_FORMATTER.vhd:64]
+INFO: [Synth 8-256] done synthesizing module 'TAR' (0#1) [c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/1cf1/hdl/TAR.vhd:57]
+INFO: [Synth 8-256] done synthesizing module 'AXI_TAR_v1_0' (0#1) [c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/1cf1/hdl/AXI_TAR_v1_0.vhd:60]
+INFO: [Synth 8-256] done synthesizing module 'adc_dma_bd_AXI_TAR_0_0' (0#1) [c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_AXI_TAR_0_0/synth/adc_dma_bd_AXI_TAR_0_0.vhd:94]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'PLS_FMT_00'. This will prevent further optimization [c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/1cf1/hdl/TAR.vhd:183]
+WARNING: [Synth 8-6014] Unused sequential element m_axis_tlast_reg was removed.  [c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/1cf1/hdl/PULSE_FORMATTER.vhd:151]
 WARNING: [Synth 8-4767] Trying to implement RAM ' ' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
 	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
 	2: Unable to determine number of words or word size in RAM. 
@@ -104,13 +97,7 @@ Reason is one or more of the following :
 	2: Unable to determine number of words or word size in RAM. 
 	3: No valid read/write found for RAM. 
 RAM "fifo_mem_reg" dissolved into registers
-WARNING: [Synth 8-3848] Net Introut in module/entity AXI_TAR_v1_0 does not have driver. [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/AXI_TAR_v1_0.vhd:24]
-WARNING: [Synth 8-3848] Net mstr_m00_axis_tvalid in module/entity AXI_TAR_v1_0 does not have driver. [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/AXI_TAR_v1_0.vhd:194]
-WARNING: [Synth 8-3848] Net mstr_m00_axis_tdata in module/entity AXI_TAR_v1_0 does not have driver. [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/AXI_TAR_v1_0.vhd:195]
-WARNING: [Synth 8-3848] Net mstr_m00_axis_tstrb in module/entity AXI_TAR_v1_0 does not have driver. [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/AXI_TAR_v1_0.vhd:196]
-WARNING: [Synth 8-3848] Net mstr_m00_axis_tlast in module/entity AXI_TAR_v1_0 does not have driver. [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/AXI_TAR_v1_0.vhd:197]
-WARNING: [Synth 8-3848] Net slv_reg2_in in module/entity AXI_TAR_v1_0 does not have driver. [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/AXI_TAR_v1_0.vhd:174]
-WARNING: [Synth 8-3848] Net slv_reg3 in module/entity AXI_TAR_v1_0 does not have driver. [/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/6844/hdl/AXI_TAR_v1_0.vhd:176]
+WARNING: [Synth 8-3848] Net Introut in module/entity AXI_TAR_v1_0 does not have driver. [c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ipshared/1cf1/hdl/AXI_TAR_v1_0.vhd:24]
 WARNING: [Synth 8-7129] Port m_axis_aclk in module PULSE_FORMATTER is either unconnected or has no load
 WARNING: [Synth 8-7129] Port m_axis_aresetn in module PULSE_FORMATTER is either unconnected or has no load
 WARNING: [Synth 8-7129] Port S_AXI_AWPROT[2] in module AXI_TAR_v1_0_S00_AXI is either unconnected or has no load
@@ -125,48 +112,48 @@ WARNING: [Synth 8-7129] Port sCh1In[0] in module AXI_TAR_v1_0 is either unconnec
 WARNING: [Synth 8-7129] Port sCh2In[1] in module AXI_TAR_v1_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port sCh2In[0] in module AXI_TAR_v1_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2152.793 ; gain = 465.676 ; free physical = 115 ; free virtual = 1569
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1404.043 ; gain = 524.488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2170.605 ; gain = 483.488 ; free physical = 115 ; free virtual = 1569
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1404.043 ; gain = 524.488
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2170.605 ; gain = 483.488 ; free physical = 115 ; free virtual = 1569
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1404.043 ; gain = 524.488
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2176.543 ; gain = 0.000 ; free physical = 110 ; free virtual = 1563
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.071 . Memory (MB): peak = 1404.043 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 2278.340 ; gain = 0.000 ; free physical = 117 ; free virtual = 1561
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1476.344 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.06 . Memory (MB): peak = 2278.340 ; gain = 0.000 ; free physical = 117 ; free virtual = 1561
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.121 . Memory (MB): peak = 1481.801 ; gain = 5.457
 INFO: [Designutils 20-5008] Incremental synthesis strategy off
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2278.340 ; gain = 591.223 ; free physical = 109 ; free virtual = 1555
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1481.801 ; gain = 602.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg484-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2278.340 ; gain = 591.223 ; free physical = 109 ; free virtual = 1555
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1481.801 ; gain = 602.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 2278.340 ; gain = 591.223 ; free physical = 109 ; free virtual = 1556
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1481.801 ; gain = 602.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 2278.340 ; gain = 591.223 ; free physical = 112 ; free virtual = 1555
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1481.801 ; gain = 602.246
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -184,7 +171,7 @@ Detailed RTL Component Info :
 	   5 Input    4 Bit       Adders := 1     
 +---Registers : 
 	               64 Bit    Registers := 17    
-	               32 Bit    Registers := 8     
+	               32 Bit    Registers := 9     
 	               14 Bit    Registers := 4     
 	                5 Bit    Registers := 1     
 	                4 Bit    Registers := 4     
@@ -193,11 +180,10 @@ Detailed RTL Component Info :
 +---Muxes : 
 	   2 Input 1024 Bit        Muxes := 3     
 	   5 Input 1024 Bit        Muxes := 1     
-	   2 Input   64 Bit        Muxes := 150   
-	   2 Input   32 Bit        Muxes := 6     
-	   4 Input   32 Bit        Muxes := 4     
-	   2 Input   14 Bit        Muxes := 12    
-	   2 Input    8 Bit        Muxes := 1     
+	   2 Input   64 Bit        Muxes := 149   
+	   2 Input   32 Bit        Muxes := 4     
+	   4 Input   32 Bit        Muxes := 5     
+	   2 Input   14 Bit        Muxes := 2     
 	   4 Input    5 Bit        Muxes := 1     
 	   2 Input    5 Bit        Muxes := 1     
 	   4 Input    4 Bit        Muxes := 1     
@@ -233,25 +219,25 @@ WARNING: [Synth 8-7129] Port s00_axi_arprot[2] in module adc_dma_bd_AXI_TAR_0_0 
 WARNING: [Synth 8-7129] Port s00_axi_arprot[1] in module adc_dma_bd_AXI_TAR_0_0 is either unconnected or has no load
 WARNING: [Synth 8-7129] Port s00_axi_arprot[0] in module adc_dma_bd_AXI_TAR_0_0 is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:45 ; elapsed = 00:00:47 . Memory (MB): peak = 2611.340 ; gain = 924.223 ; free physical = 116 ; free virtual = 1173
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:43 ; elapsed = 00:00:47 . Memory (MB): peak = 1891.262 ; gain = 1011.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:51 ; elapsed = 00:00:53 . Memory (MB): peak = 2611.340 ; gain = 924.223 ; free physical = 107 ; free virtual = 1173
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:49 ; elapsed = 00:00:53 . Memory (MB): peak = 1891.262 ; gain = 1011.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:52 ; elapsed = 00:00:54 . Memory (MB): peak = 2611.340 ; gain = 924.223 ; free physical = 106 ; free virtual = 1172
+Finished Timing Optimization : Time (s): cpu = 00:00:50 ; elapsed = 00:00:54 . Memory (MB): peak = 1891.262 ; gain = 1011.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:56 ; elapsed = 00:00:58 . Memory (MB): peak = 2619.340 ; gain = 932.223 ; free physical = 113 ; free virtual = 1173
+Finished Technology Mapping : Time (s): cpu = 00:00:55 ; elapsed = 00:00:59 . Memory (MB): peak = 1891.262 ; gain = 1011.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -269,37 +255,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 2619.340 ; gain = 932.223 ; free physical = 112 ; free virtual = 1174
+Finished IO Insertion : Time (s): cpu = 00:01:02 ; elapsed = 00:01:07 . Memory (MB): peak = 1891.262 ; gain = 1011.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 2619.340 ; gain = 932.223 ; free physical = 112 ; free virtual = 1174
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:03 ; elapsed = 00:01:07 . Memory (MB): peak = 1891.262 ; gain = 1011.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 2619.340 ; gain = 932.223 ; free physical = 112 ; free virtual = 1174
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 1891.262 ; gain = 1011.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:03 ; elapsed = 00:01:05 . Memory (MB): peak = 2619.340 ; gain = 932.223 ; free physical = 112 ; free virtual = 1174
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 1891.262 ; gain = 1011.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:04 ; elapsed = 00:01:06 . Memory (MB): peak = 2619.340 ; gain = 932.223 ; free physical = 112 ; free virtual = 1174
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 1891.262 ; gain = 1011.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:04 ; elapsed = 00:01:06 . Memory (MB): peak = 2619.340 ; gain = 932.223 ; free physical = 112 ; free virtual = 1174
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 1891.262 ; gain = 1011.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -315,45 +301,43 @@ Report Cell Usage:
 +------+-------+------+
 |      |Cell   |Count |
 +------+-------+------+
-|1     |CARRY4 |    18|
-|2     |LUT1   |   107|
-|3     |LUT2   |   177|
-|4     |LUT3   |  1842|
-|5     |LUT4   |   412|
-|6     |LUT5   |   930|
-|7     |LUT6   |  8315|
-|8     |MUXF7  |   256|
-|9     |MUXF8  |    78|
-|10    |FDRE   |  1428|
+|1     |CARRY4 |    20|
+|2     |LUT1   |    42|
+|3     |LUT2   |  1138|
+|4     |LUT3   |  2348|
+|5     |LUT4   |   183|
+|6     |LUT5   |  1498|
+|7     |LUT6   |  5053|
+|8     |MUXF7  |   192|
+|9     |MUXF8  |    64|
+|10    |FDRE   |  1496|
 |11    |FDSE   |     3|
 +------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:04 ; elapsed = 00:01:06 . Memory (MB): peak = 2619.340 ; gain = 932.223 ; free physical = 112 ; free virtual = 1174
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 1891.262 ; gain = 1011.707
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 14 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:01:01 ; elapsed = 00:01:03 . Memory (MB): peak = 2619.340 ; gain = 824.488 ; free physical = 112 ; free virtual = 1174
-Synthesis Optimization Complete : Time (s): cpu = 00:01:04 ; elapsed = 00:01:06 . Memory (MB): peak = 2619.348 ; gain = 932.223 ; free physical = 112 ; free virtual = 1174
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:52 ; elapsed = 00:01:05 . Memory (MB): peak = 1891.262 ; gain = 933.949
+Synthesis Optimization Complete : Time (s): cpu = 00:01:03 ; elapsed = 00:01:08 . Memory (MB): peak = 1891.262 ; gain = 1011.707
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.11 . Memory (MB): peak = 2619.348 ; gain = 0.000 ; free physical = 379 ; free virtual = 1434
-INFO: [Netlist 29-17] Analyzing 352 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.101 . Memory (MB): peak = 1891.262 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 276 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 WARNING: [Netlist 29-101] Netlist 'adc_dma_bd_AXI_TAR_0_0' is not ideal for floorplanning, since the cellview 'PULSE_FORMATTER' contains a large number of primitives.  Please consider enabling hierarchy in synthesis if you want to do floorplanning.
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2619.348 ; gain = 0.000 ; free physical = 371 ; free virtual = 1434
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1891.262 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Synth Design complete | Checksum: 19fd833c
+Synth Design complete | Checksum: b3a5dcac
 INFO: [Common 17-83] Releasing license: Synthesis
-45 Infos, 46 Warnings, 0 Critical Warnings and 0 Errors encountered.
+43 Infos, 35 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:15 ; elapsed = 00:01:14 . Memory (MB): peak = 2619.348 ; gain = 1273.793 ; free physical = 371 ; free virtual = 1434
-INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 2309.013; main = 1993.708; forked = 423.485
-INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 3601.840; main = 2619.344; forked = 982.496
-INFO: [Common 17-1381] The checkpoint '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/adc_dma_bd_AXI_TAR_0_0_synth_1/adc_dma_bd_AXI_TAR_0_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP adc_dma_bd_AXI_TAR_0_0, cache-ID = cb9bc86aa75fead5
+synth_design: Time (s): cpu = 00:01:11 ; elapsed = 00:01:17 . Memory (MB): peak = 1891.262 ; gain = 1418.992
+INFO: [Common 17-1381] The checkpoint 'C:/TAR/adc_dma_test.runs/adc_dma_bd_AXI_TAR_0_0_synth_1/adc_dma_bd_AXI_TAR_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP adc_dma_bd_AXI_TAR_0_0, cache-ID = cfe2e88d0dcea0b1
 INFO: [Coretcl 2-1174] Renamed 7 cell refs.
-INFO: [Common 17-1381] The checkpoint '/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.runs/adc_dma_bd_AXI_TAR_0_0_synth_1/adc_dma_bd_AXI_TAR_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'C:/TAR/adc_dma_test.runs/adc_dma_bd_AXI_TAR_0_0_synth_1/adc_dma_bd_AXI_TAR_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file adc_dma_bd_AXI_TAR_0_0_utilization_synth.rpt -pb adc_dma_bd_AXI_TAR_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Mar 26 20:12:19 2025...
+INFO: [Common 17-206] Exiting Vivado at Tue Apr  1 20:16:12 2025...

@@ -24,16 +24,16 @@ vhdl xil_defaultlib  \
 "../../../bd/adc_dma_bd/ip/adc_dma_bd_rst_ps7_0_100M_1_0/sim/adc_dma_bd_rst_ps7_0_100M_1_0.vhd" \
 
 vhdl2008 xil_defaultlib  \
-"../../../bd/adc_dma_bd/ipshared/6844/hdl/AXI_TAR_v1_0_S00_AXI.vhd" \
+"../../../bd/adc_dma_bd/ipshared/30b5/hdl/AXI_TAR_v1_0_S00_AXI.vhd" \
 
 vhdl xil_defaultlib  \
-"../../../bd/adc_dma_bd/ipshared/6844/hdl/PULSE_FORMATTER.vhd" \
-"../../../bd/adc_dma_bd/ipshared/6844/hdl/TAR.vhd" \
-"../../../bd/adc_dma_bd/ipshared/6844/hdl/TIME_BASE.vhd" \
-"../../../bd/adc_dma_bd/ipshared/6844/hdl/VP_DETECTOR.vhd" \
+"../../../bd/adc_dma_bd/ipshared/30b5/hdl/PULSE_FORMATTER.vhd" \
+"../../../bd/adc_dma_bd/ipshared/30b5/hdl/TAR.vhd" \
+"../../../bd/adc_dma_bd/ipshared/30b5/hdl/TIME_BASE.vhd" \
+"../../../bd/adc_dma_bd/ipshared/30b5/hdl/VP_DETECTOR.vhd" \
 
 vhdl2008 xil_defaultlib  \
-"../../../bd/adc_dma_bd/ipshared/6844/hdl/AXI_TAR_v1_0.vhd" \
+"../../../bd/adc_dma_bd/ipshared/30b5/hdl/AXI_TAR_v1_0.vhd" \
 
 vhdl xil_defaultlib  \
 "../../../bd/adc_dma_bd/ip/adc_dma_bd_AXI_TAR_0_0/sim/adc_dma_bd_AXI_TAR_0_0.vhd" \

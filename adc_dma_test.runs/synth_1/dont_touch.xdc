@@ -15,26 +15,11 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_dma_bd_
 # IP: bd/adc_dma_bd/ip/adc_dma_bd_xbar_0/adc_dma_bd_xbar_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_dma_bd_xbar_0 || ORIG_REF_NAME==adc_dma_bd_xbar_0} -quiet] -quiet
 
-# IP: bd/adc_dma_bd/ip/adc_dma_bd_auto_pc_0/adc_dma_bd_auto_pc_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_dma_bd_auto_pc_0 || ORIG_REF_NAME==adc_dma_bd_auto_pc_0} -quiet] -quiet
-
-# IP: bd/adc_dma_bd/ip/adc_dma_bd_auto_cc_0/adc_dma_bd_auto_cc_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_dma_bd_auto_cc_0 || ORIG_REF_NAME==adc_dma_bd_auto_cc_0} -quiet] -quiet
-
 # IP: bd/adc_dma_bd/ip/adc_dma_bd_ps7_0_axi_periph_0/adc_dma_bd_ps7_0_axi_periph_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_dma_bd_ps7_0_axi_periph_0 || ORIG_REF_NAME==adc_dma_bd_ps7_0_axi_periph_0} -quiet] -quiet
 
 # IP: bd/adc_dma_bd/ip/adc_dma_bd_xbar_1/adc_dma_bd_xbar_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_dma_bd_xbar_1 || ORIG_REF_NAME==adc_dma_bd_xbar_1} -quiet] -quiet
-
-# IP: bd/adc_dma_bd/ip/adc_dma_bd_auto_us_0/adc_dma_bd_auto_us_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_dma_bd_auto_us_0 || ORIG_REF_NAME==adc_dma_bd_auto_us_0} -quiet] -quiet
-
-# IP: bd/adc_dma_bd/ip/adc_dma_bd_auto_us_1/adc_dma_bd_auto_us_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_dma_bd_auto_us_1 || ORIG_REF_NAME==adc_dma_bd_auto_us_1} -quiet] -quiet
-
-# IP: bd/adc_dma_bd/ip/adc_dma_bd_auto_pc_1/adc_dma_bd_auto_pc_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_dma_bd_auto_pc_1 || ORIG_REF_NAME==adc_dma_bd_auto_pc_1} -quiet] -quiet
 
 # IP: bd/adc_dma_bd/ip/adc_dma_bd_axi_mem_intercon_0/adc_dma_bd_axi_mem_intercon_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_dma_bd_axi_mem_intercon_0 || ORIG_REF_NAME==adc_dma_bd_axi_mem_intercon_0} -quiet] -quiet
@@ -72,4 +57,19 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_dma_bd_
 # IP: bd/adc_dma_bd/ip/adc_dma_bd_AXI_TAR_0_0/adc_dma_bd_AXI_TAR_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_dma_bd_AXI_TAR_0_0 || ORIG_REF_NAME==adc_dma_bd_AXI_TAR_0_0} -quiet] -quiet
 
-# XDC: /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/adc_dma_bd_ooc.xdc
+# IP: bd/adc_dma_bd/ip/adc_dma_bd_auto_pc_0/adc_dma_bd_auto_pc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_dma_bd_auto_pc_0 || ORIG_REF_NAME==adc_dma_bd_auto_pc_0} -quiet] -quiet
+
+# IP: bd/adc_dma_bd/ip/adc_dma_bd_auto_cc_0/adc_dma_bd_auto_cc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_dma_bd_auto_cc_0 || ORIG_REF_NAME==adc_dma_bd_auto_cc_0} -quiet] -quiet
+
+# IP: bd/adc_dma_bd/ip/adc_dma_bd_auto_us_0/adc_dma_bd_auto_us_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_dma_bd_auto_us_0 || ORIG_REF_NAME==adc_dma_bd_auto_us_0} -quiet] -quiet
+
+# IP: bd/adc_dma_bd/ip/adc_dma_bd_auto_us_1/adc_dma_bd_auto_us_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_dma_bd_auto_us_1 || ORIG_REF_NAME==adc_dma_bd_auto_us_1} -quiet] -quiet
+
+# IP: bd/adc_dma_bd/ip/adc_dma_bd_auto_pc_1/adc_dma_bd_auto_pc_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==adc_dma_bd_auto_pc_1 || ORIG_REF_NAME==adc_dma_bd_auto_pc_1} -quiet] -quiet
+
+# XDC: c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/adc_dma_bd_ooc.xdc

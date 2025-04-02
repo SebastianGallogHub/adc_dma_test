@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="/home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.hw/hw_1/wave/hw_ila_data_4/hw_ila_data_4.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0"></ZoomStartTime>
+      <ZoomEndTime time="16"></ZoomEndTime>
+      <Cursor1Time time="0"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="658"></NameColumnWidth>
+      <ValueColumnWidth column_width="128"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="2" />
+   <wvobject type="array" fp_name="adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/VP_DET_A/h_high_ila">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/VP_DET_A/h_high_ila[15:0]</obj_property>
+      <obj_property name="ObjectShortName">h_high_ila[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      <obj_property name="label">VP_DET_A/h_high_ila[15:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/VP_DET_A/h_low_ila">
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="ElementShortName">adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/VP_DET_A/h_low_ila[15:0]</obj_property>
+      <obj_property name="ObjectShortName">h_low_ila[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      <obj_property name="label">VP_DET_A/h_low_ila[15:0]</obj_property>
+   </wvobject>
+</wave_config>

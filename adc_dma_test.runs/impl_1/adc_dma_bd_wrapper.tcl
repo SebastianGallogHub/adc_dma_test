@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/TAR/adc_dma_test/adc_dma_test.runs/impl_1/adc_dma_bd_wrapper.tcl"
+  variable script "C:/TAR/adc_dma_test.runs/impl_1/adc_dma_bd_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -126,7 +126,7 @@ set rc [catch {
   set_param chipscope.maxJobs 2
   set_param runs.launchOptions { -jobs 8  }
   open_checkpoint adc_dma_bd_wrapper_routed.dcp
-  set_property webtalk.parent_dir C:/TAR/adc_dma_test/adc_dma_test.cache/wt [current_project]
+  set_property webtalk.parent_dir C:/TAR/adc_dma_test.cache/wt [current_project]
 set_property TOP adc_dma_bd_wrapper [current_fileset]
 OPTRACE "read constraints: write_bitstream" START { }
 OPTRACE "read constraints: write_bitstream" END { }

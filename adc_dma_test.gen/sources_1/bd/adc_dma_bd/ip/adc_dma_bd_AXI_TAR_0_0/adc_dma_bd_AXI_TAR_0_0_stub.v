@@ -1,11 +1,11 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
 // Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2023.1 (lin64) Build 3865809 Sun May  7 15:04:56 MDT 2023
-// Date        : Wed Mar 26 20:12:18 2025
-// Host        : sebasHAL running 64-bit Ubuntu 20.04.6 LTS
+// Tool Version: Vivado v.2023.1 (win64) Build 3865809 Sun May  7 15:05:29 MDT 2023
+// Date        : Tue Apr  1 20:16:10 2025
+// Host        : DESKTOP-N93DAM9 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
-//               /home/sebas/Escritorio/proyecto/workspace/adc_dma_test/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_AXI_TAR_0_0/adc_dma_bd_AXI_TAR_0_0_stub.v
+//               c:/TAR/adc_dma_test.gen/sources_1/bd/adc_dma_bd/ip/adc_dma_bd_AXI_TAR_0_0/adc_dma_bd_AXI_TAR_0_0_stub.v
 // Design      : adc_dma_bd_AXI_TAR_0_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg484-1
