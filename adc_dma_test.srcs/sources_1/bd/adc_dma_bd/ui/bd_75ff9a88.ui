@@ -4,134 +4,153 @@
    "Addressing View_Layers":"/sys_clock_1:false|/processing_system7_0_FCLK_RESET0_N:false|/rst_ps7_0_100M_1_peripheral_aresetn:false|/processing_system7_0_FCLK_CLK1:false|/AXI_TAR_0_Introut:false|/axi_dma_0_s2mm_introut:false|/processing_system7_0_FCLK_CLK0:false|/rst_ps7_0_100M_peripheral_aresetn:false|/clk_wiz_0_clk_out1:false|",
    "Addressing View_Layout":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 5 -x 1420 -y 170 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 5 -x 1420 -y 190 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 4 -x 1180 -y 200 -defaultsOSRD
+preplace port DDR -pg 1 -lvl 5 -x 1370 -y 170 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 5 -x 1370 -y 190 -defaultsOSRD
 preplace inst axi_dma_0 -pg 1 -lvl 2 -x 480 -y 220 -defaultsOSRD
 preplace inst ps7_0_axi_periph -pg 1 -lvl 1 -x 160 -y 90 -defaultsOSRD
-preplace inst axi_mem_intercon -pg 1 -lvl 3 -x 820 -y 210 -defaultsOSRD
+preplace inst axi_mem_intercon -pg 1 -lvl 3 -x 770 -y 210 -defaultsOSRD
 preplace inst AXI_ZmodADC1410_0 -pg 1 -lvl 2 -x 480 -y 380 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 4 -x 1130 -y 200 -defaultsOSRD
 preplace inst AXI_TAR_0 -pg 1 -lvl 2 -x 480 -y 90 -defaultsOSRD
+preplace netloc AXI_TAR_0_M00_AXIS 1 2 1 N 90
 preplace netloc AXI_ZmodADC1410_0_mCalibCh1 1 2 1 N 390
 preplace netloc AXI_ZmodADC1410_0_mCalibCh2 1 2 1 N 410
 preplace netloc AXI_ZmodADC1410_0_mSPI_IAP 1 2 1 N 370
-preplace netloc axi_dma_0_M_AXI_MM2S 1 2 1 650 210n
-preplace netloc axi_dma_0_M_AXI_S2MM 1 2 1 660 210n
+preplace netloc axi_dma_0_M_AXI_MM2S 1 2 1 N 210
+preplace netloc axi_dma_0_M_AXI_S2MM 1 2 1 N 230
 preplace netloc axi_dma_0_M_AXI_SG 1 2 1 N 190
 preplace netloc axi_mem_intercon_M00_AXI 1 3 1 N 210
+preplace netloc axis_data_fifo_0_M_AXIS 1 1 1 N 230
 preplace netloc processing_system7_0_DDR 1 4 1 NJ 170
 preplace netloc processing_system7_0_FIXED_IO 1 4 1 NJ 190
-preplace netloc processing_system7_0_M_AXI_GP0 1 0 5 20 10 NJ 10 NJ 10 NJ 10 1400
+preplace netloc processing_system7_0_M_AXI_GP0 1 0 5 20 10 NJ 10 NJ 10 NJ 10 1350
 preplace netloc ps7_0_axi_periph_M00_AXI 1 1 1 310 70n
 preplace netloc ps7_0_axi_periph_M01_AXI 1 1 1 NJ 90
 preplace netloc ps7_0_axi_periph_M02_AXI 1 1 1 300 110n
-preplace netloc AXI_TAR_0_M00_AXIS 1 2 1 N 90
-preplace netloc axis_data_fifo_0_M_AXIS 1 1 1 N 230
-levelinfo -pg 1 0 160 480 820 1180 1420
-pagesize -pg 1 -db -bbox -sgen 0 0 1540 470
+levelinfo -pg 1 0 160 480 770 1130 1370
+pagesize -pg 1 -db -bbox -sgen 0 0 1490 470
 ",
-   "Addressing View_ScaleFactor":"1.63803",
-   "Addressing View_TopLeft":"10,-138",
+   "Addressing View_ScaleFactor":"1.69356",
+   "Addressing View_TopLeft":"10,-126",
    "Color Coded_ExpandedHierarchyInLayout":"",
    "Color Coded_Layout":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 8 -x 2710 -y 600 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 8 -x 2710 -y 620 -defaultsOSRD
-preplace port port-id_sys_clock -pg 1 -lvl 0 -x 0 -y 1300 -defaultsOSRD
-preplace port port-id_sCh1GainH_0 -pg 1 -lvl 8 -x 2710 -y 1200 -defaultsOSRD
-preplace port port-id_adcClkIn_p_0 -pg 1 -lvl 8 -x 2710 -y 1000 -defaultsOSRD
-preplace port port-id_sCh1GainL_0 -pg 1 -lvl 8 -x 2710 -y 1220 -defaultsOSRD
-preplace port port-id_sCh2CouplingH_0 -pg 1 -lvl 8 -x 2710 -y 1160 -defaultsOSRD
-preplace port port-id_adcClkIn_n_0 -pg 1 -lvl 8 -x 2710 -y 1020 -defaultsOSRD
-preplace port port-id_sCh2CouplingL_0 -pg 1 -lvl 8 -x 2710 -y 1180 -defaultsOSRD
-preplace port port-id_sRelayComH_0 -pg 1 -lvl 8 -x 2710 -y 1280 -defaultsOSRD
-preplace port port-id_sCh2GainH_0 -pg 1 -lvl 8 -x 2710 -y 1240 -defaultsOSRD
-preplace port port-id_sADC_SDIO_0 -pg 1 -lvl 8 -x 2710 -y 1060 -defaultsOSRD
-preplace port port-id_adcSync_0 -pg 1 -lvl 8 -x 2710 -y 1040 -defaultsOSRD
-preplace port port-id_sCh2GainL_0 -pg 1 -lvl 8 -x 2710 -y 1260 -defaultsOSRD
-preplace port port-id_sCh1CouplingH_0 -pg 1 -lvl 8 -x 2710 -y 1120 -defaultsOSRD
-preplace port port-id_sCh1CouplingL_0 -pg 1 -lvl 8 -x 2710 -y 1140 -defaultsOSRD
-preplace port port-id_sADC_CS_0 -pg 1 -lvl 8 -x 2710 -y 1080 -defaultsOSRD
-preplace port port-id_sADC_Sclk_0 -pg 1 -lvl 8 -x 2710 -y 1100 -defaultsOSRD
-preplace port port-id_sRelayComL_0 -pg 1 -lvl 8 -x 2710 -y 1300 -defaultsOSRD
-preplace port port-id_DcoClk_0 -pg 1 -lvl 0 -x 0 -y 1370 -defaultsOSRD
-preplace portBus dADC_Data_0 -pg 1 -lvl 0 -x 0 -y 1350 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 7 -x 2440 -y 660 -defaultsOSRD
-preplace inst axi_dma_0 -pg 1 -lvl 5 -x 1600 -y 250 -defaultsOSRD
-preplace inst ZmodADC1410_Controll_0 -pg 1 -lvl 7 -x 2440 -y 1100 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 570 -y 560 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 79 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 59 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 103 100 104 101 107 102 105 106 108} -defaultsOSRD
-preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 210 -y 520 -defaultsOSRD
-preplace inst axi_mem_intercon -pg 1 -lvl 6 -x 2020 -y 180 -defaultsOSRD
-preplace inst xlconcat_0 -pg 1 -lvl 6 -x 2020 -y 620 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 6 -x 2020 -y 1290 -defaultsOSRD
-preplace inst AXI_ZmodADC1410_0 -pg 1 -lvl 6 -x 2020 -y 1070 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 61 48 60 51 50 49 54 53 55 56 57 58 52 59 47} -defaultsOSRD
-preplace inst rst_ps7_0_100M_1 -pg 1 -lvl 1 -x 210 -y 700 -swap {0 1 2 3 4 9 6 7 8 5} -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 5 -x 1600 -y 1060 -defaultsOSRD
-preplace inst system_ila_0 -pg 1 -lvl 6 -x 2020 -y 440 -swap {56 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 0 47 48 49 50 51 52 53 54 55 46 57 58 59 60 61 62 63 64 65 66 67} -defaultsOSRD
-preplace inst system_ila_1 -pg 1 -lvl 6 -x 2020 -y 780 -defaultsOSRD
-preplace inst AXI_TAR_0 -pg 1 -lvl 3 -x 920 -y 650 -defaultsOSRD
-preplace inst axis_data_fifo_0 -pg 1 -lvl 4 -x 1240 -y 490 -swap {0 1 2 3 4 5 6 7 9 8} -defaultsOSRD
-preplace netloc AXI_TAR_0_Introut 1 3 3 N 660 NJ 660 1850
-preplace netloc AXI_ZmodADC1410_0_sCh1CouplingSelect 1 6 1 2180 1080n
-preplace netloc AXI_ZmodADC1410_0_sCh1GainSelect 1 6 1 N 1140
-preplace netloc AXI_ZmodADC1410_0_sCh2CouplingSelect 1 6 1 N 1120
-preplace netloc AXI_ZmodADC1410_0_sCh2GainSelect 1 6 1 N 1160
-preplace netloc AXI_ZmodADC1410_0_sTestMode 1 6 1 N 1180
-preplace netloc AXI_ZmodADC1410_0_sZmodControllerRst_n 1 6 1 2190 1060n
-preplace netloc DcoClk_0_1 1 0 7 NJ 1370 NJ 1370 NJ 1370 NJ 1370 NJ 1370 NJ 1370 2210J
-preplace netloc Net 1 7 1 NJ 1060
-preplace netloc ZmodADC1410_Controll_0_adcClkIn_n 1 7 1 NJ 1020
-preplace netloc ZmodADC1410_Controll_0_adcClkIn_p 1 7 1 NJ 1000
-preplace netloc ZmodADC1410_Controll_0_adcSync 1 7 1 NJ 1040
-preplace netloc ZmodADC1410_Controll_0_sADC_CS 1 7 1 NJ 1080
-preplace netloc ZmodADC1410_Controll_0_sADC_Sclk 1 7 1 NJ 1100
-preplace netloc ZmodADC1410_Controll_0_sCh1CouplingH 1 7 1 NJ 1120
-preplace netloc ZmodADC1410_Controll_0_sCh1CouplingL 1 7 1 NJ 1140
-preplace netloc ZmodADC1410_Controll_0_sCh1GainH 1 7 1 NJ 1200
-preplace netloc ZmodADC1410_Controll_0_sCh1GainL 1 7 1 NJ 1220
-preplace netloc ZmodADC1410_Controll_0_sCh1Out 1 2 6 780 830 NJ 830 NJ 830 1840 880 2180J 810 2670
-preplace netloc ZmodADC1410_Controll_0_sCh2CouplingH 1 7 1 NJ 1160
-preplace netloc ZmodADC1410_Controll_0_sCh2CouplingL 1 7 1 NJ 1180
-preplace netloc ZmodADC1410_Controll_0_sCh2GainH 1 7 1 NJ 1240
-preplace netloc ZmodADC1410_Controll_0_sCh2GainL 1 7 1 NJ 1260
-preplace netloc ZmodADC1410_Controll_0_sCh2Out 1 2 6 770 840 NJ 840 NJ 840 1850 890 2190J 820 2690
-preplace netloc ZmodADC1410_Controll_0_sInitDone_n 1 5 3 1850 900 2200J 830 2660
-preplace netloc ZmodADC1410_Controll_0_sRelayComH 1 7 1 NJ 1280
-preplace netloc ZmodADC1410_Controll_0_sRelayComL 1 7 1 NJ 1300
-preplace netloc axi_dma_0_s2mm_introut 1 5 1 1820 320n
-preplace netloc clk_wiz_0_clk_out1 1 6 1 2200 1060n
-preplace netloc dADC_Data_0_1 1 0 7 NJ 1350 NJ 1350 NJ 1350 NJ 1350 NJ 1350 1850J 1360 2220J
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 8 30 420 390 740 750 790 1090 570 1390 380 1830 550 2200 780 2690
-preplace netloc processing_system7_0_FCLK_CLK1 1 0 8 30 800 410 720 740 820 NJ 820 NJ 820 1830 870 2220 840 2680
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 8 20 810 NJ 810 NJ 810 NJ 810 NJ 810 1810 690 2180J 790 2670
-preplace netloc rst_ps7_0_100M_1_peripheral_aresetn 1 1 5 420 730 730 1120 NJ 1120 NJ 1120 NJ
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 5 400 750 760 800 1100 580 1400 390 1850
-preplace netloc sys_clock_1 1 0 6 NJ 1300 NJ 1300 NJ 1300 NJ 1300 NJ 1300 NJ
-preplace netloc xlconcat_0_dout 1 6 1 2190 620n
-preplace netloc xlconstant_0_dout 1 5 1 1800 1060n
-preplace netloc AXI_ZmodADC1410_0_mCalibCh1 1 6 1 N 1000
-preplace netloc AXI_ZmodADC1410_0_mCalibCh2 1 6 1 N 1020
-preplace netloc AXI_ZmodADC1410_0_mSPI_IAP 1 6 1 N 980
-preplace netloc axi_dma_0_M_AXI_MM2S 1 5 1 1810 100n
-preplace netloc axi_dma_0_M_AXI_S2MM 1 5 1 1840 80n
-preplace netloc axi_dma_0_M_AXI_SG 1 5 1 1800 60n
-preplace netloc axi_mem_intercon_M00_AXI 1 6 1 2220 180n
-preplace netloc processing_system7_0_DDR 1 7 1 NJ 600
-preplace netloc processing_system7_0_FIXED_IO 1 7 1 NJ 620
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 7 420 400 NJ 400 NJ 400 NJ 400 1800J 540 NJ 540 2670
-preplace netloc ps7_0_axi_periph_M00_AXI 1 2 3 720 190 NJ 190 NJ
-preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 780 570n
-preplace netloc ps7_0_axi_periph_M02_AXI 1 2 4 720 1000 NJ 1000 NJ 1000 NJ
-preplace netloc AXI_TAR_0_M00_AXIS 1 3 3 1080 410 NJ 410 1810
-preplace netloc axis_data_fifo_0_M_AXIS 1 4 2 1380 420 N
-levelinfo -pg 1 0 210 570 920 1240 1600 2020 2440 2710
-pagesize -pg 1 -db -bbox -sgen -190 0 2890 1390
+preplace port DDR -pg 1 -lvl 8 -x 2970 -y 610 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 8 -x 2970 -y 630 -defaultsOSRD
+preplace port port-id_sys_clock -pg 1 -lvl 0 -x 0 -y 1330 -defaultsOSRD
+preplace port port-id_sCh1GainH_0 -pg 1 -lvl 8 -x 2970 -y 1210 -defaultsOSRD
+preplace port port-id_adcClkIn_p_0 -pg 1 -lvl 8 -x 2970 -y 1010 -defaultsOSRD
+preplace port port-id_sCh1GainL_0 -pg 1 -lvl 8 -x 2970 -y 1230 -defaultsOSRD
+preplace port port-id_sCh2CouplingH_0 -pg 1 -lvl 8 -x 2970 -y 1170 -defaultsOSRD
+preplace port port-id_adcClkIn_n_0 -pg 1 -lvl 8 -x 2970 -y 1030 -defaultsOSRD
+preplace port port-id_sCh2CouplingL_0 -pg 1 -lvl 8 -x 2970 -y 1190 -defaultsOSRD
+preplace port port-id_sRelayComH_0 -pg 1 -lvl 8 -x 2970 -y 1290 -defaultsOSRD
+preplace port port-id_sCh2GainH_0 -pg 1 -lvl 8 -x 2970 -y 1250 -defaultsOSRD
+preplace port port-id_sADC_SDIO_0 -pg 1 -lvl 8 -x 2970 -y 1070 -defaultsOSRD
+preplace port port-id_adcSync_0 -pg 1 -lvl 8 -x 2970 -y 1050 -defaultsOSRD
+preplace port port-id_sCh2GainL_0 -pg 1 -lvl 8 -x 2970 -y 1270 -defaultsOSRD
+preplace port port-id_sCh1CouplingH_0 -pg 1 -lvl 8 -x 2970 -y 1130 -defaultsOSRD
+preplace port port-id_sCh1CouplingL_0 -pg 1 -lvl 8 -x 2970 -y 1150 -defaultsOSRD
+preplace port port-id_sADC_CS_0 -pg 1 -lvl 8 -x 2970 -y 1090 -defaultsOSRD
+preplace port port-id_sADC_Sclk_0 -pg 1 -lvl 8 -x 2970 -y 1110 -defaultsOSRD
+preplace port port-id_sRelayComL_0 -pg 1 -lvl 8 -x 2970 -y 1310 -defaultsOSRD
+preplace port port-id_DcoClk_0 -pg 1 -lvl 0 -x 0 -y 1400 -defaultsOSRD
+preplace portBus dADC_Data_0 -pg 1 -lvl 0 -x 0 -y 1380 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 5 -x 1880 -y 440 -defaultsOSRD
+preplace inst ZmodADC1410_Controll_0 -pg 1 -lvl 7 -x 2690 -y 1110 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 570 -y 980 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 79 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 59 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 103 100 104 101 107 102 105 106 108} -defaultsOSRD
+preplace inst axi_mem_intercon -pg 1 -lvl 6 -x 2260 -y 490 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 6 -x 2260 -y 720 -defaultsOSRD
+preplace inst AXI_ZmodADC1410_0 -pg 1 -lvl 6 -x 2260 -y 1080 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 61 48 60 51 50 49 54 53 55 56 57 58 52 59 47} -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 5 -x 1880 -y 1070 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 6 -x 2260 -y 100 -defaultsOSRD
+preplace inst system_ila_1 -pg 1 -lvl 4 -x 1510 -y 350 -defaultsOSRD
+preplace inst axis_data_fifo_0 -pg 1 -lvl 4 -x 1510 -y 700 -swap {0 1 2 3 4 5 6 7 8 9 10 11 13 12} -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 6 -x 2260 -y 1320 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 7 -x 2690 -y 670 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 210 -y 940 -defaultsOSRD
+preplace inst rst_ps7_0_100M_1 -pg 1 -lvl 1 -x 210 -y 1140 -swap {0 1 2 3 4 9 6 7 8 5} -defaultsOSRD
+preplace inst AXI_TAR_0 -pg 1 -lvl 3 -x 960 -y 440 -defaultsOSRD
+preplace netloc AXI_TAR_0_Introut 1 3 3 1230 620 NJ 620 2060J
+preplace netloc AXI_ZmodADC1410_0_sCh1CouplingSelect 1 6 1 2420 1090n
+preplace netloc AXI_ZmodADC1410_0_sCh1GainSelect 1 6 1 N 1150
+preplace netloc AXI_ZmodADC1410_0_sCh2CouplingSelect 1 6 1 N 1130
+preplace netloc AXI_ZmodADC1410_0_sCh2GainSelect 1 6 1 N 1170
+preplace netloc AXI_ZmodADC1410_0_sTestMode 1 6 1 N 1190
+preplace netloc AXI_ZmodADC1410_0_sZmodControllerRst_n 1 6 1 2430 1070n
+preplace netloc DcoClk_0_1 1 0 7 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 2460J
+preplace netloc Net 1 7 1 NJ 1070
+preplace netloc ZmodADC1410_Controll_0_adcClkIn_n 1 7 1 NJ 1030
+preplace netloc ZmodADC1410_Controll_0_adcClkIn_p 1 7 1 NJ 1010
+preplace netloc ZmodADC1410_Controll_0_adcSync 1 7 1 NJ 1050
+preplace netloc ZmodADC1410_Controll_0_sADC_CS 1 7 1 NJ 1090
+preplace netloc ZmodADC1410_Controll_0_sADC_Sclk 1 7 1 NJ 1110
+preplace netloc ZmodADC1410_Controll_0_sCh1CouplingH 1 7 1 NJ 1130
+preplace netloc ZmodADC1410_Controll_0_sCh1CouplingL 1 7 1 NJ 1150
+preplace netloc ZmodADC1410_Controll_0_sCh1GainH 1 7 1 NJ 1210
+preplace netloc ZmodADC1410_Controll_0_sCh1GainL 1 7 1 NJ 1230
+preplace netloc ZmodADC1410_Controll_0_sCh1Out 1 2 6 770 180 1300 990 NJ 990 2060J 810 NJ 810 2930
+preplace netloc ZmodADC1410_Controll_0_sCh2CouplingH 1 7 1 NJ 1170
+preplace netloc ZmodADC1410_Controll_0_sCh2CouplingL 1 7 1 NJ 1190
+preplace netloc ZmodADC1410_Controll_0_sCh2GainH 1 7 1 NJ 1250
+preplace netloc ZmodADC1410_Controll_0_sCh2GainL 1 7 1 NJ 1270
+preplace netloc ZmodADC1410_Controll_0_sCh2Out 1 2 6 770 700 1310 1000 NJ 1000 2080J 820 NJ 820 2950
+preplace netloc ZmodADC1410_Controll_0_sInitDone_n 1 5 3 2100 840 2470J 830 2910
+preplace netloc ZmodADC1410_Controll_0_sRelayComH 1 7 1 NJ 1290
+preplace netloc ZmodADC1410_Controll_0_sRelayComL 1 7 1 NJ 1310
+preplace netloc axi_dma_0_s2mm_introut 1 5 1 2090 510n
+preplace netloc clk_wiz_0_clk_out1 1 6 1 2450 1070n
+preplace netloc dADC_Data_0_1 1 0 7 NJ 1380 NJ 1380 NJ 1380 NJ 1380 NJ 1380 2060J 1390 2470J
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 8 30 840 410 810 740 720 1360 780 1660 600 2100 790 2450 790 2930
+preplace netloc processing_system7_0_FCLK_CLK1 1 0 8 30 1040 400 820 730 710 1280 1140 NJ 1140 2090 830 2450 840 2940
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 8 20 1250 NJ 1250 NJ 1250 NJ 1250 NJ 1250 2100 1250 2440J 850 2920
+preplace netloc rst_ps7_0_100M_1_peripheral_aresetn 1 1 5 420 1140 750 1130 NJ 1130 NJ 1130 NJ
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 5 390 790 760 790 1370 790 1680 610 2070
+preplace netloc sys_clock_1 1 0 6 NJ 1330 NJ 1330 NJ 1330 NJ 1330 NJ 1330 NJ
+preplace netloc xlconcat_0_dout 1 6 1 2440 710n
+preplace netloc xlconstant_0_dout 1 5 1 2060 1070n
+preplace netloc cha_ts_debug 1 3 1 1200 240n
+preplace netloc cha_hist 1 3 1 1170 220n
+preplace netloc pf_wr_ptr_debug 1 3 1 1290 520n
+preplace netloc pf_cha_fifo_reg_debug 1 3 1 1220 440n
+preplace netloc chb_ts_debug 1 3 1 1320 360n
+preplace netloc chb_ts_temp_debug 1 3 1 1210 380n
+preplace netloc chb_vp_temp_debug 1 3 1 N 420
+preplace netloc cha_ts_temp_debug 1 3 1 1240 260n
+preplace netloc cha_dr_debug 1 3 1 1190 200n
+preplace netloc cha_vp_temp_debug 1 3 1 N 300
+preplace netloc cha_vp_debug 1 3 1 1250 280n
+preplace netloc pf_of_pend_flg_debug 1 3 1 1350 520n
+preplace netloc pf_rd_ptr_debug 1 3 1 N 540
+preplace netloc pf_chb_pend_flg_debug 1 3 1 1360 500n
+preplace netloc pf_cha_pend_flg_debug 1 3 1 1340 460n
+preplace netloc chb_dr_debug 1 3 1 1270 320n
+preplace netloc chb_vp_debug 1 3 1 1330 400n
+preplace netloc chb_hist 1 3 1 1260 340n
+preplace netloc pf_chb_fifo_reg_debug 1 3 1 1370 480n
+preplace netloc AXI_TAR_0_M00_AXIS 1 3 3 1180 80 NJ 80 NJ
+preplace netloc AXI_ZmodADC1410_0_mCalibCh1 1 6 1 N 1010
+preplace netloc AXI_ZmodADC1410_0_mCalibCh2 1 6 1 N 1030
+preplace netloc AXI_ZmodADC1410_0_mSPI_IAP 1 6 1 N 990
+preplace netloc axi_dma_0_M_AXI_MM2S 1 5 1 N 390
+preplace netloc axi_dma_0_M_AXI_S2MM 1 5 1 2060 60n
+preplace netloc axi_dma_0_M_AXI_SG 1 5 1 N 370
+preplace netloc axi_mem_intercon_M00_AXI 1 6 1 2450 490n
+preplace netloc axis_data_fifo_0_M_AXIS 1 4 2 1650 100 N
+preplace netloc processing_system7_0_DDR 1 7 1 NJ 610
+preplace netloc processing_system7_0_FIXED_IO 1 7 1 NJ 630
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 7 420 800 NJ 800 NJ 800 NJ 800 NJ 800 NJ 800 2950
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 3 NJ 960 NJ 960 1670
+preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 720 360n
+preplace netloc ps7_0_axi_periph_M02_AXI 1 2 4 NJ 980 NJ 980 NJ 980 2070
+levelinfo -pg 1 0 210 570 960 1510 1880 2260 2690 2970
+pagesize -pg 1 -db -bbox -sgen -190 0 3150 1420
 ",
-   "Color Coded_ScaleFactor":"0.81183",
-   "Color Coded_TopLeft":"-191,-53",
+   "Color Coded_ScaleFactor":"0.748577",
+   "Color Coded_TopLeft":"-191,-102",
    "Default View_Layers":"/processing_system7_0_FCLK_CLK0:true|/rst_ps7_0_100M_peripheral_aresetn:true|/axi_dma_0_s2mm_introut:true|/clk_wiz_0_clk_out1:true|/rst_ps7_0_100M_1_peripheral_aresetn:true|/axi_dma_0_mm2s_introut:true|/sys_clock_1:true|/processing_system7_0_FCLK_CLK1:true|/processing_system7_0_FCLK_RESET0_N:true|/AXI_TAR_0_Introut:true|",
-   "Default View_ScaleFactor":"1.22342",
-   "Default View_TopLeft":"396,441",
+   "Default View_ScaleFactor":"0.750827",
+   "Default View_TopLeft":"-190,-100",
    "Display-PortTypeClock":"true",
    "Display-PortTypeInterrupt":"true",
    "Display-PortTypeOthers":"true",
@@ -140,57 +159,58 @@ pagesize -pg 1 -db -bbox -sgen -190 0 2890 1390
    "Grouping and No Loops_ExpandedHierarchyInLayout":"",
    "Grouping and No Loops_Layout":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
-preplace port group_1 -pg 1 -lvl 9 -x 3060 -y 460 -defaultsOSRD
-preplace port group_2 -pg 1 -lvl 9 -x 3060 -y 480 -defaultsOSRD
-preplace port group_3 -pg 1 -lvl 9 -x 3060 -y 740 -defaultsOSRD
-preplace port port-id_sys_clock -pg 1 -lvl 0 -x 0 -y 1180 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 5 -x 1750 -y 260 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 95 94} -defaultsOSRD -pinBusDir group_1 right -pinBusY group_1 60R -pinDir USBIND_0 right -pinY USBIND_0 80R -pinDir S_AXI_HP0_FIFO_CTRL right -pinY S_AXI_HP0_FIFO_CTRL 100R -pinDir M_AXI_GP0 right -pinY M_AXI_GP0 160R -pinDir S_AXI_HP0 left -pinY S_AXI_HP0 20L -pinDir M_AXI_GP0_ACLK left -pinY M_AXI_GP0_ACLK 40L -pinDir S_AXI_HP0_ACLK left -pinY S_AXI_HP0_ACLK 60L -pinBusDir IRQ_F2P left -pinBusY IRQ_F2P 220L -pinDir FCLK_CLK0 right -pinY FCLK_CLK0 180R -pinDir FCLK_CLK1 right -pinY FCLK_CLK1 220R -pinDir FCLK_RESET0_N right -pinY FCLK_RESET0_N 200R
-preplace inst axi_dma_0 -pg 1 -lvl 3 -x 900 -y 500 -swap {0 18 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 1 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55} -defaultsOSRD -pinBusDir group_1 right -pinBusY group_1 20R -pinDir S_AXI_LITE right -pinY S_AXI_LITE 60R -pinDir M_AXI_S2MM right -pinY M_AXI_S2MM 40R -pinDir M_AXIS_MM2S right -pinY M_AXIS_MM2S 80R -pinDir S_AXIS_S2MM left -pinY S_AXIS_S2MM 20L -pinDir s_axi_lite_aclk left -pinY s_axi_lite_aclk 40L -pinDir m_axi_sg_aclk left -pinY m_axi_sg_aclk 60L -pinDir m_axi_mm2s_aclk left -pinY m_axi_mm2s_aclk 80L -pinDir m_axi_s2mm_aclk left -pinY m_axi_s2mm_aclk 100L -pinDir axi_resetn left -pinY axi_resetn 120L -pinDir mm2s_prmry_reset_out_n right -pinY mm2s_prmry_reset_out_n 100R -pinDir s2mm_prmry_reset_out_n right -pinY s2mm_prmry_reset_out_n 120R -pinDir mm2s_introut right -pinY mm2s_introut 140R -pinDir s2mm_introut right -pinY s2mm_introut 160R
-preplace inst ZmodADC1410_Controll_0 -pg 1 -lvl 8 -x 2900 -y 440 -swap {6 0 1 3 4 5 7 2 8 9} -defaultsOSRD -pinBusDir group_1 left -pinBusY group_1 220L -pinBusDir group_2 left -pinBusY group_2 20L -pinBusDir group_3 left -pinBusY group_3 80L -pinBusDir group_4 right -pinBusY group_4 20R -pinBusDir group_5 right -pinBusY group_5 40R -pinDir SysClk left -pinY SysClk 200L -pinDir ADC_InClk left -pinY ADC_InClk 240L -pinDir sInitDone_n left -pinY sInitDone_n 100L -pinDir FIFO_EMPTY_CHA right -pinY FIFO_EMPTY_CHA 60R -pinDir FIFO_EMPTY_CHB right -pinY FIFO_EMPTY_CHB 80R
-preplace inst ps7_0_axi_periph -pg 1 -lvl 6 -x 2210 -y 400 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 79 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 59 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 103 100 104 101 107 102 105 106 108} -defaultsOSRD -pinDir S00_AXI left -pinY S00_AXI 20L -pinDir M00_AXI left -pinY M00_AXI 100L -pinDir M01_AXI right -pinY M01_AXI 300R -pinDir M02_AXI right -pinY M02_AXI 20R -pinDir ACLK left -pinY ACLK 120L -pinDir ARESETN left -pinY ARESETN 200L -pinDir S00_ACLK left -pinY S00_ACLK 140L -pinDir S00_ARESETN left -pinY S00_ARESETN 220L -pinDir M00_ACLK left -pinY M00_ACLK 160L -pinDir M00_ARESETN left -pinY M00_ARESETN 280L -pinDir M01_ACLK left -pinY M01_ACLK 180L -pinDir M01_ARESETN left -pinY M01_ARESETN 240L -pinDir M02_ACLK left -pinY M02_ACLK 260L -pinDir M02_ARESETN left -pinY M02_ARESETN 300L
-preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 200 -y 420 -swap {0 9 2 3 4 1 5 7 8 6} -defaultsOSRD -pinDir slowest_sync_clk right -pinY slowest_sync_clk 20R -pinDir ext_reset_in right -pinY ext_reset_in 300R -pinDir aux_reset_in left -pinY aux_reset_in 20L -pinDir mb_debug_sys_rst left -pinY mb_debug_sys_rst 40L -pinDir dcm_locked left -pinY dcm_locked 60L -pinDir mb_reset right -pinY mb_reset 40R -pinBusDir bus_struct_reset right -pinBusY bus_struct_reset 60R -pinBusDir peripheral_reset right -pinBusY peripheral_reset 100R -pinBusDir interconnect_aresetn right -pinBusY interconnect_aresetn 120R -pinBusDir peripheral_aresetn right -pinBusY peripheral_aresetn 80R
-preplace inst axi_mem_intercon -pg 1 -lvl 4 -x 1350 -y 40 -swap {69 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 0 64 60 65 61 66 62 67 63 68} -defaultsOSRD -pinBusDir group_1 left -pinBusY group_1 240L -pinDir M00_AXI right -pinY M00_AXI 240R -pinDir S01_AXI left -pinY S01_AXI 40L -pinDir ACLK left -pinY ACLK 20L -pinDir ARESETN left -pinY ARESETN 140L -pinDir S00_ACLK left -pinY S00_ACLK 60L -pinDir S00_ARESETN left -pinY S00_ARESETN 160L -pinDir M00_ACLK left -pinY M00_ACLK 80L -pinDir M00_ARESETN left -pinY M00_ARESETN 180L -pinDir S01_ACLK left -pinY S01_ACLK 100L -pinDir S01_ARESETN left -pinY S01_ARESETN 200L -pinDir S02_ACLK left -pinY S02_ACLK 120L -pinDir S02_ARESETN left -pinY S02_ARESETN 220L
-preplace inst xlconcat_0 -pg 1 -lvl 4 -x 1350 -y 840 -swap {0 2 1} -defaultsOSRD -pinBusDir In0 left -pinBusY In0 20L -pinBusDir In1 right -pinBusY In1 100R -pinBusDir dout right -pinBusY dout 20R
-preplace inst clk_wiz_0 -pg 1 -lvl 7 -x 2590 -y 1140 -defaultsOSRD -pinDir resetn left -pinY resetn 20L -pinDir clk_in1 left -pinY clk_in1 40L -pinDir clk_out1 right -pinY clk_out1 20R
-preplace inst AXI_ZmodADC1410_0 -pg 1 -lvl 7 -x 2590 -y 400 -swap {0 31 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 30 34 36 1 32 33 28 29 35} -defaultsOSRD -pinBusDir group_1 right -pinBusY group_1 60R -pinBusDir group_2 right -pinBusY group_2 120R -pinDir S00_AXI left -pinY S00_AXI 20L -pinDir AXI_S2MM right -pinY AXI_S2MM 100R -pinDir SysClk left -pinY SysClk 80L -pinDir AxiStreamClk left -pinY AxiStreamClk 100L -pinDir lRst_n left -pinY lRst_n 160L -pinDir lIrqOut right -pinY lIrqOut 80R -pinDir sInitDone_n right -pinY sInitDone_n 140R -pinBusDir sSync right -pinBusY sSync 160R -pinBusDir sCh1In left -pinBusY sCh1In 40L -pinBusDir sCh2In left -pinBusY sCh2In 60L -pinDir s00_axi_aclk left -pinY s00_axi_aclk 120L
-preplace inst rst_ps7_0_100M_1 -pg 1 -lvl 5 -x 1750 -y 620 -swap {0 4 1 2 3 5 6 7 8 9} -defaultsOSRD -pinDir slowest_sync_clk right -pinY slowest_sync_clk 20R -pinDir ext_reset_in left -pinY ext_reset_in 80L -pinDir aux_reset_in left -pinY aux_reset_in 20L -pinDir mb_debug_sys_rst left -pinY mb_debug_sys_rst 40L -pinDir dcm_locked left -pinY dcm_locked 60L -pinDir mb_reset right -pinY mb_reset 40R -pinBusDir bus_struct_reset right -pinBusY bus_struct_reset 60R -pinBusDir peripheral_reset right -pinBusY peripheral_reset 80R -pinBusDir interconnect_aresetn right -pinBusY interconnect_aresetn 100R -pinBusDir peripheral_aresetn right -pinBusY peripheral_aresetn 120R
-preplace inst xlconstant_0 -pg 1 -lvl 6 -x 2210 -y 240 -defaultsOSRD -pinBusDir dout right -pinBusY dout 20R
-preplace inst system_ila_0 -pg 1 -lvl 4 -x 1350 -y 380 -swap {56 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 0 47 48 49 50 51 52 53 54 55 46 57 58 59 60 61 62 63 64 65 66 67} -defaultsOSRD -pinDir SLOT_0_AXI left -pinY SLOT_0_AXI 60L -pinDir SLOT_1_AXIS left -pinY SLOT_1_AXIS 20L -pinDir SLOT_2_AXIS left -pinY SLOT_2_AXIS 40L -pinDir clk left -pinY clk 80L -pinDir resetn left -pinY resetn 100L
-preplace inst system_ila_1 -pg 1 -lvl 7 -x 2590 -y 1020 -defaultsOSRD -pinBusDir group_1 right -pinBusY group_1 20R -pinDir clk left -pinY clk 20L -pinBusDir probe0 left -pinBusY probe0 40L
-preplace inst AXI_TAR_0 -pg 1 -lvl 7 -x 2590 -y 680 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 29 32 33 27 30 28 31} -defaultsOSRD -pinBusDir group_1 right -pinBusY group_1 20R -pinDir S00_AXI left -pinY S00_AXI 20L -pinDir M00_AXIS left -pinY M00_AXIS 120L -pinDir SysClk left -pinY SysClk 180L -pinDir IRst_n left -pinY IRst_n 240L -pinDir Introut left -pinY Introut 260L -pinDir s00_axi_aclk left -pinY s00_axi_aclk 140L -pinDir s00_axi_aresetn left -pinY s00_axi_aresetn 200L -pinDir m00_axis_aclk left -pinY m00_axis_aclk 160L -pinDir m00_axis_aresetn left -pinY m00_axis_aresetn 220L
-preplace inst axis_data_fifo_0 -pg 1 -lvl 2 -x 520 -y 380 -swap {0 1 2 3 4 5 6 7 9 8} -defaultsOSRD -pinDir S_AXIS right -pinY S_AXIS 20R -pinDir M_AXIS right -pinY M_AXIS 40R -pinDir s_axis_aresetn left -pinY s_axis_aresetn 40L -pinDir s_axis_aclk left -pinY s_axis_aclk 20L
-preplace netloc netgroup_1 1 3 1 1180 280n
-preplace netloc netgroup_2 1 7 1 2720 660n
-preplace netloc netgroup_3 1 7 1 N 460
-preplace netloc netgroup_4 1 7 1 N 520
-preplace netloc netgroup_5 1 8 1 NJ 460
-preplace netloc netgroup_6 1 8 1 NJ 480
-preplace netloc netgroup_7 1 5 4 NJ 320 2420J 620 2740J 740 NJ
-preplace netloc AXI_TAR_0_Introut 1 4 3 NJ 940 NJ 940 2440
-preplace netloc ZmodADC1410_Controll_0_sInitDone_n 1 7 1 N 540
-preplace netloc axi_dma_0_s2mm_introut 1 3 1 1100 660n
-preplace netloc clk_wiz_0_clk_out1 1 7 1 2760 680n
-preplace netloc processing_system7_0_FCLK_CLK0 1 1 6 380 480 680 440 1120 340 1500 220 2060 340 2400
-preplace netloc processing_system7_0_FCLK_CLK1 1 5 3 2000 360 2360 640 N
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 6 N 720 NJ 720 NJ 720 1520 580 1980 1160 NJ
-preplace netloc rst_ps7_0_100M_1_peripheral_aresetn 1 5 2 2060 780 2440
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 6 400 500 700 460 1100 540 NJ 540 2020 760 2380
-preplace netloc sys_clock_1 1 0 7 NJ 1180 NJ 1180 NJ 1180 NJ 1180 NJ 1180 NJ 1180 NJ
-preplace netloc xlconcat_0_dout 1 4 1 1500 480n
-preplace netloc xlconstant_0_dout 1 6 1 2440 260n
-preplace netloc axi_dma_0_M_AXI_S2MM 1 3 1 1160 80n
-preplace netloc axi_mem_intercon_M00_AXI 1 4 1 N 280
-preplace netloc processing_system7_0_M_AXI_GP0 1 5 1 N 420
-preplace netloc ps7_0_axi_periph_M00_AXI 1 3 3 NJ 560 NJ 560 2040
-preplace netloc ps7_0_axi_periph_M01_AXI 1 6 1 N 700
-preplace netloc ps7_0_axi_periph_M02_AXI 1 6 1 N 420
-preplace netloc AXI_TAR_0_M00_AXIS 1 2 5 NJ 400 1140 800 NJ 800 NJ 800 N
-preplace netloc axis_data_fifo_0_M_AXIS 1 2 2 660 420 NJ
-levelinfo -pg 1 0 200 520 900 1350 1750 2210 2590 2900 3060
-pagesize -pg 1 -db -bbox -sgen -120 0 3170 1240
+preplace port group_1 -pg 1 -lvl 9 -x 3140 -y 250 -defaultsOSRD
+preplace port group_2 -pg 1 -lvl 9 -x 3140 -y 270 -defaultsOSRD
+preplace port group_3 -pg 1 -lvl 9 -x 3140 -y 70 -defaultsOSRD
+preplace port port-id_sys_clock -pg 1 -lvl 0 -x 0 -y 790 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 3 -x 900 -y 390 -swap {0 35 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 1 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55} -defaultsOSRD -pinBusDir group_1 right -pinBusY group_1 20R -pinDir S_AXI_LITE right -pinY S_AXI_LITE 80R -pinDir M_AXI_S2MM right -pinY M_AXI_S2MM 60R -pinDir M_AXIS_MM2S right -pinY M_AXIS_MM2S 40R -pinDir S_AXIS_S2MM left -pinY S_AXIS_S2MM 140L -pinDir s_axi_lite_aclk left -pinY s_axi_lite_aclk 160L -pinDir m_axi_sg_aclk left -pinY m_axi_sg_aclk 180L -pinDir m_axi_mm2s_aclk left -pinY m_axi_mm2s_aclk 200L -pinDir m_axi_s2mm_aclk left -pinY m_axi_s2mm_aclk 220L -pinDir axi_resetn left -pinY axi_resetn 240L -pinDir mm2s_prmry_reset_out_n right -pinY mm2s_prmry_reset_out_n 100R -pinDir s2mm_prmry_reset_out_n right -pinY s2mm_prmry_reset_out_n 120R -pinDir mm2s_introut right -pinY mm2s_introut 140R -pinDir s2mm_introut right -pinY s2mm_introut 160R
+preplace inst ZmodADC1410_Controll_0 -pg 1 -lvl 8 -x 2980 -y 230 -swap {0 1 2 3 6 5 7 4 8 9} -defaultsOSRD -pinBusDir group_1 right -pinBusY group_1 20R -pinBusDir group_2 right -pinBusY group_2 40R -pinBusDir group_3 left -pinBusY group_3 20L -pinBusDir group_4 left -pinBusY group_4 80L -pinBusDir group_5 left -pinBusY group_5 240L -pinDir SysClk left -pinY SysClk 180L -pinDir ADC_InClk left -pinY ADC_InClk 260L -pinDir sInitDone_n left -pinY sInitDone_n 100L -pinDir FIFO_EMPTY_CHA right -pinY FIFO_EMPTY_CHA 60R -pinDir FIFO_EMPTY_CHB right -pinY FIFO_EMPTY_CHB 80R
+preplace inst ps7_0_axi_periph -pg 1 -lvl 6 -x 2250 -y 590 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 79 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 59 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 100 105 101 106 102 107 103 108 99 104} -defaultsOSRD -pinDir S00_AXI left -pinY S00_AXI 20L -pinDir M00_AXI left -pinY M00_AXI 40L -pinDir M01_AXI right -pinY M01_AXI 40R -pinDir M02_AXI right -pinY M02_AXI 20R -pinDir ACLK left -pinY ACLK 80L -pinDir ARESETN left -pinY ARESETN 180L -pinDir S00_ACLK left -pinY S00_ACLK 100L -pinDir S00_ARESETN left -pinY S00_ARESETN 200L -pinDir M00_ACLK left -pinY M00_ACLK 120L -pinDir M00_ARESETN left -pinY M00_ARESETN 220L -pinDir M01_ACLK left -pinY M01_ACLK 140L -pinDir M01_ARESETN left -pinY M01_ARESETN 240L -pinDir M02_ACLK left -pinY M02_ACLK 60L -pinDir M02_ARESETN left -pinY M02_ARESETN 160L
+preplace inst axi_mem_intercon -pg 1 -lvl 4 -x 1330 -y 110 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 83 79 84 80 85 81 86 82 87} -defaultsOSRD -pinBusDir group_1 left -pinBusY group_1 60L -pinDir M00_AXI right -pinY M00_AXI 20R -pinDir S02_AXI left -pinY S02_AXI 80L -pinDir ACLK left -pinY ACLK 100L -pinDir ARESETN left -pinY ARESETN 200L -pinDir S00_ACLK left -pinY S00_ACLK 120L -pinDir S00_ARESETN left -pinY S00_ARESETN 220L -pinDir M00_ACLK left -pinY M00_ACLK 140L -pinDir M00_ARESETN left -pinY M00_ARESETN 240L -pinDir S01_ACLK left -pinY S01_ACLK 160L -pinDir S01_ARESETN left -pinY S01_ARESETN 260L -pinDir S02_ACLK left -pinY S02_ACLK 180L -pinDir S02_ARESETN left -pinY S02_ARESETN 280L
+preplace inst xlconcat_0 -pg 1 -lvl 4 -x 1330 -y 530 -swap {0 2 1} -defaultsOSRD -pinBusDir In0 left -pinBusY In0 20L -pinBusDir In1 right -pinBusY In1 40R -pinBusDir dout right -pinBusY dout 20R
+preplace inst AXI_ZmodADC1410_0 -pg 1 -lvl 7 -x 2670 -y 210 -swap {0 31 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 36 1 32 33 34 35 30} -defaultsOSRD -pinBusDir group_1 right -pinBusY group_1 40R -pinBusDir group_2 right -pinBusY group_2 100R -pinDir S00_AXI left -pinY S00_AXI 20L -pinDir AXI_S2MM right -pinY AXI_S2MM 80R -pinDir SysClk left -pinY SysClk 40L -pinDir AxiStreamClk left -pinY AxiStreamClk 60L -pinDir lRst_n left -pinY lRst_n 140L -pinDir lIrqOut right -pinY lIrqOut 60R -pinDir sInitDone_n right -pinY sInitDone_n 120R -pinBusDir sSync right -pinBusY sSync 140R -pinBusDir sCh1In left -pinBusY sCh1In 100L -pinBusDir sCh2In left -pinBusY sCh2In 120L -pinDir s00_axi_aclk left -pinY s00_axi_aclk 80L
+preplace inst xlconstant_0 -pg 1 -lvl 6 -x 2250 -y 290 -defaultsOSRD -pinBusDir dout right -pinBusY dout 20R
+preplace inst system_ila_0 -pg 1 -lvl 4 -x 1330 -y 690 -defaultsOSRD -pinDir SLOT_0_AXI left -pinY SLOT_0_AXI 20L -pinDir SLOT_1_AXIS left -pinY SLOT_1_AXIS 40L -pinDir SLOT_2_AXIS left -pinY SLOT_2_AXIS 60L -pinDir clk left -pinY clk 80L -pinDir resetn left -pinY resetn 100L
+preplace inst system_ila_1 -pg 1 -lvl 8 -x 2980 -y 570 -swap {2 1 0} -defaultsOSRD -pinBusDir group_1 left -pinBusY group_1 60L -pinBusDir group_2 left -pinBusY group_2 40L -pinDir clk left -pinY clk 20L
+preplace inst axis_data_fifo_0 -pg 1 -lvl 2 -x 500 -y 390 -swap {6 1 2 3 4 5 0 7 8 9 10 11 13 12} -defaultsOSRD -pinDir S_AXIS right -pinY S_AXIS 320R -pinDir M_AXIS right -pinY M_AXIS 140R -pinDir s_axis_aresetn left -pinY s_axis_aresetn 320L -pinDir s_axis_aclk left -pinY s_axis_aclk 20L
+preplace inst clk_wiz_0 -pg 1 -lvl 7 -x 2670 -y 710 -defaultsOSRD -pinDir resetn left -pinY resetn 20L -pinDir clk_in1 left -pinY clk_in1 200L -pinDir clk_out1 right -pinY clk_out1 20R
+preplace inst processing_system7_0 -pg 1 -lvl 5 -x 1730 -y 50 -defaultsOSRD -pinBusDir group_1 right -pinBusY group_1 20R -pinDir USBIND_0 right -pinY USBIND_0 40R -pinDir S_AXI_HP0_FIFO_CTRL right -pinY S_AXI_HP0_FIFO_CTRL 60R -pinDir M_AXI_GP0 right -pinY M_AXI_GP0 80R -pinDir S_AXI_HP0 left -pinY S_AXI_HP0 80L -pinDir M_AXI_GP0_ACLK left -pinY M_AXI_GP0_ACLK 100L -pinDir S_AXI_HP0_ACLK left -pinY S_AXI_HP0_ACLK 120L -pinBusDir IRQ_F2P left -pinBusY IRQ_F2P 140L -pinDir FCLK_CLK0 right -pinY FCLK_CLK0 100R -pinDir FCLK_CLK1 right -pinY FCLK_CLK1 120R -pinDir FCLK_RESET0_N right -pinY FCLK_RESET0_N 140R
+preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 200 -y 310 -defaultsOSRD -pinDir slowest_sync_clk right -pinY slowest_sync_clk 20R -pinDir ext_reset_in right -pinY ext_reset_in 40R -pinDir aux_reset_in left -pinY aux_reset_in 20L -pinDir mb_debug_sys_rst left -pinY mb_debug_sys_rst 40L -pinDir dcm_locked left -pinY dcm_locked 60L -pinDir mb_reset right -pinY mb_reset 120R -pinBusDir bus_struct_reset right -pinBusY bus_struct_reset 140R -pinBusDir peripheral_reset right -pinBusY peripheral_reset 160R -pinBusDir interconnect_aresetn right -pinBusY interconnect_aresetn 180R -pinBusDir peripheral_aresetn right -pinBusY peripheral_aresetn 400R
+preplace inst rst_ps7_0_100M_1 -pg 1 -lvl 5 -x 1730 -y 290 -swap {8 4 1 2 3 0 5 6 7 9} -defaultsOSRD -pinDir slowest_sync_clk right -pinY slowest_sync_clk 100R -pinDir ext_reset_in left -pinY ext_reset_in 120L -pinDir aux_reset_in left -pinY aux_reset_in 20L -pinDir mb_debug_sys_rst left -pinY mb_debug_sys_rst 40L -pinDir dcm_locked left -pinY dcm_locked 60L -pinDir mb_reset right -pinY mb_reset 20R -pinBusDir bus_struct_reset right -pinBusY bus_struct_reset 40R -pinBusDir peripheral_reset right -pinBusY peripheral_reset 60R -pinBusDir interconnect_aresetn right -pinBusY interconnect_aresetn 80R -pinBusDir peripheral_aresetn right -pinBusY peripheral_aresetn 120R
+preplace inst AXI_TAR_0 -pg 1 -lvl 7 -x 2670 -y 450 -swap {1 0 22 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 2 23 24 25 26 27 28 29 30 31 33 32 34} -defaultsOSRD -pinBusDir group_1 right -pinBusY group_1 180R -pinBusDir group_2 right -pinBusY group_2 20R -pinDir S00_AXI left -pinY S00_AXI 40L -pinDir M00_AXIS left -pinY M00_AXIS 20L -pinDir SysClk left -pinY SysClk 60L -pinDir IRst_n left -pinY IRst_n 80L -pinDir Introut left -pinY Introut 100L -pinDir s00_axi_aclk left -pinY s00_axi_aclk 120L -pinDir s00_axi_aresetn left -pinY s00_axi_aresetn 160L -pinDir m00_axis_aclk left -pinY m00_axis_aclk 140L -pinDir m00_axis_aresetn left -pinY m00_axis_aresetn 180L
+preplace netloc netgroup_1 1 7 1 N 630
+preplace netloc netgroup_2 1 8 1 NJ 250
+preplace netloc netgroup_3 1 8 1 NJ 270
+preplace netloc netgroup_4 1 5 4 NJ 70 NJ 70 NJ 70 NJ
+preplace netloc netgroup_5 1 3 1 1080 170n
+preplace netloc netgroup_6 1 7 1 N 250
+preplace netloc netgroup_7 1 7 1 N 310
+preplace netloc netgroup_8 1 7 1 2800 470n
+preplace netloc AXI_TAR_0_Introut 1 4 3 1500 510 NJ 510 2480J
+preplace netloc ZmodADC1410_Controll_0_sInitDone_n 1 7 1 N 330
+preplace netloc axi_dma_0_s2mm_introut 1 3 1 N 550
+preplace netloc clk_wiz_0_clk_out1 1 7 1 2820 490n
+preplace netloc processing_system7_0_FCLK_CLK0 1 1 6 380 330 640 690 1180 70 1480 10 2080 530 2420
+preplace netloc processing_system7_0_FCLK_CLK1 1 5 3 2060 250 2520 410 2840
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 6 NJ 350 NJ 350 1140J 450 1500 250 1980 550 2400J
+preplace netloc rst_ps7_0_100M_1_peripheral_aresetn 1 5 2 2040 490 2460
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 6 380 770 680 770 1160 650 NJ 650 1960 890 2520
+preplace netloc sys_clock_1 1 0 7 NJ 790 NJ 790 700J 730 1080J 630 NJ 630 1980J 910 NJ
+preplace netloc xlconcat_0_dout 1 4 1 1480 190n
+preplace netloc xlconstant_0_dout 1 6 1 2500 310n
+preplace netloc AXI_TAR_0_M00_AXIS 1 2 5 NJ 710 1100 490 NJ 490 2020J 470 NJ
+preplace netloc axi_dma_0_M_AXI_S2MM 1 3 1 1120 190n
+preplace netloc axi_mem_intercon_M00_AXI 1 4 1 N 130
+preplace netloc axis_data_fifo_0_M_AXIS 1 2 2 660 750 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 5 1 2100 130n
+preplace netloc ps7_0_axi_periph_M00_AXI 1 3 3 NJ 470 NJ 470 2000
+preplace netloc ps7_0_axi_periph_M01_AXI 1 6 1 2500 490n
+preplace netloc ps7_0_axi_periph_M02_AXI 1 6 1 2440 230n
+levelinfo -pg 1 0 200 500 900 1330 1730 2250 2670 2980 3140
+pagesize -pg 1 -db -bbox -sgen -120 0 3250 970
 ",
-   "Grouping and No Loops_ScaleFactor":"0.760426",
-   "Grouping and No Loops_TopLeft":"-117,-180",
+   "Grouping and No Loops_ScaleFactor":"0.742348",
+   "Grouping and No Loops_TopLeft":"-117,-335",
    "Interfaces View_ExpandedHierarchyInLayout":"",
    "Interfaces View_Layers":"/processing_system7_0_FCLK_CLK0:false|/sys_clock_1:false|/axi_dma_0_mm2s_introut:false|/processing_system7_0_FCLK_CLK1:false|/rst_ps7_0_100M_peripheral_aresetn:false|/processing_system7_0_FCLK_RESET0_N:false|/clk_wiz_0_clk_out1:false|/rst_ps7_0_100M_1_peripheral_aresetn:false|/axi_dma_0_s2mm_introut:false|/AXI_TAR_0_Introut:false|",
    "Interfaces View_Layout":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
@@ -215,133 +235,152 @@ preplace port port-id_sADC_Sclk_0 -pg 1 -lvl 7 -x 1890 -y 120 -defaultsOSRD
 preplace port port-id_sRelayComL_0 -pg 1 -lvl 7 -x 1890 -y 360 -defaultsOSRD
 preplace port port-id_DcoClk_0 -pg 1 -lvl 0 -x 0 -y 40 -defaultsOSRD
 preplace portBus dADC_Data_0 -pg 1 -lvl 0 -x 0 -y 20 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 6 -x 1650 -y 290 -defaultsOSRD
 preplace inst axi_dma_0 -pg 1 -lvl 4 -x 1000 -y 310 -defaultsOSRD
 preplace inst ZmodADC1410_Controll_0 -pg 1 -lvl 3 -x 700 -y 100 -defaultsOSRD
 preplace inst ps7_0_axi_periph -pg 1 -lvl 1 -x 160 -y 220 -defaultsOSRD
 preplace inst axi_mem_intercon -pg 1 -lvl 5 -x 1290 -y 300 -defaultsOSRD
 preplace inst AXI_ZmodADC1410_0 -pg 1 -lvl 2 -x 430 -y 90 -defaultsOSRD
 preplace inst system_ila_0 -pg 1 -lvl 5 -x 1290 -y 480 -defaultsOSRD
-preplace inst AXI_TAR_0 -pg 1 -lvl 2 -x 430 -y 220 -defaultsOSRD
 preplace inst axis_data_fifo_0 -pg 1 -lvl 3 -x 700 -y 340 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 6 -x 1650 -y 290 -defaultsOSRD
+preplace inst AXI_TAR_0 -pg 1 -lvl 2 -x 430 -y 220 -defaultsOSRD
+preplace netloc AXI_TAR_0_M00_AXIS 1 2 3 570 480 NJ 480 NJ
 preplace netloc AXI_ZmodADC1410_0_mCalibCh1 1 2 1 N 100
 preplace netloc AXI_ZmodADC1410_0_mCalibCh2 1 2 1 N 120
 preplace netloc AXI_ZmodADC1410_0_mSPI_IAP 1 2 1 N 80
+preplace netloc axi_dma_0_M_AXI_MM2S 1 4 1 N 300
+preplace netloc axi_dma_0_M_AXI_S2MM 1 4 1 1150 320n
 preplace netloc axi_dma_0_M_AXI_SG 1 4 1 N 280
 preplace netloc axi_mem_intercon_M00_AXI 1 5 1 N 300
+preplace netloc axis_data_fifo_0_M_AXIS 1 3 2 830 500 NJ
 preplace netloc processing_system7_0_DDR 1 6 1 NJ 260
 preplace netloc processing_system7_0_FIXED_IO 1 6 1 NJ 280
 preplace netloc processing_system7_0_M_AXI_GP0 1 0 7 20 400 NJ 400 NJ 400 NJ 400 NJ 400 NJ 400 1870
 preplace netloc ps7_0_axi_periph_M00_AXI 1 1 3 300J 280 NJ 280 830
 preplace netloc ps7_0_axi_periph_M01_AXI 1 1 1 NJ 220
 preplace netloc ps7_0_axi_periph_M02_AXI 1 1 1 310 90n
-preplace netloc AXI_TAR_0_M00_AXIS 1 2 3 570 480 NJ 480 NJ
-preplace netloc axis_data_fifo_0_M_AXIS 1 3 2 830 500 NJ
-preplace netloc axi_dma_0_M_AXI_MM2S 1 4 1 N 300
-preplace netloc axi_dma_0_M_AXI_S2MM 1 4 1 1150 320n
 levelinfo -pg 1 0 160 430 700 1000 1290 1650 1890
 pagesize -pg 1 -db -bbox -sgen -190 0 2070 560
 ",
-   "Interfaces View_ScaleFactor":"0.748339",
-   "Interfaces View_TopLeft":"-191,-533",
+   "Interfaces View_ScaleFactor":"1.10678",
+   "Interfaces View_TopLeft":"-191,-270",
    "No Loops_ExpandedHierarchyInLayout":"",
    "No Loops_Layers":"/processing_system7_0_FCLK_RESET0_N:true|/AXI_TAR_0_Introut:true|/processing_system7_0_FCLK_CLK1:true|/processing_system7_0_FCLK_CLK0:true|/sys_clock_1:true|/rst_ps7_0_100M_peripheral_aresetn:true|/clk_wiz_0_clk_out1:true|/rst_ps7_0_100M_1_peripheral_aresetn:true|/axi_dma_0_s2mm_introut:true|",
    "No Loops_Layout":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 8 -x 2770 -y 300 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 8 -x 2770 -y 320 -defaultsOSRD
-preplace port port-id_sys_clock -pg 1 -lvl 0 -x 0 -y 1360 -defaultsOSRD
-preplace port port-id_sCh1GainH_0 -pg 1 -lvl 8 -x 2770 -y 1220 -defaultsOSRD
-preplace port port-id_adcClkIn_p_0 -pg 1 -lvl 8 -x 2770 -y 1020 -defaultsOSRD
-preplace port port-id_sCh1GainL_0 -pg 1 -lvl 8 -x 2770 -y 1240 -defaultsOSRD
-preplace port port-id_sCh2CouplingH_0 -pg 1 -lvl 8 -x 2770 -y 1180 -defaultsOSRD
-preplace port port-id_adcClkIn_n_0 -pg 1 -lvl 8 -x 2770 -y 1040 -defaultsOSRD
-preplace port port-id_sCh2CouplingL_0 -pg 1 -lvl 8 -x 2770 -y 1200 -defaultsOSRD
-preplace port port-id_sRelayComH_0 -pg 1 -lvl 8 -x 2770 -y 1300 -defaultsOSRD
-preplace port port-id_sCh2GainH_0 -pg 1 -lvl 8 -x 2770 -y 1260 -defaultsOSRD
-preplace port port-id_sADC_SDIO_0 -pg 1 -lvl 8 -x 2770 -y 1080 -defaultsOSRD
-preplace port port-id_adcSync_0 -pg 1 -lvl 8 -x 2770 -y 1060 -defaultsOSRD
-preplace port port-id_sCh2GainL_0 -pg 1 -lvl 8 -x 2770 -y 1280 -defaultsOSRD
-preplace port port-id_sCh1CouplingH_0 -pg 1 -lvl 8 -x 2770 -y 1140 -defaultsOSRD
-preplace port port-id_sCh1CouplingL_0 -pg 1 -lvl 8 -x 2770 -y 1160 -defaultsOSRD
-preplace port port-id_sADC_CS_0 -pg 1 -lvl 8 -x 2770 -y 1100 -defaultsOSRD
-preplace port port-id_sADC_Sclk_0 -pg 1 -lvl 8 -x 2770 -y 1120 -defaultsOSRD
-preplace port port-id_sRelayComL_0 -pg 1 -lvl 8 -x 2770 -y 1320 -defaultsOSRD
-preplace port port-id_DcoClk_0 -pg 1 -lvl 0 -x 0 -y 1420 -defaultsOSRD
-preplace portBus dADC_Data_0 -pg 1 -lvl 0 -x 0 -y 1440 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 7 -x 2520 -y 280 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 73 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 34 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 115 114 116 117} -defaultsOSRD -pinDir DDR right -pinY DDR 20R -pinDir FIXED_IO right -pinY FIXED_IO 40R -pinDir USBIND_0 right -pinY USBIND_0 60R -pinDir S_AXI_HP0_FIFO_CTRL right -pinY S_AXI_HP0_FIFO_CTRL 80R -pinDir M_AXI_GP0 left -pinY M_AXI_GP0 260L -pinDir S_AXI_HP0 left -pinY S_AXI_HP0 20L -pinDir M_AXI_GP0_ACLK left -pinY M_AXI_GP0_ACLK 280L -pinDir S_AXI_HP0_ACLK left -pinY S_AXI_HP0_ACLK 300L -pinBusDir IRQ_F2P left -pinBusY IRQ_F2P 340L -pinDir FCLK_CLK0 left -pinY FCLK_CLK0 320L -pinDir FCLK_CLK1 left -pinY FCLK_CLK1 420L -pinDir FCLK_RESET0_N left -pinY FCLK_RESET0_N 440L
-preplace inst axi_dma_0 -pg 1 -lvl 5 -x 1600 -y 300 -swap {84 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 0 85 86 87 88 89 91 92 93 94 90 95 96 97 98} -defaultsOSRD -pinDir S_AXI_LITE left -pinY S_AXI_LITE 60L -pinDir M_AXI_SG right -pinY M_AXI_SG 20R -pinDir M_AXI_MM2S right -pinY M_AXI_MM2S 40R -pinDir M_AXI_S2MM right -pinY M_AXI_S2MM 60R -pinDir M_AXIS_MM2S right -pinY M_AXIS_MM2S 80R -pinDir S_AXIS_S2MM left -pinY S_AXIS_S2MM 20L -pinDir s_axi_lite_aclk left -pinY s_axi_lite_aclk 100L -pinDir m_axi_sg_aclk left -pinY m_axi_sg_aclk 120L -pinDir m_axi_mm2s_aclk left -pinY m_axi_mm2s_aclk 140L -pinDir m_axi_s2mm_aclk left -pinY m_axi_s2mm_aclk 160L -pinDir axi_resetn left -pinY axi_resetn 80L -pinDir mm2s_prmry_reset_out_n right -pinY mm2s_prmry_reset_out_n 100R -pinDir s2mm_prmry_reset_out_n right -pinY s2mm_prmry_reset_out_n 120R -pinDir mm2s_introut right -pinY mm2s_introut 140R -pinDir s2mm_introut right -pinY s2mm_introut 160R
-preplace inst ZmodADC1410_Controll_0 -pg 1 -lvl 7 -x 2520 -y 960 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 33 24 27 25 26 22 23 28 29 30 31 32 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51} -defaultsOSRD -pinDir sSPI_IAP left -pinY sSPI_IAP 20L -pinDir sCalibCh1 left -pinY sCalibCh1 60L -pinDir sCalibCh2 left -pinY sCalibCh2 80L -pinDir SysClk left -pinY SysClk 100L -pinDir ADC_InClk left -pinY ADC_InClk 380L -pinDir sRst_n left -pinY sRst_n 160L -pinDir sInitDone_n left -pinY sInitDone_n 180L -pinDir FIFO_EMPTY_CHA right -pinY FIFO_EMPTY_CHA 20R -pinDir FIFO_EMPTY_CHB right -pinY FIFO_EMPTY_CHB 40R -pinBusDir sCh1Out left -pinBusY sCh1Out 120L -pinBusDir sCh2Out left -pinBusY sCh2Out 140L -pinDir sCh1CouplingConfig left -pinY sCh1CouplingConfig 200L -pinDir sCh2CouplingConfig left -pinY sCh2CouplingConfig 220L -pinDir sCh1GainConfig left -pinY sCh1GainConfig 240L -pinDir sCh2GainConfig left -pinY sCh2GainConfig 260L -pinDir sTestMode left -pinY sTestMode 280L -pinDir adcClkIn_p right -pinY adcClkIn_p 60R -pinDir adcClkIn_n right -pinY adcClkIn_n 80R -pinDir adcSync right -pinY adcSync 100R -pinDir DcoClk left -pinY DcoClk 460L -pinBusDir dADC_Data left -pinBusY dADC_Data 480L -pinDir sADC_SDIO right -pinY sADC_SDIO 120R -pinDir sADC_CS right -pinY sADC_CS 140R -pinDir sADC_Sclk right -pinY sADC_Sclk 160R -pinDir sCh1CouplingH right -pinY sCh1CouplingH 180R -pinDir sCh1CouplingL right -pinY sCh1CouplingL 200R -pinDir sCh2CouplingH right -pinY sCh2CouplingH 220R -pinDir sCh2CouplingL right -pinY sCh2CouplingL 240R -pinDir sCh1GainH right -pinY sCh1GainH 260R -pinDir sCh1GainL right -pinY sCh1GainL 280R -pinDir sCh2GainH right -pinY sCh2GainH 300R -pinDir sCh2GainL right -pinY sCh2GainL 320R -pinDir sRelayComH right -pinY sRelayComH 340R -pinDir sRelayComL right -pinY sRelayComL 360R
-preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 570 -y 340 -swap {39 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 0 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 103 100 104 101 105 102 106 107 108} -defaultsOSRD -pinDir S00_AXI right -pinY S00_AXI 200R -pinDir M00_AXI right -pinY M00_AXI 20R -pinDir M01_AXI right -pinY M01_AXI 260R -pinDir M02_AXI right -pinY M02_AXI 640R -pinDir ACLK left -pinY ACLK 20L -pinDir ARESETN left -pinY ARESETN 100L -pinDir S00_ACLK left -pinY S00_ACLK 40L -pinDir S00_ARESETN left -pinY S00_ARESETN 120L -pinDir M00_ACLK left -pinY M00_ACLK 60L -pinDir M00_ARESETN left -pinY M00_ARESETN 140L -pinDir M01_ACLK left -pinY M01_ACLK 80L -pinDir M01_ARESETN left -pinY M01_ARESETN 160L -pinDir M02_ACLK left -pinY M02_ACLK 620L -pinDir M02_ARESETN left -pinY M02_ARESETN 640L
-preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 200 -y 400 -swap {0 8 2 3 4 5 9 6 7 1} -defaultsOSRD -pinDir slowest_sync_clk right -pinY slowest_sync_clk 20R -pinDir ext_reset_in right -pinY ext_reset_in 120R -pinDir aux_reset_in left -pinY aux_reset_in 20L -pinDir mb_debug_sys_rst left -pinY mb_debug_sys_rst 40L -pinDir dcm_locked left -pinY dcm_locked 60L -pinDir mb_reset right -pinY mb_reset 60R -pinBusDir bus_struct_reset right -pinBusY bus_struct_reset 520R -pinBusDir peripheral_reset right -pinBusY peripheral_reset 80R -pinBusDir interconnect_aresetn right -pinBusY interconnect_aresetn 100R -pinBusDir peripheral_aresetn right -pinBusY peripheral_aresetn 40R
-preplace inst axi_mem_intercon -pg 1 -lvl 6 -x 2090 -y 40 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 95 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 75 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 117 112 118 113 119 114 120 115 121 116} -defaultsOSRD -pinDir S00_AXI left -pinY S00_AXI 20L -pinDir M00_AXI right -pinY M00_AXI 260R -pinDir S01_AXI left -pinY S01_AXI 60L -pinDir S02_AXI left -pinY S02_AXI 40L -pinDir ACLK left -pinY ACLK 180L -pinDir ARESETN left -pinY ARESETN 80L -pinDir S00_ACLK left -pinY S00_ACLK 200L -pinDir S00_ARESETN left -pinY S00_ARESETN 100L -pinDir M00_ACLK left -pinY M00_ACLK 220L -pinDir M00_ARESETN left -pinY M00_ARESETN 120L -pinDir S01_ACLK left -pinY S01_ACLK 240L -pinDir S01_ARESETN left -pinY S01_ARESETN 140L -pinDir S02_ACLK left -pinY S02_ACLK 260L -pinDir S02_ARESETN left -pinY S02_ARESETN 160L
-preplace inst xlconcat_0 -pg 1 -lvl 6 -x 2090 -y 600 -defaultsOSRD -pinBusDir In0 left -pinBusY In0 20L -pinBusDir In1 left -pinBusY In1 40L -pinBusDir dout right -pinBusY dout 20R
-preplace inst clk_wiz_0 -pg 1 -lvl 6 -x 2090 -y 1320 -defaultsOSRD -pinDir resetn left -pinY resetn 20L -pinDir clk_in1 left -pinY clk_in1 40L -pinDir clk_out1 right -pinY clk_out1 20R
-preplace inst AXI_ZmodADC1410_0 -pg 1 -lvl 6 -x 2090 -y 960 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 26 21 22 23 24 25 20 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 59 52 50 53 51 54 55 56 57 58 60 61 49} -defaultsOSRD -pinDir S00_AXI left -pinY S00_AXI 20L -pinDir AXI_S2MM right -pinY AXI_S2MM 40R -pinDir mSPI_IAP right -pinY mSPI_IAP 20R -pinDir mCalibCh1 right -pinY mCalibCh1 60R -pinDir mCalibCh2 right -pinY mCalibCh2 80R -pinDir SysClk left -pinY SysClk 40L -pinDir AxiStreamClk left -pinY AxiStreamClk 60L -pinDir lRst_n left -pinY lRst_n 100L -pinDir sZmodControllerRst_n right -pinY sZmodControllerRst_n 160R -pinDir lIrqOut right -pinY lIrqOut 100R -pinDir sInitDone_n right -pinY sInitDone_n 180R -pinBusDir sSync right -pinBusY sSync 140R -pinDir sCh1CouplingSelect right -pinY sCh1CouplingSelect 200R -pinDir sCh2CouplingSelect right -pinY sCh2CouplingSelect 220R -pinDir sCh1GainSelect right -pinY sCh1GainSelect 240R -pinDir sCh2GainSelect right -pinY sCh2GainSelect 260R -pinDir sTestMode right -pinY sTestMode 280R -pinBusDir sCh1In left -pinBusY sCh1In 140L -pinBusDir sCh2In left -pinBusY sCh2In 160L -pinDir s00_axi_aclk left -pinY s00_axi_aclk 80L
-preplace inst rst_ps7_0_100M_1 -pg 1 -lvl 1 -x 200 -y 1000 -swap {0 9 2 3 4 1 6 7 8 5} -defaultsOSRD -pinDir slowest_sync_clk right -pinY slowest_sync_clk 20R -pinDir ext_reset_in right -pinY ext_reset_in 140R -pinDir aux_reset_in left -pinY aux_reset_in 20L -pinDir mb_debug_sys_rst left -pinY mb_debug_sys_rst 40L -pinDir dcm_locked left -pinY dcm_locked 60L -pinDir mb_reset right -pinY mb_reset 40R -pinBusDir bus_struct_reset right -pinBusY bus_struct_reset 80R -pinBusDir peripheral_reset right -pinBusY peripheral_reset 100R -pinBusDir interconnect_aresetn right -pinBusY interconnect_aresetn 120R -pinBusDir peripheral_aresetn right -pinBusY peripheral_aresetn 60R
-preplace inst xlconstant_0 -pg 1 -lvl 5 -x 1600 -y 1100 -defaultsOSRD -pinBusDir dout right -pinBusY dout 20R
-preplace inst system_ila_0 -pg 1 -lvl 6 -x 2090 -y 380 -swap {56 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 0 57 58 59 60 61 62 63 64 65 67 66} -defaultsOSRD -pinDir SLOT_0_AXI left -pinY SLOT_0_AXI 60L -pinDir SLOT_1_AXIS left -pinY SLOT_1_AXIS 40L -pinDir SLOT_2_AXIS left -pinY SLOT_2_AXIS 20L -pinDir clk left -pinY clk 100L -pinDir resetn left -pinY resetn 80L
-preplace inst system_ila_1 -pg 1 -lvl 6 -x 2090 -y 760 -swap {3 2 0 1} -defaultsOSRD -pinDir clk left -pinY clk 80L -pinBusDir probe0 left -pinBusY probe0 60L -pinBusDir probe1 left -pinBusY probe1 20L -pinBusDir probe2 left -pinBusY probe2 40L
-preplace inst AXI_TAR_0 -pg 1 -lvl 3 -x 880 -y 580 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 33 34 28 29 30 26 31 27 32} -defaultsOSRD -pinDir S00_AXI left -pinY S00_AXI 20L -pinDir M00_AXIS right -pinY M00_AXIS 20R -pinDir SysClk left -pinY SysClk 300L -pinDir IRst_n left -pinY IRst_n 320L -pinBusDir sCh1In right -pinBusY sCh1In 200R -pinBusDir sCh2In right -pinBusY sCh2In 220R -pinDir Introut right -pinY Introut 240R -pinDir s00_axi_aclk left -pinY s00_axi_aclk 40L -pinDir s00_axi_aresetn left -pinY s00_axi_aresetn 80L -pinDir m00_axis_aclk left -pinY m00_axis_aclk 60L -pinDir m00_axis_aresetn left -pinY m00_axis_aresetn 100L
-preplace inst axis_data_fifo_0 -pg 1 -lvl 4 -x 1220 -y 140 -defaultsOSRD -pinDir S_AXIS left -pinY S_AXIS 20L -pinDir M_AXIS right -pinY M_AXIS 60R -pinDir s_axis_aresetn left -pinY s_axis_aresetn 40L -pinDir s_axis_aclk left -pinY s_axis_aclk 60L
-preplace netloc AXI_TAR_0_Introut 1 3 3 NJ 820 NJ 820 1840
-preplace netloc AXI_ZmodADC1410_0_sCh1CouplingSelect 1 6 1 N 1160
-preplace netloc AXI_ZmodADC1410_0_sCh1GainSelect 1 6 1 N 1200
-preplace netloc AXI_ZmodADC1410_0_sCh2CouplingSelect 1 6 1 N 1180
-preplace netloc AXI_ZmodADC1410_0_sCh2GainSelect 1 6 1 N 1220
-preplace netloc AXI_ZmodADC1410_0_sTestMode 1 6 1 N 1240
-preplace netloc AXI_ZmodADC1410_0_sZmodControllerRst_n 1 6 1 N 1120
-preplace netloc DcoClk_0_1 1 0 7 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ 1420 NJ
-preplace netloc Net 1 7 1 NJ 1080
-preplace netloc ZmodADC1410_Controll_0_adcClkIn_n 1 7 1 NJ 1040
-preplace netloc ZmodADC1410_Controll_0_adcClkIn_p 1 7 1 NJ 1020
-preplace netloc ZmodADC1410_Controll_0_adcSync 1 7 1 NJ 1060
-preplace netloc ZmodADC1410_Controll_0_sADC_CS 1 7 1 NJ 1100
-preplace netloc ZmodADC1410_Controll_0_sADC_Sclk 1 7 1 NJ 1120
-preplace netloc ZmodADC1410_Controll_0_sCh1CouplingH 1 7 1 NJ 1140
-preplace netloc ZmodADC1410_Controll_0_sCh1CouplingL 1 7 1 NJ 1160
-preplace netloc ZmodADC1410_Controll_0_sCh1GainH 1 7 1 NJ 1220
-preplace netloc ZmodADC1410_Controll_0_sCh1GainL 1 7 1 NJ 1240
-preplace netloc ZmodADC1410_Controll_0_sCh1Out 1 3 4 NJ 780 NJ 780 1820 900 2270
-preplace netloc ZmodADC1410_Controll_0_sCh2CouplingH 1 7 1 NJ 1180
-preplace netloc ZmodADC1410_Controll_0_sCh2CouplingL 1 7 1 NJ 1200
-preplace netloc ZmodADC1410_Controll_0_sCh2GainH 1 7 1 NJ 1260
-preplace netloc ZmodADC1410_Controll_0_sCh2GainL 1 7 1 NJ 1280
-preplace netloc ZmodADC1410_Controll_0_sCh2Out 1 3 4 NJ 800 NJ 800 1800 920 2250
-preplace netloc ZmodADC1410_Controll_0_sInitDone_n 1 6 1 N 1140
-preplace netloc ZmodADC1410_Controll_0_sRelayComH 1 7 1 NJ 1300
-preplace netloc ZmodADC1410_Controll_0_sRelayComL 1 7 1 NJ 1320
-preplace netloc axi_dma_0_s2mm_introut 1 5 1 1800 460n
-preplace netloc clk_wiz_0_clk_out1 1 6 1 N 1340
-preplace netloc dADC_Data_0_1 1 0 7 NJ 1440 NJ 1440 NJ 1440 NJ 1440 NJ 1440 NJ 1440 NJ
-preplace netloc processing_system7_0_FCLK_CLK0 1 1 6 380 280 720 320 1080 320 1360 520 1920 560 2290
-preplace netloc processing_system7_0_FCLK_CLK1 1 1 6 420 1040 720 960 NJ 960 NJ 960 1860 700 2290
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 6 380 1180 NJ 1180 NJ 1180 NJ 1180 1900 720 NJ
-preplace netloc rst_ps7_0_100M_1_peripheral_aresetn 1 1 5 400 1060 740 1060 NJ 1060 NJ 1060 NJ
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 5 420 300 740 300 1060 280 1400 220 1900
-preplace netloc sys_clock_1 1 0 6 NJ 1360 NJ 1360 NJ 1360 NJ 1360 NJ 1360 NJ
-preplace netloc xlconcat_0_dout 1 6 1 N 620
-preplace netloc xlconstant_0_dout 1 5 1 1920 1100n
-preplace netloc AXI_ZmodADC1410_0_mCalibCh1 1 6 1 N 1020
-preplace netloc AXI_ZmodADC1410_0_mCalibCh2 1 6 1 N 1040
-preplace netloc AXI_ZmodADC1410_0_mSPI_IAP 1 6 1 N 980
-preplace netloc axi_dma_0_M_AXI_MM2S 1 5 1 1820 80n
-preplace netloc axi_dma_0_M_AXI_S2MM 1 5 1 1880 100n
-preplace netloc axi_dma_0_M_AXI_SG 1 5 1 1800 60n
-preplace netloc axi_mem_intercon_M00_AXI 1 6 1 N 300
-preplace netloc processing_system7_0_DDR 1 7 1 NJ 300
-preplace netloc processing_system7_0_FIXED_IO 1 7 1 NJ 320
-preplace netloc processing_system7_0_M_AXI_GP0 1 2 5 N 540 NJ 540 NJ 540 NJ 540 NJ
-preplace netloc ps7_0_axi_periph_M00_AXI 1 2 3 NJ 360 NJ 360 N
-preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 N 600
-preplace netloc ps7_0_axi_periph_M02_AXI 1 2 4 N 980 NJ 980 NJ 980 NJ
-preplace netloc AXI_TAR_0_M00_AXIS 1 3 3 1040 260 NJ 260 1840
-preplace netloc axis_data_fifo_0_M_AXIS 1 4 2 1380 240 1860
-levelinfo -pg 1 0 200 570 880 1220 1600 2090 2520 2770
-pagesize -pg 1 -db -bbox -sgen -190 0 2950 1500
+preplace port DDR -pg 1 -lvl 8 -x 2920 -y 980 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 8 -x 2920 -y 1000 -defaultsOSRD
+preplace port port-id_sys_clock -pg 1 -lvl 0 -x 0 -y 1680 -defaultsOSRD
+preplace port port-id_sCh1GainH_0 -pg 1 -lvl 8 -x 2920 -y 1540 -defaultsOSRD
+preplace port port-id_adcClkIn_p_0 -pg 1 -lvl 8 -x 2920 -y 1340 -defaultsOSRD
+preplace port port-id_sCh1GainL_0 -pg 1 -lvl 8 -x 2920 -y 1560 -defaultsOSRD
+preplace port port-id_sCh2CouplingH_0 -pg 1 -lvl 8 -x 2920 -y 1500 -defaultsOSRD
+preplace port port-id_adcClkIn_n_0 -pg 1 -lvl 8 -x 2920 -y 1360 -defaultsOSRD
+preplace port port-id_sCh2CouplingL_0 -pg 1 -lvl 8 -x 2920 -y 1520 -defaultsOSRD
+preplace port port-id_sRelayComH_0 -pg 1 -lvl 8 -x 2920 -y 1620 -defaultsOSRD
+preplace port port-id_sCh2GainH_0 -pg 1 -lvl 8 -x 2920 -y 1580 -defaultsOSRD
+preplace port port-id_sADC_SDIO_0 -pg 1 -lvl 8 -x 2920 -y 1400 -defaultsOSRD
+preplace port port-id_adcSync_0 -pg 1 -lvl 8 -x 2920 -y 1380 -defaultsOSRD
+preplace port port-id_sCh2GainL_0 -pg 1 -lvl 8 -x 2920 -y 1600 -defaultsOSRD
+preplace port port-id_sCh1CouplingH_0 -pg 1 -lvl 8 -x 2920 -y 1460 -defaultsOSRD
+preplace port port-id_sCh1CouplingL_0 -pg 1 -lvl 8 -x 2920 -y 1480 -defaultsOSRD
+preplace port port-id_sADC_CS_0 -pg 1 -lvl 8 -x 2920 -y 1420 -defaultsOSRD
+preplace port port-id_sADC_Sclk_0 -pg 1 -lvl 8 -x 2920 -y 1440 -defaultsOSRD
+preplace port port-id_sRelayComL_0 -pg 1 -lvl 8 -x 2920 -y 1640 -defaultsOSRD
+preplace port port-id_DcoClk_0 -pg 1 -lvl 0 -x 0 -y 1740 -defaultsOSRD
+preplace portBus dADC_Data_0 -pg 1 -lvl 0 -x 0 -y 1760 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 5 -x 1800 -y 660 -swap {84 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 61 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 78 48 49 50 51 52 53 54 55 56 57 58 59 60 17 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 47 79 80 81 82 83 0 85 86 87 88 89 90 91 92 93 94 95 96 97 98} -defaultsOSRD -pinDir S_AXI_LITE left -pinY S_AXI_LITE 200L -pinDir M_AXI_SG right -pinY M_AXI_SG 100R -pinDir M_AXI_MM2S right -pinY M_AXI_MM2S 120R -pinDir M_AXI_S2MM right -pinY M_AXI_S2MM 20R -pinDir M_AXIS_MM2S right -pinY M_AXIS_MM2S 40R -pinDir S_AXIS_S2MM left -pinY S_AXIS_S2MM 20L -pinDir s_axi_lite_aclk left -pinY s_axi_lite_aclk 220L -pinDir m_axi_sg_aclk left -pinY m_axi_sg_aclk 240L -pinDir m_axi_mm2s_aclk left -pinY m_axi_mm2s_aclk 260L -pinDir m_axi_s2mm_aclk left -pinY m_axi_s2mm_aclk 280L -pinDir axi_resetn left -pinY axi_resetn 300L -pinDir mm2s_prmry_reset_out_n right -pinY mm2s_prmry_reset_out_n 140R -pinDir s2mm_prmry_reset_out_n right -pinY s2mm_prmry_reset_out_n 160R -pinDir mm2s_introut right -pinY mm2s_introut 180R -pinDir s2mm_introut right -pinY s2mm_introut 300R
+preplace inst ZmodADC1410_Controll_0 -pg 1 -lvl 7 -x 2670 -y 1280 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 23 33 24 27 25 26 21 22 28 29 30 31 32 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51} -defaultsOSRD -pinDir sSPI_IAP left -pinY sSPI_IAP 20L -pinDir sCalibCh1 left -pinY sCalibCh1 40L -pinDir sCalibCh2 left -pinY sCalibCh2 60L -pinDir SysClk left -pinY SysClk 120L -pinDir ADC_InClk left -pinY ADC_InClk 380L -pinDir sRst_n left -pinY sRst_n 140L -pinDir sInitDone_n left -pinY sInitDone_n 160L -pinDir FIFO_EMPTY_CHA right -pinY FIFO_EMPTY_CHA 20R -pinDir FIFO_EMPTY_CHB right -pinY FIFO_EMPTY_CHB 40R -pinBusDir sCh1Out left -pinBusY sCh1Out 80L -pinBusDir sCh2Out left -pinBusY sCh2Out 100L -pinDir sCh1CouplingConfig left -pinY sCh1CouplingConfig 180L -pinDir sCh2CouplingConfig left -pinY sCh2CouplingConfig 200L -pinDir sCh1GainConfig left -pinY sCh1GainConfig 220L -pinDir sCh2GainConfig left -pinY sCh2GainConfig 240L -pinDir sTestMode left -pinY sTestMode 260L -pinDir adcClkIn_p right -pinY adcClkIn_p 60R -pinDir adcClkIn_n right -pinY adcClkIn_n 80R -pinDir adcSync right -pinY adcSync 100R -pinDir DcoClk left -pinY DcoClk 460L -pinBusDir dADC_Data left -pinBusY dADC_Data 480L -pinDir sADC_SDIO right -pinY sADC_SDIO 120R -pinDir sADC_CS right -pinY sADC_CS 140R -pinDir sADC_Sclk right -pinY sADC_Sclk 160R -pinDir sCh1CouplingH right -pinY sCh1CouplingH 180R -pinDir sCh1CouplingL right -pinY sCh1CouplingL 200R -pinDir sCh2CouplingH right -pinY sCh2CouplingH 220R -pinDir sCh2CouplingL right -pinY sCh2CouplingL 240R -pinDir sCh1GainH right -pinY sCh1GainH 260R -pinDir sCh1GainL right -pinY sCh1GainL 280R -pinDir sCh2GainH right -pinY sCh2GainH 300R -pinDir sCh2GainL right -pinY sCh2GainL 320R -pinDir sRelayComH right -pinY sRelayComH 340R -pinDir sRelayComL right -pinY sRelayComL 360R
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 570 -y 820 -swap {39 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 59 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 0 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 103 100 104 101 105 102 106 107 108} -defaultsOSRD -pinDir S00_AXI right -pinY S00_AXI 260R -pinDir M00_AXI right -pinY M00_AXI 280R -pinDir M01_AXI right -pinY M01_AXI 20R -pinDir M02_AXI right -pinY M02_AXI 460R -pinDir ACLK left -pinY ACLK 20L -pinDir ARESETN left -pinY ARESETN 100L -pinDir S00_ACLK left -pinY S00_ACLK 40L -pinDir S00_ARESETN left -pinY S00_ARESETN 120L -pinDir M00_ACLK left -pinY M00_ACLK 60L -pinDir M00_ARESETN left -pinY M00_ARESETN 140L -pinDir M01_ACLK left -pinY M01_ACLK 80L -pinDir M01_ARESETN left -pinY M01_ARESETN 160L -pinDir M02_ACLK left -pinY M02_ACLK 180L -pinDir M02_ARESETN left -pinY M02_ARESETN 460L
+preplace inst axi_mem_intercon -pg 1 -lvl 6 -x 2220 -y 720 -swap {75 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 73 74 92 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 0 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 125 126 127 128 129 130 135 131 136 132 137 133 138 134 139} -defaultsOSRD -pinDir S00_AXI left -pinY S00_AXI 40L -pinDir M00_AXI right -pinY M00_AXI 260R -pinDir S01_AXI left -pinY S01_AXI 60L -pinDir S02_AXI left -pinY S02_AXI 20L -pinDir ACLK left -pinY ACLK 80L -pinDir ARESETN left -pinY ARESETN 180L -pinDir S00_ACLK left -pinY S00_ACLK 100L -pinDir S00_ARESETN left -pinY S00_ARESETN 200L -pinDir M00_ACLK left -pinY M00_ACLK 120L -pinDir M00_ARESETN left -pinY M00_ARESETN 220L -pinDir S01_ACLK left -pinY S01_ACLK 140L -pinDir S01_ARESETN left -pinY S01_ARESETN 240L -pinDir S02_ACLK left -pinY S02_ACLK 160L -pinDir S02_ARESETN left -pinY S02_ARESETN 260L
+preplace inst xlconcat_0 -pg 1 -lvl 6 -x 2220 -y 1120 -swap {1 0 2} -defaultsOSRD -pinBusDir In0 left -pinBusY In0 40L -pinBusDir In1 left -pinBusY In1 20L -pinBusDir dout right -pinBusY dout 40R
+preplace inst AXI_ZmodADC1410_0 -pg 1 -lvl 6 -x 2220 -y 1260 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 47 48 59 52 50 53 51 54 55 56 57 58 60 61 49} -defaultsOSRD -pinDir S00_AXI left -pinY S00_AXI 20L -pinDir AXI_S2MM right -pinY AXI_S2MM 20R -pinDir mSPI_IAP right -pinY mSPI_IAP 40R -pinDir mCalibCh1 right -pinY mCalibCh1 60R -pinDir mCalibCh2 right -pinY mCalibCh2 80R -pinDir SysClk left -pinY SysClk 40L -pinDir AxiStreamClk left -pinY AxiStreamClk 60L -pinDir lRst_n left -pinY lRst_n 100L -pinDir sZmodControllerRst_n right -pinY sZmodControllerRst_n 160R -pinDir lIrqOut right -pinY lIrqOut 100R -pinDir sInitDone_n right -pinY sInitDone_n 180R -pinBusDir sSync right -pinBusY sSync 120R -pinDir sCh1CouplingSelect right -pinY sCh1CouplingSelect 200R -pinDir sCh2CouplingSelect right -pinY sCh2CouplingSelect 220R -pinDir sCh1GainSelect right -pinY sCh1GainSelect 240R -pinDir sCh2GainSelect right -pinY sCh2GainSelect 260R -pinDir sTestMode right -pinY sTestMode 280R -pinBusDir sCh1In left -pinBusY sCh1In 140L -pinBusDir sCh2In left -pinBusY sCh2In 160L -pinDir s00_axi_aclk left -pinY s00_axi_aclk 80L
+preplace inst xlconstant_0 -pg 1 -lvl 5 -x 1800 -y 1400 -defaultsOSRD -pinBusDir dout right -pinBusY dout 20R
+preplace inst system_ila_0 -pg 1 -lvl 6 -x 2220 -y 540 -swap {42 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 0 37 38 39 40 41 36 43 44 45 46 47 48 49} -defaultsOSRD -pinDir SLOT_0_AXI left -pinY SLOT_0_AXI 60L -pinDir SLOT_1_AXIS left -pinY SLOT_1_AXIS 20L -pinDir SLOT_2_AXIS left -pinY SLOT_2_AXIS 40L -pinDir clk left -pinY clk 80L -pinDir resetn left -pinY resetn 100L
+preplace inst system_ila_1 -pg 1 -lvl 4 -x 1420 -y 60 -swap {21 0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20} -defaultsOSRD -pinDir clk left -pinY clk 440L -pinBusDir probe0 left -pinBusY probe0 20L -pinBusDir probe1 left -pinBusY probe1 40L -pinBusDir probe2 left -pinBusY probe2 60L -pinBusDir probe3 left -pinBusY probe3 80L -pinBusDir probe4 left -pinBusY probe4 100L -pinBusDir probe5 left -pinBusY probe5 120L -pinBusDir probe6 left -pinBusY probe6 140L -pinBusDir probe7 left -pinBusY probe7 160L -pinBusDir probe8 left -pinBusY probe8 180L -pinBusDir probe9 left -pinBusY probe9 200L -pinBusDir probe10 left -pinBusY probe10 220L -pinBusDir probe11 left -pinBusY probe11 240L -pinBusDir probe12 left -pinBusY probe12 260L -pinBusDir probe13 left -pinBusY probe13 280L -pinBusDir probe14 left -pinBusY probe14 300L -pinBusDir probe15 left -pinBusY probe15 320L -pinBusDir probe16 left -pinBusY probe16 340L -pinBusDir probe17 left -pinBusY probe17 360L -pinBusDir probe18 left -pinBusY probe18 380L -pinBusDir probe19 left -pinBusY probe19 400L -pinBusDir probe20 left -pinBusY probe20 420L
+preplace inst axis_data_fifo_0 -pg 1 -lvl 4 -x 1420 -y 620 -defaultsOSRD -pinDir S_AXIS left -pinY S_AXIS 20L -pinDir M_AXIS right -pinY M_AXIS 20R -pinDir s_axis_aresetn left -pinY s_axis_aresetn 300L -pinDir s_axis_aclk left -pinY s_axis_aclk 320L
+preplace inst clk_wiz_0 -pg 1 -lvl 6 -x 2220 -y 1640 -defaultsOSRD -pinDir resetn left -pinY resetn 20L -pinDir clk_in1 left -pinY clk_in1 40L -pinDir clk_out1 right -pinY clk_out1 20R
+preplace inst processing_system7_0 -pg 1 -lvl 7 -x 2670 -y 960 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 73 35 36 37 38 39 40 41 42 43 44 45 46 47 48 49 50 51 52 53 54 55 56 57 58 59 60 61 62 63 64 65 66 67 68 69 70 71 72 34 74 75 76 77 78 79 80 81 82 83 84 85 86 87 88 89 90 91 92 93 94 95 96 97 98 99 100 101 102 103 104 105 106 107 108 109 110 111 112 113 115 114 116 117} -defaultsOSRD -pinDir DDR right -pinY DDR 20R -pinDir FIXED_IO right -pinY FIXED_IO 40R -pinDir USBIND_0 right -pinY USBIND_0 60R -pinDir S_AXI_HP0_FIFO_CTRL right -pinY S_AXI_HP0_FIFO_CTRL 80R -pinDir M_AXI_GP0 left -pinY M_AXI_GP0 120L -pinDir S_AXI_HP0 left -pinY S_AXI_HP0 20L -pinDir M_AXI_GP0_ACLK left -pinY M_AXI_GP0_ACLK 140L -pinDir S_AXI_HP0_ACLK left -pinY S_AXI_HP0_ACLK 160L -pinBusDir IRQ_F2P left -pinBusY IRQ_F2P 200L -pinDir FCLK_CLK0 left -pinY FCLK_CLK0 180L -pinDir FCLK_CLK1 left -pinY FCLK_CLK1 220L -pinDir FCLK_RESET0_N left -pinY FCLK_RESET0_N 240L
+preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 200 -y 880 -swap {0 8 2 3 4 5 9 6 7 1} -defaultsOSRD -pinDir slowest_sync_clk right -pinY slowest_sync_clk 20R -pinDir ext_reset_in right -pinY ext_reset_in 120R -pinDir aux_reset_in left -pinY aux_reset_in 20L -pinDir mb_debug_sys_rst left -pinY mb_debug_sys_rst 40L -pinDir dcm_locked left -pinY dcm_locked 60L -pinDir mb_reset right -pinY mb_reset 60R -pinBusDir bus_struct_reset right -pinBusY bus_struct_reset 140R -pinBusDir peripheral_reset right -pinBusY peripheral_reset 80R -pinBusDir interconnect_aresetn right -pinBusY interconnect_aresetn 100R -pinBusDir peripheral_aresetn right -pinBusY peripheral_aresetn 40R
+preplace inst rst_ps7_0_100M_1 -pg 1 -lvl 1 -x 200 -y 1100 -swap {0 9 2 3 4 1 5 6 7 8} -defaultsOSRD -pinDir slowest_sync_clk right -pinY slowest_sync_clk 20R -pinDir ext_reset_in right -pinY ext_reset_in 200R -pinDir aux_reset_in left -pinY aux_reset_in 20L -pinDir mb_debug_sys_rst left -pinY mb_debug_sys_rst 40L -pinDir dcm_locked left -pinY dcm_locked 60L -pinDir mb_reset right -pinY mb_reset 40R -pinBusDir bus_struct_reset right -pinBusY bus_struct_reset 60R -pinBusDir peripheral_reset right -pinBusY peripheral_reset 80R -pinBusDir interconnect_aresetn right -pinBusY interconnect_aresetn 100R -pinBusDir peripheral_aresetn right -pinBusY peripheral_aresetn 180R
+preplace inst AXI_TAR_0 -pg 1 -lvl 3 -x 970 -y 40 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 52 53 28 29 49 31 35 33 30 34 32 37 41 39 36 40 38 48 47 46 43 45 42 44 26 50 27 51} -defaultsOSRD -pinDir S00_AXI left -pinY S00_AXI 800L -pinDir M00_AXIS right -pinY M00_AXIS 20R -pinDir SysClk left -pinY SysClk 900L -pinDir IRst_n left -pinY IRst_n 920L -pinBusDir sCh1In right -pinBusY sCh1In 40R -pinBusDir sCh2In right -pinBusY sCh2In 60R -pinDir Introut right -pinY Introut 540R -pinBusDir cha_hist right -pinBusY cha_hist 100R -pinBusDir cha_vp_temp_debug right -pinBusY cha_vp_temp_debug 180R -pinBusDir cha_ts_temp_debug right -pinBusY cha_ts_temp_debug 140R -pinDir cha_dr_debug right -pinY cha_dr_debug 80R -pinBusDir cha_vp_debug right -pinBusY cha_vp_debug 160R -pinBusDir cha_ts_debug right -pinBusY cha_ts_debug 120R -pinBusDir chb_hist right -pinBusY chb_hist 220R -pinBusDir chb_vp_temp_debug right -pinBusY chb_vp_temp_debug 300R -pinBusDir chb_ts_temp_debug right -pinBusY chb_ts_temp_debug 260R -pinDir chb_dr_debug right -pinY chb_dr_debug 200R -pinBusDir chb_vp_debug right -pinBusY chb_vp_debug 280R -pinBusDir chb_ts_debug right -pinBusY chb_ts_debug 240R -pinBusDir pf_wr_ptr_debug right -pinBusY pf_wr_ptr_debug 440R -pinBusDir pf_rd_ptr_debug right -pinBusY pf_rd_ptr_debug 420R -pinBusDir pf_of_pend_flg_debug right -pinBusY pf_of_pend_flg_debug 400R -pinBusDir pf_cha_pend_flg_debug right -pinBusY pf_cha_pend_flg_debug 340R -pinBusDir pf_chb_pend_flg_debug right -pinBusY pf_chb_pend_flg_debug 380R -pinBusDir pf_cha_fifo_reg_debug right -pinBusY pf_cha_fifo_reg_debug 320R -pinBusDir pf_chb_fifo_reg_debug right -pinBusY pf_chb_fifo_reg_debug 360R -pinDir s00_axi_aclk left -pinY s00_axi_aclk 820L -pinDir s00_axi_aresetn left -pinY s00_axi_aresetn 860L -pinDir m00_axis_aclk left -pinY m00_axis_aclk 840L -pinDir m00_axis_aresetn left -pinY m00_axis_aresetn 880L
+preplace netloc AXI_TAR_0_Introut 1 3 3 N 580 1580J 620 2020J
+preplace netloc AXI_ZmodADC1410_0_sCh1CouplingSelect 1 6 1 N 1460
+preplace netloc AXI_ZmodADC1410_0_sCh1GainSelect 1 6 1 N 1500
+preplace netloc AXI_ZmodADC1410_0_sCh2CouplingSelect 1 6 1 N 1480
+preplace netloc AXI_ZmodADC1410_0_sCh2GainSelect 1 6 1 N 1520
+preplace netloc AXI_ZmodADC1410_0_sTestMode 1 6 1 N 1540
+preplace netloc AXI_ZmodADC1410_0_sZmodControllerRst_n 1 6 1 N 1420
+preplace netloc DcoClk_0_1 1 0 7 NJ 1740 NJ 1740 NJ 1740 NJ 1740 NJ 1740 NJ 1740 NJ
+preplace netloc Net 1 7 1 NJ 1400
+preplace netloc ZmodADC1410_Controll_0_adcClkIn_n 1 7 1 NJ 1360
+preplace netloc ZmodADC1410_Controll_0_adcClkIn_p 1 7 1 NJ 1340
+preplace netloc ZmodADC1410_Controll_0_adcSync 1 7 1 NJ 1380
+preplace netloc ZmodADC1410_Controll_0_sADC_CS 1 7 1 NJ 1420
+preplace netloc ZmodADC1410_Controll_0_sADC_Sclk 1 7 1 NJ 1440
+preplace netloc ZmodADC1410_Controll_0_sCh1CouplingH 1 7 1 NJ 1460
+preplace netloc ZmodADC1410_Controll_0_sCh1CouplingL 1 7 1 NJ 1480
+preplace netloc ZmodADC1410_Controll_0_sCh1GainH 1 7 1 NJ 1540
+preplace netloc ZmodADC1410_Controll_0_sCh1GainL 1 7 1 NJ 1560
+preplace netloc ZmodADC1410_Controll_0_sCh1Out 1 3 4 1280 1040 NJ 1040 NJ 1040 2400J
+preplace netloc ZmodADC1410_Controll_0_sCh2CouplingH 1 7 1 NJ 1500
+preplace netloc ZmodADC1410_Controll_0_sCh2CouplingL 1 7 1 NJ 1520
+preplace netloc ZmodADC1410_Controll_0_sCh2GainH 1 7 1 NJ 1580
+preplace netloc ZmodADC1410_Controll_0_sCh2GainL 1 7 1 NJ 1600
+preplace netloc ZmodADC1410_Controll_0_sCh2Out 1 3 4 1200 1060 NJ 1060 NJ 1060 2380J
+preplace netloc ZmodADC1410_Controll_0_sInitDone_n 1 6 1 N 1440
+preplace netloc ZmodADC1410_Controll_0_sRelayComH 1 7 1 NJ 1620
+preplace netloc ZmodADC1410_Controll_0_sRelayComL 1 7 1 NJ 1640
+preplace netloc axi_dma_0_s2mm_introut 1 5 1 1980 960n
+preplace netloc clk_wiz_0_clk_out1 1 6 1 N 1660
+preplace netloc dADC_Data_0_1 1 0 7 NJ 1760 NJ 1760 NJ 1760 NJ 1760 NJ 1760 NJ 1760 NJ
+preplace netloc processing_system7_0_FCLK_CLK0 1 1 6 380 740 760 1060 1180 1000 1560 600 2040 500 2440
+preplace netloc processing_system7_0_FCLK_CLK1 1 1 6 400 780 720 1020 1240 1300 NJ 1300 2060 1220 2420
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 6 380 1590 NJ 1590 NJ 1590 NJ 1590 2060 1600 2440
+preplace netloc rst_ps7_0_100M_1_peripheral_aresetn 1 1 5 420 1340 780 1360 NJ 1360 NJ 1360 NJ
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 5 420 760 740 1040 1260 1020 1600 1020 2000
+preplace netloc sys_clock_1 1 0 6 NJ 1680 NJ 1680 NJ 1680 NJ 1680 NJ 1680 NJ
+preplace netloc xlconcat_0_dout 1 6 1 N 1160
+preplace netloc xlconstant_0_dout 1 5 1 1980 1400n
+preplace netloc cha_ts_debug 1 3 1 N 160
+preplace netloc cha_hist 1 3 1 N 140
+preplace netloc pf_wr_ptr_debug 1 3 1 N 480
+preplace netloc pf_cha_fifo_reg_debug 1 3 1 N 360
+preplace netloc chb_ts_debug 1 3 1 N 280
+preplace netloc chb_ts_temp_debug 1 3 1 N 300
+preplace netloc chb_vp_temp_debug 1 3 1 N 340
+preplace netloc cha_ts_temp_debug 1 3 1 N 180
+preplace netloc cha_dr_debug 1 3 1 N 120
+preplace netloc cha_vp_temp_debug 1 3 1 N 220
+preplace netloc cha_vp_debug 1 3 1 N 200
+preplace netloc pf_of_pend_flg_debug 1 3 1 N 440
+preplace netloc pf_rd_ptr_debug 1 3 1 N 460
+preplace netloc pf_chb_pend_flg_debug 1 3 1 N 420
+preplace netloc pf_cha_pend_flg_debug 1 3 1 N 380
+preplace netloc chb_dr_debug 1 3 1 N 240
+preplace netloc chb_vp_debug 1 3 1 N 320
+preplace netloc chb_hist 1 3 1 N 260
+preplace netloc pf_chb_fifo_reg_debug 1 3 1 N 400
+preplace netloc AXI_TAR_0_M00_AXIS 1 3 3 1220 560 NJ 560 NJ
+preplace netloc AXI_ZmodADC1410_0_mCalibCh1 1 6 1 N 1320
+preplace netloc AXI_ZmodADC1410_0_mCalibCh2 1 6 1 N 1340
+preplace netloc AXI_ZmodADC1410_0_mSPI_IAP 1 6 1 N 1300
+preplace netloc axi_dma_0_M_AXI_MM2S 1 5 1 N 780
+preplace netloc axi_dma_0_M_AXI_S2MM 1 5 1 2060 600n
+preplace netloc axi_dma_0_M_AXI_SG 1 5 1 N 760
+preplace netloc axi_mem_intercon_M00_AXI 1 6 1 N 980
+preplace netloc axis_data_fifo_0_M_AXIS 1 4 2 1600 580 NJ
+preplace netloc processing_system7_0_DDR 1 7 1 NJ 980
+preplace netloc processing_system7_0_FIXED_IO 1 7 1 NJ 1000
+preplace netloc processing_system7_0_M_AXI_GP0 1 2 5 NJ 1080 NJ 1080 NJ 1080 NJ 1080 N
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 3 NJ 1100 NJ 1100 1580
+preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 N 840
+preplace netloc ps7_0_axi_periph_M02_AXI 1 2 4 NJ 1280 NJ 1280 NJ 1280 N
+levelinfo -pg 1 0 200 570 970 1420 1800 2220 2670 2920
+pagesize -pg 1 -db -bbox -sgen -190 0 3100 1820
 ",
-   "No Loops_ScaleFactor":"0.796302",
-   "No Loops_TopLeft":"-191,-14",
+   "No Loops_ScaleFactor":"0.670342",
+   "No Loops_TopLeft":"-412,3",
    "Reduced Jogs_ExpandedHierarchyInLayout":"",
    "Reduced Jogs_Layers":"/processing_system7_0_FCLK_CLK0:true|/sys_clock_1:true|/axi_dma_0_mm2s_introut:true|/processing_system7_0_FCLK_CLK1:true|/rst_ps7_0_100M_peripheral_aresetn:true|/processing_system7_0_FCLK_RESET0_N:true|/clk_wiz_0_clk_out1:true|/rst_ps7_0_100M_1_peripheral_aresetn:true|/axi_dma_0_s2mm_introut:true|/AXI_TAR_0_Introut:true|",
    "Reduced Jogs_Layout":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
@@ -440,99 +479,118 @@ pagesize -pg 1 -db -bbox -sgen -190 0 3130 1560
 ",
    "Reduced Jogs_ScaleFactor":"0.75309",
    "Reduced Jogs_TopLeft":"-191,-28",
-   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0 TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 8 -x 2750 -y 600 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 8 -x 2750 -y 620 -defaultsOSRD
-preplace port port-id_sys_clock -pg 1 -lvl 0 -x -10 -y 1300 -defaultsOSRD
-preplace port port-id_sCh1GainH_0 -pg 1 -lvl 8 -x 2750 -y 1200 -defaultsOSRD
-preplace port port-id_adcClkIn_p_0 -pg 1 -lvl 8 -x 2750 -y 1000 -defaultsOSRD
-preplace port port-id_sCh1GainL_0 -pg 1 -lvl 8 -x 2750 -y 1220 -defaultsOSRD
-preplace port port-id_sCh2CouplingH_0 -pg 1 -lvl 8 -x 2750 -y 1160 -defaultsOSRD
-preplace port port-id_adcClkIn_n_0 -pg 1 -lvl 8 -x 2750 -y 1020 -defaultsOSRD
-preplace port port-id_sCh2CouplingL_0 -pg 1 -lvl 8 -x 2750 -y 1180 -defaultsOSRD
-preplace port port-id_sRelayComH_0 -pg 1 -lvl 8 -x 2750 -y 1280 -defaultsOSRD
-preplace port port-id_sCh2GainH_0 -pg 1 -lvl 8 -x 2750 -y 1240 -defaultsOSRD
-preplace port port-id_sADC_SDIO_0 -pg 1 -lvl 8 -x 2750 -y 1060 -defaultsOSRD
-preplace port port-id_adcSync_0 -pg 1 -lvl 8 -x 2750 -y 1040 -defaultsOSRD
-preplace port port-id_sCh2GainL_0 -pg 1 -lvl 8 -x 2750 -y 1260 -defaultsOSRD
-preplace port port-id_sCh1CouplingH_0 -pg 1 -lvl 8 -x 2750 -y 1120 -defaultsOSRD
-preplace port port-id_sCh1CouplingL_0 -pg 1 -lvl 8 -x 2750 -y 1140 -defaultsOSRD
-preplace port port-id_sADC_CS_0 -pg 1 -lvl 8 -x 2750 -y 1080 -defaultsOSRD
-preplace port port-id_sADC_Sclk_0 -pg 1 -lvl 8 -x 2750 -y 1100 -defaultsOSRD
-preplace port port-id_sRelayComL_0 -pg 1 -lvl 8 -x 2750 -y 1300 -defaultsOSRD
-preplace port port-id_DcoClk_0 -pg 1 -lvl 0 -x -10 -y 1370 -defaultsOSRD
-preplace portBus dADC_Data_0 -pg 1 -lvl 0 -x -10 -y 1350 -defaultsOSRD
-preplace inst axi_dma_0 -pg 1 -lvl 5 -x 1600 -y 270 -defaultsOSRD
-preplace inst ZmodADC1410_Controll_0 -pg 1 -lvl 7 -x 2470 -y 1100 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 580 -y 580 -defaultsOSRD
-preplace inst axi_mem_intercon -pg 1 -lvl 6 -x 2040 -y 180 -defaultsOSRD
-preplace inst xlconcat_0 -pg 1 -lvl 6 -x 2040 -y 620 -defaultsOSRD
-preplace inst AXI_ZmodADC1410_0 -pg 1 -lvl 6 -x 2040 -y 1070 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 61 48 60 51 50 49 54 53 55 56 57 58 52 59 47} -defaultsOSRD
-preplace inst xlconstant_0 -pg 1 -lvl 5 -x 1600 -y 1060 -defaultsOSRD
-preplace inst system_ila_0 -pg 1 -lvl 6 -x 2040 -y 440 -defaultsOSRD
-preplace inst system_ila_1 -pg 1 -lvl 6 -x 2040 -y 780 -defaultsOSRD
-preplace inst axis_data_fifo_0 -pg 1 -lvl 4 -x 1240 -y 510 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 6 -x 2040 -y 1290 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 7 -x 2470 -y 660 -defaultsOSRD
-preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 210 -y 530 -defaultsOSRD
-preplace inst rst_ps7_0_100M_1 -pg 1 -lvl 1 -x 210 -y 710 -swap {0 1 2 3 4 9 6 7 8 5} -defaultsOSRD
-preplace inst AXI_TAR_0 -pg 1 -lvl 3 -x 920 -y 660 -defaultsOSRD
-preplace netloc AXI_TAR_0_Introut 1 3 3 N 670 NJ 670 1890
-preplace netloc AXI_ZmodADC1410_0_sCh1CouplingSelect 1 6 1 2190 1080n
-preplace netloc AXI_ZmodADC1410_0_sCh1GainSelect 1 6 1 N 1140
-preplace netloc AXI_ZmodADC1410_0_sCh2CouplingSelect 1 6 1 N 1120
-preplace netloc AXI_ZmodADC1410_0_sCh2GainSelect 1 6 1 N 1160
-preplace netloc AXI_ZmodADC1410_0_sTestMode 1 6 1 N 1180
-preplace netloc AXI_ZmodADC1410_0_sZmodControllerRst_n 1 6 1 2200 1060n
-preplace netloc DcoClk_0_1 1 0 7 NJ 1370 NJ 1370 NJ 1370 NJ 1370 NJ 1370 NJ 1370 2230J
-preplace netloc Net 1 7 1 NJ 1060
-preplace netloc ZmodADC1410_Controll_0_adcClkIn_n 1 7 1 NJ 1020
-preplace netloc ZmodADC1410_Controll_0_adcClkIn_p 1 7 1 NJ 1000
-preplace netloc ZmodADC1410_Controll_0_adcSync 1 7 1 NJ 1040
-preplace netloc ZmodADC1410_Controll_0_sADC_CS 1 7 1 NJ 1080
-preplace netloc ZmodADC1410_Controll_0_sADC_Sclk 1 7 1 NJ 1100
-preplace netloc ZmodADC1410_Controll_0_sCh1CouplingH 1 7 1 NJ 1120
-preplace netloc ZmodADC1410_Controll_0_sCh1CouplingL 1 7 1 NJ 1140
-preplace netloc ZmodADC1410_Controll_0_sCh1GainH 1 7 1 NJ 1200
-preplace netloc ZmodADC1410_Controll_0_sCh1GainL 1 7 1 NJ 1220
-preplace netloc ZmodADC1410_Controll_0_sCh1Out 1 2 6 780 800 NJ 800 NJ 800 1890 870 2190J 820 2710
-preplace netloc ZmodADC1410_Controll_0_sCh2CouplingH 1 7 1 NJ 1160
-preplace netloc ZmodADC1410_Controll_0_sCh2CouplingL 1 7 1 NJ 1180
-preplace netloc ZmodADC1410_Controll_0_sCh2GainH 1 7 1 NJ 1240
-preplace netloc ZmodADC1410_Controll_0_sCh2GainL 1 7 1 NJ 1260
-preplace netloc ZmodADC1410_Controll_0_sCh2Out 1 2 6 750 810 NJ 810 NJ 810 1860 880 2220J 830 2720
-preplace netloc ZmodADC1410_Controll_0_sInitDone_n 1 5 3 1890 900 2240J 840 2700
-preplace netloc ZmodADC1410_Controll_0_sRelayComH 1 7 1 NJ 1280
-preplace netloc ZmodADC1410_Controll_0_sRelayComL 1 7 1 NJ 1300
-preplace netloc axi_dma_0_s2mm_introut 1 5 1 1850 340n
-preplace netloc clk_wiz_0_clk_out1 1 6 1 2210 1060n
-preplace netloc dADC_Data_0_1 1 0 7 NJ 1350 NJ 1350 NJ 1350 NJ 1350 NJ 1350 1770J 1380 2240J
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 8 30 420 410 410 760 410 1100 310 1400 130 1890 550 2240 530 2730
-preplace netloc processing_system7_0_FCLK_CLK1 1 0 8 40 430 400 390 780 390 NJ 390 1430J 430 1810 1360 2220 1360 2730
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 8 20 370 NJ 370 NJ 370 NJ 370 1370J 460 1800 890 2200J 810 2710
-preplace netloc rst_ps7_0_100M_1_peripheral_aresetn 1 1 5 420 420 730 430 NJ 430 1360J 440 1830J
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 5 390 380 740 420 1110 330 1430 140 1870
-preplace netloc sys_clock_1 1 0 6 NJ 1300 NJ 1300 NJ 1300 NJ 1300 NJ 1300 NJ
-preplace netloc xlconcat_0_dout 1 6 1 2190 620n
-preplace netloc xlconstant_0_dout 1 5 1 1790 1060n
-preplace netloc AXI_TAR_0_M00_AXIS 1 3 3 1120 420 NJ 420 N
-preplace netloc AXI_ZmodADC1410_0_mCalibCh1 1 6 1 N 1000
-preplace netloc AXI_ZmodADC1410_0_mCalibCh2 1 6 1 N 1020
-preplace netloc AXI_ZmodADC1410_0_mSPI_IAP 1 6 1 N 980
-preplace netloc axi_dma_0_M_AXI_MM2S 1 5 1 1840 80n
-preplace netloc axi_dma_0_M_AXI_S2MM 1 5 1 1880 100n
-preplace netloc axi_dma_0_M_AXI_SG 1 5 1 1830 60n
-preplace netloc axi_mem_intercon_M00_AXI 1 6 1 2200 180n
-preplace netloc axis_data_fifo_0_M_AXIS 1 4 2 1420 450 1840
-preplace netloc processing_system7_0_DDR 1 7 1 NJ 600
-preplace netloc processing_system7_0_FIXED_IO 1 7 1 NJ 620
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 7 430 400 NJ 400 NJ 400 NJ 400 1860J 540 NJ 540 2710
-preplace netloc ps7_0_axi_periph_M00_AXI 1 2 3 750 210 NJ 210 NJ
-preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 N 580
-preplace netloc ps7_0_axi_periph_M02_AXI 1 2 4 770 520 1060J 590 NJ 590 1820J
-levelinfo -pg 1 -10 210 580 920 1240 1600 2040 2470 2750
-pagesize -pg 1 -db -bbox -sgen -200 0 2930 1390
+preplace port DDR -pg 1 -lvl 8 -x 2960 -y 610 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 8 -x 2960 -y 630 -defaultsOSRD
+preplace port port-id_sys_clock -pg 1 -lvl 0 -x 0 -y 1330 -defaultsOSRD
+preplace port port-id_sCh1GainH_0 -pg 1 -lvl 8 -x 2960 -y 1210 -defaultsOSRD
+preplace port port-id_adcClkIn_p_0 -pg 1 -lvl 8 -x 2960 -y 1010 -defaultsOSRD
+preplace port port-id_sCh1GainL_0 -pg 1 -lvl 8 -x 2960 -y 1230 -defaultsOSRD
+preplace port port-id_sCh2CouplingH_0 -pg 1 -lvl 8 -x 2960 -y 1170 -defaultsOSRD
+preplace port port-id_adcClkIn_n_0 -pg 1 -lvl 8 -x 2960 -y 1030 -defaultsOSRD
+preplace port port-id_sCh2CouplingL_0 -pg 1 -lvl 8 -x 2960 -y 1190 -defaultsOSRD
+preplace port port-id_sRelayComH_0 -pg 1 -lvl 8 -x 2960 -y 1290 -defaultsOSRD
+preplace port port-id_sCh2GainH_0 -pg 1 -lvl 8 -x 2960 -y 1250 -defaultsOSRD
+preplace port port-id_sADC_SDIO_0 -pg 1 -lvl 8 -x 2960 -y 1070 -defaultsOSRD
+preplace port port-id_adcSync_0 -pg 1 -lvl 8 -x 2960 -y 1050 -defaultsOSRD
+preplace port port-id_sCh2GainL_0 -pg 1 -lvl 8 -x 2960 -y 1270 -defaultsOSRD
+preplace port port-id_sCh1CouplingH_0 -pg 1 -lvl 8 -x 2960 -y 1130 -defaultsOSRD
+preplace port port-id_sCh1CouplingL_0 -pg 1 -lvl 8 -x 2960 -y 1150 -defaultsOSRD
+preplace port port-id_sADC_CS_0 -pg 1 -lvl 8 -x 2960 -y 1090 -defaultsOSRD
+preplace port port-id_sADC_Sclk_0 -pg 1 -lvl 8 -x 2960 -y 1110 -defaultsOSRD
+preplace port port-id_sRelayComL_0 -pg 1 -lvl 8 -x 2960 -y 1310 -defaultsOSRD
+preplace port port-id_DcoClk_0 -pg 1 -lvl 0 -x 0 -y 1400 -defaultsOSRD
+preplace portBus dADC_Data_0 -pg 1 -lvl 0 -x 0 -y 1380 -defaultsOSRD
+preplace inst axi_dma_0 -pg 1 -lvl 5 -x 1870 -y 440 -defaultsOSRD
+preplace inst ZmodADC1410_Controll_0 -pg 1 -lvl 7 -x 2680 -y 1110 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 570 -y 980 -defaultsOSRD
+preplace inst axi_mem_intercon -pg 1 -lvl 6 -x 2250 -y 490 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 6 -x 2250 -y 720 -defaultsOSRD
+preplace inst AXI_ZmodADC1410_0 -pg 1 -lvl 6 -x 2250 -y 1080 -swap {0 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32 33 34 35 36 37 38 39 40 41 42 43 44 45 46 61 48 60 51 50 49 54 53 55 56 57 58 52 59 47} -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 5 -x 1870 -y 1080 -defaultsOSRD
+preplace inst system_ila_0 -pg 1 -lvl 6 -x 2250 -y 100 -defaultsOSRD
+preplace inst system_ila_1 -pg 1 -lvl 4 -x 1500 -y 350 -defaultsOSRD
+preplace inst axis_data_fifo_0 -pg 1 -lvl 4 -x 1500 -y 700 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 6 -x 2250 -y 1320 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 7 -x 2680 -y 670 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -x 210 -y 950 -defaultsOSRD
+preplace inst rst_ps7_0_100M_1 -pg 1 -lvl 1 -x 210 -y 1150 -swap {0 1 2 3 4 9 6 7 8 5} -defaultsOSRD
+preplace inst AXI_TAR_0 -pg 1 -lvl 3 -x 960 -y 440 -defaultsOSRD
+preplace netloc AXI_TAR_0_Introut 1 3 3 1230 620 NJ 620 2050J
+preplace netloc AXI_ZmodADC1410_0_sCh1CouplingSelect 1 6 1 2410 1090n
+preplace netloc AXI_ZmodADC1410_0_sCh1GainSelect 1 6 1 N 1150
+preplace netloc AXI_ZmodADC1410_0_sCh2CouplingSelect 1 6 1 N 1130
+preplace netloc AXI_ZmodADC1410_0_sCh2GainSelect 1 6 1 N 1170
+preplace netloc AXI_ZmodADC1410_0_sTestMode 1 6 1 N 1190
+preplace netloc AXI_ZmodADC1410_0_sZmodControllerRst_n 1 6 1 2420 1070n
+preplace netloc DcoClk_0_1 1 0 7 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 NJ 1400 2450J
+preplace netloc Net 1 7 1 NJ 1070
+preplace netloc ZmodADC1410_Controll_0_adcClkIn_n 1 7 1 NJ 1030
+preplace netloc ZmodADC1410_Controll_0_adcClkIn_p 1 7 1 NJ 1010
+preplace netloc ZmodADC1410_Controll_0_adcSync 1 7 1 NJ 1050
+preplace netloc ZmodADC1410_Controll_0_sADC_CS 1 7 1 NJ 1090
+preplace netloc ZmodADC1410_Controll_0_sADC_Sclk 1 7 1 NJ 1110
+preplace netloc ZmodADC1410_Controll_0_sCh1CouplingH 1 7 1 NJ 1130
+preplace netloc ZmodADC1410_Controll_0_sCh1CouplingL 1 7 1 NJ 1150
+preplace netloc ZmodADC1410_Controll_0_sCh1GainH 1 7 1 NJ 1210
+preplace netloc ZmodADC1410_Controll_0_sCh1GainL 1 7 1 NJ 1230
+preplace netloc ZmodADC1410_Controll_0_sCh1Out 1 2 6 770 180 1300 1010 NJ 1010 2050J 810 NJ 810 2920
+preplace netloc ZmodADC1410_Controll_0_sCh2CouplingH 1 7 1 NJ 1170
+preplace netloc ZmodADC1410_Controll_0_sCh2CouplingL 1 7 1 NJ 1190
+preplace netloc ZmodADC1410_Controll_0_sCh2GainH 1 7 1 NJ 1250
+preplace netloc ZmodADC1410_Controll_0_sCh2GainL 1 7 1 NJ 1270
+preplace netloc ZmodADC1410_Controll_0_sCh2Out 1 2 6 770 700 1310 1020 NJ 1020 2070J 820 NJ 820 2940
+preplace netloc ZmodADC1410_Controll_0_sInitDone_n 1 5 3 2090 840 2460J 830 2900
+preplace netloc ZmodADC1410_Controll_0_sRelayComH 1 7 1 NJ 1290
+preplace netloc ZmodADC1410_Controll_0_sRelayComL 1 7 1 NJ 1310
+preplace netloc axi_dma_0_s2mm_introut 1 5 1 2080 510n
+preplace netloc clk_wiz_0_clk_out1 1 6 1 2440 1070n
+preplace netloc dADC_Data_0_1 1 0 7 NJ 1380 NJ 1380 NJ 1380 NJ 1380 NJ 1380 2050J 1390 2460J
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 8 30 850 410 810 750 790 1360 790 1660 600 2090 790 2440 790 2920
+preplace netloc processing_system7_0_FCLK_CLK1 1 0 8 30 1050 400 820 730 710 1280 1150 NJ 1150 2080 830 2440 840 2930
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 8 20 1250 NJ 1250 NJ 1250 NJ 1250 NJ 1250 2090 1250 2430J 850 2910
+preplace netloc rst_ps7_0_100M_1_peripheral_aresetn 1 1 5 420 1140 760 1140 NJ 1140 NJ 1140 2050J
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 5 390 790 740 780 1350 780 1670 610 2060
+preplace netloc sys_clock_1 1 0 6 NJ 1330 NJ 1330 NJ 1330 NJ 1330 NJ 1330 NJ
+preplace netloc xlconcat_0_dout 1 6 1 2430 710n
+preplace netloc xlconstant_0_dout 1 5 1 2050 1080n
+preplace netloc cha_ts_debug 1 3 1 1200 240n
+preplace netloc cha_hist 1 3 1 1170 220n
+preplace netloc pf_wr_ptr_debug 1 3 1 1290 520n
+preplace netloc pf_cha_fifo_reg_debug 1 3 1 1220 440n
+preplace netloc chb_ts_debug 1 3 1 1290 360n
+preplace netloc chb_ts_temp_debug 1 3 1 1210 380n
+preplace netloc chb_vp_temp_debug 1 3 1 N 420
+preplace netloc cha_ts_temp_debug 1 3 1 1240 260n
+preplace netloc cha_dr_debug 1 3 1 1190 200n
+preplace netloc cha_vp_temp_debug 1 3 1 N 300
+preplace netloc cha_vp_debug 1 3 1 1250 280n
+preplace netloc pf_of_pend_flg_debug 1 3 1 1340 520n
+preplace netloc pf_rd_ptr_debug 1 3 1 N 540
+preplace netloc pf_chb_pend_flg_debug 1 3 1 1350 500n
+preplace netloc pf_cha_pend_flg_debug 1 3 1 1330 460n
+preplace netloc chb_dr_debug 1 3 1 1270 320n
+preplace netloc chb_vp_debug 1 3 1 1320 400n
+preplace netloc chb_hist 1 3 1 1260 340n
+preplace netloc pf_chb_fifo_reg_debug 1 3 1 1360 480n
+preplace netloc AXI_TAR_0_M00_AXIS 1 3 3 1180 80 NJ 80 NJ
+preplace netloc AXI_ZmodADC1410_0_mCalibCh1 1 6 1 N 1010
+preplace netloc AXI_ZmodADC1410_0_mCalibCh2 1 6 1 N 1030
+preplace netloc AXI_ZmodADC1410_0_mSPI_IAP 1 6 1 N 990
+preplace netloc axi_dma_0_M_AXI_MM2S 1 5 1 N 390
+preplace netloc axi_dma_0_M_AXI_S2MM 1 5 1 2050 60n
+preplace netloc axi_dma_0_M_AXI_SG 1 5 1 N 370
+preplace netloc axi_mem_intercon_M00_AXI 1 6 1 2440 490n
+preplace netloc axis_data_fifo_0_M_AXIS 1 4 2 1640 100 N
+preplace netloc processing_system7_0_DDR 1 7 1 NJ 610
+preplace netloc processing_system7_0_FIXED_IO 1 7 1 NJ 630
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 7 420 800 NJ 800 NJ 800 NJ 800 NJ 800 NJ 800 2940
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 3 NJ 960 NJ 960 1650
+preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 720 360n
+preplace netloc ps7_0_axi_periph_M02_AXI 1 2 4 NJ 1000 NJ 1000 NJ 1000 2060
+levelinfo -pg 1 0 210 570 960 1500 1870 2250 2680 2960
+pagesize -pg 1 -db -bbox -sgen -190 0 3140 1420
 "
 }
 {
