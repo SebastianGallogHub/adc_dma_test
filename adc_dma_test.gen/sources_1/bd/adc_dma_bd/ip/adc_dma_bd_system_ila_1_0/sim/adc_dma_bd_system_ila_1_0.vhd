@@ -56,9 +56,27 @@ USE ieee.numeric_std.ALL;
 ENTITY adc_dma_bd_system_ila_1_0 IS
   PORT (
     clk : IN STD_LOGIC;
-    probe0 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    probe0 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     probe1 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-    probe2 : IN STD_LOGIC_VECTOR(15 DOWNTO 0)
+    probe2 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    probe3 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    probe4 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    probe5 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    probe6 : IN STD_LOGIC_VECTOR(13 DOWNTO 0);
+    probe7 : IN STD_LOGIC_VECTOR(13 DOWNTO 0);
+    probe8 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    probe9 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    probe10 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    probe11 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    probe12 : IN STD_LOGIC_VECTOR(13 DOWNTO 0);
+    probe13 : IN STD_LOGIC_VECTOR(13 DOWNTO 0);
+    probe14 : IN STD_LOGIC_VECTOR(63 DOWNTO 0);
+    probe15 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    probe16 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    probe17 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+    probe18 : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+    probe19 : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+    probe20 : IN STD_LOGIC_VECTOR(63 DOWNTO 0)
   );
 END adc_dma_bd_system_ila_1_0;
 
@@ -68,9 +86,27 @@ ARCHITECTURE adc_dma_bd_system_ila_1_0_arch OF adc_dma_bd_system_ila_1_0 IS
   COMPONENT bd_4d6e IS
     PORT (
       clk : IN STD_LOGIC;
-      probe0 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+      probe0 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
       probe1 : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-      probe2 : IN STD_LOGIC_VECTOR(15 DOWNTO 0)
+      probe2 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+      probe3 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      probe4 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      probe5 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      probe6 : IN STD_LOGIC_VECTOR(13 DOWNTO 0);
+      probe7 : IN STD_LOGIC_VECTOR(13 DOWNTO 0);
+      probe8 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+      probe9 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      probe10 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      probe11 : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      probe12 : IN STD_LOGIC_VECTOR(13 DOWNTO 0);
+      probe13 : IN STD_LOGIC_VECTOR(13 DOWNTO 0);
+      probe14 : IN STD_LOGIC_VECTOR(63 DOWNTO 0);
+      probe15 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+      probe16 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+      probe17 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
+      probe18 : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+      probe19 : IN STD_LOGIC_VECTOR(3 DOWNTO 0);
+      probe20 : IN STD_LOGIC_VECTOR(63 DOWNTO 0)
     );
   END COMPONENT bd_4d6e;
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -83,6 +119,24 @@ BEGIN
       clk => clk,
       probe0 => probe0,
       probe1 => probe1,
-      probe2 => probe2
+      probe2 => probe2,
+      probe3 => probe3,
+      probe4 => probe4,
+      probe5 => probe5,
+      probe6 => probe6,
+      probe7 => probe7,
+      probe8 => probe8,
+      probe9 => probe9,
+      probe10 => probe10,
+      probe11 => probe11,
+      probe12 => probe12,
+      probe13 => probe13,
+      probe14 => probe14,
+      probe15 => probe15,
+      probe16 => probe16,
+      probe17 => probe17,
+      probe18 => probe18,
+      probe19 => probe19,
+      probe20 => probe20
     );
 END adc_dma_bd_system_ila_1_0_arch;

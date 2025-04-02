@@ -3,77 +3,256 @@
 # SW Build 3865809 on Sun May  7 15:05:29 MDT 2023
 # IP Build 3864474 on Sun May  7 20:36:21 MDT 2023
 # SharedData Build 3865790 on Sun May 07 13:33:03 MDT 2023
-# Start of session at: Tue Apr  1 22:49:44 2025
-# Process ID: 10368
-# Current directory: C:/TAR
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4168 C:\TAR\adc_dma_test.xpr
-# Log file: C:/TAR/vivado.log
-# Journal file: C:/TAR\vivado.jou
+# Start of session at: Wed Apr  2 09:58:25 2025
+# Process ID: 12756
+# Current directory: C:/tar
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent12152 C:\tar\adc_dma_test.xpr
+# Log file: C:/tar/vivado.log
+# Journal file: C:/tar\vivado.jou
 # Running On: DESKTOP-N93DAM9, OS: Windows, CPU Frequency: 1190 MHz, CPU Physical cores: 4, Host memory: 8341 MB
 #-----------------------------------------------------------
 start_gui
-open_project C:/TAR/adc_dma_test.xpr
+open_project C:/tar/adc_dma_test.xpr
 update_compile_order -fileset sources_1
+open_bd_design {C:/tar/adc_dma_test.srcs/sources_1/bd/adc_dma_bd/adc_dma_bd.bd}
+regenerate_bd_layout
+regenerate_bd_layout -routing
+reset_run synth_1
 launch_runs synth_1 -jobs 8
 wait_on_run synth_1
-open_bd_design {C:/TAR/adc_dma_test.srcs/sources_1/bd/adc_dma_bd/adc_dma_bd.bd}
-open_run synth_1 -name synth_1
-create_debug_core u_ila_0 ila
-set_property C_DATA_DEPTH 2048 [get_debug_cores u_ila_0]
-set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
-set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
-set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
-set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
-set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
-set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
-set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
-connect_debug_port u_ila_0/clk [get_nets [list adc_dma_bd_i/processing_system7_0/inst/FCLK_CLK1 ]]
-set_property port_width 64 [get_debug_ports u_ila_0/probe0]
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
-connect_debug_port u_ila_0/probe0 [get_nets [list {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[0]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[1]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[2]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[3]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[4]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[5]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[6]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[7]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[8]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[9]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[10]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[11]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[12]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[13]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[14]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[15]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[16]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[17]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[18]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[19]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[20]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[21]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[22]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[23]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[24]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[25]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[26]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[27]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[28]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[29]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[30]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[31]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[32]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[33]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[34]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[35]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[36]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[37]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[38]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[39]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[40]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[41]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[42]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[43]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[44]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[45]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[46]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[47]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[48]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[49]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[50]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[51]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[52]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[53]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[54]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[55]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[56]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[57]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[58]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[59]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[60]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[61]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[62]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[63]} ]]
-create_debug_port u_ila_0 probe
-set_property port_width 64 [get_debug_ports u_ila_0/probe1]
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
-connect_debug_port u_ila_0/probe1 [get_nets [list {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[0]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[1]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[2]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[3]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[4]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[5]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[6]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[7]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[8]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[9]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[10]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[11]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[12]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[13]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[14]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[15]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[16]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[17]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[18]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[19]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[20]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[21]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[22]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[23]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[24]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[25]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[26]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[27]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[28]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[29]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[30]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[31]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[32]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[33]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[34]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[35]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[36]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[37]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[38]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[39]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[40]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[41]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[42]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[43]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[44]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[45]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[46]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[47]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[48]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[49]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[50]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[51]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[52]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[53]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[54]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[55]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[56]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[57]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[58]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[59]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[60]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[61]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[62]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[63]} ]]
-create_debug_port u_ila_0 probe
-set_property port_width 1 [get_debug_ports u_ila_0/probe2]
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
-connect_debug_port u_ila_0/probe2 [get_nets [list adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/fifo_empty_ila ]]
-create_debug_port u_ila_0 probe
-set_property port_width 1 [get_debug_ports u_ila_0/probe3]
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
-connect_debug_port u_ila_0/probe3 [get_nets [list adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/fifo_full_ila ]]
-save_constraints
-delete_debug_core [get_debug_cores {u_ila_0 }]
-create_debug_core u_ila_0 ila
-set_property C_DATA_DEPTH 2048 [get_debug_cores u_ila_0]
-set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
-set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
-set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
-set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
-set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
-set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
-set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
-connect_debug_port u_ila_0/clk [get_nets [list adc_dma_bd_i/processing_system7_0/inst/FCLK_CLK1 ]]
-set_property port_width 64 [get_debug_ports u_ila_0/probe0]
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
-connect_debug_port u_ila_0/probe0 [get_nets [list {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[0]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[1]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[2]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[3]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[4]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[5]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[6]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[7]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[8]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[9]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[10]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[11]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[12]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[13]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[14]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[15]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[16]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[17]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[18]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[19]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[20]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[21]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[22]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[23]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[24]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[25]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[26]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[27]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[28]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[29]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[30]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[31]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[32]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[33]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[34]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[35]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[36]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[37]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[38]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[39]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[40]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[41]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[42]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[43]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[44]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[45]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[46]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[47]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[48]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[49]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[50]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[51]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[52]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[53]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[54]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[55]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[56]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[57]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[58]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[59]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[60]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[61]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[62]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/chb_fifo_reg[63]} ]]
-create_debug_port u_ila_0 probe
-set_property port_width 64 [get_debug_ports u_ila_0/probe1]
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
-connect_debug_port u_ila_0/probe1 [get_nets [list {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[0]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[1]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[2]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[3]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[4]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[5]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[6]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[7]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[8]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[9]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[10]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[11]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[12]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[13]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[14]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[15]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[16]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[17]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[18]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[19]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[20]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[21]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[22]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[23]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[24]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[25]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[26]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[27]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[28]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[29]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[30]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[31]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[32]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[33]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[34]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[35]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[36]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[37]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[38]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[39]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[40]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[41]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[42]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[43]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[44]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[45]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[46]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[47]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[48]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[49]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[50]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[51]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[52]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[53]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[54]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[55]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[56]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[57]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[58]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[59]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[60]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[61]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[62]} {adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[63]} ]]
-create_debug_port u_ila_0 probe
-set_property port_width 1 [get_debug_ports u_ila_0/probe2]
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
-connect_debug_port u_ila_0/probe2 [get_nets [list adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/fifo_empty_ila ]]
-create_debug_port u_ila_0 probe
-set_property port_width 1 [get_debug_ports u_ila_0/probe3]
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
-connect_debug_port u_ila_0/probe3 [get_nets [list adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/fifo_full_ila ]]
-save_constraints
-reset_run impl_1
+ipx::edit_ip_in_project -upgrade true -name AXI_TAR_v1_0_project -directory C:/tar/adc_dma_test.tmp/AXI_TAR_v1_0_project c:/tar/ip_repo/AXI_TAR_1_0/component.xml
+update_compile_order -fileset sources_1
+current_project adc_dma_test
+current_project AXI_TAR_v1_0_project
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 41 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/tar/ip_repo
+report_ip_status -name ip_status 
+upgrade_ip -vlnv user.org:user:AXI_TAR:1.0 [get_ips  adc_dma_bd_AXI_TAR_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips adc_dma_bd_AXI_TAR_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+ipx::edit_ip_in_project -upgrade true -name AXI_TAR_v1_0_project -directory C:/tar/adc_dma_test.tmp/AXI_TAR_v1_0_project c:/tar/ip_repo/AXI_TAR_1_0/component.xml
+update_compile_order -fileset sources_1
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 42 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/tar/ip_repo
+report_ip_status -name ip_status 
+upgrade_ip -vlnv user.org:user:AXI_TAR:1.0 [get_ips  adc_dma_bd_AXI_TAR_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips adc_dma_bd_AXI_TAR_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+report_ip_status -name ip_status 
+open_bd_design {C:/tar/adc_dma_test.srcs/sources_1/bd/adc_dma_bd/adc_dma_bd.bd}
+ipx::edit_ip_in_project -upgrade true -name AXI_TAR_v1_0_project -directory C:/tar/adc_dma_test.tmp/AXI_TAR_v1_0_project c:/tar/ip_repo/AXI_TAR_1_0/component.xml
+update_compile_order -fileset sources_1
+current_project adc_dma_test
+current_project AXI_TAR_v1_0_project
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+ipx::merge_project_changes ports [ipx::current_core]
+ipx::merge_project_changes ports [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 43 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path c:/tar/ip_repo
+report_ip_status -name ip_status 
+upgrade_ip -vlnv user.org:user:AXI_TAR:1.0 [get_ips  adc_dma_bd_AXI_TAR_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips adc_dma_bd_AXI_TAR_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+delete_bd_objs [get_bd_nets pf_chb_pend_flg_debug] [get_bd_nets pf_of_pend_flg_debug] [get_bd_nets pf_cha_pend_flg_debug]
+startgroup
+connect_bd_net -net pf_chb_pend_flg_debug [get_bd_pins AXI_TAR_0/pf_chb_pend_flg_debug]
+connect_bd_net -net pf_cha_pend_flg_debug [get_bd_pins AXI_TAR_0/pf_cha_pend_flg_debug]
+connect_bd_net -net pf_of_pend_flg_debug [get_bd_pins AXI_TAR_0/pf_of_pend_flg_debug]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {pf_chb_pend_flg_debug pf_cha_pend_flg_debug pf_of_pend_flg_debug }]
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_nets pf_cha_pend_flg_debug] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK1" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets pf_chb_pend_flg_debug] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK1" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets pf_of_pend_flg_debug] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK1" SYSTEM_ILA "Auto" } \
+                                                         ]
+endgroup
+delete_bd_objs [get_bd_nets pf_of_pend_flg_debug]
+delete_bd_objs [get_bd_nets pf_chb_pend_flg_debug]
+delete_bd_objs [get_bd_nets pf_cha_pend_flg_debug]
+delete_bd_objs [get_bd_nets cha_dr_debug]
+delete_bd_objs [get_bd_nets cha_hist]
+delete_bd_objs [get_bd_nets cha_ts_debug]
+delete_bd_objs [get_bd_nets cha_ts_temp_debug]
+delete_bd_objs [get_bd_nets cha_vp_debug]
+delete_bd_objs [get_bd_nets cha_vp_temp_debug]
+delete_bd_objs [get_bd_nets chb_hist]
+delete_bd_objs [get_bd_nets chb_dr_debug]
+delete_bd_objs [get_bd_nets chb_ts_debug]
+delete_bd_objs [get_bd_nets chb_ts_temp_debug]
+delete_bd_objs [get_bd_nets chb_vp_debug]
+delete_bd_objs [get_bd_nets chb_vp_temp_debug]
+delete_bd_objs [get_bd_nets pf_cha_fifo_reg_debug]
+delete_bd_objs [get_bd_nets pf_chb_fifo_reg_debug]
+delete_bd_objs [get_bd_nets pf_rd_ptr_debug]
+delete_bd_objs [get_bd_nets pf_wr_ptr_debug]
+startgroup
+set_property CONFIG.C_NUM_OF_PROBES {2} [get_bd_cells system_ila_1]
+endgroup
+regenerate_bd_layout
+regenerate_bd_layout -routing
+regenerate_bd_layout
+startgroup
+connect_bd_net -net pf_wr_ptr_debug [get_bd_pins AXI_TAR_0/pf_wr_ptr_debug]
+connect_bd_net -net pf_chb_fifo_reg_debug [get_bd_pins AXI_TAR_0/pf_chb_fifo_reg_debug]
+connect_bd_net -net cha_hist [get_bd_pins AXI_TAR_0/cha_hist]
+connect_bd_net -net cha_ts_debug [get_bd_pins AXI_TAR_0/cha_ts_debug]
+connect_bd_net -net chb_ts_temp_debug [get_bd_pins AXI_TAR_0/chb_ts_temp_debug]
+connect_bd_net -net chb_ts_debug [get_bd_pins AXI_TAR_0/chb_ts_debug]
+connect_bd_net -net pf_cha_fifo_reg_debug [get_bd_pins AXI_TAR_0/pf_cha_fifo_reg_debug]
+connect_bd_net -net chb_vp_temp_debug [get_bd_pins AXI_TAR_0/chb_vp_temp_debug]
+connect_bd_net -net cha_ts_temp_debug [get_bd_pins AXI_TAR_0/cha_ts_temp_debug]
+connect_bd_net -net cha_vp_temp_debug [get_bd_pins AXI_TAR_0/cha_vp_temp_debug]
+connect_bd_net -net cha_dr_debug [get_bd_pins AXI_TAR_0/cha_dr_debug]
+connect_bd_net -net cha_vp_debug [get_bd_pins AXI_TAR_0/cha_vp_debug]
+connect_bd_net -net pf_of_pend_flg_debug [get_bd_pins AXI_TAR_0/pf_of_pend_flg_debug]
+connect_bd_net -net pf_chb_pend_flg_debug [get_bd_pins AXI_TAR_0/pf_chb_pend_flg_debug]
+connect_bd_net -net pf_cha_pend_flg_debug [get_bd_pins AXI_TAR_0/pf_cha_pend_flg_debug]
+connect_bd_net -net pf_rd_ptr_debug [get_bd_pins AXI_TAR_0/pf_rd_ptr_debug]
+connect_bd_net -net chb_dr_debug [get_bd_pins AXI_TAR_0/chb_dr_debug]
+connect_bd_net -net chb_vp_debug [get_bd_pins AXI_TAR_0/chb_vp_debug]
+connect_bd_net -net chb_hist [get_bd_pins AXI_TAR_0/chb_hist]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {pf_wr_ptr_debug pf_chb_fifo_reg_debug cha_hist cha_ts_debug chb_ts_temp_debug chb_ts_debug pf_cha_fifo_reg_debug chb_vp_temp_debug cha_ts_temp_debug cha_vp_temp_debug cha_dr_debug cha_vp_debug pf_of_pend_flg_debug pf_chb_pend_flg_debug pf_cha_pend_flg_debug pf_rd_ptr_debug chb_dr_debug chb_vp_debug chb_hist }]
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_nets cha_dr_debug] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK1" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets cha_hist] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK1" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets cha_ts_debug] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK1" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets cha_ts_temp_debug] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK1" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets cha_vp_debug] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK1" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets cha_vp_temp_debug] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK1" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets chb_dr_debug] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK1" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets chb_hist] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK1" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets chb_ts_debug] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK1" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets chb_ts_temp_debug] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK1" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets chb_vp_debug] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK1" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets chb_vp_temp_debug] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK1" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets pf_cha_fifo_reg_debug] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK1" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets pf_cha_pend_flg_debug] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK1" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets pf_chb_fifo_reg_debug] {PROBE_TYPE "Data and Trigger" CLK_SRC "None (Connect manually)" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets pf_chb_pend_flg_debug] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK1" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets pf_of_pend_flg_debug] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK1" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets pf_rd_ptr_debug] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK1" SYSTEM_ILA "Auto" } \
+                                                          [get_bd_nets pf_wr_ptr_debug] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK1" SYSTEM_ILA "Auto" } \
+                                                         ]
+endgroup
+regenerate_bd_layout
+regenerate_bd_layout -routing
+regenerate_bd_layout
+regenerate_bd_layout -routing
+apply_bd_automation -rule xilinx.com:bd_rule:clkrst -config { Clk {/processing_system7_0/FCLK_CLK1 (100 MHz)} Freq {100} Ref_Clk0 {None} Ref_Clk1 {None} Ref_Clk2 {None}}  [get_bd_pins system_ila_2/clk]
+regenerate_bd_layout
+regenerate_bd_layout -routing
+delete_bd_objs [get_bd_nets pf_chb_fifo_reg_debug]
+delete_bd_objs [get_bd_cells system_ila_2]
+startgroup
+connect_bd_net -net pf_chb_fifo_reg_debug [get_bd_pins AXI_TAR_0/pf_chb_fifo_reg_debug]
+set_property HDL_ATTRIBUTE.DEBUG true [get_bd_nets {pf_chb_fifo_reg_debug }]
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:debug -dict [list \
+                                                          [get_bd_nets pf_chb_fifo_reg_debug] {PROBE_TYPE "Data and Trigger" CLK_SRC "/processing_system7_0/FCLK_CLK1" SYSTEM_ILA "Auto" } \
+                                                         ]
+regenerate_bd_layout
+regenerate_bd_layout -routing
+regenerate_bd_layout
+regenerate_bd_layout -routing
+regenerate_bd_layout
+save_bd_design
+report_ip_status -name ip_status 
+regenerate_bd_layout
+regenerate_bd_layout -routing
+regenerate_bd_layout
+regenerate_bd_layout
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
 launch_runs impl_1 -jobs 8
 wait_on_run impl_1
-open_bd_design {C:/TAR/adc_dma_test.srcs/sources_1/bd/adc_dma_bd/adc_dma_bd.bd}
+regenerate_bd_layout
+regenerate_bd_layout -routing
+regenerate_bd_layout
+startgroup
+delete_bd_objs [get_bd_nets cha_ts_debug]
+delete_bd_objs [get_bd_nets pf_of_pend_flg_debug]
+delete_bd_objs [get_bd_nets cha_vp_debug]
+delete_bd_objs [get_bd_nets pf_cha_pend_flg_debug]
+delete_bd_objs [get_bd_nets chb_vp_debug]
+delete_bd_objs [get_bd_nets chb_hist]
+delete_bd_objs [get_bd_nets cha_hist]
+delete_bd_objs [get_bd_nets chb_vp_temp_debug]
+delete_bd_objs [get_bd_nets cha_ts_temp_debug]
+delete_bd_objs [get_bd_nets chb_ts_temp_debug]
+delete_bd_objs [get_bd_nets pf_cha_fifo_reg_debug]
+delete_bd_objs [get_bd_nets cha_dr_debug]
+delete_bd_objs [get_bd_nets pf_chb_pend_flg_debug]
+delete_bd_objs [get_bd_nets pf_rd_ptr_debug]
+delete_bd_objs [get_bd_nets chb_dr_debug]
+delete_bd_objs [get_bd_nets pf_chb_fifo_reg_debug]
+delete_bd_objs [get_bd_nets chb_ts_debug]
+delete_bd_objs [get_bd_nets cha_vp_temp_debug]
+delete_bd_objs [get_bd_nets pf_wr_ptr_debug]
+endgroup
+undo
+regenerate_bd_layout
+regenerate_bd_layout
+startgroup
+set_property -dict [list CONFIG.c_s_axis_s2mm_tdata_width.VALUE_SRC PROPAGATED] [get_bd_cells axi_dma_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.c_s_axis_s2mm_tdata_width.VALUE_SRC PROPAGATED] [get_bd_cells axi_dma_0]
+set_property -dict [list \
+  CONFIG.c_include_s2mm {1} \
+  CONFIG.c_s2mm_burst_size {256} \
+] [get_bd_cells axi_dma_0]
+endgroup
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+launch_runs impl_1 -jobs 8
+wait_on_run impl_1
 launch_runs impl_1 -to_step write_bitstream -jobs 8
 wait_on_run impl_1
+write_hw_platform -fixed -include_bit -force -file C:/tar/adc_dma_bd_wrapper.xsa
