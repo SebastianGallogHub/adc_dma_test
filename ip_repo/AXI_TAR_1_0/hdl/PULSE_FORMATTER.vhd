@@ -34,6 +34,15 @@ entity PULSE_FORMATTER is
         clk  : in STD_LOGIC;
         rstn : in STD_LOGIC;
 
+        -- Salidas de DEBUG
+        wr_ptr_debug       : out INTEGER range 0 to FIFO_DEPTH - 1;
+        rd_ptr_debug       : out INTEGER range 0 to FIFO_DEPTH - 1;
+        of_pend_flg_debug  : out INTEGER range 0 to 1;
+        cha_pend_flg_debug : out INTEGER range 0 to 1;
+        chb_pend_flg_debug : out INTEGER range 0 to 1;
+        cha_fifo_reg_debug : out STD_LOGIC_VECTOR(C_M_AXIS_TDATA_WIDTH - 1 downto 0);
+        chb_fifo_reg_debug : out STD_LOGIC_VECTOR(C_M_AXIS_TDATA_WIDTH - 1 downto 0);
+
         -- Data inputs
         cha_data : in STD_LOGIC_VECTOR(13 downto 0);
         cha_ts   : in STD_LOGIC_VECTOR(TS_LEN - 1 downto 0);
@@ -88,20 +97,16 @@ architecture Behavioral of PULSE_FORMATTER is
     constant MEDIO_PULSO : STD_LOGIC_VECTOR(TS_LEN - 1 downto 0) := "00000000000000000000000000110010"; -- 50 ciclos @ 100MHz
 
     attribute MARK_DEBUG : STRING;
-    -- Entradas/salidas
-    signal fifo_full_ila                   : STD_LOGIC;
-    signal fifo_empty_ila                  : STD_LOGIC;
-    attribute MARK_DEBUG of fifo_empty_ila : signal is G_MARK_DEBUG;
-    attribute MARK_DEBUG of fifo_full_ila  : signal is G_MARK_DEBUG;
-    -- Variables internas
-    -- attribute MARK_DEBUG of fifo_count : signal is G_MARK_DEBUG;
-    -- attribute MARK_DEBUG of fifo_mem     : signal is G_MARK_DEBUG; -- Especial atención por si no lo captura ILA
-    -- attribute MARK_DEBUG of wr_ptr       : signal is G_MARK_DEBUG;
-    -- attribute MARK_DEBUG of rd_ptr       : signal is G_MARK_DEBUG;
-    attribute MARK_DEBUG of cha_fifo_reg : signal is G_MARK_DEBUG;
-    attribute MARK_DEBUG of chb_fifo_reg : signal is G_MARK_DEBUG;
-
 begin
+    -- Asignación de señales DEBUG
+    wr_ptr_debug       <= wr_ptr;
+    rd_ptr_debug       <= rd_ptr;
+    of_pend_flg_debug  <= of_pend_flg;
+    cha_pend_flg_debug <= cha_pend_flg;
+    chb_pend_flg_debug <= chb_pend_flg;
+    cha_fifo_reg_debug <= cha_fifo_reg;
+    chb_fifo_reg_debug <= chb_fifo_reg;
+
     -- Los registros incluyen el formato de envío de datos por UART posterior 
     -- para mayor eficiencia
     cha_fifo_reg <= CMD_HEADER & cha_ts & CH_A & cha_data & CMD_FOOTER;
@@ -111,26 +116,12 @@ begin
     m_axis_tstrb <= (others => '1');
 
     -- Señales de estad de FIFO 
-    fifo_full_ila <= '1' when fifo_count = FIFO_DEPTH else
+    fifo_full <= '1' when fifo_count = FIFO_DEPTH else
         '0';
-    fifo_empty_ila <= '1' when fifo_count = 0 else
+    fifo_empty <= '1' when fifo_count = 0 else
         '0';
 
-    fifo_full  <= fifo_full_ila;
-    fifo_empty <= fifo_empty_ila;
-
-    process (clk) --is
-        -- Procedure to write data into FIFO
-        -- procedure write_fifo (
-        --     signal data : in STD_LOGIC_VECTOR(13 downto 0);
-        --     signal ts   : in STD_LOGIC_VECTOR(31 downto 0);
-        --     signal ch   : in STD_LOGIC_VECTOR(1 downto 0)
-        -- ) is
-        -- begin
-        --     fifo_mem(wr_ptr) <= ts & ch & data;
-        --     wr_ptr           <= (wr_ptr + 1) mod FIFO_DEPTH;
-        --     fifo_count       <= fifo_count + 1;
-        -- end procedure;
+    process (clk)
         variable wr_ptr_v       : INTEGER range 0 to FIFO_DEPTH - 1 := 0;
         variable rd_ptr_v       : INTEGER range 0 to FIFO_DEPTH - 1 := 0;
         variable fifo_count_v   : INTEGER range 0 to FIFO_DEPTH     := 0;

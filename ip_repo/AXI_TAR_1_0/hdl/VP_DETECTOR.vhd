@@ -31,6 +31,10 @@ entity VP_DETECTOR is
         clk  : in STD_LOGIC;
         rstn : in STD_LOGIC;
 
+        -- Salidas de DEBUG
+        vp_temp_debug : out STD_LOGIC_VECTOR (13 downto 0);
+        ts_temp_debug : out STD_LOGIC_VECTOR (TS_LEN - 1 downto 0);
+
         cad : in STD_LOGIC_VECTOR (13 downto 0);
 
         h_low  : in STD_LOGIC_VECTOR (15 downto 0);
@@ -40,7 +44,8 @@ entity VP_DETECTOR is
 
         dr : out STD_LOGIC;
         vp : out STD_LOGIC_VECTOR (13 downto 0);
-        ts : out STD_LOGIC_VECTOR (TS_LEN - 1 downto 0));
+        ts : out STD_LOGIC_VECTOR (TS_LEN - 1 downto 0)
+    );
 end VP_DETECTOR;
 
 architecture Behavioral of VP_DETECTOR is
@@ -56,20 +61,10 @@ architecture Behavioral of VP_DETECTOR is
     -- Vivado solo reconoce MARK_DEBUG en señales dentro de la arquitectura, 
     -- no directamente en los puertos de la entidad
     attribute MARK_DEBUG : STRING;
-    -- Entradas/salidas
-    -- signal h_low_ila                   : STD_LOGIC_VECTOR (15 downto 0);
-    -- signal h_high_ila                  : STD_LOGIC_VECTOR (15 downto 0);
-    -- attribute MARK_DEBUG of h_low_ila  : signal is G_MARK_DEBUG; -- histéresis
-    -- attribute MARK_DEBUG of h_high_ila : signal is G_MARK_DEBUG; -- histéresis
-    -- -- Variables internas 
-    -- attribute MARK_DEBUG of dr_internal : signal is G_MARK_DEBUG;
-    -- -- attribute MARK_DEBUG of vp_internal : signal is G_MARK_DEBUG; -- valor cambia cuando se sale de la histéresis
-    -- -- attribute MARK_DEBUG of ts_internal : signal is G_MARK_DEBUG; -- valor cambia cuando se sale de la histéresis
-    -- attribute MARK_DEBUG of vp_temp : signal is G_MARK_DEBUG;
-    -- attribute MARK_DEBUG of ts_temp : signal is G_MARK_DEBUG;
 begin
---    h_low_ila  <= h_low;
---    h_high_ila <= h_high;
+    -- Asignación de señales DEBUG
+    vp_temp_debug <= vp_temp;
+    ts_temp_debug <= ts_temp;
 
     process (clk, rstn)
     begin

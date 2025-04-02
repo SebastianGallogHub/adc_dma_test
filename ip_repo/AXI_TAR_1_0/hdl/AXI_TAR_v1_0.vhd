@@ -9,11 +9,13 @@ entity AXI_TAR_v1_0 is
 		C_S00_AXI_ADDR_WIDTH : INTEGER := 4;
 
 		-- Parameters of Axi Master Bus Interface M00_AXIS
-		C_M00_AXIS_TDATA_WIDTH : INTEGER := 32;
-		C_M00_AXIS_START_COUNT : INTEGER := 32;
+		C_M00_AXIS_TDATA_WIDTH : INTEGER := 64;
+		C_M00_AXIS_START_COUNT : INTEGER := 64;
 
 		-- Parámetro de debug via ILA
-		G_MARK_DEBUG : STRING := "false"
+		G_MARK_DEBUG : STRING := "false";
+
+		TIMESTAMP_LEN : INTEGER := 32;
 	);
 	port (
 		-- Interfaz compatible con ZmodADC1410_Controller v1.0
@@ -22,6 +24,29 @@ entity AXI_TAR_v1_0 is
 		sCh1In  : in STD_LOGIC_VECTOR(15 downto 0);
 		sCh2In  : in STD_LOGIC_VECTOR(15 downto 0);
 		Introut : out STD_LOGIC;
+
+		-- Salidas de DEBUG
+		cha_hist          : out STD_LOGIC_VECTOR(31 downto 0);
+		cha_vp_temp_debug : out STD_LOGIC_VECTOR(13 downto 0);
+		cha_ts_temp_debug : out STD_LOGIC_VECTOR(TIMESTAMP_LEN - 1 downto 0);
+		cha_dr_debug      : out STD_LOGIC;
+		cha_vp_debug      : out STD_LOGIC_VECTOR(13 downto 0);
+		cha_ts_debug      : out STD_LOGIC_VECTOR(TIMESTAMP_LEN - 1 downto 0);
+
+		chb_hist          : out STD_LOGIC_VECTOR(31 downto 0);
+		chb_vp_temp_debug : out STD_LOGIC_VECTOR(13 downto 0);
+		chb_ts_temp_debug : out STD_LOGIC_VECTOR(TIMESTAMP_LEN - 1 downto 0);
+		chb_dr_debug      : out STD_LOGIC;
+		chb_vp_debug      : out STD_LOGIC_VECTOR(13 downto 0);
+		chb_ts_debug      : out STD_LOGIC_VECTOR(TIMESTAMP_LEN - 1 downto 0);
+
+		pf_wr_ptr_debug       : out STD_LOGIC_VECTOR(3 downto 0);
+		pf_rd_ptr_debug       : out STD_LOGIC_VECTOR(3 downto 0);
+		pf_of_pend_flg_debug  : out STD_LOGIC;
+		pf_cha_pend_flg_debug : out STD_LOGIC;
+		pf_chb_pend_flg_debug : out STD_LOGIC;
+		pf_cha_fifo_reg_debug : out STD_LOGIC_VECTOR(C_M00_AXIS_TDATA_WIDTH - 1 downto 0);
+		pf_chb_fifo_reg_debug : out STD_LOGIC_VECTOR(C_M00_AXIS_TDATA_WIDTH - 1 downto 0);
 
 		-- Ports of Axi Slave Bus Interface S00_AXI
 		s00_axi_aclk    : in STD_LOGIC;
@@ -131,6 +156,27 @@ architecture arch_imp of AXI_TAR_v1_0 is
 			rstn  : in STD_LOGIC;
 			start : in STD_LOGIC;
 
+			-- Salidas de DEBUG
+			cha_vp_temp_debug : out STD_LOGIC_VECTOR (13 downto 0);
+			cha_ts_temp_debug : out STD_LOGIC_VECTOR (TIMESTAMP_LEN - 1 downto 0);
+			cha_dr_debug      : out STD_LOGIC;
+			cha_vp_debug      : out STD_LOGIC_VECTOR (13 downto 0);
+			cha_ts_debug      : out STD_LOGIC_VECTOR (TIMESTAMP_LEN - 1 downto 0);
+
+			chb_vp_temp_debug : out STD_LOGIC_VECTOR (13 downto 0);
+			chb_ts_temp_debug : out STD_LOGIC_VECTOR (TIMESTAMP_LEN - 1 downto 0);
+			chb_dr_debug      : out STD_LOGIC;
+			chb_vp_debug      : out STD_LOGIC_VECTOR (13 downto 0);
+			chb_ts_debug      : out STD_LOGIC_VECTOR (TIMESTAMP_LEN - 1 downto 0);
+
+			pf_wr_ptr_debug       : out INTEGER range 0 to FIFO_DEPTH - 1;
+			pf_rd_ptr_debug       : out INTEGER range 0 to FIFO_DEPTH - 1;
+			pf_of_pend_flg_debug  : out INTEGER range 0 to 1;
+			pf_cha_pend_flg_debug : out INTEGER range 0 to 1;
+			pf_chb_pend_flg_debug : out INTEGER range 0 to 1;
+			pf_cha_fifo_reg_debug : out STD_LOGIC_VECTOR(C_M_AXIS_TDATA_WIDTH - 1 downto 0);
+			pf_chb_fifo_reg_debug : out STD_LOGIC_VECTOR(C_M_AXIS_TDATA_WIDTH - 1 downto 0);
+
 			-- Puerto de entrada de CHA
 			sCh1In     : in STD_LOGIC_VECTOR(13 downto 0);
 			sCh1H_Low  : in STD_LOGIC_VECTOR(15 downto 0);
@@ -174,15 +220,6 @@ architecture arch_imp of AXI_TAR_v1_0 is
 	signal slv_reg1 : STD_LOGIC_VECTOR(C_S00_AXI_DATA_WIDTH - 1 downto 0);
 	signal slv_reg2 : STD_LOGIC_VECTOR(C_S00_AXI_DATA_WIDTH - 1 downto 0);
 	signal slv_reg3 : STD_LOGIC_VECTOR(C_S00_AXI_DATA_WIDTH - 1 downto 0);
-	-- signal slv_reg2_in  : STD_LOGIC_VECTOR(C_S00_AXI_DATA_WIDTH - 1 downto 0);
-	-- signal slv_reg2_out : STD_LOGIC_VECTOR(C_S00_AXI_DATA_WIDTH - 1 downto 0);
-
-	-- Agrego estas señales a debug via ILA
-	-- attribute MARK_DEBUG of slv_reg0     : signal is G_MARK_DEBUG;
-	-- attribute MARK_DEBUG of slv_reg1     : signal is G_MARK_DEBUG;
-	-- attribute MARK_DEBUG of slv_reg2_in  : signal is G_MARK_DEBUG;
-	-- attribute MARK_DEBUG of slv_reg2_out : signal is G_MARK_DEBUG;
-	-- attribute MARK_DEBUG of slv_reg3     : signal is G_MARK_DEBUG;
 
 	-- signal master_test_start : STD_LOGIC := '0';
 	signal TAR_start : STD_LOGIC := '0';
@@ -207,6 +244,10 @@ architecture arch_imp of AXI_TAR_v1_0 is
 	signal tar_m00_axis_tlast   : STD_LOGIC;
 	signal tar_m00_axis_tready  : STD_LOGIC;
 begin
+
+	-- Asignación de señales DEBUG
+	cha_hist <= slv_reg1;
+	chb_hist <= slv_reg2;
 
 	TAR_start <= slv_reg0(0);
 	-- master_test_start <= slv_reg0(4);
@@ -311,7 +352,25 @@ begin
 		m_axis_tdata   => tar_m00_axis_tdata,
 		m_axis_tstrb   => tar_m00_axis_tstrb,
 		m_axis_tlast   => tar_m00_axis_tlast,
-		m_axis_tready  => tar_m00_axis_tready
+		m_axis_tready  => tar_m00_axis_tready,
+		-- Señales de DEBUG 
+		cha_vp_temp_debug     => cha_vp_temp_debug,
+		cha_ts_temp_debug     => cha_ts_temp_debug,
+		cha_dr_debug          => cha_dr_debug,
+		cha_vp_debug          => cha_vp_debug,
+		cha_ts_debug          => cha_ts_debug,
+		chb_vp_temp_debug     => chb_vp_temp_debug,
+		chb_ts_temp_debug     => chb_ts_temp_debug,
+		chb_dr_debug          => chb_dr_debug,
+		chb_vp_debug          => chb_vp_debug,
+		chb_ts_debug          => chb_ts_debug,
+		pf_wr_ptr_debug       => pf_wr_ptr_debug,
+		pf_rd_ptr_debug       => pf_rd_ptr_debug,
+		pf_of_pend_flg_debug  => pf_of_pend_flg_debug,
+		pf_cha_pend_flg_debug => pf_cha_pend_flg_debug,
+		pf_chb_pend_flg_debug => pf_chb_pend_flg_debug,
+		pf_cha_fifo_reg_debug => pf_cha_fifo_reg_debug,
+		pf_chb_fifo_reg_debug => pf_chb_fifo_reg_debug
 	);
 
 end arch_imp;
