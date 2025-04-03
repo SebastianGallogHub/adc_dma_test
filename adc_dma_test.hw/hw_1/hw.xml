@@ -5,7 +5,7 @@
 <!-- Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.        -->
 
 <hwsession version="1" minor="2">
-  <device name="xc7z020_1" gui_info="dashboard1=hw_ila_1[xc7z020_1/hw_ila_1/Waveform=ILA_WAVE_1;xc7z020_1/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7z020_1/hw_ila_1/Status=ILA_STATUS_1;xc7z020_1/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7z020_1/hw_ila_1/Settings=ILA_SETTINGS_1;],dashboard2=hw_ila_2[xc7z020_1/hw_ila_2/Capture Setup=ILA_CAPTURE_1;xc7z020_1/hw_ila_2/Settings=ILA_SETTINGS_1;xc7z020_1/hw_ila_2/Waveform=ILA_WAVE_1;xc7z020_1/hw_ila_2/Status=ILA_STATUS_1;xc7z020_1/hw_ila_2/Trigger Setup=ILA_TRIGGER_1;],dashboard3=hw_ila_3[xc7z020_1/hw_ila_3/Trigger Setup=ILA_TRIGGER_1;xc7z020_1/hw_ila_3/Waveform=ILA_WAVE_1;xc7z020_1/hw_ila_3/Status=ILA_STATUS_1;xc7z020_1/hw_ila_3/Settings=ILA_SETTINGS_1;xc7z020_1/hw_ila_3/Capture Setup=ILA_CAPTURE_1;]"/>
+  <device name="xc7z020_1" gui_info="dashboard1=hw_ila_1[xc7z020_1/hw_ila_1/Waveform=ILA_WAVE_1;xc7z020_1/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7z020_1/hw_ila_1/Status=ILA_STATUS_1;xc7z020_1/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7z020_1/hw_ila_1/Settings=ILA_SETTINGS_1;],dashboard2=hw_ila_2[xc7z020_1/hw_ila_2/Capture Setup=ILA_CAPTURE_1;xc7z020_1/hw_ila_2/Settings=ILA_SETTINGS_1;xc7z020_1/hw_ila_2/Waveform=ILA_WAVE_1;xc7z020_1/hw_ila_2/Status=ILA_STATUS_1;xc7z020_1/hw_ila_2/Trigger Setup=ILA_TRIGGER_1;]"/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7z020_1" gui_info="">
       <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/adc_dma_bd_wrapper.ltx"/>
@@ -59,10 +59,12 @@
     <Object name="adc_dma_bd_i/system_ila_0/U0/net_slot_2_axis_tready" gui_info=""/>
     <Object name="adc_dma_bd_i/system_ila_0/U0/net_slot_2_axis_tvalid" gui_info=""/>
     <Object name="adc_dma_bd_i/system_ila_1/U0/probe0_1" gui_info=""/>
+    <Object name="adc_dma_bd_i/system_ila_1/U0/probe17_1" gui_info=""/>
     <Object name="adc_dma_bd_i/system_ila_1/U0/probe1_1[15:0]" gui_info=""/>
+    <Object name="adc_dma_bd_i/system_ila_1/U0/probe2_1" gui_info="Trigger Setup=0"/>
   </ObjectList>
   <probeset name="hw project" active="false">
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
@@ -146,7 +148,7 @@
         <net name="adc_dma_bd_i/AXI_TAR_0/U0/TAR_00/PLS_FMT_00/cha_fifo_reg[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
@@ -2532,7 +2534,7 @@
         <Option Id="HW_ILA" value="hw_ila_1"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
         <Option Id="MAP" value="probe17[0]"/>
-        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.CUSTOM" value="slot_0 : axi_dma_0_M_AXI_S2MM : Protocol Checker Assertion"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
         <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
@@ -3827,7 +3829,7 @@
         <net name="adc_dma_bd_i/system_ila_0/U0/net_slot_2_axis_tstrb[0]"/>
       </nets>
     </probe>
-    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq8&apos;hXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq8&apos;hXX"/>
@@ -3897,7 +3899,410 @@
         <net name="adc_dma_bd_i/system_ila_1/U0/probe0_1"/>
       </nets>
     </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="UNSIGNED"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[15:0]"/>
+        <Option Id="NAME.CUSTOM" value="ZmodADC1410_Controll_0_sCh1Out"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Analog"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe0_1[15]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe0_1[14]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe0_1[13]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe0_1[12]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe0_1[11]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe0_1[10]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe0_1[9]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe0_1[8]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe0_1[7]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe0_1[6]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe0_1[5]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe0_1[4]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe0_1[3]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe0_1[2]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe0_1[1]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe0_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe10[31:0]"/>
+        <Option Id="NAME.CUSTOM" value="chb_ts_debug"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe10_1[31]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe10_1[30]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe10_1[29]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe10_1[28]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe10_1[27]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe10_1[26]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe10_1[25]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe10_1[24]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe10_1[23]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe10_1[22]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe10_1[21]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe10_1[20]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe10_1[19]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe10_1[18]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe10_1[17]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe10_1[16]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe10_1[15]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe10_1[14]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe10_1[13]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe10_1[12]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe10_1[11]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe10_1[10]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe10_1[9]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe10_1[8]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe10_1[7]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe10_1[6]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe10_1[5]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe10_1[4]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe10_1[3]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe10_1[2]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe10_1[1]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe10_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe11[31:0]"/>
+        <Option Id="NAME.CUSTOM" value="chb_ts_temp_debug"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe11_1[31]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe11_1[30]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe11_1[29]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe11_1[28]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe11_1[27]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe11_1[26]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe11_1[25]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe11_1[24]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe11_1[23]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe11_1[22]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe11_1[21]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe11_1[20]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe11_1[19]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe11_1[18]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe11_1[17]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe11_1[16]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe11_1[15]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe11_1[14]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe11_1[13]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe11_1[12]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe11_1[11]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe11_1[10]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe11_1[9]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe11_1[8]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe11_1[7]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe11_1[6]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe11_1[5]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe11_1[4]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe11_1[3]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe11_1[2]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe11_1[1]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe11_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq14&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq14&apos;hXXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe12[13:0]"/>
+        <Option Id="NAME.CUSTOM" value="chb_vp_debug"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq14&apos;hXXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe12_1[13]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe12_1[12]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe12_1[11]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe12_1[10]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe12_1[9]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe12_1[8]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe12_1[7]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe12_1[6]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe12_1[5]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe12_1[4]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe12_1[3]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe12_1[2]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe12_1[1]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe12_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq14&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq14&apos;hXXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe13[13:0]"/>
+        <Option Id="NAME.CUSTOM" value="chb_vp_temp_debug"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq14&apos;hXXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe13_1[13]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe13_1[12]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe13_1[11]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe13_1[10]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe13_1[9]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe13_1[8]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe13_1[7]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe13_1[6]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe13_1[5]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe13_1[4]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe13_1[3]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe13_1[2]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe13_1[1]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe13_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe14[63:0]"/>
+        <Option Id="NAME.CUSTOM" value="pf_cha_fifo_reg_debug"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[63]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[62]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[61]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[60]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[59]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[58]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[57]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[56]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[55]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[54]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[53]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[52]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[51]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[50]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[49]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[48]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[47]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[46]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[45]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[44]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[43]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[42]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[41]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[40]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[39]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[38]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[37]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[36]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[35]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[34]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[33]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[32]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[31]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[30]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[29]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[28]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[27]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[26]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[25]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[24]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[23]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[22]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[21]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[20]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[19]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[18]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[17]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[16]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[15]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[14]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[13]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[12]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[11]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[10]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[9]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[8]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[7]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[6]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[5]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[4]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[3]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[2]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[1]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe14_1[0]"/>
+      </nets>
+    </probe>
     <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe15[0]"/>
+        <Option Id="NAME.CUSTOM" value="pf_cha_pend_flg_debug"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe15_1"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe16[0]"/>
+        <Option Id="NAME.CUSTOM" value="pf_chb_pend_flg_debug"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe16_1"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe17[0]"/>
+        <Option Id="NAME.CUSTOM" value="pf_of_pend_flg_debug"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe17_1"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq4&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe18[3:0]"/>
+        <Option Id="NAME.CUSTOM" value="pf_rd_ptr_debug"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq4&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe18_1[3]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe18_1[2]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe18_1[1]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe18_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq4&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe19[3:0]"/>
+        <Option Id="NAME.CUSTOM" value="pf_wr_ptr_debug"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq4&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe19_1[3]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe19_1[2]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe19_1[1]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe19_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
@@ -3908,7 +4313,7 @@
         <Option Id="HW_ILA" value="hw_ila_2"/>
         <Option Id="LINK_TO_WAVEFORM" value="1"/>
         <Option Id="MAP" value="probe1[15:0]"/>
-        <Option Id="NAME.CUSTOM" value="ZmodADC1410_Controll_0_sCh1Out"/>
+        <Option Id="NAME.CUSTOM" value="ZmodADC1410_Controll_0_sCh2Out"/>
         <Option Id="NAME.SELECT" value="Custom"/>
         <Option Id="SOURCE" value="netlist"/>
         <Option Id="TRIGGER_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
@@ -3934,6 +4339,111 @@
       </nets>
     </probe>
     <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe20[63:0]"/>
+        <Option Id="NAME.CUSTOM" value="pf_chb_fifo_reg_debug"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq64&apos;hXXXX_XXXX_XXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[63]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[62]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[61]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[60]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[59]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[58]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[57]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[56]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[55]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[54]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[53]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[52]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[51]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[50]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[49]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[48]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[47]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[46]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[45]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[44]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[43]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[42]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[41]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[40]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[39]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[38]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[37]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[36]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[35]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[34]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[33]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[32]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[31]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[30]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[29]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[28]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[27]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[26]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[25]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[24]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[23]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[22]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[21]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[20]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[19]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[18]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[17]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[16]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[15]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[14]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[13]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[12]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[11]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[10]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[9]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[8]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[7]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[6]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[5]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[4]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[3]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[2]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[1]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe20_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[0]"/>
+        <Option Id="NAME.CUSTOM" value="cha_dr_debug"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe2_1"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
       <probeOptions Id="DebugProbeParams">
         <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
         <Option Id="COMPARE_VALUE.0" value="eq16&apos;hXXXX"/>
@@ -3967,6 +4477,303 @@
         <net name="adc_dma_bd_i/system_ila_1/U0/probe2_1[2]"/>
         <net name="adc_dma_bd_i/system_ila_1/U0/probe2_1[1]"/>
         <net name="adc_dma_bd_i/system_ila_1/U0/probe2_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe3[31:0]"/>
+        <Option Id="NAME.CUSTOM" value="cha_hist"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe3_1[31]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe3_1[30]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe3_1[29]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe3_1[28]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe3_1[27]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe3_1[26]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe3_1[25]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe3_1[24]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe3_1[23]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe3_1[22]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe3_1[21]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe3_1[20]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe3_1[19]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe3_1[18]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe3_1[17]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe3_1[16]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe3_1[15]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe3_1[14]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe3_1[13]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe3_1[12]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe3_1[11]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe3_1[10]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe3_1[9]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe3_1[8]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe3_1[7]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe3_1[6]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe3_1[5]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe3_1[4]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe3_1[3]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe3_1[2]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe3_1[1]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe3_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[31:0]"/>
+        <Option Id="NAME.CUSTOM" value="cha_ts_debug"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe4_1[31]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe4_1[30]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe4_1[29]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe4_1[28]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe4_1[27]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe4_1[26]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe4_1[25]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe4_1[24]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe4_1[23]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe4_1[22]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe4_1[21]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe4_1[20]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe4_1[19]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe4_1[18]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe4_1[17]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe4_1[16]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe4_1[15]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe4_1[14]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe4_1[13]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe4_1[12]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe4_1[11]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe4_1[10]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe4_1[9]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe4_1[8]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe4_1[7]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe4_1[6]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe4_1[5]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe4_1[4]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe4_1[3]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe4_1[2]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe4_1[1]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe4_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe5[31:0]"/>
+        <Option Id="NAME.CUSTOM" value="cha_ts_temp_debug"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe5_1[31]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe5_1[30]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe5_1[29]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe5_1[28]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe5_1[27]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe5_1[26]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe5_1[25]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe5_1[24]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe5_1[23]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe5_1[22]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe5_1[21]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe5_1[20]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe5_1[19]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe5_1[18]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe5_1[17]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe5_1[16]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe5_1[15]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe5_1[14]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe5_1[13]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe5_1[12]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe5_1[11]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe5_1[10]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe5_1[9]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe5_1[8]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe5_1[7]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe5_1[6]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe5_1[5]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe5_1[4]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe5_1[3]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe5_1[2]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe5_1[1]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe5_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq14&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq14&apos;hXXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe6[13:0]"/>
+        <Option Id="NAME.CUSTOM" value="cha_vp_debug"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq14&apos;hXXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe6_1[13]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe6_1[12]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe6_1[11]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe6_1[10]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe6_1[9]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe6_1[8]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe6_1[7]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe6_1[6]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe6_1[5]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe6_1[4]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe6_1[3]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe6_1[2]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe6_1[1]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe6_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq14&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq14&apos;hXXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe7[13:0]"/>
+        <Option Id="NAME.CUSTOM" value="cha_vp_temp_debug"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq14&apos;hXXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe7_1[13]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe7_1[12]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe7_1[11]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe7_1[10]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe7_1[9]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe7_1[8]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe7_1[7]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe7_1[6]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe7_1[5]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe7_1[4]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe7_1[3]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe7_1[2]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe7_1[1]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe7_1[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe8[0]"/>
+        <Option Id="NAME.CUSTOM" value="chb_dr_debug"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe8_1"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_2"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe9[31:0]"/>
+        <Option Id="NAME.CUSTOM" value="chb_hist"/>
+        <Option Id="NAME.SELECT" value="Custom"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe9_1[31]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe9_1[30]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe9_1[29]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe9_1[28]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe9_1[27]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe9_1[26]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe9_1[25]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe9_1[24]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe9_1[23]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe9_1[22]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe9_1[21]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe9_1[20]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe9_1[19]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe9_1[18]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe9_1[17]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe9_1[16]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe9_1[15]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe9_1[14]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe9_1[13]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe9_1[12]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe9_1[11]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe9_1[10]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe9_1[9]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe9_1[8]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe9_1[7]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe9_1[6]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe9_1[5]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe9_1[4]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe9_1[3]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe9_1[2]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe9_1[1]"/>
+        <net name="adc_dma_bd_i/system_ila_1/U0/probe9_1[0]"/>
       </nets>
     </probe>
     <probe type="ila_data" busType="net" source="user" spec="ILA_DATA_V2_RT">
