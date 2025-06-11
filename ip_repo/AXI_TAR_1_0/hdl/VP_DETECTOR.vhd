@@ -1,22 +1,23 @@
-----------------------------------------------------------------------------------
--- Company:     FCEIA   
--- Engineer:    GALLO, Sebastián
--- 
--- Create Date: 06/18/2024 06:54:22 PM
--- Design Name: max_cad_detector
--- Module Name: max_cad_detector - Behavioral
--- Project Name: TAR
--- Target Devices: Eclypse Z7
--- Tool Versions: 2023.1
--- Description: Detector de máximo cad en tiempo real
--- 
--- Dependencies: 
--- 
--- Revision: 1
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
+-- =============================================================
+-- Nombre del Proyecto   : Registrador de Amplitud y Tiempo (TAR)
+-- Archivo               : VP_DETECTOR.vhd
+-- Descripción           : Implementación de lógica de determinación de máximo de pulso.
+-- Autor                 : Sebastián Nahuel Gallo
+-- Fecha de creación     : 18/06/2024
+-- Fecha de modificación : 11/06/2025
+-- Versión               : v1.0
+--
+-- Institución           : Universidad Nacional de Rosario (UNR)
+-- Carrera               : Ingeniería Electrónica
+--
+-- Derechos reservados:
+-- Este código ha sido desarrollado en el marco del Proyecto Final de Ingeniería
+-- por Sebastián Nahuel Gallo. Su uso está autorizado únicamente por la
+-- Comisión Nacional de Energía Atómica (CNEA) con fines internos.
+-- Queda prohibida su reproducción, modificación o distribución sin
+-- autorización expresa por escrito del autor.
+-- =============================================================
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 use IEEE.STD_LOGIC_ARITH.all;

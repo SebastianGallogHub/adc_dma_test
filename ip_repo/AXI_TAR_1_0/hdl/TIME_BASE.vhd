@@ -1,22 +1,23 @@
-----------------------------------------------------------------------------------
--- Company:     FCEIA   
--- Engineer:    GALLO, Sebastián
--- 
--- Create Date: 06/22/2024 08:19:59 PM
--- Design Name: TIME_BASE
--- Module Name: TIME_BASE_tb - Behavioral
--- Project Name: TAR
--- Target Devices: Eclypse Z7
--- Tool Versions: 2023.1
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
+-- =============================================================
+-- Nombre del Proyecto   : Registrador de Amplitud y Tiempo (TAR)
+-- Archivo               : TIME_BASE.vhd
+-- Descripción           : Implementación de reloj común.
+-- Autor                 : Sebastián Nahuel Gallo
+-- Fecha de creación     : 22/06/2024
+-- Fecha de modificación : 11/06/2025
+-- Versión               : v1.0
+--
+-- Institución           : Universidad Nacional de Rosario (UNR)
+-- Carrera               : Ingeniería Electrónica
+--
+-- Derechos reservados:
+-- Este código ha sido desarrollado en el marco del Proyecto Final de Ingeniería
+-- por Sebastián Nahuel Gallo. Su uso está autorizado únicamente por la
+-- Comisión Nacional de Energía Atómica (CNEA) con fines internos.
+-- Queda prohibida su reproducción, modificación o distribución sin
+-- autorización expresa por escrito del autor.
+-- =============================================================
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 --use IEEE.STD_LOGIC_ARITH.ALL;

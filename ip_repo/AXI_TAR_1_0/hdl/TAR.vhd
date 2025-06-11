@@ -1,22 +1,25 @@
-----------------------------------------------------------------------------------
--- Company: 
--- Engineer: 
--- 
--- Create Date: 12/11/2024 11:15:49 AM
--- Design Name: 
--- Module Name: TAR - Behavioral
--- Project Name: 
--- Target Devices: 
--- Tool Versions: 
--- Description: 
--- 
--- Dependencies: 
--- 
--- Revision:
--- Revision 0.01 - File Created
--- Additional Comments:
--- 
-----------------------------------------------------------------------------------
+-- =============================================================
+-- Nombre del Proyecto   : Registrador de Amplitud y Tiempo (TAR)
+-- Archivo               : TAR.vhd
+-- Descripción           : Implementación de módulo gerárquico TAR. Instancia las 
+--                         herramientas necesarias para realizar la adquisición y 
+--                         envío de datos a memoria.
+-- Autor                 : Sebastián Nahuel Gallo
+-- Fecha de creación     : 11/12/2024
+-- Fecha de modificación : 11/06/2025
+-- Versión               : v1.0
+--
+-- Institución           : Universidad Nacional de Rosario (UNR)
+-- Carrera               : Ingeniería Electrónica
+--
+-- Derechos reservados:
+-- Este código ha sido desarrollado en el marco del Proyecto Final de Ingeniería
+-- por Sebastián Nahuel Gallo. Su uso está autorizado únicamente por la
+-- Comisión Nacional de Energía Atómica (CNEA) con fines internos.
+-- Queda prohibida su reproducción, modificación o distribución sin
+-- autorización expresa por escrito del autor.
+-- =============================================================
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.all;
 

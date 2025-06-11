@@ -1,9 +1,29 @@
-LIBRARY ieee;
-USE ieee.std_logic_1164.ALL;
-USE ieee.numeric_std.ALL;
+-- =============================================================
+-- Nombre del Proyecto   : Registrador de Amplitud y Tiempo (TAR)
+-- Archivo               : AXI_TAR_v1_0.vhd
+-- Descripción           : Archivo principal de AXI_TAR. Interfaz con otros IP
+-- Autor                 : Sebastián Nahuel Gallo
+-- Fecha de creación     : 01/12/2024
+-- Fecha de modificación : 11/06/2025
+-- Versión               : v1.0
+--
+-- Institución           : Universidad Nacional de Rosario (UNR)
+-- Carrera               : Ingeniería Electrónica
+--
+-- Derechos reservados:
+-- Este código ha sido desarrollado en el marco del Proyecto Final de Ingeniería
+-- por Sebastián Nahuel Gallo. Su uso está autorizado únicamente por la
+-- Comisión Nacional de Energía Atómica (CNEA) con fines internos.
+-- Queda prohibida su reproducción, modificación o distribución sin
+-- autorización expresa por escrito del autor.
+-- =============================================================
 
-ENTITY AXI_TAR_v1_0 IS
-    GENERIC (
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.numeric_std.all;
+
+entity AXI_TAR_v1_0 is
+    generic (
         -- Parameters of Axi Slave Bus Interface S00_AXI
         C_S00_AXI_DATA_WIDTH : INTEGER := 32;
         C_S00_AXI_ADDR_WIDTH : INTEGER := 4;
@@ -17,110 +37,110 @@ ENTITY AXI_TAR_v1_0 IS
 
         TIMESTAMP_LEN : INTEGER := 32
     );
-    PORT (
+    port (
         -- Interfaz compatible con ZmodADC1410_Controller v1.0
-        SysClk  : IN STD_LOGIC;
-        IRst_n  : IN STD_LOGIC;
-        sCh1In  : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-        sCh2In  : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-        Introut : OUT STD_LOGIC;
+        SysClk  : in STD_LOGIC;
+        IRst_n  : in STD_LOGIC;
+        sCh1In  : in STD_LOGIC_VECTOR(15 downto 0);
+        sCh2In  : in STD_LOGIC_VECTOR(15 downto 0);
+        Introut : out STD_LOGIC;
 
         -- Salidas de DEBUG
-        cha_hist          : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-        cha_vp_temp_debug : OUT STD_LOGIC_VECTOR(13 DOWNTO 0);
-        cha_ts_temp_debug : OUT STD_LOGIC_VECTOR(TIMESTAMP_LEN - 1 DOWNTO 0);
-        cha_dr_debug      : OUT STD_LOGIC;
-        cha_vp_debug      : OUT STD_LOGIC_VECTOR(13 DOWNTO 0);
-        cha_ts_debug      : OUT STD_LOGIC_VECTOR(TIMESTAMP_LEN - 1 DOWNTO 0);
+        cha_hist          : out STD_LOGIC_VECTOR(31 downto 0);
+        cha_vp_temp_debug : out STD_LOGIC_VECTOR(13 downto 0);
+        cha_ts_temp_debug : out STD_LOGIC_VECTOR(TIMESTAMP_LEN - 1 downto 0);
+        cha_dr_debug      : out STD_LOGIC;
+        cha_vp_debug      : out STD_LOGIC_VECTOR(13 downto 0);
+        cha_ts_debug      : out STD_LOGIC_VECTOR(TIMESTAMP_LEN - 1 downto 0);
 
-        chb_hist          : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
-        chb_vp_temp_debug : OUT STD_LOGIC_VECTOR(13 DOWNTO 0);
-        chb_ts_temp_debug : OUT STD_LOGIC_VECTOR(TIMESTAMP_LEN - 1 DOWNTO 0);
-        chb_dr_debug      : OUT STD_LOGIC;
-        chb_vp_debug      : OUT STD_LOGIC_VECTOR(13 DOWNTO 0);
-        chb_ts_debug      : OUT STD_LOGIC_VECTOR(TIMESTAMP_LEN - 1 DOWNTO 0);
+        chb_hist          : out STD_LOGIC_VECTOR(31 downto 0);
+        chb_vp_temp_debug : out STD_LOGIC_VECTOR(13 downto 0);
+        chb_ts_temp_debug : out STD_LOGIC_VECTOR(TIMESTAMP_LEN - 1 downto 0);
+        chb_dr_debug      : out STD_LOGIC;
+        chb_vp_debug      : out STD_LOGIC_VECTOR(13 downto 0);
+        chb_ts_debug      : out STD_LOGIC_VECTOR(TIMESTAMP_LEN - 1 downto 0);
 
-        pf_wr_ptr_debug       : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-        pf_rd_ptr_debug       : OUT STD_LOGIC_VECTOR(3 DOWNTO 0);
-        pf_of_pend_flg_debug  : OUT STD_LOGIC;
-        pf_cha_pend_flg_debug : OUT STD_LOGIC;
-        pf_chb_pend_flg_debug : OUT STD_LOGIC;
-        pf_cha_fifo_reg_debug : OUT STD_LOGIC_VECTOR(C_M00_AXIS_TDATA_WIDTH - 1 DOWNTO 0);
-        pf_chb_fifo_reg_debug : OUT STD_LOGIC_VECTOR(C_M00_AXIS_TDATA_WIDTH - 1 DOWNTO 0);
+        pf_wr_ptr_debug       : out STD_LOGIC_VECTOR(3 downto 0);
+        pf_rd_ptr_debug       : out STD_LOGIC_VECTOR(3 downto 0);
+        pf_of_pend_flg_debug  : out STD_LOGIC;
+        pf_cha_pend_flg_debug : out STD_LOGIC;
+        pf_chb_pend_flg_debug : out STD_LOGIC;
+        pf_cha_fifo_reg_debug : out STD_LOGIC_VECTOR(C_M00_AXIS_TDATA_WIDTH - 1 downto 0);
+        pf_chb_fifo_reg_debug : out STD_LOGIC_VECTOR(C_M00_AXIS_TDATA_WIDTH - 1 downto 0);
 
         -- Ports of Axi Slave Bus Interface S00_AXI
-        s00_axi_aclk    : IN STD_LOGIC;
-        s00_axi_aresetn : IN STD_LOGIC;
-        s00_axi_awaddr  : IN STD_LOGIC_VECTOR(C_S00_AXI_ADDR_WIDTH - 1 DOWNTO 0);
-        s00_axi_awprot  : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
-        s00_axi_awvalid : IN STD_LOGIC;
-        s00_axi_awready : OUT STD_LOGIC;
-        s00_axi_wdata   : IN STD_LOGIC_VECTOR(C_S00_AXI_DATA_WIDTH - 1 DOWNTO 0);
-        s00_axi_wstrb   : IN STD_LOGIC_VECTOR((C_S00_AXI_DATA_WIDTH/8) - 1 DOWNTO 0);
-        s00_axi_wvalid  : IN STD_LOGIC;
-        s00_axi_wready  : OUT STD_LOGIC;
-        s00_axi_bresp   : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
-        s00_axi_bvalid  : OUT STD_LOGIC;
-        s00_axi_bready  : IN STD_LOGIC;
-        s00_axi_araddr  : IN STD_LOGIC_VECTOR(C_S00_AXI_ADDR_WIDTH - 1 DOWNTO 0);
-        s00_axi_arprot  : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
-        s00_axi_arvalid : IN STD_LOGIC;
-        s00_axi_arready : OUT STD_LOGIC;
-        s00_axi_rdata   : OUT STD_LOGIC_VECTOR(C_S00_AXI_DATA_WIDTH - 1 DOWNTO 0);
-        s00_axi_rresp   : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
-        s00_axi_rvalid  : OUT STD_LOGIC;
-        s00_axi_rready  : IN STD_LOGIC;
+        s00_axi_aclk    : in STD_LOGIC;
+        s00_axi_aresetn : in STD_LOGIC;
+        s00_axi_awaddr  : in STD_LOGIC_VECTOR(C_S00_AXI_ADDR_WIDTH - 1 downto 0);
+        s00_axi_awprot  : in STD_LOGIC_VECTOR(2 downto 0);
+        s00_axi_awvalid : in STD_LOGIC;
+        s00_axi_awready : out STD_LOGIC;
+        s00_axi_wdata   : in STD_LOGIC_VECTOR(C_S00_AXI_DATA_WIDTH - 1 downto 0);
+        s00_axi_wstrb   : in STD_LOGIC_VECTOR((C_S00_AXI_DATA_WIDTH/8) - 1 downto 0);
+        s00_axi_wvalid  : in STD_LOGIC;
+        s00_axi_wready  : out STD_LOGIC;
+        s00_axi_bresp   : out STD_LOGIC_VECTOR(1 downto 0);
+        s00_axi_bvalid  : out STD_LOGIC;
+        s00_axi_bready  : in STD_LOGIC;
+        s00_axi_araddr  : in STD_LOGIC_VECTOR(C_S00_AXI_ADDR_WIDTH - 1 downto 0);
+        s00_axi_arprot  : in STD_LOGIC_VECTOR(2 downto 0);
+        s00_axi_arvalid : in STD_LOGIC;
+        s00_axi_arready : out STD_LOGIC;
+        s00_axi_rdata   : out STD_LOGIC_VECTOR(C_S00_AXI_DATA_WIDTH - 1 downto 0);
+        s00_axi_rresp   : out STD_LOGIC_VECTOR(1 downto 0);
+        s00_axi_rvalid  : out STD_LOGIC;
+        s00_axi_rready  : in STD_LOGIC;
 
         -- Ports of Axi Master Bus Interface M00_AXIS
-        m00_axis_aclk    : IN STD_LOGIC;
-        m00_axis_aresetn : IN STD_LOGIC;
-        m00_axis_tvalid  : OUT STD_LOGIC;
-        m00_axis_tdata   : OUT STD_LOGIC_VECTOR(C_M00_AXIS_TDATA_WIDTH - 1 DOWNTO 0);
-        m00_axis_tstrb   : OUT STD_LOGIC_VECTOR((C_M00_AXIS_TDATA_WIDTH/8) - 1 DOWNTO 0);
-        m00_axis_tlast   : OUT STD_LOGIC;
-        m00_axis_tready  : IN STD_LOGIC
+        m00_axis_aclk    : in STD_LOGIC;
+        m00_axis_aresetn : in STD_LOGIC;
+        m00_axis_tvalid  : out STD_LOGIC;
+        m00_axis_tdata   : out STD_LOGIC_VECTOR(C_M00_AXIS_TDATA_WIDTH - 1 downto 0);
+        m00_axis_tstrb   : out STD_LOGIC_VECTOR((C_M00_AXIS_TDATA_WIDTH/8) - 1 downto 0);
+        m00_axis_tlast   : out STD_LOGIC;
+        m00_axis_tready  : in STD_LOGIC
     );
-END AXI_TAR_v1_0;
+end AXI_TAR_v1_0;
 
-ARCHITECTURE arch_imp OF AXI_TAR_v1_0 IS
+architecture arch_imp of AXI_TAR_v1_0 is
 
     -- component declaration
-    COMPONENT AXI_TAR_v1_0_S00_AXI IS
-        GENERIC (
+    component AXI_TAR_v1_0_S00_AXI is
+        generic (
             C_S_AXI_DATA_WIDTH : INTEGER := 32;
             C_S_AXI_ADDR_WIDTH : INTEGER := 4
         );
-        PORT (
-            OUT_REG0 : OUT STD_LOGIC_VECTOR(C_S_AXI_DATA_WIDTH - 1 DOWNTO 0);
-            OUT_REG1 : OUT STD_LOGIC_VECTOR(C_S_AXI_DATA_WIDTH - 1 DOWNTO 0);
-            OUT_REG2 : OUT STD_LOGIC_VECTOR(C_S_AXI_DATA_WIDTH - 1 DOWNTO 0);
-            OUT_REG3 : OUT STD_LOGIC_VECTOR(C_S_AXI_DATA_WIDTH - 1 DOWNTO 0);
+        port (
+            OUT_REG0 : out STD_LOGIC_VECTOR(C_S_AXI_DATA_WIDTH - 1 downto 0);
+            OUT_REG1 : out STD_LOGIC_VECTOR(C_S_AXI_DATA_WIDTH - 1 downto 0);
+            OUT_REG2 : out STD_LOGIC_VECTOR(C_S_AXI_DATA_WIDTH - 1 downto 0);
+            OUT_REG3 : out STD_LOGIC_VECTOR(C_S_AXI_DATA_WIDTH - 1 downto 0);
             -- IN_REG2       : in STD_LOGIC_VECTOR(C_S_AXI_DATA_WIDTH - 1 downto 0);
             -- IN_REG3       : in STD_LOGIC_VECTOR(C_S_AXI_DATA_WIDTH - 1 downto 0);
             -- reg2mode      : in STD_LOGIC;
-            S_AXI_ACLK    : IN STD_LOGIC;
-            S_AXI_ARESETN : IN STD_LOGIC;
-            S_AXI_AWADDR  : IN STD_LOGIC_VECTOR(C_S_AXI_ADDR_WIDTH - 1 DOWNTO 0);
-            S_AXI_AWPROT  : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
-            S_AXI_AWVALID : IN STD_LOGIC;
-            S_AXI_AWREADY : OUT STD_LOGIC;
-            S_AXI_WDATA   : IN STD_LOGIC_VECTOR(C_S_AXI_DATA_WIDTH - 1 DOWNTO 0);
-            S_AXI_WSTRB   : IN STD_LOGIC_VECTOR((C_S_AXI_DATA_WIDTH/8) - 1 DOWNTO 0);
-            S_AXI_WVALID  : IN STD_LOGIC;
-            S_AXI_WREADY  : OUT STD_LOGIC;
-            S_AXI_BRESP   : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
-            S_AXI_BVALID  : OUT STD_LOGIC;
-            S_AXI_BREADY  : IN STD_LOGIC;
-            S_AXI_ARADDR  : IN STD_LOGIC_VECTOR(C_S_AXI_ADDR_WIDTH - 1 DOWNTO 0);
-            S_AXI_ARPROT  : IN STD_LOGIC_VECTOR(2 DOWNTO 0);
-            S_AXI_ARVALID : IN STD_LOGIC;
-            S_AXI_ARREADY : OUT STD_LOGIC;
-            S_AXI_RDATA   : OUT STD_LOGIC_VECTOR(C_S_AXI_DATA_WIDTH - 1 DOWNTO 0);
-            S_AXI_RRESP   : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
-            S_AXI_RVALID  : OUT STD_LOGIC;
-            S_AXI_RREADY  : IN STD_LOGIC
+            S_AXI_ACLK    : in STD_LOGIC;
+            S_AXI_ARESETN : in STD_LOGIC;
+            S_AXI_AWADDR  : in STD_LOGIC_VECTOR(C_S_AXI_ADDR_WIDTH - 1 downto 0);
+            S_AXI_AWPROT  : in STD_LOGIC_VECTOR(2 downto 0);
+            S_AXI_AWVALID : in STD_LOGIC;
+            S_AXI_AWREADY : out STD_LOGIC;
+            S_AXI_WDATA   : in STD_LOGIC_VECTOR(C_S_AXI_DATA_WIDTH - 1 downto 0);
+            S_AXI_WSTRB   : in STD_LOGIC_VECTOR((C_S_AXI_DATA_WIDTH/8) - 1 downto 0);
+            S_AXI_WVALID  : in STD_LOGIC;
+            S_AXI_WREADY  : out STD_LOGIC;
+            S_AXI_BRESP   : out STD_LOGIC_VECTOR(1 downto 0);
+            S_AXI_BVALID  : out STD_LOGIC;
+            S_AXI_BREADY  : in STD_LOGIC;
+            S_AXI_ARADDR  : in STD_LOGIC_VECTOR(C_S_AXI_ADDR_WIDTH - 1 downto 0);
+            S_AXI_ARPROT  : in STD_LOGIC_VECTOR(2 downto 0);
+            S_AXI_ARVALID : in STD_LOGIC;
+            S_AXI_ARREADY : out STD_LOGIC;
+            S_AXI_RDATA   : out STD_LOGIC_VECTOR(C_S_AXI_DATA_WIDTH - 1 downto 0);
+            S_AXI_RRESP   : out STD_LOGIC_VECTOR(1 downto 0);
+            S_AXI_RVALID  : out STD_LOGIC;
+            S_AXI_RREADY  : in STD_LOGIC
         );
-    END COMPONENT AXI_TAR_v1_0_S00_AXI;
+    end component AXI_TAR_v1_0_S00_AXI;
 
     -- component master_test is
     -- 	generic (
@@ -144,59 +164,59 @@ ARCHITECTURE arch_imp OF AXI_TAR_v1_0 IS
     -- 	);
     -- end component master_test;
 
-    COMPONENT TAR IS
-        GENERIC (
+    component TAR is
+        generic (
             TIMESTAMP_LEN        : INTEGER := 32;
             FIFO_DEPTH           : INTEGER := 16;
             C_M_AXIS_TDATA_WIDTH : INTEGER := 64;
             G_MARK_DEBUG         : STRING  := "false"
         );
-        PORT (
-            clk   : IN STD_LOGIC;
-            rstn  : IN STD_LOGIC;
-            start : IN STD_LOGIC;
+        port (
+            clk   : in STD_LOGIC;
+            rstn  : in STD_LOGIC;
+            start : in STD_LOGIC;
 
             -- Salidas de DEBUG
-            cha_vp_temp_debug : OUT STD_LOGIC_VECTOR (13 DOWNTO 0);
-            cha_ts_temp_debug : OUT STD_LOGIC_VECTOR (TIMESTAMP_LEN - 1 DOWNTO 0);
-            cha_dr_debug      : OUT STD_LOGIC;
-            cha_vp_debug      : OUT STD_LOGIC_VECTOR (13 DOWNTO 0);
-            cha_ts_debug      : OUT STD_LOGIC_VECTOR (TIMESTAMP_LEN - 1 DOWNTO 0);
+            cha_vp_temp_debug : out STD_LOGIC_VECTOR (13 downto 0);
+            cha_ts_temp_debug : out STD_LOGIC_VECTOR (TIMESTAMP_LEN - 1 downto 0);
+            cha_dr_debug      : out STD_LOGIC;
+            cha_vp_debug      : out STD_LOGIC_VECTOR (13 downto 0);
+            cha_ts_debug      : out STD_LOGIC_VECTOR (TIMESTAMP_LEN - 1 downto 0);
 
-            chb_vp_temp_debug : OUT STD_LOGIC_VECTOR (13 DOWNTO 0);
-            chb_ts_temp_debug : OUT STD_LOGIC_VECTOR (TIMESTAMP_LEN - 1 DOWNTO 0);
-            chb_dr_debug      : OUT STD_LOGIC;
-            chb_vp_debug      : OUT STD_LOGIC_VECTOR (13 DOWNTO 0);
-            chb_ts_debug      : OUT STD_LOGIC_VECTOR (TIMESTAMP_LEN - 1 DOWNTO 0);
+            chb_vp_temp_debug : out STD_LOGIC_VECTOR (13 downto 0);
+            chb_ts_temp_debug : out STD_LOGIC_VECTOR (TIMESTAMP_LEN - 1 downto 0);
+            chb_dr_debug      : out STD_LOGIC;
+            chb_vp_debug      : out STD_LOGIC_VECTOR (13 downto 0);
+            chb_ts_debug      : out STD_LOGIC_VECTOR (TIMESTAMP_LEN - 1 downto 0);
 
-            pf_wr_ptr_debug       : OUT INTEGER RANGE 0 TO FIFO_DEPTH - 1;
-            pf_rd_ptr_debug       : OUT INTEGER RANGE 0 TO FIFO_DEPTH - 1;
-            pf_of_pend_flg_debug  : OUT INTEGER RANGE 0 TO 1;
-            pf_cha_pend_flg_debug : OUT INTEGER RANGE 0 TO 1;
-            pf_chb_pend_flg_debug : OUT INTEGER RANGE 0 TO 1;
-            pf_cha_fifo_reg_debug : OUT STD_LOGIC_VECTOR(C_M_AXIS_TDATA_WIDTH - 1 DOWNTO 0);
-            pf_chb_fifo_reg_debug : OUT STD_LOGIC_VECTOR(C_M_AXIS_TDATA_WIDTH - 1 DOWNTO 0);
+            pf_wr_ptr_debug       : out INTEGER range 0 to FIFO_DEPTH - 1;
+            pf_rd_ptr_debug       : out INTEGER range 0 to FIFO_DEPTH - 1;
+            pf_of_pend_flg_debug  : out INTEGER range 0 to 1;
+            pf_cha_pend_flg_debug : out INTEGER range 0 to 1;
+            pf_chb_pend_flg_debug : out INTEGER range 0 to 1;
+            pf_cha_fifo_reg_debug : out STD_LOGIC_VECTOR(C_M_AXIS_TDATA_WIDTH - 1 downto 0);
+            pf_chb_fifo_reg_debug : out STD_LOGIC_VECTOR(C_M_AXIS_TDATA_WIDTH - 1 downto 0);
 
             -- Puerto de entrada de CHA
-            sCh1In     : IN STD_LOGIC_VECTOR(13 DOWNTO 0);
-            sCh1H_Low  : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-            sCh1H_High : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+            sCh1In     : in STD_LOGIC_VECTOR(13 downto 0);
+            sCh1H_Low  : in STD_LOGIC_VECTOR(15 downto 0);
+            sCh1H_High : in STD_LOGIC_VECTOR(15 downto 0);
 
             -- Puerto de entrada de CHB
-            sCh2In     : IN STD_LOGIC_VECTOR(13 DOWNTO 0);
-            sCh2H_Low  : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-            sCh2H_High : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+            sCh2In     : in STD_LOGIC_VECTOR(13 downto 0);
+            sCh2H_Low  : in STD_LOGIC_VECTOR(15 downto 0);
+            sCh2H_High : in STD_LOGIC_VECTOR(15 downto 0);
 
             -- AXI Stream outputs
-            m_axis_aclk    : IN STD_LOGIC;
-            m_axis_aresetn : IN STD_LOGIC;
-            m_axis_tvalid  : OUT STD_LOGIC;
-            m_axis_tdata   : OUT STD_LOGIC_VECTOR(C_M_AXIS_TDATA_WIDTH - 1 DOWNTO 0);
-            m_axis_tstrb   : OUT STD_LOGIC_VECTOR((C_M_AXIS_TDATA_WIDTH/8) - 1 DOWNTO 0);
-            m_axis_tlast   : OUT STD_LOGIC;
-            m_axis_tready  : IN STD_LOGIC
+            m_axis_aclk    : in STD_LOGIC;
+            m_axis_aresetn : in STD_LOGIC;
+            m_axis_tvalid  : out STD_LOGIC;
+            m_axis_tdata   : out STD_LOGIC_VECTOR(C_M_AXIS_TDATA_WIDTH - 1 downto 0);
+            m_axis_tstrb   : out STD_LOGIC_VECTOR((C_M_AXIS_TDATA_WIDTH/8) - 1 downto 0);
+            m_axis_tlast   : out STD_LOGIC;
+            m_axis_tready  : in STD_LOGIC
         );
-    END COMPONENT TAR;
+    end component TAR;
 
     -- component AXI_TAR_v1_0_M00_AXIS is
     -- 	generic (
@@ -216,13 +236,13 @@ ARCHITECTURE arch_imp OF AXI_TAR_v1_0 IS
 
     -- attribute MARK_DEBUG : STRING;
 
-    SIGNAL slv_reg0 : STD_LOGIC_VECTOR(C_S00_AXI_DATA_WIDTH - 1 DOWNTO 0);
-    SIGNAL slv_reg1 : STD_LOGIC_VECTOR(C_S00_AXI_DATA_WIDTH - 1 DOWNTO 0);
-    SIGNAL slv_reg2 : STD_LOGIC_VECTOR(C_S00_AXI_DATA_WIDTH - 1 DOWNTO 0);
-    SIGNAL slv_reg3 : STD_LOGIC_VECTOR(C_S00_AXI_DATA_WIDTH - 1 DOWNTO 0);
+    signal slv_reg0 : STD_LOGIC_VECTOR(C_S00_AXI_DATA_WIDTH - 1 downto 0);
+    signal slv_reg1 : STD_LOGIC_VECTOR(C_S00_AXI_DATA_WIDTH - 1 downto 0);
+    signal slv_reg2 : STD_LOGIC_VECTOR(C_S00_AXI_DATA_WIDTH - 1 downto 0);
+    signal slv_reg3 : STD_LOGIC_VECTOR(C_S00_AXI_DATA_WIDTH - 1 downto 0);
 
     -- signal master_test_start : STD_LOGIC := '0';
-    SIGNAL TAR_start : STD_LOGIC := '0';
+    signal TAR_start : STD_LOGIC := '0';
 
     -- Agrego estas señales a debug via ILA
     -- attribute MARK_DEBUG of master_test_start : signal is G_MARK_DEBUG;
@@ -236,21 +256,21 @@ ARCHITECTURE arch_imp OF AXI_TAR_v1_0 IS
     -- signal mstr_m00_axis_tlast   : STD_LOGIC;
     -- signal mstr_m00_axis_tready  : STD_LOGIC;
 
-    SIGNAL tar_m00_axis_aclk    : STD_LOGIC;
-    SIGNAL tar_m00_axis_aresetn : STD_LOGIC;
-    SIGNAL tar_m00_axis_tvalid  : STD_LOGIC;
-    SIGNAL tar_m00_axis_tdata   : STD_LOGIC_VECTOR(C_M00_AXIS_TDATA_WIDTH - 1 DOWNTO 0);
-    SIGNAL tar_m00_axis_tstrb   : STD_LOGIC_VECTOR((C_M00_AXIS_TDATA_WIDTH/8) - 1 DOWNTO 0);
-    SIGNAL tar_m00_axis_tlast   : STD_LOGIC;
-    SIGNAL tar_m00_axis_tready  : STD_LOGIC;
+    signal tar_m00_axis_aclk    : STD_LOGIC;
+    signal tar_m00_axis_aresetn : STD_LOGIC;
+    signal tar_m00_axis_tvalid  : STD_LOGIC;
+    signal tar_m00_axis_tdata   : STD_LOGIC_VECTOR(C_M00_AXIS_TDATA_WIDTH - 1 downto 0);
+    signal tar_m00_axis_tstrb   : STD_LOGIC_VECTOR((C_M00_AXIS_TDATA_WIDTH/8) - 1 downto 0);
+    signal tar_m00_axis_tlast   : STD_LOGIC;
+    signal tar_m00_axis_tready  : STD_LOGIC;
 
     -- Seniales internas de DEBUG
-    SIGNAL pf_wr_ptr_debug_internal       : INTEGER RANGE 0 TO 15;
-    SIGNAL pf_rd_ptr_debug_internal       : INTEGER RANGE 0 TO 15;
-    SIGNAL pf_of_pend_flg_debug_internal  : INTEGER RANGE 0 TO 1;
-    SIGNAL pf_cha_pend_flg_debug_internal : INTEGER RANGE 0 TO 1;
-    SIGNAL pf_chb_pend_flg_debug_internal : INTEGER RANGE 0 TO 1;
-BEGIN
+    signal pf_wr_ptr_debug_internal       : INTEGER range 0 to 15;
+    signal pf_rd_ptr_debug_internal       : INTEGER range 0 to 15;
+    signal pf_of_pend_flg_debug_internal  : INTEGER range 0 to 1;
+    signal pf_cha_pend_flg_debug_internal : INTEGER range 0 to 1;
+    signal pf_chb_pend_flg_debug_internal : INTEGER range 0 to 1;
+begin
 
     -- Asignación de señales DEBUG
     cha_hist        <= slv_reg1;
@@ -258,11 +278,11 @@ BEGIN
     pf_wr_ptr_debug <= STD_LOGIC_VECTOR(to_unsigned(pf_wr_ptr_debug_internal, 4));
     pf_rd_ptr_debug <= STD_LOGIC_VECTOR(to_unsigned(pf_rd_ptr_debug_internal, 4));
 
-    pf_of_pend_flg_debug <= '1' WHEN pf_of_pend_flg_debug_internal = 1 ELSE
+    pf_of_pend_flg_debug <= '1' when pf_of_pend_flg_debug_internal = 1 else
         '0';
-    pf_cha_pend_flg_debug <= '1' WHEN pf_cha_pend_flg_debug_internal = 1 ELSE
+    pf_cha_pend_flg_debug <= '1' when pf_cha_pend_flg_debug_internal = 1 else
         '0';
-    pf_chb_pend_flg_debug <= '1' WHEN pf_chb_pend_flg_debug_internal = 1 ELSE
+    pf_chb_pend_flg_debug <= '1' when pf_chb_pend_flg_debug_internal = 1 else
         '0';
 
     TAR_start <= slv_reg0(0);
@@ -291,11 +311,11 @@ BEGIN
 
     -- Instantiation of Axi Bus Interface S00_AXI
     AXI_TAR_v1_0_S00_AXI_inst : AXI_TAR_v1_0_S00_AXI
-    GENERIC MAP(
+    generic map(
         C_S_AXI_DATA_WIDTH => C_S00_AXI_DATA_WIDTH,
         C_S_AXI_ADDR_WIDTH => C_S00_AXI_ADDR_WIDTH
     )
-    PORT MAP(
+    port map(
         OUT_REG0 => slv_reg0,
         OUT_REG1 => slv_reg1,
         OUT_REG2 => slv_reg2,
@@ -348,20 +368,20 @@ BEGIN
     -- );
 
     TAR_00 : TAR
-    GENERIC MAP(
+    generic map(
         C_M_AXIS_TDATA_WIDTH => C_M00_AXIS_TDATA_WIDTH,
         G_MARK_DEBUG         => G_MARK_DEBUG
     )
-    PORT MAP(
+    port map(
         clk            => SysClk,
         rstn           => IRst_n,
         start          => TAR_start,
-        sCh1In         => sCh1In(15 DOWNTO 2),
-        sCh1H_High     => slv_reg1(31 DOWNTO 16),
-        sCh1H_Low      => slv_reg1(15 DOWNTO 0),
-        sCh2In         => sCh2In(15 DOWNTO 2),
-        sCh2H_High     => slv_reg2(31 DOWNTO 16),
-        sCh2H_Low      => slv_reg2(15 DOWNTO 0),
+        sCh1In         => sCh1In(15 downto 2),
+        sCh1H_High     => slv_reg1(31 downto 16),
+        sCh1H_Low      => slv_reg1(15 downto 0),
+        sCh2In         => sCh2In(15 downto 2),
+        sCh2H_High     => slv_reg2(31 downto 16),
+        sCh2H_Low      => slv_reg2(15 downto 0),
         m_axis_aclk    => tar_m00_axis_aclk,
         m_axis_aresetn => tar_m00_axis_aresetn,
         m_axis_tvalid  => tar_m00_axis_tvalid,
@@ -389,4 +409,4 @@ BEGIN
         pf_chb_fifo_reg_debug => pf_chb_fifo_reg_debug
     );
 
-END arch_imp;
+end arch_imp;

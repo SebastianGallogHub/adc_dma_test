@@ -1,7 +1,22 @@
-
--- Testbench automatically generated online
--- at https://vhdl.lapinoo.net
--- Generation date : 22.8.2024 00:50:46 UTC
+-- =============================================================
+-- Nombre del Proyecto   : Registrador de Amplitud y Tiempo (TAR)
+-- Archivo               : PULSE_FORMATTER_tb.vhd
+-- Descripción           : Prueba de módulo PULSE_FORMATTER.
+-- Autor                 : Sebastián Nahuel Gallo
+-- Fecha de creación     : 22/08/2024
+-- Fecha de modificación : 11/06/2025
+-- Versión               : v1.0
+--
+-- Institución           : Universidad Nacional de Rosario (UNR)
+-- Carrera               : Ingeniería Electrónica
+--
+-- Derechos reservados:
+-- Este código ha sido desarrollado en el marco del Proyecto Final de Ingeniería
+-- por Sebastián Nahuel Gallo. Su uso está autorizado únicamente por la
+-- Comisión Nacional de Energía Atómica (CNEA) con fines internos.
+-- Queda prohibida su reproducción, modificación o distribución sin
+-- autorización expresa por escrito del autor.
+-- =============================================================
 
 library ieee;
 use ieee.std_logic_1164.all;
