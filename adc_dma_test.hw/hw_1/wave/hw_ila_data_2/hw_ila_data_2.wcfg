@@ -10,300 +10,155 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0"></ZoomStartTime>
-      <ZoomEndTime time="2,049"></ZoomEndTime>
-      <Cursor1Time time="2,048"></Cursor1Time>
+      <ZoomEndTime time="544"></ZoomEndTime>
+      <Cursor1Time time="766"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="374"></NameColumnWidth>
-      <ValueColumnWidth column_width="290"></ValueColumnWidth>
+      <NameColumnWidth column_width="332"></NameColumnWidth>
+      <ValueColumnWidth column_width="80"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="6" />
+   <WVObjectSize size="4" />
    <wave_markers>
    </wave_markers>
-   <wvobject type="vbus" fp_name="vbus814">
-      <obj_property name="label">CAD_A</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
-      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe0_1[15]">
-         <obj_property name="ElementShortName">[15]</obj_property>
-         <obj_property name="ObjectShortName">[15]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe0_1[14]">
-         <obj_property name="ElementShortName">[14]</obj_property>
-         <obj_property name="ObjectShortName">[14]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe0_1[13]">
-         <obj_property name="ElementShortName">[13]</obj_property>
-         <obj_property name="ObjectShortName">[13]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe0_1[12]">
-         <obj_property name="ElementShortName">[12]</obj_property>
-         <obj_property name="ObjectShortName">[12]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe0_1[11]">
-         <obj_property name="ElementShortName">[11]</obj_property>
-         <obj_property name="ObjectShortName">[11]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe0_1[10]">
-         <obj_property name="ElementShortName">[10]</obj_property>
-         <obj_property name="ObjectShortName">[10]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe0_1[9]">
-         <obj_property name="ElementShortName">[9]</obj_property>
-         <obj_property name="ObjectShortName">[9]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe0_1[8]">
-         <obj_property name="ElementShortName">[8]</obj_property>
-         <obj_property name="ObjectShortName">[8]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe0_1[7]">
-         <obj_property name="ElementShortName">[7]</obj_property>
-         <obj_property name="ObjectShortName">[7]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe0_1[6]">
-         <obj_property name="ElementShortName">[6]</obj_property>
-         <obj_property name="ObjectShortName">[6]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe0_1[5]">
-         <obj_property name="ElementShortName">[5]</obj_property>
-         <obj_property name="ObjectShortName">[5]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe0_1[4]">
-         <obj_property name="ElementShortName">[4]</obj_property>
-         <obj_property name="ObjectShortName">[4]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe0_1[3]">
-         <obj_property name="ElementShortName">[3]</obj_property>
-         <obj_property name="ObjectShortName">[3]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe0_1[2]">
-         <obj_property name="ElementShortName">[2]</obj_property>
-         <obj_property name="ObjectShortName">[2]</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject type="vbus" fp_name="vbus845">
-      <obj_property name="label">CAD_B</obj_property>
-      <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
-      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe1_1[15]">
-         <obj_property name="ElementShortName">[15]</obj_property>
-         <obj_property name="ObjectShortName">[15]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe1_1[14]">
-         <obj_property name="ElementShortName">[14]</obj_property>
-         <obj_property name="ObjectShortName">[14]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe1_1[13]">
-         <obj_property name="ElementShortName">[13]</obj_property>
-         <obj_property name="ObjectShortName">[13]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe1_1[12]">
-         <obj_property name="ElementShortName">[12]</obj_property>
-         <obj_property name="ObjectShortName">[12]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe1_1[11]">
-         <obj_property name="ElementShortName">[11]</obj_property>
-         <obj_property name="ObjectShortName">[11]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe1_1[10]">
-         <obj_property name="ElementShortName">[10]</obj_property>
-         <obj_property name="ObjectShortName">[10]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe1_1[9]">
-         <obj_property name="ElementShortName">[9]</obj_property>
-         <obj_property name="ObjectShortName">[9]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe1_1[8]">
-         <obj_property name="ElementShortName">[8]</obj_property>
-         <obj_property name="ObjectShortName">[8]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe1_1[7]">
-         <obj_property name="ElementShortName">[7]</obj_property>
-         <obj_property name="ObjectShortName">[7]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe1_1[6]">
-         <obj_property name="ElementShortName">[6]</obj_property>
-         <obj_property name="ObjectShortName">[6]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe1_1[5]">
-         <obj_property name="ElementShortName">[5]</obj_property>
-         <obj_property name="ObjectShortName">[5]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe1_1[4]">
-         <obj_property name="ElementShortName">[4]</obj_property>
-         <obj_property name="ObjectShortName">[4]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe1_1[3]">
-         <obj_property name="ElementShortName">[3]</obj_property>
-         <obj_property name="ObjectShortName">[3]</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe1_1[2]">
-         <obj_property name="ElementShortName">[2]</obj_property>
-         <obj_property name="ObjectShortName">[2]</obj_property>
-      </wvobject>
-   </wvobject>
-   <wvobject type="group" fp_name="group1314">
-      <obj_property name="label">VP_DET_CHA</obj_property>
+   <wvobject type="group" fp_name="group217">
+      <obj_property name="label">VP_DETECTOR_A</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="isExpanded"></obj_property>
-      <wvobject type="vbus" fp_name="vbus930">
-         <obj_property name="label">cha_hist</obj_property>
+      <wvobject type="vbus" fp_name="vbus1206">
+         <obj_property name="label">ZmodADC1410_Controll_0_sCh1Out</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="vbus" fp_name="vbus896">
-            <obj_property name="label">high</obj_property>
-            <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[31]">
-               <obj_property name="ElementShortName">[31]</obj_property>
-               <obj_property name="ObjectShortName">[31]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[30]">
-               <obj_property name="ElementShortName">[30]</obj_property>
-               <obj_property name="ObjectShortName">[30]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[29]">
-               <obj_property name="ElementShortName">[29]</obj_property>
-               <obj_property name="ObjectShortName">[29]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[28]">
-               <obj_property name="ElementShortName">[28]</obj_property>
-               <obj_property name="ObjectShortName">[28]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[27]">
-               <obj_property name="ElementShortName">[27]</obj_property>
-               <obj_property name="ObjectShortName">[27]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[26]">
-               <obj_property name="ElementShortName">[26]</obj_property>
-               <obj_property name="ObjectShortName">[26]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[25]">
-               <obj_property name="ElementShortName">[25]</obj_property>
-               <obj_property name="ObjectShortName">[25]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[24]">
-               <obj_property name="ElementShortName">[24]</obj_property>
-               <obj_property name="ObjectShortName">[24]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[23]">
-               <obj_property name="ElementShortName">[23]</obj_property>
-               <obj_property name="ObjectShortName">[23]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[22]">
-               <obj_property name="ElementShortName">[22]</obj_property>
-               <obj_property name="ObjectShortName">[22]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[21]">
-               <obj_property name="ElementShortName">[21]</obj_property>
-               <obj_property name="ObjectShortName">[21]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[20]">
-               <obj_property name="ElementShortName">[20]</obj_property>
-               <obj_property name="ObjectShortName">[20]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[19]">
-               <obj_property name="ElementShortName">[19]</obj_property>
-               <obj_property name="ObjectShortName">[19]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[18]">
-               <obj_property name="ElementShortName">[18]</obj_property>
-               <obj_property name="ObjectShortName">[18]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[17]">
-               <obj_property name="ElementShortName">[17]</obj_property>
-               <obj_property name="ObjectShortName">[17]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[16]">
-               <obj_property name="ElementShortName">[16]</obj_property>
-               <obj_property name="ObjectShortName">[16]</obj_property>
-            </wvobject>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="CustomSignalColor">#00FF00</obj_property>
+         <obj_property name="UseCustomSignalColor">true</obj_property>
+         <obj_property name="AnalogYRangeMin">0</obj_property>
+         <obj_property name="AnalogYRRangeMax">32763</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe0_1[15]">
+            <obj_property name="ElementShortName">[15]</obj_property>
+            <obj_property name="ObjectShortName">[15]</obj_property>
          </wvobject>
-         <wvobject type="vbus" fp_name="vbus913">
-            <obj_property name="label">low</obj_property>
-            <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[15]">
-               <obj_property name="ElementShortName">[15]</obj_property>
-               <obj_property name="ObjectShortName">[15]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[14]">
-               <obj_property name="ElementShortName">[14]</obj_property>
-               <obj_property name="ObjectShortName">[14]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[13]">
-               <obj_property name="ElementShortName">[13]</obj_property>
-               <obj_property name="ObjectShortName">[13]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[12]">
-               <obj_property name="ElementShortName">[12]</obj_property>
-               <obj_property name="ObjectShortName">[12]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[11]">
-               <obj_property name="ElementShortName">[11]</obj_property>
-               <obj_property name="ObjectShortName">[11]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[10]">
-               <obj_property name="ElementShortName">[10]</obj_property>
-               <obj_property name="ObjectShortName">[10]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[9]">
-               <obj_property name="ElementShortName">[9]</obj_property>
-               <obj_property name="ObjectShortName">[9]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[8]">
-               <obj_property name="ElementShortName">[8]</obj_property>
-               <obj_property name="ObjectShortName">[8]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[7]">
-               <obj_property name="ElementShortName">[7]</obj_property>
-               <obj_property name="ObjectShortName">[7]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[6]">
-               <obj_property name="ElementShortName">[6]</obj_property>
-               <obj_property name="ObjectShortName">[6]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[5]">
-               <obj_property name="ElementShortName">[5]</obj_property>
-               <obj_property name="ObjectShortName">[5]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[4]">
-               <obj_property name="ElementShortName">[4]</obj_property>
-               <obj_property name="ObjectShortName">[4]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[3]">
-               <obj_property name="ElementShortName">[3]</obj_property>
-               <obj_property name="ObjectShortName">[3]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[2]">
-               <obj_property name="ElementShortName">[2]</obj_property>
-               <obj_property name="ObjectShortName">[2]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[1]">
-               <obj_property name="ElementShortName">[1]</obj_property>
-               <obj_property name="ObjectShortName">[1]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[0]">
-               <obj_property name="ElementShortName">[0]</obj_property>
-               <obj_property name="ObjectShortName">[0]</obj_property>
-            </wvobject>
+         <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe0_1[14]">
+            <obj_property name="ElementShortName">[14]</obj_property>
+            <obj_property name="ObjectShortName">[14]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe0_1[13]">
+            <obj_property name="ElementShortName">[13]</obj_property>
+            <obj_property name="ObjectShortName">[13]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe0_1[12]">
+            <obj_property name="ElementShortName">[12]</obj_property>
+            <obj_property name="ObjectShortName">[12]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe0_1[11]">
+            <obj_property name="ElementShortName">[11]</obj_property>
+            <obj_property name="ObjectShortName">[11]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe0_1[10]">
+            <obj_property name="ElementShortName">[10]</obj_property>
+            <obj_property name="ObjectShortName">[10]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe0_1[9]">
+            <obj_property name="ElementShortName">[9]</obj_property>
+            <obj_property name="ObjectShortName">[9]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe0_1[8]">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">[8]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe0_1[7]">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">[7]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe0_1[6]">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">[6]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe0_1[5]">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">[5]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe0_1[4]">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">[4]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe0_1[3]">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">[3]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe0_1[2]">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">[2]</obj_property>
          </wvobject>
       </wvobject>
-      <wvobject type="array" fp_name="adc_dma_bd_i/system_ila_1/U0/probe5_1">
+      <wvobject type="vbus" fp_name="vbus1221">
+         <obj_property name="label">ZmodADC1410_Controll_0_sCh2Out</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_1/U0/probe5_1[31:0]</obj_property>
-         <obj_property name="ObjectShortName">probe5_1[31:0]</obj_property>
-         <obj_property name="label">cha_ts_temp_debug</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe1_1[15]">
+            <obj_property name="ElementShortName">[15]</obj_property>
+            <obj_property name="ObjectShortName">[15]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe1_1[14]">
+            <obj_property name="ElementShortName">[14]</obj_property>
+            <obj_property name="ObjectShortName">[14]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe1_1[13]">
+            <obj_property name="ElementShortName">[13]</obj_property>
+            <obj_property name="ObjectShortName">[13]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe1_1[12]">
+            <obj_property name="ElementShortName">[12]</obj_property>
+            <obj_property name="ObjectShortName">[12]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe1_1[11]">
+            <obj_property name="ElementShortName">[11]</obj_property>
+            <obj_property name="ObjectShortName">[11]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe1_1[10]">
+            <obj_property name="ElementShortName">[10]</obj_property>
+            <obj_property name="ObjectShortName">[10]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe1_1[9]">
+            <obj_property name="ElementShortName">[9]</obj_property>
+            <obj_property name="ObjectShortName">[9]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe1_1[8]">
+            <obj_property name="ElementShortName">[8]</obj_property>
+            <obj_property name="ObjectShortName">[8]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe1_1[7]">
+            <obj_property name="ElementShortName">[7]</obj_property>
+            <obj_property name="ObjectShortName">[7]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe1_1[6]">
+            <obj_property name="ElementShortName">[6]</obj_property>
+            <obj_property name="ObjectShortName">[6]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe1_1[5]">
+            <obj_property name="ElementShortName">[5]</obj_property>
+            <obj_property name="ObjectShortName">[5]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe1_1[4]">
+            <obj_property name="ElementShortName">[4]</obj_property>
+            <obj_property name="ObjectShortName">[4]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe1_1[3]">
+            <obj_property name="ElementShortName">[3]</obj_property>
+            <obj_property name="ObjectShortName">[3]</obj_property>
+         </wvobject>
+         <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe1_1[2]">
+            <obj_property name="ElementShortName">[2]</obj_property>
+            <obj_property name="ObjectShortName">[2]</obj_property>
+         </wvobject>
       </wvobject>
-      <wvobject type="array" fp_name="adc_dma_bd_i/system_ila_1/U0/probe7_1">
+      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe8_1">
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_1/U0/probe7_1[13:0]</obj_property>
-         <obj_property name="ObjectShortName">probe7_1[13:0]</obj_property>
-         <obj_property name="label">cha_vp_temp_debug</obj_property>
+         <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_1/U0/probe8_1</obj_property>
+         <obj_property name="ObjectShortName">probe8_1</obj_property>
+         <obj_property name="label">chb_dr_debug</obj_property>
          <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
@@ -317,253 +172,387 @@
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="adc_dma_bd_i/system_ila_1/U0/probe4_1">
+      <wvobject type="group" fp_name="group353">
+         <obj_property name="label">internal</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_1/U0/probe4_1[31:0]</obj_property>
-         <obj_property name="ObjectShortName">probe4_1[31:0]</obj_property>
-         <obj_property name="label">cha_ts_debug</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="adc_dma_bd_i/system_ila_1/U0/probe6_1">
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_1/U0/probe6_1[13:0]</obj_property>
-         <obj_property name="ObjectShortName">probe6_1[13:0]</obj_property>
-         <obj_property name="label">cha_vp_debug</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         <wvobject type="group" fp_name="group492">
+            <obj_property name="label">cha_hist</obj_property>
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject type="vbus" fp_name="vbus475">
+               <obj_property name="label">[31:16]H_HIGH</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[31]">
+                  <obj_property name="ElementShortName">[31]</obj_property>
+                  <obj_property name="ObjectShortName">[31]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[30]">
+                  <obj_property name="ElementShortName">[30]</obj_property>
+                  <obj_property name="ObjectShortName">[30]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[29]">
+                  <obj_property name="ElementShortName">[29]</obj_property>
+                  <obj_property name="ObjectShortName">[29]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[28]">
+                  <obj_property name="ElementShortName">[28]</obj_property>
+                  <obj_property name="ObjectShortName">[28]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[27]">
+                  <obj_property name="ElementShortName">[27]</obj_property>
+                  <obj_property name="ObjectShortName">[27]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[26]">
+                  <obj_property name="ElementShortName">[26]</obj_property>
+                  <obj_property name="ObjectShortName">[26]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[25]">
+                  <obj_property name="ElementShortName">[25]</obj_property>
+                  <obj_property name="ObjectShortName">[25]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[24]">
+                  <obj_property name="ElementShortName">[24]</obj_property>
+                  <obj_property name="ObjectShortName">[24]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[23]">
+                  <obj_property name="ElementShortName">[23]</obj_property>
+                  <obj_property name="ObjectShortName">[23]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[22]">
+                  <obj_property name="ElementShortName">[22]</obj_property>
+                  <obj_property name="ObjectShortName">[22]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[21]">
+                  <obj_property name="ElementShortName">[21]</obj_property>
+                  <obj_property name="ObjectShortName">[21]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[20]">
+                  <obj_property name="ElementShortName">[20]</obj_property>
+                  <obj_property name="ObjectShortName">[20]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[19]">
+                  <obj_property name="ElementShortName">[19]</obj_property>
+                  <obj_property name="ObjectShortName">[19]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[18]">
+                  <obj_property name="ElementShortName">[18]</obj_property>
+                  <obj_property name="ObjectShortName">[18]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[17]">
+                  <obj_property name="ElementShortName">[17]</obj_property>
+                  <obj_property name="ObjectShortName">[17]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[16]">
+                  <obj_property name="ElementShortName">[16]</obj_property>
+                  <obj_property name="ObjectShortName">[16]</obj_property>
+               </wvobject>
+            </wvobject>
+            <wvobject type="vbus" fp_name="vbus458">
+               <obj_property name="label">[15:0]H_LOW</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[15]">
+                  <obj_property name="ElementShortName">[15]</obj_property>
+                  <obj_property name="ObjectShortName">[15]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[14]">
+                  <obj_property name="ElementShortName">[14]</obj_property>
+                  <obj_property name="ObjectShortName">[14]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[13]">
+                  <obj_property name="ElementShortName">[13]</obj_property>
+                  <obj_property name="ObjectShortName">[13]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[12]">
+                  <obj_property name="ElementShortName">[12]</obj_property>
+                  <obj_property name="ObjectShortName">[12]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[11]">
+                  <obj_property name="ElementShortName">[11]</obj_property>
+                  <obj_property name="ObjectShortName">[11]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[10]">
+                  <obj_property name="ElementShortName">[10]</obj_property>
+                  <obj_property name="ObjectShortName">[10]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[9]">
+                  <obj_property name="ElementShortName">[9]</obj_property>
+                  <obj_property name="ObjectShortName">[9]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[8]">
+                  <obj_property name="ElementShortName">[8]</obj_property>
+                  <obj_property name="ObjectShortName">[8]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[7]">
+                  <obj_property name="ElementShortName">[7]</obj_property>
+                  <obj_property name="ObjectShortName">[7]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[6]">
+                  <obj_property name="ElementShortName">[6]</obj_property>
+                  <obj_property name="ObjectShortName">[6]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[5]">
+                  <obj_property name="ElementShortName">[5]</obj_property>
+                  <obj_property name="ObjectShortName">[5]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[4]">
+                  <obj_property name="ElementShortName">[4]</obj_property>
+                  <obj_property name="ObjectShortName">[4]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[3]">
+                  <obj_property name="ElementShortName">[3]</obj_property>
+                  <obj_property name="ObjectShortName">[3]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[2]">
+                  <obj_property name="ElementShortName">[2]</obj_property>
+                  <obj_property name="ObjectShortName">[2]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[1]">
+                  <obj_property name="ElementShortName">[1]</obj_property>
+                  <obj_property name="ObjectShortName">[1]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1[0]">
+                  <obj_property name="ElementShortName">[0]</obj_property>
+                  <obj_property name="ObjectShortName">[0]</obj_property>
+               </wvobject>
+            </wvobject>
+         </wvobject>
+         <wvobject type="array" fp_name="adc_dma_bd_i/system_ila_1/U0/probe7_1">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_1/U0/probe7_1[13:0]</obj_property>
+            <obj_property name="ObjectShortName">probe7_1[13:0]</obj_property>
+            <obj_property name="label">cha_vp_temp_debug</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="adc_dma_bd_i/system_ila_1/U0/probe5_1">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_1/U0/probe5_1[31:0]</obj_property>
+            <obj_property name="ObjectShortName">probe5_1[31:0]</obj_property>
+            <obj_property name="label">cha_ts_temp_debug</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="adc_dma_bd_i/system_ila_1/U0/probe6_1">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_1/U0/probe6_1[13:0]</obj_property>
+            <obj_property name="ObjectShortName">probe6_1[13:0]</obj_property>
+            <obj_property name="label">cha_vp_debug</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="adc_dma_bd_i/system_ila_1/U0/probe4_1">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_1/U0/probe4_1[31:0]</obj_property>
+            <obj_property name="ObjectShortName">probe4_1[31:0]</obj_property>
+            <obj_property name="label">cha_ts_debug</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
       </wvobject>
    </wvobject>
-   <wvobject type="group" fp_name="group1313">
-      <obj_property name="label">VP_DET_CHB</obj_property>
+   <wvobject type="group" fp_name="group218">
+      <obj_property name="label">VP_DETECTOR_B</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <wvobject type="vbus" fp_name="vbus998">
-         <obj_property name="label">chb_hist</obj_property>
+      <wvobject type="group" fp_name="group352">
+         <obj_property name="label">internal</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="vbus" fp_name="vbus980">
-            <obj_property name="label">high</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="group" fp_name="group286">
+            <obj_property name="label">chb_hist</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[31]">
-               <obj_property name="ElementShortName">[31]</obj_property>
-               <obj_property name="ObjectShortName">[31]</obj_property>
+            <obj_property name="isExpanded"></obj_property>
+            <wvobject type="vbus" fp_name="vbus269">
+               <obj_property name="label">[31:16]H_HIGH</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[31]">
+                  <obj_property name="ElementShortName">[31]</obj_property>
+                  <obj_property name="ObjectShortName">[31]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[30]">
+                  <obj_property name="ElementShortName">[30]</obj_property>
+                  <obj_property name="ObjectShortName">[30]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[29]">
+                  <obj_property name="ElementShortName">[29]</obj_property>
+                  <obj_property name="ObjectShortName">[29]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[28]">
+                  <obj_property name="ElementShortName">[28]</obj_property>
+                  <obj_property name="ObjectShortName">[28]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[27]">
+                  <obj_property name="ElementShortName">[27]</obj_property>
+                  <obj_property name="ObjectShortName">[27]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[26]">
+                  <obj_property name="ElementShortName">[26]</obj_property>
+                  <obj_property name="ObjectShortName">[26]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[25]">
+                  <obj_property name="ElementShortName">[25]</obj_property>
+                  <obj_property name="ObjectShortName">[25]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[24]">
+                  <obj_property name="ElementShortName">[24]</obj_property>
+                  <obj_property name="ObjectShortName">[24]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[23]">
+                  <obj_property name="ElementShortName">[23]</obj_property>
+                  <obj_property name="ObjectShortName">[23]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[22]">
+                  <obj_property name="ElementShortName">[22]</obj_property>
+                  <obj_property name="ObjectShortName">[22]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[21]">
+                  <obj_property name="ElementShortName">[21]</obj_property>
+                  <obj_property name="ObjectShortName">[21]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[20]">
+                  <obj_property name="ElementShortName">[20]</obj_property>
+                  <obj_property name="ObjectShortName">[20]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[19]">
+                  <obj_property name="ElementShortName">[19]</obj_property>
+                  <obj_property name="ObjectShortName">[19]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[18]">
+                  <obj_property name="ElementShortName">[18]</obj_property>
+                  <obj_property name="ObjectShortName">[18]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[17]">
+                  <obj_property name="ElementShortName">[17]</obj_property>
+                  <obj_property name="ObjectShortName">[17]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[16]">
+                  <obj_property name="ElementShortName">[16]</obj_property>
+                  <obj_property name="ObjectShortName">[16]</obj_property>
+               </wvobject>
             </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[30]">
-               <obj_property name="ElementShortName">[30]</obj_property>
-               <obj_property name="ObjectShortName">[30]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[29]">
-               <obj_property name="ElementShortName">[29]</obj_property>
-               <obj_property name="ObjectShortName">[29]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[28]">
-               <obj_property name="ElementShortName">[28]</obj_property>
-               <obj_property name="ObjectShortName">[28]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[27]">
-               <obj_property name="ElementShortName">[27]</obj_property>
-               <obj_property name="ObjectShortName">[27]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[26]">
-               <obj_property name="ElementShortName">[26]</obj_property>
-               <obj_property name="ObjectShortName">[26]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[25]">
-               <obj_property name="ElementShortName">[25]</obj_property>
-               <obj_property name="ObjectShortName">[25]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[24]">
-               <obj_property name="ElementShortName">[24]</obj_property>
-               <obj_property name="ObjectShortName">[24]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[23]">
-               <obj_property name="ElementShortName">[23]</obj_property>
-               <obj_property name="ObjectShortName">[23]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[22]">
-               <obj_property name="ElementShortName">[22]</obj_property>
-               <obj_property name="ObjectShortName">[22]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[21]">
-               <obj_property name="ElementShortName">[21]</obj_property>
-               <obj_property name="ObjectShortName">[21]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[20]">
-               <obj_property name="ElementShortName">[20]</obj_property>
-               <obj_property name="ObjectShortName">[20]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[19]">
-               <obj_property name="ElementShortName">[19]</obj_property>
-               <obj_property name="ObjectShortName">[19]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[18]">
-               <obj_property name="ElementShortName">[18]</obj_property>
-               <obj_property name="ObjectShortName">[18]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[17]">
-               <obj_property name="ElementShortName">[17]</obj_property>
-               <obj_property name="ObjectShortName">[17]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[16]">
-               <obj_property name="ElementShortName">[16]</obj_property>
-               <obj_property name="ObjectShortName">[16]</obj_property>
+            <wvobject type="vbus" fp_name="vbus251">
+               <obj_property name="label">[15:0]H_LOW</obj_property>
+               <obj_property name="DisplayName">label</obj_property>
+               <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[15]">
+                  <obj_property name="ElementShortName">[15]</obj_property>
+                  <obj_property name="ObjectShortName">[15]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[14]">
+                  <obj_property name="ElementShortName">[14]</obj_property>
+                  <obj_property name="ObjectShortName">[14]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[13]">
+                  <obj_property name="ElementShortName">[13]</obj_property>
+                  <obj_property name="ObjectShortName">[13]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[12]">
+                  <obj_property name="ElementShortName">[12]</obj_property>
+                  <obj_property name="ObjectShortName">[12]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[11]">
+                  <obj_property name="ElementShortName">[11]</obj_property>
+                  <obj_property name="ObjectShortName">[11]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[10]">
+                  <obj_property name="ElementShortName">[10]</obj_property>
+                  <obj_property name="ObjectShortName">[10]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[9]">
+                  <obj_property name="ElementShortName">[9]</obj_property>
+                  <obj_property name="ObjectShortName">[9]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[8]">
+                  <obj_property name="ElementShortName">[8]</obj_property>
+                  <obj_property name="ObjectShortName">[8]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[7]">
+                  <obj_property name="ElementShortName">[7]</obj_property>
+                  <obj_property name="ObjectShortName">[7]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[6]">
+                  <obj_property name="ElementShortName">[6]</obj_property>
+                  <obj_property name="ObjectShortName">[6]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[5]">
+                  <obj_property name="ElementShortName">[5]</obj_property>
+                  <obj_property name="ObjectShortName">[5]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[4]">
+                  <obj_property name="ElementShortName">[4]</obj_property>
+                  <obj_property name="ObjectShortName">[4]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[3]">
+                  <obj_property name="ElementShortName">[3]</obj_property>
+                  <obj_property name="ObjectShortName">[3]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[2]">
+                  <obj_property name="ElementShortName">[2]</obj_property>
+                  <obj_property name="ObjectShortName">[2]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[1]">
+                  <obj_property name="ElementShortName">[1]</obj_property>
+                  <obj_property name="ObjectShortName">[1]</obj_property>
+               </wvobject>
+               <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[0]">
+                  <obj_property name="ElementShortName">[0]</obj_property>
+                  <obj_property name="ObjectShortName">[0]</obj_property>
+               </wvobject>
             </wvobject>
          </wvobject>
-         <wvobject type="vbus" fp_name="vbus963">
-            <obj_property name="label">low</obj_property>
+         <wvobject type="array" fp_name="adc_dma_bd_i/system_ila_1/U0/probe13_1">
             <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_1/U0/probe13_1[13:0]</obj_property>
+            <obj_property name="ObjectShortName">probe13_1[13:0]</obj_property>
+            <obj_property name="label">chb_vp_temp_debug</obj_property>
             <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[15]">
-               <obj_property name="ElementShortName">[15]</obj_property>
-               <obj_property name="ObjectShortName">[15]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[14]">
-               <obj_property name="ElementShortName">[14]</obj_property>
-               <obj_property name="ObjectShortName">[14]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[13]">
-               <obj_property name="ElementShortName">[13]</obj_property>
-               <obj_property name="ObjectShortName">[13]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[12]">
-               <obj_property name="ElementShortName">[12]</obj_property>
-               <obj_property name="ObjectShortName">[12]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[11]">
-               <obj_property name="ElementShortName">[11]</obj_property>
-               <obj_property name="ObjectShortName">[11]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[10]">
-               <obj_property name="ElementShortName">[10]</obj_property>
-               <obj_property name="ObjectShortName">[10]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[9]">
-               <obj_property name="ElementShortName">[9]</obj_property>
-               <obj_property name="ObjectShortName">[9]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[8]">
-               <obj_property name="ElementShortName">[8]</obj_property>
-               <obj_property name="ObjectShortName">[8]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[7]">
-               <obj_property name="ElementShortName">[7]</obj_property>
-               <obj_property name="ObjectShortName">[7]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[6]">
-               <obj_property name="ElementShortName">[6]</obj_property>
-               <obj_property name="ObjectShortName">[6]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[5]">
-               <obj_property name="ElementShortName">[5]</obj_property>
-               <obj_property name="ObjectShortName">[5]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[4]">
-               <obj_property name="ElementShortName">[4]</obj_property>
-               <obj_property name="ObjectShortName">[4]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[3]">
-               <obj_property name="ElementShortName">[3]</obj_property>
-               <obj_property name="ObjectShortName">[3]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[2]">
-               <obj_property name="ElementShortName">[2]</obj_property>
-               <obj_property name="ObjectShortName">[2]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[1]">
-               <obj_property name="ElementShortName">[1]</obj_property>
-               <obj_property name="ObjectShortName">[1]</obj_property>
-            </wvobject>
-            <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1[0]">
-               <obj_property name="ElementShortName">[0]</obj_property>
-               <obj_property name="ObjectShortName">[0]</obj_property>
-            </wvobject>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
          </wvobject>
-      </wvobject>
-      <wvobject type="array" fp_name="adc_dma_bd_i/system_ila_1/U0/probe11_1">
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_1/U0/probe11_1[31:0]</obj_property>
-         <obj_property name="ObjectShortName">probe11_1[31:0]</obj_property>
-         <obj_property name="label">chb_ts_temp_debug</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="adc_dma_bd_i/system_ila_1/U0/probe13_1">
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_1/U0/probe13_1[13:0]</obj_property>
-         <obj_property name="ObjectShortName">probe13_1[13:0]</obj_property>
-         <obj_property name="label">chb_vp_temp_debug</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe8_1">
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_1/U0/probe8_1</obj_property>
-         <obj_property name="ObjectShortName">probe8_1</obj_property>
-         <obj_property name="label">chb_dr_debug</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="adc_dma_bd_i/system_ila_1/U0/probe10_1">
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_1/U0/probe10_1[31:0]</obj_property>
-         <obj_property name="ObjectShortName">probe10_1[31:0]</obj_property>
-         <obj_property name="label">chb_ts_debug</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="adc_dma_bd_i/system_ila_1/U0/probe12_1">
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_1/U0/probe12_1[13:0]</obj_property>
-         <obj_property name="ObjectShortName">probe12_1[13:0]</obj_property>
-         <obj_property name="label">chb_vp_debug</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         <wvobject type="array" fp_name="adc_dma_bd_i/system_ila_1/U0/probe11_1">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_1/U0/probe11_1[31:0]</obj_property>
+            <obj_property name="ObjectShortName">probe11_1[31:0]</obj_property>
+            <obj_property name="label">chb_ts_temp_debug</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="adc_dma_bd_i/system_ila_1/U0/probe10_1">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_1/U0/probe10_1[31:0]</obj_property>
+            <obj_property name="ObjectShortName">probe10_1[31:0]</obj_property>
+            <obj_property name="label">chb_ts_debug</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
+         <wvobject type="array" fp_name="adc_dma_bd_i/system_ila_1/U0/probe12_1">
+            <obj_property name="DisplayName">label</obj_property>
+            <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_1/U0/probe12_1[13:0]</obj_property>
+            <obj_property name="ObjectShortName">probe12_1[13:0]</obj_property>
+            <obj_property name="label">chb_vp_debug</obj_property>
+            <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+            <obj_property name="LABELRADIX">true</obj_property>
+            <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         </wvobject>
       </wvobject>
    </wvobject>
-   <wvobject type="group" fp_name="group1315">
+   <wvobject type="group" fp_name="group216">
       <obj_property name="label">PULSE_FORMATTER</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe17_1">
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_1/U0/probe17_1</obj_property>
-         <obj_property name="ObjectShortName">probe17_1</obj_property>
-         <obj_property name="label">pf_of_pend_flg_debug</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe15_1">
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_1/U0/probe15_1</obj_property>
-         <obj_property name="ObjectShortName">probe15_1</obj_property>
-         <obj_property name="label">pf_cha_pend_flg_debug</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      </wvobject>
-      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe16_1">
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_1/U0/probe16_1</obj_property>
-         <obj_property name="ObjectShortName">probe16_1</obj_property>
-         <obj_property name="label">pf_chb_pend_flg_debug</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      </wvobject>
-      <wvobject type="vbus" fp_name="vbus1142">
+      <wvobject type="vbus" fp_name="vbus698">
          <obj_property name="label">pf_cha_fifo_reg_debug</obj_property>
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="vbus" fp_name="vbus1100">
-            <obj_property name="label">HEADER</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="vbus" fp_name="vbus615">
+            <obj_property name="label">[63:56]HDR</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe14_1[63]">
                <obj_property name="ElementShortName">[63]</obj_property>
@@ -598,10 +587,9 @@
                <obj_property name="ObjectShortName">[56]</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject type="vbus" fp_name="vbus1109">
-            <obj_property name="label">TS</obj_property>
+         <wvobject type="vbus" fp_name="vbus582">
+            <obj_property name="label">[55:24]TS</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="Radix">HEXRADIX</obj_property>
             <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe14_1[55]">
                <obj_property name="ElementShortName">[55]</obj_property>
                <obj_property name="ObjectShortName">[55]</obj_property>
@@ -731,10 +719,9 @@
                <obj_property name="ObjectShortName">[24]</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject type="vbus" fp_name="vbus1097">
-            <obj_property name="label">CH</obj_property>
+         <wvobject type="vbus" fp_name="vbus579">
+            <obj_property name="label">[23:22]CH</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="Radix">BINARYRADIX</obj_property>
             <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe14_1[23]">
                <obj_property name="ElementShortName">[23]</obj_property>
                <obj_property name="ObjectShortName">[23]</obj_property>
@@ -744,8 +731,8 @@
                <obj_property name="ObjectShortName">[22]</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject type="vbus" fp_name="vbus1082">
-            <obj_property name="label">VP</obj_property>
+         <wvobject type="vbus" fp_name="vbus564">
+            <obj_property name="label">[21:8]VP</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe14_1[21]">
                <obj_property name="ElementShortName">[21]</obj_property>
@@ -804,8 +791,8 @@
                <obj_property name="ObjectShortName">[8]</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject type="vbus" fp_name="vbus1073">
-            <obj_property name="label">FOOTER</obj_property>
+         <wvobject type="vbus" fp_name="vbus555">
+            <obj_property name="label">[7:0]FTR</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe14_1[7]">
                <obj_property name="ElementShortName">[7]</obj_property>
@@ -841,11 +828,21 @@
             </wvobject>
          </wvobject>
       </wvobject>
-      <wvobject type="vbus" fp_name="vbus1276">
-         <obj_property name="label">pf_chb_fifo_reg_debug</obj_property>
+      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe15_1">
          <obj_property name="DisplayName">label</obj_property>
-         <wvobject type="vbus" fp_name="vbus1267">
-            <obj_property name="label">HEADER</obj_property>
+         <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_1/U0/probe15_1</obj_property>
+         <obj_property name="ObjectShortName">probe15_1</obj_property>
+         <obj_property name="label">pf_cha_pend_flg_debug</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+      <wvobject type="vbus" fp_name="vbus699">
+         <obj_property name="label">pf_chB_fifo_reg_debug</obj_property>
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="isExpanded"></obj_property>
+         <wvobject type="vbus" fp_name="vbus685">
+            <obj_property name="label">[63:56]HDR</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe20_1[63]">
                <obj_property name="ElementShortName">[63]</obj_property>
@@ -880,8 +877,8 @@
                <obj_property name="ObjectShortName">[56]</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject type="vbus" fp_name="vbus1234">
-            <obj_property name="label">TS</obj_property>
+         <wvobject type="vbus" fp_name="vbus652">
+            <obj_property name="label">[55:24]TS</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe20_1[55]">
                <obj_property name="ElementShortName">[55]</obj_property>
@@ -1012,10 +1009,9 @@
                <obj_property name="ObjectShortName">[24]</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject type="vbus" fp_name="vbus1231">
-            <obj_property name="label">CH</obj_property>
+         <wvobject type="vbus" fp_name="vbus649">
+            <obj_property name="label">[23:22]CH</obj_property>
             <obj_property name="DisplayName">label</obj_property>
-            <obj_property name="Radix">BINARYRADIX</obj_property>
             <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe20_1[23]">
                <obj_property name="ElementShortName">[23]</obj_property>
                <obj_property name="ObjectShortName">[23]</obj_property>
@@ -1025,8 +1021,8 @@
                <obj_property name="ObjectShortName">[22]</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject type="vbus" fp_name="vbus1216">
-            <obj_property name="label">VP</obj_property>
+         <wvobject type="vbus" fp_name="vbus634">
+            <obj_property name="label">[21:8]VP</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe20_1[21]">
                <obj_property name="ElementShortName">[21]</obj_property>
@@ -1085,8 +1081,8 @@
                <obj_property name="ObjectShortName">[8]</obj_property>
             </wvobject>
          </wvobject>
-         <wvobject type="vbus" fp_name="vbus1207">
-            <obj_property name="label">FOOTER</obj_property>
+         <wvobject type="vbus" fp_name="vbus625">
+            <obj_property name="label">[7:0]FTR</obj_property>
             <obj_property name="DisplayName">label</obj_property>
             <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe20_1[7]">
                <obj_property name="ElementShortName">[7]</obj_property>
@@ -1122,6 +1118,24 @@
             </wvobject>
          </wvobject>
       </wvobject>
+      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe16_1">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_1/U0/probe16_1</obj_property>
+         <obj_property name="ObjectShortName">probe16_1</obj_property>
+         <obj_property name="label">pf_chb_pend_flg_debug</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="adc_dma_bd_i/system_ila_1/U0/probe17_1">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_1/U0/probe17_1</obj_property>
+         <obj_property name="ObjectShortName">probe17_1</obj_property>
+         <obj_property name="label">pf_of_pend_flg_debug</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+      </wvobject>
       <wvobject type="array" fp_name="adc_dma_bd_i/system_ila_1/U0/probe19_1">
          <obj_property name="DisplayName">label</obj_property>
          <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_1/U0/probe19_1[3:0]</obj_property>
@@ -1141,26 +1155,17 @@
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
    </wvobject>
-   <wvobject type="group" fp_name="group860">
-      <obj_property name="label">OCULTOS</obj_property>
+   <wvobject type="group" fp_name="group287">
+      <obj_property name="label">-</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <wvobject type="array" fp_name="adc_dma_bd_i/system_ila_1/U0/probe0_1">
+      <wvobject type="array" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1">
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_1/U0/probe0_1[15:0]</obj_property>
-         <obj_property name="ObjectShortName">probe0_1[15:0]</obj_property>
-         <obj_property name="label">ZmodADC1410_Controll_0_sCh1Out</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_1/U0/probe9_1[31:0]</obj_property>
+         <obj_property name="ObjectShortName">probe9_1[31:0]</obj_property>
+         <obj_property name="label">chb_hist</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      </wvobject>
-      <wvobject type="array" fp_name="adc_dma_bd_i/system_ila_1/U0/probe1_1">
-         <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_1/U0/probe1_1[15:0]</obj_property>
-         <obj_property name="ObjectShortName">probe1_1[15:0]</obj_property>
-         <obj_property name="label">ZmodADC1410_Controll_0_sCh2Out</obj_property>
-         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-         <obj_property name="LABELRADIX">true</obj_property>
-         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
       <wvobject type="array" fp_name="adc_dma_bd_i/system_ila_1/U0/probe3_1">
          <obj_property name="DisplayName">label</obj_property>
@@ -1171,12 +1176,26 @@
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
-      <wvobject type="array" fp_name="adc_dma_bd_i/system_ila_1/U0/probe9_1">
+      <wvobject type="array" fp_name="adc_dma_bd_i/system_ila_1/U0/probe0_1">
          <obj_property name="DisplayName">label</obj_property>
-         <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_1/U0/probe9_1[31:0]</obj_property>
-         <obj_property name="ObjectShortName">probe9_1[31:0]</obj_property>
-         <obj_property name="label">chb_hist</obj_property>
-         <obj_property name="Radix">HEXRADIX</obj_property>
+         <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_1/U0/probe0_1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">probe0_1[15:0]</obj_property>
+         <obj_property name="label">ZmodADC1410_Controll_0_sCh1Out</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+         <obj_property name="LABELRADIX">true</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+         <obj_property name="AnalogYRangeMin">0.000000</obj_property>
+         <obj_property name="AnalogYRRangeMax">0.000000</obj_property>
+         <obj_property name="AnalogInterpolation">ANALOG_INTERPOLATION_LINEAR</obj_property>
+         <obj_property name="AnalogOffscale">ANALOG_OFFSCALE_HIDE</obj_property>
+         <obj_property name="AnalogHorizLine">0.000000</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="adc_dma_bd_i/system_ila_1/U0/probe1_1">
+         <obj_property name="DisplayName">label</obj_property>
+         <obj_property name="ElementShortName">adc_dma_bd_i/system_ila_1/U0/probe1_1[15:0]</obj_property>
+         <obj_property name="ObjectShortName">probe1_1[15:0]</obj_property>
+         <obj_property name="label">ZmodADC1410_Controll_0_sCh2Out</obj_property>
+         <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
          <obj_property name="LABELRADIX">true</obj_property>
          <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>

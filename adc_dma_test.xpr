@@ -104,11 +104,11 @@
         <CompFileExtendedInfo CompFileName="adc_dma_bd.bd" FileRelPathName="ip/adc_dma_bd_processing_system7_0_0/adc_dma_bd_processing_system7_0_0.xci">
           <Proxy FileSetName="adc_dma_bd_processing_system7_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="adc_dma_bd.bd" FileRelPathName="ip/adc_dma_bd_axi_dma_0_0/adc_dma_bd_axi_dma_0_0.xci">
-          <Proxy FileSetName="adc_dma_bd_axi_dma_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="adc_dma_bd.bd" FileRelPathName="ip/adc_dma_bd_AXI_TAR_0_0/adc_dma_bd_AXI_TAR_0_0.xci">
           <Proxy FileSetName="adc_dma_bd_AXI_TAR_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="adc_dma_bd.bd" FileRelPathName="ip/adc_dma_bd_axi_dma_0_0/adc_dma_bd_axi_dma_0_0.xci">
+          <Proxy FileSetName="adc_dma_bd_axi_dma_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/adc_dma_bd/hdl/adc_dma_bd_wrapper.vhd">

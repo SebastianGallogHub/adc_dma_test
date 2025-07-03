@@ -7,13 +7,13 @@
     <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1743604505"/>
     <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1743604505"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
-      <File Name="synth\adc_dma_bd.vhd" Type="VHDL">
+      <File Name="synth/adc_dma_bd.vhd" Type="VHDL">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
-      <File Name="sim\adc_dma_bd.vhd" Type="VHDL">
+      <File Name="sim/adc_dma_bd.vhd" Type="VHDL">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>
@@ -27,7 +27,7 @@
         <UsedIn Val="OUT_OF_CONTEXT"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
-      <File Name="hw_handoff\adc_dma_bd.hwh" Type="HwHandoff">
+      <File Name="hw_handoff/adc_dma_bd.hwh" Type="HwHandoff">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
@@ -39,13 +39,13 @@
         <UsedIn Val="HW_HANDOFF"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
-      <File Name="synth\adc_dma_bd.hwdef">
+      <File Name="synth/adc_dma_bd.hwdef">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="HW_HANDOFF"/>
         <ProcessingOrder Val="NORMAL"/>
       </File>
-      <File Name="sim\adc_dma_bd.protoinst">
+      <File Name="sim/adc_dma_bd.protoinst">
         <Properties IsEditable="false" IsVisible="true" IsNetlistSimulation="false" Timestamp="0" IsTrackable="false" IsStatusTracked="false"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SIMULATION"/>

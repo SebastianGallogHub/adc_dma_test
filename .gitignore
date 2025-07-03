@@ -80,3 +80,8 @@
 #
 *.tmp
 vitis_workspace
+
+!*.mdd
+!*.xgui
+!*.mpd
+!*.pao

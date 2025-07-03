@@ -58,8 +58,8 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="adc_dma_bd_axi_dma_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="adc_dma_bd_processing_system7_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_dma_bd_AXI_TAR_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="adc_dma_bd_clk_wiz_0_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="adc_dma_bd_processing_system7_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="adc_dma_bd_axi_dma_0_0"/>
 </GenRun>
