@@ -85,3 +85,5 @@ vitis_workspace
 !*.xgui
 !*.mpd
 !*.pao
+!Makefile
+
